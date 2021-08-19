@@ -700,6 +700,9 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 /obj/machinery/computer/rdconsole/attack_hand(mob/user)
 	if(..())
 		return 1
+	if(!skillcheck(usr, SKILL_RESEARCH, SKILL_RESEARCH_MAX))
+		to_chat(user, "<span class='notice'>You don't have the training to use this.</span>")
+		return
 	if(!allowed(user) && !isobserver(user))
 		to_chat(user, "<span class='warning'>Access denied.</span>")
 		return TRUE

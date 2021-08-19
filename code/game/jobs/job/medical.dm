@@ -44,6 +44,7 @@
 	backpack = /obj/item/storage/backpack/medic
 	satchel = /obj/item/storage/backpack/satchel_med
 	dufflebag = /obj/item/storage/backpack/duffel/medical
+	skills = /datum/skills/doctor
 
 /datum/job/doctor
 	title = "Medical Doctor"

@@ -35,3 +35,11 @@
 
 /mob/living/proc/is_face_visible()
 	return TRUE
+
+/mob/proc/set_skills(skills_path)
+	if(skills)
+		qdel(skills)
+	if(!skills_path)
+		skills = null
+	else
+		skills = new skills_path(src)

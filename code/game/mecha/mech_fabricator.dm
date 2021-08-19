@@ -303,6 +303,9 @@
 /obj/machinery/mecha_part_fabricator/attack_hand(mob/user)
 	if(..())
 		return
+	if(!skillcheck(usr, SKILL_RESEARCH, SKILL_RESEARCH_MAX))
+		to_chat(user, "<span class='notice'>You don't have the training to use this.</span>")
+		return
 	if(!allowed(user) && !isobserver(user))
 		to_chat(user, "<span class='warning'>Access denied.</span>")
 		return

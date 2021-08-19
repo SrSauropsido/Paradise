@@ -92,7 +92,9 @@
 	if(shocked && !(stat & NOPOWER))
 		if(shock(user, 50))
 			return
-
+	if(!skillcheck(usr, SKILL_ENGINEER, SKILL_ENGINEER_TRAINED))
+		to_chat(user, "<span class='notice'>You don't have the training to use this.</span>")
+		return
 	if(panel_open)
 		wires.Interact(user)
 	else if(!disabled)

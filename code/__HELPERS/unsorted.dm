@@ -2138,3 +2138,6 @@ GLOBAL_DATUM_INIT(dview_mob, /mob/dview, new)
 			return slot_wear_pda
 		if(SLOT_TIE)
 			return slot_tie
+
+#define skillcheck(user, skill, req_level) ((!user.skills || user.skills.is_skilled(skill, req_level)))
+#define skillcheckexplicit(user, skill, req_level) ((!user.skills || user.skills.is_skilled(skill, req_level, TRUE)))

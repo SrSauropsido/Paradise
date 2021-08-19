@@ -118,7 +118,9 @@
 /obj/machinery/computer/cloning/attack_hand(mob/user as mob)
 	user.set_machine(src)
 	add_fingerprint(user)
-
+	if(!skillcheck(usr, SKILL_MEDICAL, SKILL_MEDICAL_MEDIC))
+		to_chat(user, "<span class='notice'>You don't have the training to use this.</span>")
+		return
 	if(stat & (BROKEN|NOPOWER))
 		return
 

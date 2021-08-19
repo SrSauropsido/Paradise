@@ -204,3 +204,5 @@
 	var/health_hud_override = HEALTH_HUD_OVERRIDE_NONE
 	/// The location our runechat message should appear. Should be src by default.
 	var/atom/runechat_msg_location
+	//Hispania Defines
+	var/datum/skills/skills = null

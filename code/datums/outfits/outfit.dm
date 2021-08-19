@@ -32,6 +32,7 @@
 	var/list/chameleon_extras //extra types for chameleon outfit changes, mostly guns
 
 	var/can_be_admin_equipped = TRUE // Set to FALSE if your outfit requires runtime parameters
+	var/skills
 
 /datum/outfit/naked
 	name = "Naked"
@@ -136,7 +137,7 @@
 		for(var/implant_type in implants)
 			var/obj/item/implant/I = new implant_type(H)
 			I.implant(H, null)
-
+	H.set_skills(skills)
 	H.update_body()
 	return 1
 

@@ -98,6 +98,9 @@
 	default_deconstruction_crowbar(user, I)
 
 /obj/machinery/chem_heater/attack_hand(mob/user)
+	if(!skillcheck(usr, SKILL_RESEARCH, SKILL_RESEARCH_TRAINED))
+		to_chat(user, "<span class='notice'>You don't have the training to use this.</span>")
+		return
 	ui_interact(user)
 
 /obj/machinery/chem_heater/attack_ghost(mob/user)

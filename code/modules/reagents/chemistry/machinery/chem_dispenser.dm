@@ -316,6 +316,9 @@
 	ui_interact(user)
 
 /obj/machinery/chem_dispenser/attack_hand(mob/user)
+	if(!skillcheck(usr, SKILL_RESEARCH, SKILL_RESEARCH_TRAINED))
+		to_chat(user, "<span class='notice'>You don't have the training to use this.</span>")
+		return
 	if(stat & BROKEN)
 		return
 	ui_interact(user)
