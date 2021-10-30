@@ -38,3 +38,4 @@ stddef.dm
 /tools/midi2piano/midi2piano/obj/*
 
 
+data/mode.txt
