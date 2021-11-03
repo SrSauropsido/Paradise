@@ -119,3 +119,50 @@
 	density = TRUE
 	opacity = TRUE
 	anchored = TRUE
+
+
+/obj/machinery/door/airlock/hatch/syndicate/vault/compuerta
+	name = "compuerta"
+	hackProof = TRUE
+	var/id_compuerta = 0
+	max_integrity = 999999
+
+/obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/Initialize(mapload)
+	GLOB.compuertas += src
+	return ..()
+
+/obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/screwdriver_act(mob/user, obj/item/I)
+	return FALSE
+
+/obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/emag_act(mob/user)
+	return FALSE
+
+/obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/emp_act(severity)
+	return FALSE
+
+obj/structure/lever
+	name = "lever"
+	desc = "Una palanca de dos estados"
+	icon = 'icons/obj/lever.dmi'
+	icon_state = "lever_on"
+	var/id_palanca = 0
+	var/palanca_normal = 1
+	var/estado = 0 //0 izquierda, 1 derecha
+
+obj/structure/lever/attack_hand(mob/user as mob)
+	add_fingerprint(user)
+	icon_state = "lever_off"
+	playsound(src, 'sound/hispania/misc/palanca.wav', 50)
+	if(palanca_normal)
+		if(estado == 0)
+			estado = 1
+			for(var/obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/D in GLOB.compuertas)
+				if(D.id_compuerta == id_palanca)
+					to_chat(world, "1")
+					D.open()
+					//D.Destroy(10000)
+					qdel(D)
+		else
+			to_chat(user, "Parece atascada")
+
+
