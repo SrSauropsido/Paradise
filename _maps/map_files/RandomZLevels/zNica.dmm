@@ -33,6 +33,11 @@
 	},
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
+"aj" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/mob/living/simple_animal/hostile/hivebot/rapid,
+/turf/simulated/floor/vines,
+/area/awaymission/example)
 "ak" = (
 /obj/structure/chair/stool,
 /turf/simulated/floor/pod/light,
@@ -75,12 +80,10 @@
 	icon_state = "yellowfull"
 	},
 /area/awaymission/example)
-"bF" = (
-/obj/item/paper{
-	info = "La turbina estara lista cuando este lista. No podemos ir mas deprisa con estas pocas herramientas!";
-	name = "documents"
-	},
-/turf/simulated/floor/pod/dark,
+"bA" = (
+/obj/item/stack/cable_coil,
+/mob/living/simple_animal/hostile/russian/ranged,
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "bO" = (
 /obj/machinery/vending/snack,
@@ -509,11 +512,6 @@
 /obj/structure/fence,
 /turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
-"lA" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/mob/living/simple_animal/hostile/hivebot/rapid,
-/turf/simulated/floor/vines,
-/area/awaymission/example)
 "lF" = (
 /mob/living/simple_animal/hostile/panther,
 /turf/simulated/floor/plating/ironsand,
@@ -925,13 +923,6 @@
 /obj/random/buff,
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
-"uF" = (
-/obj/item/paper{
-	info = "Las compuertas impenetrables por donde se las mire, forzarlas seria inutil. Pero siempre hay un boton que las abre..  ";
-	name = "documents"
-	},
-/turf/simulated/floor/pod/dark,
-/area/awaymission/example)
 "uR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating/ironsand,
@@ -967,6 +958,7 @@
 /area/awaymission/example)
 "vB" = (
 /obj/machinery/door/airlock/hatch/syndicate/vault/compuerta{
+	id_compuerta = "1";
 	id_tag = "1"
 	},
 /turf/simulated/floor/plating/ironsand,
@@ -1069,7 +1061,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/awaymission/example)
-"ym" = (
+"yp" = (
 /mob/living/simple_animal/hostile/hivebot/rapid,
 /turf/simulated/floor/vines,
 /area/awaymission/example)
@@ -1127,14 +1119,6 @@
 "yP" = (
 /obj/structure/grille/fence/north_south,
 /turf/simulated/floor/plating,
-/area/awaymission/example)
-"yU" = (
-/obj/structure/table,
-/obj/item/paper{
-	info = "Un gran tesoro aguarda a aquel valiente que logre abrir las puertas. No sera  tarea facil.. Varios lo han intentado pero jamas completaron los 3 biomas ";
-	name = "documents"
-	},
-/turf/simulated/floor/mineral/titanium,
 /area/awaymission/example)
 "zl" = (
 /obj/effect/decal/cleanable/blood/oil,
@@ -1425,10 +1409,12 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
-"Ft" = (
-/obj/item/stack/cable_coil,
-/mob/living/simple_animal/hostile/russian/ranged,
-/turf/simulated/floor/plating/ironsand,
+"FH" = (
+/obj/item/paper{
+	info = "La turbina estara lista cuando este lista. No podemos ir mas deprisa con estas pocas herramientas!";
+	name = "documents"
+	},
+/turf/simulated/floor/pod/dark,
 /area/awaymission/example)
 "FP" = (
 /obj/structure/flora/ausbushes/sparsegrass,
@@ -1923,9 +1909,24 @@
 /obj/structure/bed/roller/advanced,
 /turf/simulated/floor/plasteel,
 /area/awaymission/example)
+"PL" = (
+/obj/item/paper{
+	info = "Las compuertas impenetrables por donde se las mire, forzarlas seria inutil. Pero siempre hay un boton que las abre..  ";
+	name = "documents"
+	},
+/turf/simulated/floor/pod/dark,
+/area/awaymission/example)
 "PO" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/simulated/floor/grass,
+/area/awaymission/example)
+"PU" = (
+/obj/structure/table,
+/obj/item/paper{
+	info = "Un gran tesoro aguarda a aquel valiente que logre abrir las puertas. No sera  tarea facil.. Varios lo han intentado pero jamas completaron los 3 biomas ";
+	name = "documents"
+	},
+/turf/simulated/floor/mineral/titanium,
 /area/awaymission/example)
 "PV" = (
 /obj/structure/closet/acloset,
@@ -11959,7 +11960,7 @@ jQ
 jQ
 jQ
 jQ
-Ft
+bA
 Di
 eN
 Di
@@ -24089,7 +24090,7 @@ wv
 Kv
 Qg
 Qg
-yU
+PU
 Qg
 Qg
 Qg
@@ -25885,7 +25886,7 @@ aa
 aa
 wv
 gu
-ym
+yp
 wv
 wi
 wi
@@ -26137,7 +26138,7 @@ DV
 DV
 Yb
 yI
-bF
+FH
 DV
 OY
 XP
@@ -26529,7 +26530,7 @@ aa
 OY
 rc
 TM
-uF
+PL
 DV
 pK
 OY
@@ -26894,8 +26895,8 @@ aa
 aa
 aa
 wv
-ym
-ym
+yp
+yp
 wv
 wi
 wi
@@ -27096,7 +27097,7 @@ aa
 aa
 aa
 wv
-ym
+yp
 Lp
 wv
 wv
@@ -27306,7 +27307,7 @@ Lp
 Lp
 Lp
 Lp
-lA
+aj
 wv
 aa
 aa
@@ -27502,13 +27503,13 @@ aa
 aa
 wv
 Lp
-ym
+yp
 wv
 wv
 wv
 wv
 Lp
-ym
+yp
 wv
 aa
 aa
@@ -27703,7 +27704,7 @@ aa
 aa
 aa
 wv
-lA
+aj
 Lp
 wv
 aa
@@ -27905,8 +27906,8 @@ aa
 aa
 aa
 wv
-ym
-ym
+yp
+yp
 wv
 aa
 aa
@@ -28512,7 +28513,7 @@ aa
 aa
 wv
 sb
-ym
+yp
 wv
 aa
 aa

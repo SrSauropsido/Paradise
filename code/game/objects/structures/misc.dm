@@ -158,9 +158,7 @@ obj/structure/lever/attack_hand(mob/user as mob)
 			estado = 1
 			for(var/obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/D in GLOB.compuertas)
 				if(D.id_compuerta == id_palanca)
-					to_chat(world, "1")
 					D.open()
-					//D.Destroy(10000)
 					qdel(D)
 		else
 			to_chat(user, "Parece atascada")
