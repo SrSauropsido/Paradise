@@ -140,7 +140,7 @@
 /obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/emp_act(severity)
 	return FALSE
 
-obj/structure/lever
+/obj/structure/lever
 	name = "lever"
 	desc = "Una palanca de dos estados"
 	icon = 'icons/obj/lever.dmi'
@@ -149,7 +149,7 @@ obj/structure/lever
 	var/palanca_normal = 1
 	var/estado = 0 //0 izquierda, 1 derecha
 
-obj/structure/lever/attack_hand(mob/user as mob)
+/obj/structure/lever/attack_hand(mob/user as mob)
 	add_fingerprint(user)
 	icon_state = "lever_off"
 	playsound(src, 'sound/hispania/misc/palanca.wav', 50)
