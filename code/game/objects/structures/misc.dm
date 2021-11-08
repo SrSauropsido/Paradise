@@ -124,8 +124,13 @@
 /obj/machinery/door/airlock/hatch/syndicate/vault/compuerta
 	name = "compuerta"
 	hackProof = TRUE
+	can_be_hit = 0
+	heat_proof = 1
 	var/id_compuerta = 0
-	max_integrity = 999999
+	normal_integrity = 99999
+
+/obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/attack_hand(mob/user, /obj/item/twohanded/required/ram)
+	return FALSE
 
 /obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/Initialize(mapload)
 	GLOB.compuertas += src
@@ -158,6 +163,7 @@
 			estado = 1
 			for(var/obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/D in GLOB.compuertas)
 				if(D.id_compuerta == id_palanca)
+					D.unlock()
 					D.open()
 					qdel(D)
 		else

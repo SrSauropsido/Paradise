@@ -139,6 +139,13 @@
 	},
 /turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
+"dn" = (
+/obj/item/reagent_containers/food/drinks/bottle/kahlua,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellowfull"
+	},
+/area/space)
 "dB" = (
 /obj/structure/table/abductor,
 /obj/item/surgicaldrill,
@@ -174,6 +181,13 @@
 	},
 /obj/item/ammo_casing/shotgun/improvised,
 /turf/simulated/floor/plating/ironsand,
+/area/awaymission/example)
+"er" = (
+/obj/item/clothing/mask/pig,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellowfull"
+	},
 /area/awaymission/example)
 "et" = (
 /obj/machinery/door/airlock/medical,
@@ -244,6 +258,13 @@
 	icon_state = "yellowfull"
 	},
 /area/awaymission/example)
+"gg" = (
+/obj/item/reagent_containers/food/snacks/arepa_salmon,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellowfull"
+	},
+/area/space)
 "gu" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/vines,
@@ -262,6 +283,14 @@
 /area/awaymission/example)
 "gT" = (
 /obj/structure/barricade/wooden,
+/turf/simulated/floor/plating/ironsand,
+/area/awaymission/example)
+"gV" = (
+/mob/living/simple_animal/hostile/panther{
+	health = 0;
+	maxHealth = 0;
+	name = "Pantera Muerta"
+	},
 /turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "hd" = (
@@ -317,11 +346,16 @@
 /area/space)
 "hK" = (
 /obj/effect/decal/cleanable/insectguts,
+/obj/item/clothing/gloves/botanic_leather,
 /turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "hL" = (
 /obj/structure/barricade/wooden/crude,
 /turf/simulated/floor/plasteel,
+/area/awaymission/example)
+"hO" = (
+/obj/item/stack/sheet/leather,
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "hT" = (
 /obj/effect/spawner/random_spawners/grille_maybe,
@@ -333,7 +367,9 @@
 /turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "hX" = (
-/obj/structure/shuttle/engine/propulsion/burst/left,
+/obj/structure/shuttle/engine/propulsion/burst/left{
+	name = "Turbina desarmada"
+	},
 /obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
@@ -345,9 +381,13 @@
 /turf/simulated/floor/plating,
 /area/awaymission/example)
 "ib" = (
-/obj/structure/flora/ausbushes/sparsegrass,
-/mob/living/simple_animal/hostile/headcrab,
-/turf/simulated/floor/plating/ironsand,
+/obj/item/gun/energy/laser/awaymission_aeg,
+/obj/item/reagent_containers/food/drinks/bottle/vodka,
+/obj/structure/closet/crate,
+/obj/item/stack/spacecash/c1000,
+/obj/item/stack/spacecash/c1000,
+/obj/item/storage/firstaid,
+/turf/simulated/floor/plasteel,
 /area/awaymission/example)
 "ie" = (
 /obj/machinery/mech_bay_recharge_port/upgraded/unsimulated,
@@ -355,7 +395,8 @@
 /area/awaymission/example)
 "ij" = (
 /obj/machinery/door/airlock/hatch/syndicate/vault/compuerta{
-	id_compuerta = "1"
+	id_compuerta = "1";
+	locked = 1
 	},
 /turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
@@ -402,15 +443,27 @@
 /obj/item/mecha_parts/mecha_tracking,
 /turf/simulated/floor/pod/light,
 /area/awaymission/example)
+"iU" = (
+/obj/item/reagent_containers/food/snacks/grown/apple/gold,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellowfull"
+	},
+/area/awaymission/example)
 "ja" = (
 /obj/structure/toilet{
 	dir = 4
 	},
 /turf/simulated/floor/pod/light,
 /area/awaymission/example)
+"jj" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/plating/ironsand,
+/area/awaymission/example)
 "jr" = (
 /obj/machinery/door/airlock/hatch/syndicate/vault/compuerta{
-	id_compuerta = "4"
+	id_compuerta = "4";
+	locked = 1
 	},
 /turf/simulated/floor/sepia,
 /area/awaymission/example)
@@ -450,6 +503,7 @@
 "kn" = (
 /obj/item/airlock_electronics/destroyed,
 /obj/effect/landmark/burnturf,
+/obj/effect/decal/cleanable/blood/writing,
 /turf/simulated/floor/plasteel,
 /area/awaymission/example)
 "kq" = (
@@ -499,9 +553,15 @@
 /obj/structure/chair/stool/holostool,
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
-"li" = (
-/obj/effect/mob_spawn/human/skeleton,
+"lg" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/suit/leathercoat,
 /turf/simulated/floor/plating/ironsand,
+/area/awaymission/example)
+"li" = (
+/obj/effect/landmark/burnturf,
+/obj/effect/decal/cleanable/blood/writing,
+/turf/simulated/floor/plasteel,
 /area/awaymission/example)
 "lv" = (
 /obj/structure/closet/crate,
@@ -525,6 +585,13 @@
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
+"lP" = (
+/obj/item/clothing/mask/luchador,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellowfull"
+	},
+/area/space)
 "lV" = (
 /obj/item/ammo_casing/shotgun/improvised,
 /turf/simulated/floor/plasteel,
@@ -559,6 +626,14 @@
 /obj/effect/spawner/random_spawners/wall_rusted_maybe,
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
+"mI" = (
+/obj/effect/decal/warning_stripes/north,
+/obj/item/paper{
+	info = "Hemos logrado contener al experimento, la unica forma de liberarlo fue ocultada para que nadie se atreva a liberarlo por error.. ";
+	name = "documents"
+	},
+/turf/simulated/floor/pod/dark,
+/area/awaymission/example)
 "mM" = (
 /obj/machinery/door/poddoor/preopen{
 	id_tag = "medi"
@@ -591,7 +666,9 @@
 /turf/simulated/floor/pod/light,
 /area/awaymission/example)
 "nc" = (
-/mob/living/simple_animal/hostile/malf_drone,
+/mob/living/simple_animal/hostile/malf_drone{
+	name = "Experimento 013"
+	},
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
 "nh" = (
@@ -625,11 +702,21 @@
 /obj/structure/dispenser/oxygen,
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
+"om" = (
+/obj/effect/decal/cleanable/blood{
+	color = "red"
+	},
+/turf/simulated/floor/plating/ironsand,
+/area/awaymission/example)
 "oq" = (
 /obj/machinery/light/spot{
 	dir = 4
 	},
 /turf/simulated/floor/mineral/titanium,
+/area/awaymission/example)
+"ow" = (
+/obj/structure/closet/crate/miningcar,
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "oI" = (
 /obj/structure/grille,
@@ -663,7 +750,7 @@
 "pj" = (
 /obj/item/clothing/suit/corgisuit,
 /obj/structure/closet/crate,
-/turf/simulated/floor/plating/ironsand,
+/turf/simulated/floor/beach/away/water,
 /area/awaymission/example)
 "pn" = (
 /obj/effect/spawner/random_spawners/wall_rusted_probably,
@@ -708,9 +795,17 @@
 	},
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
+"qt" = (
+/obj/item/stack/spacecash/c100,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellowfull"
+	},
+/area/space)
 "qu" = (
 /obj/machinery/door/airlock/hatch/syndicate/vault/compuerta{
-	id_compuerta = "3"
+	id_compuerta = "3";
+	locked = 1
 	},
 /turf/simulated/floor/sepia,
 /area/awaymission/example)
@@ -737,6 +832,16 @@
 /obj/item/clothing/suit/xenos,
 /turf/simulated/floor/pod/light,
 /area/awaymission/example)
+"rk" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/obj/item/coin/gold,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellowfull"
+	},
+/area/space)
 "rs" = (
 /obj/effect/decal/cleanable/blood/oil{
 	color = "black"
@@ -766,7 +871,8 @@
 /area/awaymission/example)
 "rZ" = (
 /obj/structure/shuttle/engine/propulsion/burst/left{
-	dir = 8
+	dir = 8;
+	name = "Turbina desarmada"
 	},
 /obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/pod/light,
@@ -782,7 +888,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/mob/living/simple_animal/hostile/scarybat/batswarm,
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
 "sh" = (
@@ -920,8 +1025,8 @@
 /turf/simulated/floor/pod/light,
 /area/awaymission/example)
 "uD" = (
-/obj/random/buff,
-/turf/simulated/floor/pod/dark,
+/obj/effect/decal/cleanable/blood/writing,
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "uR" = (
 /obj/effect/decal/cleanable/dirt,
@@ -948,6 +1053,10 @@
 /obj/item/clothing/suit/storage/labcoat,
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
+"vj" = (
+/obj/item/clothing/suit/jacket/leather,
+/turf/simulated/floor/plating/ironsand,
+/area/awaymission/example)
 "vn" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/grass,
@@ -959,7 +1068,8 @@
 "vB" = (
 /obj/machinery/door/airlock/hatch/syndicate/vault/compuerta{
 	id_compuerta = "1";
-	id_tag = "1"
+	id_tag = "1";
+	locked = 1
 	},
 /turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
@@ -968,7 +1078,9 @@
 /turf/simulated/floor/transparent/glass,
 /area/awaymission/example)
 "vF" = (
-/obj/machinery/recharger,
+/obj/machinery/recharger{
+	use_power = 0
+	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/plasteel,
 /area/awaymission/example)
@@ -1000,6 +1112,13 @@
 /area/awaymission/example)
 "wv" = (
 /turf/simulated/wall/indestructible/rock,
+/area/awaymission/example)
+"wy" = (
+/obj/item/stack/sheet/leather,
+/obj/effect/decal/cleanable/blood{
+	color = "red"
+	},
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "wI" = (
 /obj/effect/decal/cleanable/blood{
@@ -1045,6 +1164,10 @@
 /obj/structure/closet/crate,
 /obj/item/grenade/chem_grenade/dirt,
 /turf/simulated/floor/plating,
+/area/awaymission/example)
+"xZ" = (
+/obj/item/kitchen/knife,
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "ya" = (
 /obj/machinery/gateway/centeraway,
@@ -1113,8 +1236,11 @@
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
 "yM" = (
-/obj/item/stock_parts/cell,
-/turf/simulated/floor/plating,
+/obj/effect/decal/cleanable/blood{
+	color = "red"
+	},
+/obj/effect/mob_spawn/human/skeleton,
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "yP" = (
 /obj/structure/grille/fence/north_south,
@@ -1159,6 +1285,13 @@
 "Ao" = (
 /obj/structure/grille/ratvar/broken,
 /turf/simulated/floor/plating,
+/area/awaymission/example)
+"Ax" = (
+/obj/item/paper{
+	info = "Los rusos estan explotando las praderas en busca de pieles para sus grandes abrigos. Esos malditos son capaces de exterminar a todas y cada una de las panteras, debemos  hacer algo antes que sea demasiado tarde ";
+	name = "documents"
+	},
+/turf/simulated/floor/plasteel,
 /area/awaymission/example)
 "AC" = (
 /obj/machinery/conveyor{
@@ -1304,6 +1437,14 @@
 /mob/living/simple_animal/hostile/russian,
 /turf/simulated/floor/plating/asteroid,
 /area/awaymission/example)
+"Dd" = (
+/obj/structure/table/reinforced,
+/obj/item/paper{
+	info = "Красивые скины, очень хорошо они будут продаваться на нашей станции ";
+	name = "documents"
+	},
+/turf/simulated/floor/plating/ironsand,
+/area/awaymission/example)
 "Di" = (
 /turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
@@ -1316,6 +1457,11 @@
 /obj/item/mecha_parts/mecha_equipment/rcd,
 /obj/effect/decal/warning_stripes/north,
 /turf/simulated/floor/pod/light,
+/area/awaymission/example)
+"Ds" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/sheet/leather,
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "Du" = (
 /obj/machinery/conveyor{
@@ -1423,7 +1569,8 @@
 /area/awaymission/example)
 "FR" = (
 /obj/machinery/door/airlock/hatch/syndicate/vault/compuerta{
-	id_compuerta = "5"
+	id_compuerta = "5";
+	locked = 1
 	},
 /turf/simulated/floor/sepia,
 /area/awaymission/example)
@@ -1432,6 +1579,10 @@
 /area/awaymission/example{
 	invisibility = 1
 	})
+"Gc" = (
+/mob/living/simple_animal/hostile/scarybat,
+/turf/simulated/floor/pod/light,
+/area/awaymission/example)
 "Gd" = (
 /obj/structure/table/reinforced,
 /obj/item/circuitboard/recharger,
@@ -1485,7 +1636,16 @@
 /turf/simulated/floor/pod/light,
 /area/awaymission/example)
 "Hv" = (
-/mob/living/simple_animal/hostile/scarybat,
+/mob/living/simple_animal/hostile/scarybat{
+	attack_sound = 'sound/effects/rustle5.ogg';
+	attacktext = "hmmm compania...";
+	harm_intent_damage = 0;
+	health = 50;
+	maxHealth = 50;
+	melee_damage_lower = 0;
+	melee_damage_upper = 0;
+	name = "Murcielagos amigables"
+	},
 /turf/simulated/floor/pod/light,
 /area/awaymission/example)
 "Hx" = (
@@ -1522,6 +1682,13 @@
 	icon_state = "yellowfull"
 	},
 /area/awaymission/example)
+"HS" = (
+/obj/structure/flora/ausbushes/sparsegrass,
+/obj/effect/decal/cleanable/blood{
+	color = "red"
+	},
+/turf/simulated/floor/plating/ironsand,
+/area/awaymission/example)
 "HV" = (
 /obj/structure/table/abductor,
 /obj/machinery/kitchen_machine/microwave/upgraded,
@@ -1539,7 +1706,7 @@
 /area/awaymission/example)
 "Ii" = (
 /obj/effect/overlay/palmtree_l,
-/turf/simulated/floor/beach/away/water,
+/turf/simulated/floor/grass,
 /area/awaymission/example)
 "Ij" = (
 /obj/structure/closet/acloset,
@@ -1562,6 +1729,10 @@
 "IK" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /turf/simulated/floor/grass,
+/area/awaymission/example)
+"IS" = (
+/obj/structure/ore_box,
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "IT" = (
 /obj/structure/reagent_dispensers/water_cooler,
@@ -1765,6 +1936,13 @@
 	},
 /turf/simulated/floor/pod/light,
 /area/awaymission/example)
+"MN" = (
+/obj/item/reagent_containers/food/snacks/candy/cotton/yellow,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellowfull"
+	},
+/area/space)
 "MR" = (
 /obj/effect/decal/cleanable/blood/tracks{
 	color = "red";
@@ -1774,6 +1952,13 @@
 	icon_state = "tracks"
 	},
 /turf/simulated/floor/plating,
+/area/awaymission/example)
+"MT" = (
+/obj/item/storage/bag/cash,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellowfull"
+	},
 /area/awaymission/example)
 "MZ" = (
 /obj/machinery/door/airlock/medical,
@@ -1803,13 +1988,14 @@
 /area/awaymission/example)
 "Ny" = (
 /obj/machinery/door/airlock/hatch/syndicate/vault/compuerta{
-	id_compuerta = "2"
+	id_compuerta = "2";
+	locked = 1
 	},
 /turf/simulated/floor/sepia,
 /area/awaymission/example)
 "NL" = (
-/obj/item/camera_assembly,
-/turf/simulated/floor/plating,
+/mob/living/simple_animal/pet/dog/corgi,
+/turf/simulated/floor/beach/away/water,
 /area/awaymission/example)
 "NP" = (
 /obj/vehicle/space/speedbike{
@@ -1825,6 +2011,10 @@
 "NZ" = (
 /mob/living/simple_animal/hostile/russian,
 /turf/simulated/floor/plating/ironsand,
+/area/awaymission/example)
+"Oa" = (
+/obj/item/circuitboard,
+/turf/simulated/floor/plating,
 /area/awaymission/example)
 "Ob" = (
 /obj/machinery/light/small{
@@ -1922,10 +2112,13 @@
 /area/awaymission/example)
 "PU" = (
 /obj/structure/table,
+/obj/item/flashlight/lantern,
 /obj/item/paper{
 	info = "Un gran tesoro aguarda a aquel valiente que logre abrir las puertas. No sera  tarea facil.. Varios lo han intentado pero jamas completaron los 3 biomas ";
 	name = "documents"
 	},
+/obj/item/flashlight/lantern,
+/obj/item/flashlight/lantern,
 /turf/simulated/floor/mineral/titanium,
 /area/awaymission/example)
 "PV" = (
@@ -1957,6 +2150,10 @@
 /obj/item/gun/energy/laser/awaymission_aeg,
 /turf/simulated/floor/plating,
 /area/awaymission/example)
+"QD" = (
+/obj/item/camera_assembly,
+/turf/simulated/floor/plating,
+/area/awaymission/example)
 "QM" = (
 /obj/structure/table/abductor,
 /obj/item/kitchen/cutter,
@@ -1972,6 +2169,11 @@
 "QX" = (
 /obj/item/flashlight/pen,
 /turf/simulated/floor/pod/dark,
+/area/awaymission/example)
+"QY" = (
+/obj/item/clothing/suit/leathercoat,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "Rb" = (
 /obj/item/trash/danitos,
@@ -2000,6 +2202,10 @@
 "Rx" = (
 /obj/item/xenos_claw,
 /turf/simulated/floor/vines,
+/area/awaymission/example)
+"RC" = (
+/obj/item/storage/firstaid,
+/turf/simulated/floor/plasteel,
 /area/awaymission/example)
 "RJ" = (
 /obj/item/stock_parts/cell,
@@ -2046,8 +2252,12 @@
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
 "SA" = (
-/mob/living/simple_animal/hostile/hellhound,
-/turf/simulated/floor/plating/ironsand,
+/obj/structure/flora/ausbushes/ppflowers,
+/obj/item/paper{
+	info = "Quien quisiera irse de un lugar como este tan lleno de paz. Los corgis corren y se alimentan de los peces, las flores brillan por sus colores. Y todos me invitan a quedarme, un dia mas.......";
+	name = "documents"
+	},
+/turf/simulated/floor/grass,
 /area/awaymission/example)
 "SF" = (
 /obj/structure/chair/office,
@@ -2118,6 +2328,10 @@
 /obj/structure/closet/crate,
 /obj/item/clothing/head/helmet,
 /turf/simulated/floor/plasteel,
+/area/awaymission/example)
+"Us" = (
+/obj/item/stock_parts/cell,
+/turf/simulated/floor/plating,
 /area/awaymission/example)
 "Uv" = (
 /obj/machinery/kitchen_machine/oven/upgraded,
@@ -2256,11 +2470,19 @@
 /turf/simulated/floor/pod/dark,
 /area/awaymission/example)
 "XO" = (
-/obj/item/circuitboard,
-/turf/simulated/floor/plating,
+/obj/structure/flora/ausbushes/sparsegrass,
+/mob/living/simple_animal/hostile/panther,
+/turf/simulated/floor/plating/ironsand,
 /area/awaymission/example)
 "XP" = (
 /turf/simulated/wall/indestructible/syndicate,
+/area/space)
+"XT" = (
+/obj/item/clothing/mask/gas/owl_mask,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "yellowfull"
+	},
 /area/space)
 "XY" = (
 /obj/machinery/power/smes{
@@ -2339,6 +2561,10 @@
 /area/awaymission/example)
 "Zj" = (
 /obj/structure/rack,
+/obj/item/paper{
+	info = "Los rusos estan explotando las praderas en busca de pieles para sus grandes abrigos. Esos malditos son capaces de exterminar a todas y cada una de las panteras, debemos  hacer algo antes que sea demasiado tarde ";
+	name = "documents"
+	},
 /turf/simulated/floor/plasteel,
 /area/awaymission/example)
 "Zo" = (
@@ -12766,11 +12992,11 @@ Di
 Di
 wv
 wv
-Di
-Di
-Di
-Di
-Di
+om
+om
+gV
+gV
+gV
 Di
 Di
 Di
@@ -12970,8 +13196,8 @@ wv
 wv
 Di
 hK
-Di
-Di
+om
+Ds
 Di
 Mu
 Di
@@ -13169,13 +13395,13 @@ PO
 JT
 wv
 wv
+NZ
 Di
+vj
+hO
+lg
 Di
-Di
-Di
-Di
-Di
-Di
+IS
 Di
 Di
 Di
@@ -13347,7 +13573,7 @@ Di
 Di
 Di
 eN
-eN
+XO
 jQ
 jQ
 jQ
@@ -13371,12 +13597,12 @@ JT
 PO
 wv
 wv
-NL
+wv
+ow
+wy
 Di
-Di
-Di
-eN
-Di
+HS
+gV
 Di
 Di
 Di
@@ -13518,6 +13744,7 @@ wv
 Di
 Di
 Di
+lF
 Di
 Di
 Di
@@ -13528,8 +13755,7 @@ Di
 Di
 Di
 Di
-Di
-Di
+lF
 Di
 Di
 Di
@@ -13572,10 +13798,10 @@ qM
 IK
 wv
 wv
-yM
-aw
-Di
-Di
+wv
+wv
+QY
+xZ
 NZ
 Di
 Di
@@ -13775,11 +14001,11 @@ IK
 wv
 wv
 wv
-XO
+wv
+jj
 Di
-Di
-Di
-Di
+Dd
+Ds
 Di
 Di
 Di
@@ -13980,8 +14206,8 @@ wv
 wv
 wv
 Di
-Di
-Di
+gV
+gV
 Di
 Di
 Di
@@ -14154,7 +14380,7 @@ Di
 Di
 Di
 eN
-Af
+Di
 Di
 Di
 wv
@@ -14165,7 +14391,7 @@ rO
 Di
 Di
 Di
-Di
+lF
 Di
 Di
 Di
@@ -14181,8 +14407,8 @@ wv
 wv
 wv
 wv
-Di
-Di
+IS
+IS
 Di
 Di
 Di
@@ -14323,13 +14549,13 @@ Di
 Di
 Di
 Di
+lF
 Di
 Di
 Di
 Di
 Di
-Di
-Di
+lF
 Di
 Di
 Di
@@ -14365,7 +14591,7 @@ wv
 wv
 Ml
 Di
-SA
+Di
 Di
 Di
 wp
@@ -14931,9 +15157,9 @@ dG
 tj
 NP
 kn
-YD
-Di
-Di
+li
+uD
+yM
 Di
 Di
 Di
@@ -15164,7 +15390,7 @@ Di
 Di
 Di
 Di
-Di
+lF
 Di
 Di
 Di
@@ -15333,14 +15559,14 @@ Di
 Di
 Dv
 cP
-li
+Di
 Nd
 Di
 Di
 Di
 Di
 Di
-Di
+lF
 Di
 Di
 Di
@@ -15941,7 +16167,7 @@ Di
 Di
 Di
 Di
-Di
+lF
 Di
 Di
 Di
@@ -15995,7 +16221,7 @@ qM
 qM
 wv
 wv
-KK
+QD
 KK
 Dc
 wv
@@ -16196,8 +16422,8 @@ qM
 qM
 qM
 wv
-wv
-KK
+Us
+aw
 KK
 KK
 wv
@@ -16399,7 +16625,7 @@ qM
 qM
 wv
 wv
-KK
+Oa
 KK
 KK
 KK
@@ -16956,7 +17182,7 @@ Di
 Di
 Di
 Di
-Af
+Di
 Di
 Di
 Di
@@ -17184,7 +17410,7 @@ Di
 Ck
 Ck
 Di
-Af
+Di
 Di
 Di
 eN
@@ -17375,7 +17601,7 @@ Di
 Di
 Di
 Di
-Di
+lF
 Di
 Di
 Di
@@ -17757,7 +17983,7 @@ Di
 Di
 Di
 Di
-Af
+Di
 Di
 Hm
 Di
@@ -17799,7 +18025,7 @@ Di
 Di
 Di
 Di
-Di
+lF
 wv
 aa
 aa
@@ -18371,7 +18597,7 @@ Di
 Di
 Di
 Di
-Di
+lF
 Di
 Di
 Di
@@ -19369,7 +19595,7 @@ aa
 aa
 aa
 aa
-aa
+wv
 wv
 wv
 wv
@@ -19571,8 +19797,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+wv
+ib
 wv
 wv
 Di
@@ -19773,8 +19999,8 @@ aa
 aa
 aa
 aa
-aa
-aa
+wv
+ac
 wv
 wv
 wv
@@ -19975,9 +20201,9 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
+wv
+wp
+Di
 wv
 wv
 IV
@@ -20177,10 +20403,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+wv
+wv
+Di
+Di
 wv
 TT
 lG
@@ -20273,7 +20499,7 @@ Ij
 Ts
 DV
 dO
-NV
+mI
 DV
 yg
 pK
@@ -20380,10 +20606,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+wv
+wv
+Di
+Di
 wv
 mS
 Di
@@ -20391,7 +20617,7 @@ eN
 Di
 Di
 Di
-ib
+eN
 Di
 Di
 Hm
@@ -20408,7 +20634,7 @@ Di
 Di
 Di
 Di
-Di
+lF
 Di
 Di
 wv
@@ -20583,11 +20809,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
 wv
 wv
+Di
+wv
+Di
 wv
 wv
 wv
@@ -20786,10 +21012,10 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
+wv
+Di
+Di
+Di
 wv
 wv
 wv
@@ -20858,7 +21084,7 @@ aa
 wv
 wv
 wv
-ac
+Ax
 ac
 wv
 aa
@@ -20988,11 +21214,11 @@ aa
 aa
 aa
 aa
-aa
-aa
-aa
-aa
-aa
+wv
+wv
+wv
+wv
+wv
 aa
 wv
 wv
@@ -21667,7 +21893,7 @@ aa
 aa
 wv
 SM
-ac
+RC
 wv
 aa
 aa
@@ -22022,7 +22248,7 @@ aa
 aa
 wv
 wv
-Di
+Ck
 im
 Ck
 zW
@@ -22223,8 +22449,8 @@ aa
 aa
 wv
 wv
-Di
-Di
+Ck
+Ck
 Ck
 Ck
 Ck
@@ -22424,10 +22650,10 @@ aa
 aa
 wv
 wv
-Di
-Di
-Di
-Di
+Ck
+Ck
+Ck
+Ck
 Ck
 Ck
 pg
@@ -22626,10 +22852,10 @@ aa
 aa
 wv
 Ck
-Di
-Di
-Di
-Di
+Ck
+Ck
+Ck
+Ck
 Ck
 JT
 qV
@@ -23031,10 +23257,10 @@ wv
 Ck
 Ck
 Ck
-Ck
+NL
 PO
 gC
-JT
+Ii
 Ck
 Ck
 zW
@@ -23230,11 +23456,11 @@ aa
 aa
 wv
 wv
-Di
+Ck
 Ck
 PO
 JT
-JT
+TE
 JT
 JT
 Ck
@@ -23431,12 +23657,12 @@ aa
 aa
 aa
 wv
-Di
-Di
 Ck
+Ck
+JT
 TE
 JT
-JT
+Ii
 PO
 JT
 JT
@@ -23633,11 +23859,11 @@ aa
 aa
 wv
 wv
-Di
-Di
+Ck
 Ck
 JT
-gC
+JT
+SA
 JT
 TE
 JT
@@ -23706,7 +23932,7 @@ Vc
 DV
 JN
 pK
-pK
+Gc
 qi
 DV
 Yb
@@ -23835,10 +24061,10 @@ aa
 aa
 wv
 wv
-Di
+Ck
 pj
 Ii
-JT
+TE
 sI
 JT
 JT
@@ -24037,17 +24263,17 @@ aa
 aa
 aa
 wv
-Di
-Di
 Ck
+Ck
+JT
 PO
 JT
 gC
 JT
+TE
 JT
-Ck
-Ck
-Di
+JT
+JT
 Ck
 Ck
 Ck
@@ -24241,18 +24467,18 @@ aa
 wv
 wv
 Ck
-Ck
+TE
 JT
 gC
 mp
 JT
+Ii
+JT
 JT
 Ck
 Ck
-Di
-Di
-Di
-Di
+Ck
+Ck
 Ck
 Ck
 wv
@@ -24445,18 +24671,18 @@ wv
 Ck
 Ck
 Ck
-Di
-Di
-Di
+Ck
+Ck
+Ck
 JT
 JT
 Ck
-Di
-Di
-Di
-Di
-Di
-Di
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
 wv
 aa
 aa
@@ -24646,19 +24872,19 @@ aa
 wv
 wv
 Ck
-Di
-Di
-Di
-Di
-Di
+Ck
+Ck
+Ck
+Ck
+Ck
 PO
 Ck
-Di
-Di
-Di
-Di
-Di
-Di
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
 wv
 aa
 aa
@@ -24847,19 +25073,19 @@ aa
 aa
 wv
 wv
-Di
-Di
-Di
-Di
-Di
-Di
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
 JT
 Ck
-Di
-Di
-Di
-Di
-Di
+Ck
+Ck
+Ck
+Ck
+Ck
 wv
 wv
 aa
@@ -25049,18 +25275,18 @@ aa
 aa
 wv
 wv
-Di
-Di
-Di
-Di
-Di
-Di
 Ck
 Ck
-Di
-Di
-Di
-Di
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
 wv
 wv
 aa
@@ -25251,16 +25477,16 @@ aa
 aa
 aa
 wv
-Di
-Di
-Di
-Di
-Di
-Di
 Ck
 Ck
-Di
-Di
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
+Ck
 wv
 wv
 wv
@@ -25455,9 +25681,9 @@ aa
 aa
 wv
 wv
-Di
-Di
-Di
+Ck
+Ck
+Ck
 wv
 wv
 wv
@@ -26733,7 +26959,7 @@ OY
 Ks
 pK
 ae
-xr
+DV
 ak
 OY
 pK
@@ -27139,7 +27365,7 @@ DV
 DV
 DV
 DV
-uD
+DV
 DV
 DV
 Yb
@@ -27337,7 +27563,7 @@ aa
 aa
 OY
 pK
-Hv
+pK
 DV
 af
 OY
@@ -28954,7 +29180,7 @@ aa
 OY
 DV
 DV
-DV
+xr
 DV
 DV
 DV
@@ -30756,7 +30982,7 @@ sZ
 AD
 aQ
 aQ
-aQ
+MT
 oc
 sZ
 Jz
@@ -30953,15 +31179,15 @@ aa
 wv
 Jz
 hE
-hE
+qt
 cU
 Rm
 aQ
 Zz
-aQ
-aQ
+er
+iU
 fX
-hE
+XT
 Zz
 sZ
 ca
@@ -31154,8 +31380,8 @@ aa
 aa
 wv
 Jz
-Kx
-YW
+rk
+lP
 Xk
 zA
 Ca
@@ -31163,7 +31389,7 @@ aQ
 Zz
 Lu
 IY
-hE
+dn
 Le
 sZ
 ca
@@ -31357,7 +31583,7 @@ aa
 wv
 Jz
 hE
-hE
+gg
 cU
 YG
 Zz
@@ -31567,7 +31793,7 @@ LD
 Yr
 LD
 aQ
-hE
+MN
 KM
 sZ
 ca
