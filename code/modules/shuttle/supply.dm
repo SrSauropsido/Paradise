@@ -205,6 +205,10 @@
 							msg += "<span class='bad'>+0</span>: New sample of \"[capitalize(S.species)]\" is not more potent than existing sample ([SSshuttle.discoveredPlants[S.type]] potency).<br>"
 					else // This is a new discovery!
 						SSshuttle.discoveredPlants[S.type] = S.potency
+						for(var/mob/M in GLOB.player_list)
+							if(M.mind)
+								for(var/datum/job_objective/further_plants/objective in M.mind.job_objectives)
+									objective.unit_completed()
 						msg += "<span class='good'>[S.rarity]</span>: New species discovered: \"[capitalize(S.species)]\". Excellent work.<br>"
 						SSshuttle.points += S.rarity // That's right, no bonus for potency.  Send a crappy sample first to "show improvement" later
 		qdel(MA)
@@ -273,6 +277,8 @@
 
 	var/obj/item/paper/reqform = new /obj/item/paper(_loc)
 	playsound(_loc, 'sound/goonstation/machines/printer_thermal.ogg', 50, 1)
+	reqform.pixel_y = rand(-10, -8) // HISPANIA ILUSION
+	reqform.pixel_x = rand(-9, 9)
 	reqform.name = "Requisition Form - [crates] '[object.name]' for [orderedby]"
 	reqform.info += "<h3>[station_name()] Supply Requisition Form</h3><hr>"
 	reqform.info += "INDEX: #[SSshuttle.ordernum]<br>"
@@ -336,6 +342,8 @@
 	for(var/typepath in contains)
 		if(!typepath)	continue
 		var/atom/A = new typepath(Crate)
+		A.pixel_y = rand(-3, 3) // HISPANIA LIFEHACK
+		A.pixel_x = rand(-3, 3)
 		if(object.amount && A.vars.Find("amount") && A:amount)
 			A:amount = object.amount
 		slip.info += "<li>[A.name]</li>"	//add the item to the manifest (even if it was misplaced)

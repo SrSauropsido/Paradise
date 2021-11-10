@@ -57,7 +57,18 @@
 		if((player.client)&&(player.ready))
 			playerC++
 
-	if(!GLOB.configuration.gamemode.enable_gamemode_player_limit || (playerC >= required_players))
+	if(playerC >= required_players)
+		return 1
+	return 0
+
+///can_start_solo_readys()
+///Chequea si no pudo comenzar unicamente porque no hubo readys
+/datum/game_mode/proc/can_start_solo_readys()
+	var/playerC = 0
+	for(var/mob/new_player/player in GLOB.player_list)
+		if((player.client)&&(player.ready))
+			playerC++
+	if(playerC >= required_players)
 		return 1
 	return 0
 
@@ -223,9 +234,18 @@
 	if(escaped_on_pod_5)
 		SSblackbox.record_feedback("nested tally", "round_end_stats", escaped_on_pod_5, list("escapees", "on_pod_5"))
 
-	SSdiscord.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "A round of [name] has ended - [surviving_total] survivors, [ghosts] ghosts.")
-	return 0
+	// HISPANIA EMBED ○_○
+	var/datum/discord_embed/new_round_embed/nwe = new
+	nwe.embed_title = "Ronda Terminada"
+	nwe.embed_colour = "FF002E"
+	nwe.embed_content = "Una ronda en modo `[name]` acaba de terminar.\n• **[surviving_total]** supervivientes.\n• **[ghosts]** muertos."
+	var/datum/discord_webhook_payload/nr = new
+	nr.embeds += nwe // Insertamos el nuevo discord_embed en la lista.
 
+	SSdiscord.send2discord_complex(DISCORD_WEBHOOK_PRIMARY, nr)
+	SSdiscord.send2discord_simple(DISCORD_WEBHOOK_PRIMARY, "*Una nueva ronda comenzara en breve.")
+
+	return 0
 
 /datum/game_mode/proc/check_win() //universal trigger to be called at mob death, nuke explosion, etc. To be called from everywhere.
 	return 0
@@ -516,7 +536,7 @@
 		var/datum/station_goal/picked = pick_n_take(possible)
 		goal_weights += initial(picked.weight)
 		station_goals += new picked
-
+	station_goals += new /datum/station_goal/redspacesearch //Forzamos que siempre sea un station_goal Hispania
 	if(station_goals.len)
 		send_station_goals_message()
 

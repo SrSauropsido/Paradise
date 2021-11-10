@@ -56,7 +56,7 @@
 	for(var/obj/item/stock_parts/manipulator/M in component_parts)
 		repairs += M.rating - 1
 	for(var/obj/item/stock_parts/cell/C in component_parts)
-		var/multiplier = C.maxcharge / 10000
+		var/multiplier = C.get_part_rating() / 10000
 		recharge_speed *= multiplier
 		recharge_speed_nutrition *= multiplier
 
@@ -201,9 +201,6 @@
 	if(isrobot(user))
 		var/mob/living/silicon/robot/R = user
 
-		if(R.stat == DEAD)
-			//Whoever had it so that a borg with a dead cell can't enter this thing should be shot. --NEO
-			return
 		if(occupant)
 			to_chat(R, "<span class='warning'>The cell is already occupied!</span>")
 			return
@@ -213,17 +210,21 @@
 			return
 		can_accept_user = 1
 
-	else if(istype(user, /mob/living/carbon/human))
+	else if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 
-		if(H.stat == DEAD)
-			return
 		if(occupant)
 			to_chat(H, "<span class='warning'>The cell is already occupied!</span>")
 			return
-		if(!H.get_int_organ(/obj/item/organ/internal/cell))
+		if(isrobot(H))
+			can_accept_user = TRUE
+		else if(!H.get_int_organ(/obj/item/organ/internal/cell))
+			to_chat(user, "<span class='notice'>Only non-organics may enter the recharger!</span>")
 			return
 		can_accept_user = 1
+
+	else if(istype(user, /mob/living/simple_animal/spiderbot))
+		can_accept_user = TRUE
 
 	if(!can_accept_user)
 		to_chat(user, "<span class='notice'>Only non-organics may enter the recharger!</span>")

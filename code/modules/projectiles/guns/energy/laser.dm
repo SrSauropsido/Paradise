@@ -1,12 +1,12 @@
 /obj/item/gun/energy/laser
 	name = "laser gun"
-	desc = "A WT-650 'Sentinel' laser carbine manufactured by Warp-Tac Inc. The golden shield of Nanotrasen Security is visible."
+	desc = "A WT-650 'Sentinel' laser carbine manufactured by Warp-Tac Inc."
 	icon_state = "laser"
 	item_state = "laser"
 	w_class = WEIGHT_CLASS_NORMAL
 	materials = list(MAT_METAL=2000)
 	origin_tech = "combat=4;magnets=2"
-	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
+	ammo_type = list(/obj/item/ammo_casing/energy/lasergun2)
 	ammo_x_offset = 1
 	shaded_charge = TRUE
 
@@ -21,6 +21,7 @@
 /obj/item/gun/energy/laser/retro
 	name ="retro laser gun"
 	icon_state = "retro"
+	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
 	desc = "An older model of the basic lasergun, no longer used by Nanotrasen's private security or military forces. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws."
 	ammo_x_offset = 3
 
@@ -28,6 +29,7 @@
 	name = "antique laser gun"
 	icon_state = "caplaser"
 	item_state = "caplaser"
+	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
 	desc = "This is an antique laser gun. All craftsmanship is of the highest quality. It is decorated with assistant leather and chrome. The object menaces with spikes of energy. On the item is an image of Space Station 13. The station is exploding."
 	force = 10
 	origin_tech = null
@@ -71,7 +73,7 @@
 	name = "accelerator laser cannon"
 	desc = "An advanced laser cannon that does more damage the farther away the target is."
 	icon_state = "lasercannon"
-	item_state = "laser"
+	item_state = "lasercannon"
 	w_class = WEIGHT_CLASS_BULKY
 	force = 10
 	flags =  CONDUCT
@@ -80,6 +82,8 @@
 	origin_tech = "combat=4;magnets=4;powerstorage=3"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/accelerator)
 	ammo_x_offset = 3
+	zoomable = TRUE
+	zoom_amt = 3
 
 /obj/item/ammo_casing/energy/laser/accelerator
 	projectile_type = /obj/item/projectile/beam/laser/accelerator
@@ -113,6 +117,8 @@
 	shaded_charge = TRUE
 	origin_tech = "combat=6;materials=4;magnets=4;syndicate=1"
 	ammo_type = list(/obj/item/ammo_casing/energy/xray)
+	zoomable = TRUE
+	zoom_amt = 3
 
 /obj/item/gun/energy/immolator
 	name = "immolator laser gun"

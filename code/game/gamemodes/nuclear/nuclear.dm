@@ -9,11 +9,11 @@
 /datum/game_mode/nuclear
 	name = "nuclear emergency"
 	config_tag = "nuclear"
-	required_players = 30	// 30 players - 5 players to be the nuke ops = 25 players remaining
-	required_enemies = 5
+	required_players = 24	// 24 players - 4 players to be the nuke ops = 20 players remaining
+	required_enemies = 4
 	recommended_enemies = 5
 
-	var/const/agents_possible = 5 //If we ever need more syndicate agents.
+	var/const/agents_possible = 2 //If we ever need more syndicate agents.
 
 	var/nukes_left = 1 //Call 3714-PRAY right now and order more nukes! Limited offer!
 	var/nuke_off_station = 0 //Used for tracking if the syndies actually haul the nuke to the station
@@ -26,9 +26,13 @@
 	to_chat(world, "A nuclear explosive was being transported by Nanotrasen to a military base. The transport ship mysteriously lost contact with Space Traffic Control (STC). About that time a strange disk was discovered around [station_name()]. It was identified by Nanotrasen as a nuclear authentication disk and now Syndicate Operatives have arrived to retake the disk and detonate SS13! There are most likely Syndicate starships are in the vicinity, so take care not to lose the disk!\n<B>Syndicate</B>: Reclaim the disk and detonate the nuclear bomb anywhere on SS13.\n<B>Personnel</B>: Hold the disk and <B>escape with the disk</B> on the shuttle!")
 
 /datum/game_mode/nuclear/can_start()//This could be better, will likely have to recode it later
-	if(!..())
+	if(!..() && GLOB.master_mode == "secret")
 		return 0
-
+	if(!..())
+		message_admins("(<font color='#ffcc00'><b>No se alcanzaron los readys Minimos.Se recomienda revisar que la ronda no este desbalanceada</b></font>)\n")
+		required_enemies = required_enemies / 2  //si no hubo readys suficientes se divide por 2 la cantidad de antags redondeando
+		if(GLOB.player_list.len <= 10) //un caso extremo que haya muy pocos conectados solo habra 1 nuke
+			required_enemies = 1
 	var/list/possible_syndicates = get_players_for_role(ROLE_OPERATIVE)
 	var/agent_number = 0
 
@@ -67,7 +71,6 @@
 		for(var/datum/objective/nuclear/O in operative_mind.objectives)
 			operative_mind.objectives -= O
 		operative_mind.current.create_attack_log("<span class='danger'>No longer nuclear operative</span>")
-		operative_mind.current.create_log(CONVERSION_LOG, "No longer nuclear operative")
 		if(issilicon(operative_mind.current))
 			to_chat(operative_mind.current, "<span class='userdanger'>You have been turned into a robot! You are no longer a Syndicate operative.</span>")
 		else

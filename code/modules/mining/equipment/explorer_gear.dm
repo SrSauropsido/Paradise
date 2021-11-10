@@ -47,7 +47,7 @@
 	name = "H.E.C.K. suit"
 	desc = "Hostile Environment Cross-Kinetic Suit: A suit designed to withstand the wide variety of hazards from Lavaland. It wasn't enough for its last owner."
 	icon_state = "hostile_env"
-	item_state = "hostile_env"
+	hispania_icon = TRUE
 	flags = THICKMATERIAL //not spaceproof
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	resistance_flags = FIRE_PROOF | LAVA_PROOF
@@ -78,6 +78,7 @@
 	icon_state = "hostile_env"
 	item_state = "hostile_env"
 	w_class = WEIGHT_CLASS_NORMAL
+	flags = BLOCKHAIR
 	max_heat_protection_temperature = FIRE_IMMUNITY_MAX_TEMP_PROTECT
 	flags = THICKMATERIAL // no space protection
 	armor = list(MELEE = 70, BULLET = 40, LASER = 10, ENERGY = 10, BOMB = 50, BIO = 100, RAD = 100, FIRE = 100, ACID = 100)

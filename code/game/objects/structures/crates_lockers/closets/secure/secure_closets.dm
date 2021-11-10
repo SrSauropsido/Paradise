@@ -1,9 +1,9 @@
 /obj/structure/closet/secure_closet
 	name = "secure locker"
 	desc = "It's an immobile card-locked storage unit."
-	icon = 'icons/obj/closet.dmi'
-	icon_state = "secure"
-	open_door_sprite = "secure_door"
+	icon = 'icons/hispania/obj/closet.dmi'
+	icon_state = "secure1"
+	density = TRUE
 	opened = FALSE
 	locked = TRUE
 	can_be_emaged = TRUE

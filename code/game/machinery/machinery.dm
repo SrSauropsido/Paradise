@@ -513,12 +513,12 @@ Class Procs:
 			var/P
 			if(W.works_from_distance)
 				to_chat(user, display_parts(user))
-			for(var/obj/item/stock_parts/A in component_parts)
+			for(var/obj/item/A in component_parts)
 				for(var/D in CB.req_components)
 					if(ispath(A.type, D))
 						P = D
 						break
-				for(var/obj/item/stock_parts/B in W.contents)
+				for(var/obj/item/B in W.contents)
 					if(istype(B, P) && istype(A, P))
 						//If it's cell - check: 1) Max charge is better? 2) Max charge same but current charge better? - If both NO -> next content
 						if(ispath(B.type, /obj/item/stock_parts/cell))
@@ -542,9 +542,9 @@ Class Procs:
 			to_chat(user, display_parts(user))
 		if(shouldplaysound)
 			W.play_rped_sound()
-		return 1
+		return TRUE
 	else
-		return 0
+		return FALSE
 
 /obj/machinery/proc/display_parts(mob/user)
 	. = list("<span class='notice'>Following parts detected in the machine:</span>")

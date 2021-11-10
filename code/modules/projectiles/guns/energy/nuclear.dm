@@ -7,9 +7,18 @@
 	origin_tech = "combat=4;magnets=3"
 	modifystate = 2
 	can_flashlight = 1
-	flight_x_offset = 20
+	ammo_x_offset = 3
+	flight_x_offset = 15
 	flight_y_offset = 10
-	shaded_charge = TRUE
+	//shaded_charge = TRUE
+
+/obj/item/gun/energy/gun/detailed_examine()
+	return "This is an energy weapon. Most energy weapons can fire through windows harmlessly. To switch between stun and lethal, click the weapon \
+			in your hand. To recharge this weapon, use a weapon recharger."
+
+/obj/item/gun/energy/gun/detailed_examine()
+	return "This is an energy weapon. Most energy weapons can fire through windows harmlessly. To switch between stun and lethal, click the weapon \
+			in your hand. To recharge this weapon, use a weapon recharger."
 
 /obj/item/gun/energy/gun/detailed_examine()
 	return "This is an energy weapon. Most energy weapons can fire through windows harmlessly. To switch between stun and lethal, click the weapon \
@@ -83,7 +92,7 @@
 	item_state = "turretlaser"
 	slot_flags = null
 	w_class = WEIGHT_CLASS_HUGE
-	ammo_type = list(/obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/laser)
+	ammo_type = list(/obj/item/ammo_casing/energy/turret_electrode, /obj/item/ammo_casing/energy/laser)
 	weapon_weight = WEAPON_HEAVY
 	can_flashlight = 0
 	trigger_guard = TRIGGER_GUARD_NONE
@@ -94,12 +103,11 @@
 	name = "advanced energy gun"
 	desc = "An energy gun with an experimental miniaturized nuclear reactor that automatically charges the internal power cell."
 	icon_state = "nucgun"
-	item_state = "nucgun"
+	item_state = null
 	origin_tech = "combat=4;magnets=4;powerstorage=4"
 	var/fail_tick = 0
 	charge_delay = 5
 	can_charge = 0
-	ammo_x_offset = 1
 	ammo_type = list(/obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/disabler)
 	selfcharge = 1
 	shaded_charge = FALSE

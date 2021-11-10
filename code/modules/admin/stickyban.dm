@@ -35,7 +35,6 @@
 
 			log_admin("[key_name(usr)] has stickybanned [ckey].\nReason: [ban["message"]]")
 			message_admins("<span class='adminnotice'>[key_name_admin(usr)] has stickybanned [ckey].\nReason: [ban["message"]]</span>")
-
 		if("remove")
 			if(!data["ckey"])
 				return

@@ -9,8 +9,7 @@
 ##																					##
 ######################################################################################
 */
-
-
+//Gloves
 /datum/gear/gloves
 	main_typepath = /datum/gear/gloves
 	slot = slot_gloves

@@ -111,6 +111,11 @@ GLOBAL_DATUM_INIT(fire_overlay, /image, image("icon" = 'icons/goonstation/effect
 	var/icon_override = null  //Used to override hardcoded clothing dmis in human clothing proc.
 	var/sprite_sheets_obj = null //Used to override hardcoded clothing inventory object dmis in human clothing proc.
 
+	//variables hispania
+	var/hispania_icon = FALSE
+	var/outline_filter
+	var/pixelYoffset = 0
+
 	//Tooltip vars
 	var/in_inventory = FALSE //is this item equipped into an inventory slot or hand of a mob?
 	var/tip_timer = 0
@@ -119,7 +124,6 @@ GLOBAL_DATUM_INIT(fire_overlay, /image, image("icon" = 'icons/goonstation/effect
 	/// Is this item inside a storage object?
 	var/in_storage = FALSE
 	/// Holder var for the item outline filter, null when no outline filter on the item.
-	var/outline_filter
 
 /obj/item/New()
 	..()
@@ -134,6 +138,10 @@ GLOBAL_DATUM_INIT(fire_overlay, /image, image("icon" = 'icons/goonstation/effect
 	LAZYINITLIST(attack_verb)
 	if(!move_resist)
 		determine_move_resist()
+
+	icon = (hispania_icon ? 'icons/hispania/obj/items.dmi' : icon)
+	lefthand_file = (hispania_icon ? 'icons/hispania/mob/inhands/items_lefthand.dmi' : lefthand_file)
+	righthand_file = (hispania_icon ? 'icons/hispania/mob/inhands/items_righthand.dmi' : righthand_file)
 
 /obj/item/Initialize(mapload)
 	. = ..()
@@ -733,7 +741,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /image, image("icon" = 'icons/goonstation/effect
 		var/obj/item/storage/S = loc
 		S.swap_items(src, I, user)
 	remove_outline() //get rid of the hover effect in case the mouse exit isn't called if someone drags and drops an item and somthing goes wrong
-
+/*Definicion duplicada, dejo la de hispania
 /obj/item/proc/apply_outline(mob/user, outline_color = null)
 	if(!(in_inventory || in_storage) || QDELETED(src) || isobserver(user)) //cancel if the item isn't in an inventory, is being deleted, or if the person hovering is a ghost (so that people spectating you don't randomly make your items glow)
 		return
@@ -767,7 +775,7 @@ GLOBAL_DATUM_INIT(fire_overlay, /image, image("icon" = 'icons/goonstation/effect
 	if(outline_filter)
 		filters -= outline_filter
 		outline_filter = null
-
+*/
 // Returns a numeric value for sorting items used as parts in machines, so they can be replaced by the rped
 /obj/item/proc/get_part_rating()
 	return 0

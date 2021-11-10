@@ -162,6 +162,17 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_XENO_IMMUNE		"xeno_immune" //prevents xeno huggies implanting skeletons
 #define TRAIT_BLOODCRAWL		"bloodcrawl"
 #define TRAIT_BLOODCRAWL_EAT	"bloodcrawl_eat"
+#define TRAIT_JESTER			"jester"
+//hispatraits
+#define TRAIT_AGEUSIA			"ageusia"
+#define TRAIT_NOSLIPWATER		"noslip_water"
+#define TRAIT_FREERUNNING		"freerunning"
+#define TRAIT_POOR_AIM 			"pooraim"
+#define TRAIT_AMEN 				"amen"
+#define TRAIT_PROSOPAGNOSIA		"prosopagnosia"
+#define TRAIT_ANXIOUS			"anxious"
+//finhispatraits
+
 #define TRAIT_DWARF				"dwarf"
 #define TRAIT_SILENT_FOOTSTEPS	"silent_footsteps" //makes your footsteps completely silent
 #define TRAIT_MESON_VISION		"meson_vision"

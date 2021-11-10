@@ -85,7 +85,7 @@
 /area/awaymission/spacebattle/syndicate2)
 "au" = (
 /obj/structure/table/reinforced,
-/obj/item/gun/projectile/automatic/c20r,
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/awaymission/spacebattle/syndicate2)
 "av" = (
@@ -713,7 +713,7 @@
 /area/awaymission/spacebattle/cruiser)
 "dn" = (
 /obj/effect/mob_spawn/human/corpse/syndicatesoldier,
-/obj/item/gun/projectile/automatic/c20r,
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r,
 /obj/effect/landmark/damageturf,
 /turf/simulated/floor/plasteel,
 /area/awaymission/spacebattle/cruiser)
@@ -1195,7 +1195,7 @@
 /area/awaymission/spacebattle/cruiser)
 "fn" = (
 /obj/effect/mob_spawn/human/corpse/syndicatesoldier,
-/obj/item/gun/projectile/automatic/c20r,
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r,
 /obj/item/ammo_casing/c10mm,
 /obj/item/ammo_casing/c10mm,
 /obj/effect/decal/cleanable/blood,
@@ -1311,7 +1311,7 @@
 /area/awaymission/spacebattle/cruiser)
 "fL" = (
 /obj/effect/mob_spawn/human/corpse/syndicatesoldier,
-/obj/item/gun/projectile/automatic/c20r,
+/obj/item/gun/projectile/automatic/fullauto/twomode/c20r,
 /obj/item/ammo_casing/c10mm,
 /obj/item/ammo_casing/c10mm,
 /obj/effect/decal/cleanable/blood,

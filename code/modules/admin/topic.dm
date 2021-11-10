@@ -1071,6 +1071,7 @@
 					to_chat(M, "<span class='warning'>No ban appeals URL has been set.</span>")
 				log_admin("[key_name(usr)] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.")
 				message_admins("<span class='notice'>[key_name_admin(usr)] has banned [M.ckey].\nReason: [reason]\nThis will be removed in [mins] minutes.</span>")
+				to_chat(world, "<b><span class='info'>El jugador <span class='warning'>[M.ckey]</span> fue baneado.</span></b><p><span class='rose'>[reason]</span></p>")
 
 				qdel(M.client)
 			if("No")
@@ -1089,8 +1090,9 @@
 				log_admin("[key_name(usr)] has banned [M.ckey].\nReason: [reason]\nThis ban does not expire automatically and must be appealed.")
 				message_admins("<span class='notice'>[key_name_admin(usr)] has banned [M.ckey].\nReason: [reason]\nThis ban does not expire automatically and must be appealed.</span>")
 				DB_ban_record(BANTYPE_PERMA, M, -1, reason)
-
-				qdel(M.client)
+				to_chat(world, "<b><span class='info'>El jugador <span class='warning'>[M.ckey]</span> fue baneado.</span></b><p><span class='rose'>[reason]</span></p>")
+				del(M.client)
+				//qdel(M)
 			if("Cancel")
 				return
 
@@ -2624,7 +2626,7 @@
 		A.reply_to = reply_to
 		A.sent_by = usr
 		A.sent_at = world.time
-
+		playsound(src, 'sound/hispania/machines/keycard_succes.ogg', 30, 1)
 		to_chat(src.owner, "<span class='notice'>Message transmitted successfully.</span>")
 		if(notify == "Yes")
 			var/mob/living/carbon/human/H = sender

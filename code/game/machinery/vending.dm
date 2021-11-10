@@ -103,6 +103,7 @@
 
 /obj/machinery/vending/Initialize(mapload)
 	. = ..()
+	make_products() // HISPANIA
 	var/build_inv = FALSE
 	if(!refill_canister)
 		build_inv = TRUE
@@ -1076,9 +1077,9 @@
 	ads_list = list("Float like an astronaut, sting like a bullet!","Express your second amendment today!","Guns don't kill people, but you can!","Who needs responsibilities when you have guns?")
 	vend_reply = "Remember the name: Liberation Station!"
 	products = list(/obj/item/gun/projectile/automatic/pistol/deagle/gold = 2,/obj/item/gun/projectile/automatic/pistol/deagle/camo = 2,
-					/obj/item/gun/projectile/automatic/pistol/m1911 = 2,/obj/item/gun/projectile/automatic/proto = 2,
+					/obj/item/gun/projectile/automatic/pistol/m1911 = 2,/obj/item/gun/projectile/automatic/fullauto/twomode/proto = 2,
 					/obj/item/gun/projectile/shotgun/automatic/combat = 2,/obj/item/gun/projectile/automatic/gyropistol = 1,
-					/obj/item/gun/projectile/shotgun = 2,/obj/item/gun/projectile/automatic/ar = 2)
+					/obj/item/gun/projectile/shotgun = 2,/obj/item/gun/projectile/automatic/fullauto/ar = 2)
 	premium = list(/obj/item/ammo_box/magazine/smgm9mm = 2,/obj/item/ammo_box/magazine/m50 = 4,/obj/item/ammo_box/magazine/m45 = 2,/obj/item/ammo_box/magazine/m75 = 2)
 	contraband = list(/obj/item/clothing/under/patriotsuit = 1,/obj/item/bedsheet/patriot = 3)
 	armor = list(melee = 100, bullet = 100, laser = 100, energy = 100, bomb = 0, bio = 0, rad = 0, fire = 100, acid = 50)
@@ -1102,8 +1103,8 @@
 					/obj/item/clothing/suit/syndicatefake = 5,
 					/obj/item/clothing/head/syndicatefake = 5) //OPS IN DORMS oh wait it's just an assistant
 	contraband = list(/obj/item/gun/projectile/shotgun/toy/crossbow= 10,   //Congrats, you unlocked the +18 setting!
-					  /obj/item/gun/projectile/automatic/c20r/toy/riot = 10,
-					  /obj/item/gun/projectile/automatic/l6_saw/toy/riot = 10,
+					  /obj/item/gun/projectile/automatic/fullauto/twomode/c20r/toy/riot = 10,
+					  /obj/item/gun/projectile/automatic/fullauto/l6_saw/toy/riot = 10,
   					  /obj/item/gun/projectile/automatic/sniper_rifle/toy = 10,
 					  /obj/item/ammo_box/foambox/riot = 20,
 					  /obj/item/toy/katana = 10,
@@ -1191,7 +1192,7 @@
 					/obj/item/reagent_containers/glass/bottle/morphine = 4, /obj/item/reagent_containers/glass/bottle/ether = 4, /obj/item/reagent_containers/glass/bottle/atropine = 3,
 					/obj/item/reagent_containers/glass/bottle/oculine = 2, /obj/item/reagent_containers/glass/bottle/toxin = 4, /obj/item/reagent_containers/syringe/antiviral = 6,
 					/obj/item/reagent_containers/syringe/insulin = 6, /obj/item/reagent_containers/syringe/calomel = 10, /obj/item/reagent_containers/syringe/heparin = 4, /obj/item/reagent_containers/hypospray/autoinjector = 5, /obj/item/reagent_containers/food/pill/salbutamol = 10,
-					/obj/item/reagent_containers/food/pill/mannitol = 10, /obj/item/reagent_containers/food/pill/mutadone = 5, /obj/item/stack/medical/bruise_pack/advanced = 4, /obj/item/stack/medical/ointment/advanced = 4, /obj/item/stack/medical/bruise_pack = 4,
+					/obj/item/reagent_containers/food/pill/mannitol = 10, /obj/item/reagent_containers/food/pill/mutadone = 5,/obj/item/reagent_containers/food/pill/paracetamol = 10, /obj/item/stack/medical/bruise_pack/advanced = 4, /obj/item/stack/medical/ointment/advanced = 4, /obj/item/stack/medical/bruise_pack = 4,
 					/obj/item/stack/medical/splint = 4, /obj/item/reagent_containers/glass/beaker = 4, /obj/item/reagent_containers/dropper = 4, /obj/item/healthanalyzer = 4,
 					/obj/item/healthupgrade = 4, /obj/item/reagent_containers/hypospray/safety = 2, /obj/item/sensor_device = 2, /obj/item/pinpointer/crew = 2)
 	contraband = list(/obj/item/reagent_containers/glass/bottle/sulfonal = 1, /obj/item/reagent_containers/glass/bottle/pancuronium = 1)

@@ -8,6 +8,9 @@
 
 /obj/effect/spawner/lootdrop/New()
 	..()
+	//loot hispa init
+	make_hispa_loot()
+	//loot hispanos end
 	if(loot && loot.len)
 		for(var/i = lootcount, i > 0, i--)
 			if(!loot.len) break
@@ -132,6 +135,7 @@
 				/obj/item/stack/tape_roll = 10,
 				/obj/item/storage/bag/plasticbag = 20,
 				/obj/item/caution = 10,
+				/obj/item/fluff/kans_winter_coat_kit = 1,
 				////////////////CONTRABAND STUFF//////////////////
 				/obj/item/grenade/clown_grenade = 3,
 				/obj/item/seeds/ambrosia/cruciatus = 3,
@@ -241,8 +245,8 @@
 	name = "3. donksoft gear"
 	loot = list(
 				// Donksoft guns
-				/obj/item/gun/projectile/automatic/c20r/toy = 50,
-				/obj/item/gun/projectile/automatic/l6_saw/toy = 50,
+				/obj/item/gun/projectile/automatic/fullauto/twomode/c20r/toy = 50,
+				/obj/item/gun/projectile/automatic/fullauto/l6_saw/toy = 50,
 				/obj/item/gun/projectile/automatic/toy/pistol = 100,
 				/obj/item/gun/projectile/automatic/toy/pistol/enforcer = 50,
 				/obj/item/gun/projectile/shotgun/toy = 50,

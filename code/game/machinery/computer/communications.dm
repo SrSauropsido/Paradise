@@ -124,7 +124,7 @@
 			var/mob/living/carbon/human/H = usr
 			var/obj/item/card/id/I = H.get_idcard(TRUE)
 			if(istype(I))
-				if(ACCESS_CAPTAIN in I.access)
+				if(ACCESS_HEADS in I.access)
 					change_security_level(text2num(params["level"]))
 				else
 					to_chat(usr, "<span class='warning'>You are not authorized to do this.</span>")
@@ -520,6 +520,8 @@
 	for(var/obj/machinery/computer/communications/C in GLOB.shuttle_caller_list)
 		if(!(C.stat & (BROKEN|NOPOWER)) && is_station_contact(C.z))
 			var/obj/item/paper/P = new /obj/item/paper(C.loc)
+			P.pixel_y = rand(-10, -8)
+			P.pixel_x = rand(-9, 9)
 			P.name = "paper- '[title]'"
 			P.info = text
 			P.update_icon()
@@ -531,6 +533,8 @@
 	for(var/obj/machinery/computer/communications/C in GLOB.shuttle_caller_list)
 		if(!(C.stat & (BROKEN|NOPOWER)) && is_admin_level(C.z))
 			var/obj/item/paper/P = new /obj/item/paper(C.loc)
+			P.pixel_y = rand(-10, -8)
+			P.pixel_x = rand(-9, 9)
 			P.name = "paper- '[title]'"
 			P.info = text
 			P.update_icon()

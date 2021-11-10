@@ -1,8 +1,8 @@
 /obj/structure/closet
 	name = "closet"
 	desc = "It's a basic storage unit."
-	icon = 'icons/obj/closet.dmi'
-	icon_state = "generic"
+	icon = 'icons/hispania/obj/closet.dmi'
+	icon_state = "closed"
 	density = TRUE
 	max_integrity = 200
 	integrity_failure = 50
@@ -24,6 +24,7 @@
 	var/storage_capacity = 30 //This is so that someone can't pack hundreds of items in a locker/crate then open it in a populated area to crash clients.
 	var/material_drop = /obj/item/stack/sheet/metal
 	var/material_drop_amount = 2
+	drag_slowdown = 1.5
 
 // Please dont override this unless you absolutely have to
 /obj/structure/closet/Initialize(mapload)
@@ -393,6 +394,7 @@
 	open_door_sprite = "bluespace_door"
 	storage_capacity = 60
 	var/materials = list(MAT_METAL = 5000, MAT_PLASMA = 2500, MAT_TITANIUM = 500, MAT_BLUESPACE = 500)
+	drag_slowdown = 0
 
 /obj/structure/closet/bluespace/CheckExit(atom/movable/AM)
 	UpdateTransparency(AM, loc)

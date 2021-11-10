@@ -258,13 +258,10 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	job = list("Chaplain")
 
 /datum/uplink_item/jobspecific/artistic_toolbox
-	name = "His Grace"
-	desc = "An incredibly dangerous weapon recovered from a station overcome by the grey tide. Once activated, He will thirst for blood and must be used to kill to sate that thirst. \
-	His Grace grants gradual regeneration and complete stun immunity to His wielder, but be wary: if He gets too hungry, He will become impossible to drop and eventually kill you if not fed. \
-	However, if left alone for long enough, He will fall back to slumber. \
-	To activate His Grace, simply unlatch Him."
-	reference = "HG"
-	item = /obj/item/his_grace
+	name = "Artistic Toolbox"
+	desc = "An accursed toolbox that grants its followers extreme power at the cost of requiring repeated sacrifices to it. If sacrifices are not provided, it will turn on its follower."
+	reference = "HGAT"
+	item = /obj/item/storage/toolbox/green/memetic
 	cost = 20
 	job = list("Chaplain")
 	surplus = 0 //No lucky chances from the crate; if you get this, this is ALL you're getting
@@ -470,7 +467,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "C-20r Submachine Gun"
 	reference = "SMG"
 	desc = "A fully-loaded Scarborough Arms bullpup submachine gun that fires .45 rounds with a 20-round magazine and is compatible with suppressors."
-	item = /obj/item/gun/projectile/automatic/c20r
+	item = /obj/item/gun/projectile/automatic/fullauto/twomode/c20r
 	cost = 14
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 40
@@ -479,7 +476,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "M-90gl Carbine"
 	desc = "A fully-loaded three-round burst carbine that uses 30-round 5.56mm magazines with a togglable underslung 40mm grenade launcher."
 	reference = "AR"
-	item = /obj/item/gun/projectile/automatic/m90
+	item = /obj/item/gun/projectile/automatic/fullauto/twomode/m90
 	cost = 18
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 50
@@ -488,7 +485,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "L6 Squad Automatic Weapon"
 	desc = "A fully-loaded Aussec Armory belt-fed machine gun. This deadly weapon has a massive 50-round magazine of devastating 7.62x51mm ammunition."
 	reference = "LMG"
-	item = /obj/item/gun/projectile/automatic/l6_saw
+	item = /obj/item/gun/projectile/automatic/fullauto/l6_saw
 	cost = 40
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 0
@@ -632,7 +629,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "Toy Submachine Gun"
 	desc = "A fully-loaded Donksoft bullpup submachine gun that fires riot grade rounds with a 20-round magazine."
 	reference = "FSMG"
-	item = /obj/item/gun/projectile/automatic/c20r/toy
+	item = /obj/item/gun/projectile/automatic/fullauto/twomode/c20r/toy
 	cost = 5
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 0
@@ -641,7 +638,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "Toy Machine Gun"
 	desc = "A fully-loaded Donksoft belt-fed machine gun. This weapon has a massive 50-round magazine of devastating riot grade darts, that can briefly incapacitate someone in just one volley."
 	reference = "FLMG"
-	item = /obj/item/gun/projectile/automatic/l6_saw/toy
+	item = /obj/item/gun/projectile/automatic/fullauto/l6_saw/toy
 	cost = 10
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 0
@@ -774,10 +771,10 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 
 /datum/uplink_item/ammo/machinegun
 	name = "L6 SAW - 5.56x45mm Box Magazine"
-	desc = "A 50-round magazine of 5.56x45mm ammunition for use in the L6 SAW machine gun. By the time you need to use this, you'll already be on a pile of corpses."
+	desc = "A 100-round magazine of 5.56x45mm ammunition for use in the L6 SAW machine gun. By the time you need to use this, you'll already be on a pile of corpses."
 	reference = "762"
 	item = /obj/item/ammo_box/magazine/mm556x45
-	cost = 12
+	cost = 18
 	gamemodes = list(/datum/game_mode/nuclear)
 	surplus = 0
 
@@ -790,14 +787,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "An additional standard 6-round magazine for use with .50 sniper rifles."
 	reference = "50M"
 	item = /obj/item/ammo_box/magazine/sniper_rounds
-
-/datum/uplink_item/ammo/sniper/antimatter
-	name = "Sniper - .50 Antimatter Magazine"
-	desc = "A 6-round magazine of antimatter ammo for use with .50 sniper rifles. \
-	Able to heavily damage objects, and delimb people."
-	reference = "50A"
-	item = /obj/item/ammo_box/magazine/sniper_rounds/antimatter
-	cost = 5
 
 /datum/uplink_item/ammo/sniper/soporific
 	name = "Sniper - .50 Soporific Magazine"
@@ -861,11 +850,11 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 /datum/uplink_item/stealthy_weapons/martialarts
 	name = "Martial Arts Scroll"
 	desc = "This scroll contains the secrets of an ancient martial arts technique. You will master unarmed combat, \
-			deflecting ranged weapon fire when you are in a defensive stance (throw mode). Learning this art means you will also refuse to use dishonorable ranged weaponry. \
+			deflecting all ranged weapon fire, but you also refuse to use dishonorable ranged weaponry. \
 			Unable to be understood by vampire and changeling agents."
 	reference = "SCS"
 	item = /obj/item/sleeping_carp_scroll
-	cost = 13
+	cost = 17
 	excludefrom = list(/datum/game_mode/nuclear)
 	refundable = TRUE
 	cant_discount = TRUE
@@ -1038,7 +1027,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	cost = 11
 	surplus = 0
 	cant_discount = TRUE
-	hijack_only = TRUE
 
 /datum/uplink_item/explosives/emp_bomb
 	name = "EMP bomb"
@@ -1184,15 +1172,6 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	cost = 4
 	excludefrom = list(/datum/game_mode/nuclear)
 
-/datum/uplink_item/stealthy_tools/voice_modulator
-	name = "Chameleon Voice Modulator Mask"
-	desc = "A syndicate tactical mask equipped with chameleon technology and a sound modulator for disguising your voice. \
-			While the mask is active, your voice will sound unrecognizable to others"
-	reference = "CVMM"
-	item = /obj/item/clothing/mask/gas/voice_modulator/chameleon
-	cost = 1
-	excludefrom = list(/datum/game_mode/nuclear)
-
 /datum/uplink_item/stealthy_tools/chameleon/nuke
 	reference = "NCHAM"
 	cost = 6
@@ -1304,7 +1283,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	desc = "The cryptographic sequencer, also known as an emag, is a small card that unlocks hidden functions in electronic devices, subverts intended functions and characteristically breaks security mechanisms."
 	reference = "EMAG"
 	item = /obj/item/card/emag
-	cost = 6
+	cost = 8
 
 /datum/uplink_item/device_tools/access_tuner
 	name = "Access Tuner"
@@ -1457,7 +1436,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	name = "Power Sink"
 	desc = "When screwed to wiring attached to an electric grid, then activated, this large device places excessive load on the grid, causing a stationwide blackout. The sink cannot be carried because of its excessive size. Ordering this sends you a small beacon that will teleport the power sink to your location on activation."
 	reference = "PS"
-	item = /obj/item/radio/beacon/syndicate/power_sink
+	item = /obj/item/powersink
 	cost = 10
 
 /datum/uplink_item/device_tools/singularity_beacon
@@ -1546,7 +1525,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 
 /datum/uplink_item/implants/freedom
 	name = "Freedom Implant"
-	desc = "An implant injected into the body and later activated manually to break out of any restraints or grabs. Can be activated up to 4 times."
+	desc = "An implant injected into the body and later activated manually to break out of any restraints. Can be activated up to 4 times."
 	reference = "FI"
 	item = /obj/item/implanter/freedom
 	cost = 5
@@ -1588,7 +1567,7 @@ GLOBAL_LIST_INIT(uplink_items, subtypesof(/datum/uplink_item))
 	reference = "MBI"
 	item = /obj/item/implanter/explosive
 	cost = 2
-	gamemodes = list(/datum/game_mode/nuclear)
+	///gamemodes = list(/datum/game_mode/nuclear)
 
 // Cybernetics
 /datum/uplink_item/cyber_implants

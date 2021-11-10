@@ -61,7 +61,7 @@
 	var/area/area
 	var/areastring = null
 	var/obj/item/stock_parts/cell/cell
-	var/start_charge = 90				// initial cell charge %
+	var/start_charge = 95				// initial cell charge %
 	var/cell_type = 2500	//Base cell has 2500 capacity. Enter the path of a different cell you want to use. cell determines charge rates, max capacity, ect. These can also be changed with other APC vars, but isn't recommended to minimize the risk of accidental usage of dirty editted APCs
 	var/opened = 0 //0=closed, 1=opened, 2=cover removed
 	var/shorted = 0
@@ -115,6 +115,7 @@
 	// Nightshift
 	var/nightshift_lights = FALSE
 	var/last_nightshift_switch = 0
+
 
 /obj/machinery/power/apc/worn_out
 	name = "\improper Worn out APC"
@@ -347,12 +348,22 @@
 			overlays.len = 0
 
 		if(!(stat & (BROKEN|MAINT)) && update_state & UPSTATE_ALLGOOD)
-			overlays += status_overlays_lock[locked+1]
-			overlays += status_overlays_charging[charging+1]
+			var/image/locked_overlay = status_overlays_lock[locked+1]
+			locked_overlay.plane = ABOVE_LIGHTING_PLANE
+			overlays += locked_overlay
+			var/image/charging_overlay = status_overlays_charging[charging+1]
+			charging_overlay.plane = ABOVE_LIGHTING_PLANE
+			overlays += charging_overlay
 			if(operating)
-				overlays += status_overlays_equipment[equipment+1]
-				overlays += status_overlays_lighting[lighting+1]
-				overlays += status_overlays_environ[environ+1]
+				var/image/equipment_overlay = status_overlays_equipment[equipment+1]
+				equipment_overlay.plane = ABOVE_LIGHTING_PLANE
+				overlays += equipment_overlay
+				var/image/lighting_overlay = status_overlays_lighting[lighting+1]
+				lighting_overlay.plane = ABOVE_LIGHTING_PLANE
+				overlays += lighting_overlay
+				var/image/enviroment_overlay = status_overlays_environ[environ+1]
+				enviroment_overlay.plane = ABOVE_LIGHTING_PLANE
+				overlays += enviroment_overlay
 
 
 /obj/machinery/power/apc/proc/check_updates()
@@ -470,6 +481,8 @@
 				return
 			W.forceMove(src)
 			cell = W
+			newcell = TRUE  //un apc que tenga esto activo descarga su bateria
+
 			user.visible_message(\
 				"[user.name] has inserted the power cell to [name]!",\
 				"<span class='notice'>You insert the power cell.</span>")
@@ -1115,10 +1128,12 @@
 	else
 		main_status = APC_EXTERNAL_POWER_GOOD
 
+
 	if(debug)
 		log_debug("Status: [main_status] - Excess: [excess] - Last Equip: [lastused_equip] - Last Light: [lastused_light] - Longterm: [longtermpower]")
 
 	if(cell && !shorted)
+		update_cell()//hispania
 		// draw power from cell as before to power the area
 		var/cellused = min(cell.charge, GLOB.CELLRATE * lastused_total)	// clamp deduction to a max, amount left in cell
 		cell.use(cellused)
@@ -1131,7 +1146,7 @@
 
 		else		// no excess, and not enough per-apc
 			if((cell.charge/GLOB.CELLRATE + excess) >= lastused_total)		// can we draw enough from cell+grid to cover last usage?
-				cell.charge = min(cell.maxcharge, cell.charge + GLOB.CELLRATE * excess)	//recharge with what we can
+				cell.give(GLOB.CELLRATE * excess)	//recharge with what we can
 				add_load(excess)		// so draw what we can from the grid
 				charging = 0
 

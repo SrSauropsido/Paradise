@@ -41,6 +41,8 @@
 			"criminal" = "Please select new criminal status:",
 			"mi_crim" = "Please input new minor crimes:",
 			"mi_crim_d" = "Please summarize minor crimes:",
+			"mo_crim" = "Please input new moderate crimes:", // HISPANIA
+			"mo_crim_d" = "Please summarize moderate crimes:", // HISPANIA
 			"ma_crim" = "Please input new major crimes:",
 			"ma_crim_d" = "Please summarize major crimes:",
 			"notes" = "Please input new important notes:",
@@ -135,6 +137,8 @@
 						SEC_FIELD("Criminal Status", 	sec_fields["criminal"], 	"criminal", 	TRUE),
 						SEC_FIELD("Minor Crimes", 		sec_fields["mi_crim"], 		"mi_crim", 		FALSE),
 						SEC_FIELD("Details", 			sec_fields["mi_crim_d"], 	"mi_crim_d", 	TRUE),
+						SEC_FIELD("Moderate Crimes", 	sec_fields["mo_crim"], 		"mo_crim", 		FALSE), // HISPANIA
+						SEC_FIELD("Details", 			sec_fields["mo_crim_d"], 	"mo_crim_d", 	TRUE), // HISPANIA
 						SEC_FIELD("Major Crimes", 		sec_fields["ma_crim"], 		"ma_crim", 		FALSE),
 						SEC_FIELD("Details", 			sec_fields["ma_crim_d"], 	"ma_crim_d", 	TRUE),
 						SEC_FIELD("Important Notes", 	sec_fields["notes"], 		null, 			FALSE),
@@ -215,6 +219,8 @@
 			S.fields["criminal"] = SEC_RECORD_STATUS_NONE
 			S.fields["mi_crim"] = "None"
 			S.fields["mi_crim_d"] = "No minor crime convictions."
+			S.fields["mo_crim"] = "None" // HISPANIA
+			S.fields["mo_crim_d"] = "No moderate crime convictions." // HISPANIA
 			S.fields["ma_crim"] = "None"
 			S.fields["ma_crim_d"] = "No major crime convictions."
 			S.fields["notes"] = "No notes."
@@ -388,6 +394,8 @@
   */
 /obj/machinery/computer/secure_data/proc/print_record_finish()
 	var/obj/item/paper/P = new(loc)
+	P.pixel_y = rand(-10, -8)
+	P.pixel_x = rand(-9, 9)
 	P.info = "<center><b>Security Record</b></center><br>"
 	if(record_general && GLOB.data_core.general.Find(record_general))
 		P.info += {"Name: [record_general.fields["name"]] ID: [record_general.fields["id"]]
@@ -399,11 +407,13 @@
 		P.name = "paper - 'Security Record: [record_general.fields["name"]]'"
 	else
 		P.info += "<b>General Record Lost!</b><br>"
-	if(record_security && GLOB.data_core.security.Find(record_security))
+	if(record_security && GLOB.data_core.security.Find(record_security)) // HISPANIA
 		P.info += {"<br>\n<center><b>Security Data</b></center>
 		<br>\nCriminal Status: [record_security.fields["criminal"]]<br>\n
 		<br>\nMinor Crimes: [record_security.fields["mi_crim"]]
 		<br>\nDetails: [record_security.fields["mi_crim_d"]]<br>\n
+		<br>\nModerate Crimes: [record_security.fields["mo_crim"]]
+		<br>\nDetails: [record_security.fields["mo_crim_d"]]<br>\n
 		<br>\nMajor Crimes: [record_security.fields["ma_crim"]]
 		<br>\nDetails: [record_security.fields["ma_crim_d"]]<br>\n
 		<br>\nImportant Notes:
@@ -420,6 +430,8 @@
   */
 /obj/machinery/computer/secure_data/proc/print_cell_log_finish(name, info)
 	var/obj/item/paper/P = new(loc)
+	P.pixel_y = rand(-10, -8)
+	P.pixel_x = rand(-9, 9)
 	P.name = name
 	P.info = info
 	is_printing = FALSE

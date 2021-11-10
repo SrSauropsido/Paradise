@@ -83,6 +83,7 @@
 	name = "durathread beanie"
 	desc = "A beanie made from durathread, its resilient fibres provide some protection to the wearer."
 	icon_state = "beaniedurathread"
+	item_state = "beaniedurathread"
 	item_color = null
 	armor = list(MELEE = 15, BULLET = 5, LASER = 15, ENERGY = 5, BOMB = 10, BIO = 0, RAD = 0, FIRE = 30, ACID = 5)
 

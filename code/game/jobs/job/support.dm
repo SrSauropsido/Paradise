@@ -6,10 +6,12 @@
 	total_positions = 1
 	spawn_positions = 1
 	is_service = 1
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
-	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM)
+	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN, ACCESS_MORGUE, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM, ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_BAR, ACCESS_MAINT_TUNNELS, ACCESS_WEAPONS, ACCESS_MINERAL_STOREROOM)
 	outfit = /datum/outfit/job/bartender
 
@@ -44,13 +46,15 @@
 	title = "Chef"
 	flag = JOB_CHEF
 	department_flag = JOBCAT_SUPPORT
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	is_service = 1
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
-	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN, ACCESS_MORGUE)
+	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_KITCHEN, ACCESS_MAINT_TUNNELS)
 	alt_titles = list("Cook","Culinary Artist","Butcher")
 	outfit = /datum/outfit/job/chef
@@ -83,15 +87,20 @@
 	title = "Botanist"
 	flag = JOB_BOTANIST
 	department_flag = JOBCAT_SUPPORT
-	total_positions = 3
+	total_positions = 2
 	spawn_positions = 2
 	is_service = 1
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
-	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN, ACCESS_MORGUE)
+	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_HYDROPONICS, ACCESS_MORGUE, ACCESS_MAINT_TUNNELS)
-	alt_titles = list("Hydroponicist", "Botanical Researcher")
+	alt_titles = list("Hydroponicist", "Botanical Researcher", "Beekeeper")
+	required_objectives = list(
+		/datum/job_objective/further_plants
+	)
 	outfit = /datum/outfit/job/hydro
 
 /datum/outfit/job/hydro
@@ -120,9 +129,13 @@
 	total_positions = 1
 	spawn_positions = 1
 	is_supply = 1
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
+	exp_requirements = 600
+	exp_type = EXP_TYPE_CREW
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
 	outfit = /datum/outfit/job/qm
@@ -148,10 +161,12 @@
 	total_positions = 2
 	spawn_positions = 2
 	is_supply = 1
-	supervisors = "the quartermaster"
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
+	supervisors = "Quartermaster"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
-	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
+	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_MINT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_MAILSORTING, ACCESS_MINERAL_STOREROOM)
 	outfit = /datum/outfit/job/cargo_tech
 
@@ -174,10 +189,12 @@
 	total_positions = 6
 	spawn_positions = 8
 	is_supply = 1
-	supervisors = "the quartermaster"
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
+	supervisors = "Quartermaster"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
-	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
+	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_MINT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM, ACCESS_CARGO, ACCESS_CARGO_BOT) //Accesos Minero
 	minimal_access = list(ACCESS_MINING, ACCESS_MINT, ACCESS_MINING_STATION, ACCESS_MAILSORTING, ACCESS_MAINT_TUNNELS, ACCESS_MINERAL_STOREROOM)
 	alt_titles = list("Spelunker")
 	outfit = /datum/outfit/job/mining
@@ -198,7 +215,8 @@
 		/obj/item/flashlight/seclite=1,\
 		/obj/item/kitchen/knife/combat/survival=1,\
 		/obj/item/mining_voucher=1,\
-		/obj/item/stack/marker_beacon/ten=1
+		/obj/item/stack/marker_beacon/ten=1,\
+		/obj/item/stack/medical/quickclot/survivalqc=1 ///Quickclot Hispania
 	)
 
 	backpack = /obj/item/storage/backpack/explorer
@@ -244,6 +262,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	is_service = 1
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
@@ -333,6 +353,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	is_service = 1
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
@@ -385,6 +407,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	is_service = 1
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
@@ -411,6 +435,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	is_service = 1
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
@@ -440,6 +466,8 @@
 	total_positions = 1
 	spawn_positions = 1
 	is_service = 1
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
@@ -466,6 +494,8 @@
 	department_flag = JOBCAT_SUPPORT
 	total_positions = 0
 	spawn_positions = 0
+	minimal_command_character_age = 1
+	minimal_captain_character_age = 1
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#dddddd"
