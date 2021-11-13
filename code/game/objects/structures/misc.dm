@@ -150,17 +150,17 @@
 	desc = "Una palanca de dos estados"
 	icon = 'icons/obj/lever.dmi'
 	icon_state = "lever_on"
-	var/id_palanca = 0
-	var/palanca_normal = 1
-	var/estado = 0 //0 izquierda, 1 derecha
+	var/id_palanca = FALSE
+	var/palanca_normal = TRUE
+	var/estado = FALSE //0 izquierda, 1 derecha
 
 /obj/structure/lever/attack_hand(mob/user as mob)
 	add_fingerprint(user)
 	icon_state = "lever_off"
-	playsound(src, 'sound/hispania/misc/palanca.wav', 50)
+	playsound(src, 'sound/hispania/misc/palanca.ogg', 50)
 	if(palanca_normal)
-		if(estado == 0)
-			estado = 1
+		if(estado == FALSE)
+			estado = TRUE
 			for(var/obj/machinery/door/airlock/hatch/syndicate/vault/compuerta/D in GLOB.compuertas)
 				if(D.id_compuerta == id_palanca)
 					D.unlock()
