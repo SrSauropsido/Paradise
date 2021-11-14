@@ -234,8 +234,6 @@
 					return
 				mode = SHUTTLE_DOCKED
 				timer = world.time
-				spawn(5 SECONDS)
-					SSvote.initiate_vote("map", "the server", TRUE)
 				if(canRecall)
 					emergency_shuttle_docked.Announce("The emergency shuttle has docked with the station. You have [timeLeft(600)] minutes to board the emergency shuttle.")
 				else
@@ -250,6 +248,8 @@
 						G.dom_attempts = min(1,G.dom_attempts)
 */
 		if(SHUTTLE_DOCKED)
+
+			SSvote.initiate_vote("map", "the server", TRUE)
 			if(time_left <= 0 && SSshuttle.emergencyNoEscape)
 				GLOB.priority_announcement.Announce("Hostile environment detected. Departure has been postponed indefinitely pending conflict resolution.")
 				sound_played = 0
