@@ -134,6 +134,37 @@
 	new PICK(src.loc)
 	qdel(src)
 
+/obj/effect/landmark/recompensa/random/New() //recomepnsa random
+	. = ..()
+	var/list/options = list(/obj/item/reagent_containers/glass/beaker/waterbottle,
+	/obj/item/clothing/head/fluff/goldtophat,
+	/obj/item/pen/multi/fountain,
+	/obj/item/gun/magic/staff/slipping,
+	/obj/item/clothing/glasses/sunglasses/big,
+	/obj/item/reagent_containers/food/drinks/drinkingglass/devilskiss,
+	/obj/item/clothing/shoes/brown,
+	/obj/item/reagent_containers/food/snacks/candy/jellybean/wtf,
+	/obj/item/melee/candy_sword,
+	/obj/item/seeds/banana,
+	/obj/item/coin/gold,
+	/obj/item/toy/plushie/voxplushie,
+	/obj/item/clothing/suit/chickensuit,
+	/obj/item/clothing/glasses/godeye,
+	/obj/item/storage/box/syndie_kit/bonerepair,
+	/obj/item/storage/toolbox,
+	/obj/item/melee/energy/sword/pirate,
+	/obj/item/slimecross/industrial/blue,
+	/obj/item/clothing/shoes/ducky,
+	/obj/item/clothing/mask/cigarette/rollie,
+	/obj/item/autosurgeon,
+	/obj/item/clothing/head/cowboyhat,
+	/obj/item/bikehorn/fluff/pinkbikehorn,
+	/obj/item/toy/plushie/voxplushie,
+	)
+	var/PICK= options[rand(1,options.len)]
+	new PICK(src.loc)
+	qdel(src)
+
 //SUBCLASSES.  Spawn a bunch of items and disappear likewise
 /obj/effect/landmark/costume/chicken/New()
 	. = ..()
