@@ -12550,6 +12550,9 @@
 /obj/structure/coatrack{
 	pixel_x = -8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "aue" = (
@@ -20118,6 +20121,13 @@
 	req_access_txt = "64"
 	},
 /obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "aGb" = (
@@ -20155,6 +20165,9 @@
 /obj/structure/chair/office/light{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/carpet,
 /area/medical/psych)
 "aGf" = (
@@ -20162,6 +20175,9 @@
 /obj/item/flashlight/lamp/green{
 	pixel_x = -4;
 	pixel_y = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/carpet,
 /area/medical/psych)
@@ -20173,9 +20189,21 @@
 	layer = 4;
 	pixel_y = 32
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "aGh" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "aGi" = (
@@ -20208,6 +20236,9 @@
 "aGl" = (
 /obj/structure/table/wood,
 /obj/machinery/computer/med_data/laptop,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/carpet,
 /area/medical/psych)
 "aGm" = (
@@ -20222,6 +20253,9 @@
 	pixel_y = 5
 	},
 /obj/item/pen/multi,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/carpet,
 /area/medical/psych)
 "aGn" = (
@@ -20241,6 +20275,12 @@
 /area/crew_quarters/bar)
 "aGo" = (
 /obj/machinery/hologram/holopad,
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
 /turf/simulated/floor/carpet,
 /area/medical/psych)
 "aGp" = (
@@ -20254,6 +20294,9 @@
 	},
 /obj/machinery/light_switch{
 	pixel_x = 38
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/carpet,
 /area/medical/psych)
@@ -22160,6 +22203,9 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -22194,6 +22240,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -23870,6 +23919,9 @@
 /turf/simulated/floor/plasteel,
 /area/toxins/storage)
 "aMa" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "aMb" = (
@@ -23909,6 +23961,9 @@
 /obj/effect/turf_decal/stripes,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
@@ -23979,6 +24034,7 @@
 	name = "south bump";
 	pixel_y = -24
 	},
+/obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "aMo" = (
@@ -31181,6 +31237,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plasteel{
 	dir = 10;
 	icon_state = "purple"
@@ -31232,6 +31291,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
+/obj/structure/cable,
 /turf/simulated/floor/plasteel{
 	dir = 10;
 	icon_state = "purple"
@@ -46857,6 +46917,9 @@
 	},
 /obj/effect/turf_decal/hispania/purplefull,
 /obj/machinery/door/firedoor,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plasteel,
 /area/janitor)
 "bym" = (
@@ -57524,6 +57587,9 @@
 	dir = 1;
 	initialize_directions = 11
 	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
 	},
@@ -58919,6 +58985,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/heavy,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "floorgrime"
 	},
@@ -58926,6 +58995,9 @@
 "bUM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/structure/cable{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
@@ -63801,6 +63873,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "purplecorner"
@@ -66215,6 +66290,24 @@
 	icon_state = "bar"
 	},
 /area/crew_quarters/kitchen)
+"pQV" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "bluecorner"
+	},
+/area/hallway/primary/port)
 
 (1,1,1) = {"
 aaa
@@ -88418,7 +88511,7 @@ aAk
 brn
 aEC
 cfg
-cep
+pQV
 aGa
 aGh
 aGo
