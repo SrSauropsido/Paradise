@@ -1,10 +1,8 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
+name: Sugerencia de Feature
+about: Sugiere una idea para mejorar el juego
 title: ''
 labels: ''
 assignees: ''
 
 ---
-
-Please place all features requests here: https://www.paradisestation.org/forum/60-suggestions/
