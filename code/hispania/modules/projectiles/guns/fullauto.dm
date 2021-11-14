@@ -8,16 +8,26 @@
 	fire_delay = 2.25
 	actions_types = null
 
+// ACTIVAR CLICK HANDLER
 /obj/item/gun/projectile/automatic/fullauto/pickup(mob/living/L)
 	.=..()
 	modeupdate(L,TRUE)
 
+/obj/item/gun/projectile/automatic/fullauto/swappedto(mob/living/L)
+	modeupdate(L,TRUE)
+
+/obj/item/gun/projectile/automatic/fullauto/gotcha(mob/living/L)
+	modeupdate(L,TRUE)
+
+/obj/item/gun/projectile/automatic/fullauto/on_exit_storage(obj,mob/living/L)
+	if(L)
+		if(L.get_active_hand() == src)
+			modeupdate(L,TRUE)
+
+// DESACTIVAR CLICK HANDLER
 /obj/item/gun/projectile/automatic/fullauto/dropped(mob/living/L)
 	.=..()
 	modeupdate(L,FALSE)
-
-/obj/item/gun/projectile/automatic/fullauto/swappedto(mob/living/L)
-	modeupdate(L,TRUE)
 
 /obj/item/gun/projectile/automatic/fullauto/swapped(mob/living/L)
 	modeupdate(L,FALSE)
@@ -28,11 +38,6 @@
 /obj/item/gun/projectile/automatic/fullauto/after_throw(datum/callback/callback, mob/living/L)
 	..()
 	modeupdate(L,FALSE)
-
-/obj/item/gun/projectile/automatic/fullauto/on_exit_storage(obj,mob/living/L)
-	if(L)
-		if(L.get_active_hand() == src)
-			modeupdate(L,TRUE)
 
 // called when this item is added into a storage item, which is passed on as S. The loc variable is already set to the storage item.
 /obj/item/gun/projectile/automatic/fullauto/on_enter_storage(obj,mob/living/L)
