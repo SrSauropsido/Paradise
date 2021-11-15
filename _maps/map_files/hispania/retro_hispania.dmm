@@ -847,7 +847,7 @@
 /obj/machinery/r_n_d/server/core,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 5;
-	tag = "icon-intact (NORTHEAST)"
+	tag = ""
 	},
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
@@ -4515,7 +4515,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
 	dir = 8;
-	tag = "icon-intact (WEST)"
+	tag = ""
 	},
 /turf/simulated/floor/plating,
 /area/toxins/server)
@@ -5512,7 +5512,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 9;
-	tag = "icon-intact (NORTHWEST)"
+	tag = ""
 	},
 /turf/simulated/wall/r_wall,
 /area/engine/break_room)
@@ -8148,7 +8148,7 @@
 /obj/structure/disposalpipe/sortjunction{
 	dir = 4;
 	sortType = 20;
-	tag = "icon-pipe-j1s (EAST)"
+	tag = ""
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1;
@@ -8860,7 +8860,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (SOUTHWEST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "cFP" = (
@@ -10782,7 +10782,7 @@
 "dgX" = (
 /obj/structure/transit_tube{
 	icon_state = "E-NW";
-	tag = "icon-E-NW"
+	tag = ""
 	},
 /turf/space,
 /area/space)
@@ -20212,7 +20212,7 @@
 	dir = 2;
 	name = "Hydroponics Delivery";
 	req_access_txt = "35";
-	tag = "icon-right"
+	tag = ""
 	},
 /obj/effect/decal/warning_stripes/yellow,
 /turf/simulated/floor{
@@ -22076,7 +22076,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 9;
-	tag = "icon-intact (NORTHWEST)"
+	tag = ""
 	},
 /obj/machinery/door/airlock/engineering/glass{
 	id_tag = "englobby";
@@ -28680,7 +28680,7 @@
 	dir = 8;
 	name = "Bar Delivery";
 	req_access_txt = "25";
-	tag = "icon-left (WEST)"
+	tag = ""
 	},
 /obj/effect/decal/warning_stripes/yellow,
 /turf/simulated/floor,
@@ -44356,7 +44356,7 @@
 "npj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9;
-	tag = "icon-intact-y (NORTHWEST)"
+	tag = ""
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -46669,7 +46669,7 @@
 "ocr" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9;
-	tag = "icon-intact-y (NORTHWEST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	icon_state = "floorgrime"
@@ -54290,7 +54290,7 @@
 /obj/structure/disposalpipe/sortjunction{
 	dir = 4;
 	sortType = 21;
-	tag = "icon-pipe-j1s (EAST)"
+	tag = ""
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -65429,7 +65429,7 @@
 "tHQ" = (
 /obj/structure/transit_tube{
 	icon_state = "D-NE";
-	tag = "icon-D-NE"
+	tag = ""
 	},
 /turf/space,
 /area/space)
@@ -69155,7 +69155,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "warnwhitecorner";
-	tag = "icon-warnwhitecorner (EAST)"
+	tag = ""
 	},
 /area/toxins/mixing)
 "uNt" = (
@@ -71827,7 +71827,7 @@
 "vGv" = (
 /obj/structure/transit_tube{
 	icon_state = "D-NE";
-	tag = "icon-D-NE"
+	tag = ""
 	},
 /obj/structure/lattice,
 /turf/space,
