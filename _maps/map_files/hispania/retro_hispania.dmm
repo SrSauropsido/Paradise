@@ -7694,9 +7694,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/port)
 "cmO" = (
@@ -20441,9 +20438,6 @@
 /area/medical/medbay2)
 "giW" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/port)
 "gjo" = (
@@ -25254,9 +25248,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/port)
@@ -36455,9 +36446,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -63955,9 +63943,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/port)
 "tnX" = (
@@ -66588,22 +66573,6 @@
 	icon_state = "darkred"
 	},
 /area/security/lobby)
-"uaq" = (
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8;
-	initialize_directions = 11
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8;
-	initialize_directions = 11
-	},
-/turf/simulated/floor/plasteel,
-/area/hallway/secondary/entry)
 "uau" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -72880,9 +72849,6 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1;
@@ -92700,7 +92666,7 @@ bTV
 qqB
 bgu
 bgu
-uaq
+iNJ
 afi
 brd
 kMh
