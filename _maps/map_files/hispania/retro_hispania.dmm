@@ -41900,7 +41900,6 @@
 /turf/simulated/floor/plating,
 /area/aisat/entrance)
 "mws" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8;
 	initialize_directions = 11
