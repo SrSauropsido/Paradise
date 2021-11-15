@@ -1557,7 +1557,7 @@
 	pod.icon_state = "pod_dece"
 	pod.name = "sleek spacepod"
 	pod.desc = "A modified varient of a space pod."
-	pod.can_paint = FALSE
+//	pod.can_paint = FALSE
 	used = 1
 	qdel(src)
 
