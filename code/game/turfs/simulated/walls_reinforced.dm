@@ -17,6 +17,11 @@
 	var/d_state = RWALL_INTACT
 	var/can_be_reinforced = 1
 
+/turf/simulated/wall/r_wall/Initialize(mapload)
+	var/nombre_estacion = "[station_name()]"
+	if((nombre_estacion == "NSS Retro Hispania") && (icon == 'icons/turf/walls/reinforced_wall.dmi'))
+		icon = 'icons/hispania/turf/walls/reinforced_wall.dmi'
+
 /turf/simulated/wall/r_wall/examine(mob/user)
 	. = ..()
 	switch(d_state)

@@ -33,3 +33,12 @@
 /obj/machinery/computer/guestpass/retro
 	icon = 'icons/hispania/obj/machines/retro.dmi'
 	icon_state = "old2"
+
+/obj/machinery/r_n_d/destructive_analyzer/retro
+	icon = 'icons/hispania/obj/machines/retro.dmi'
+
+/obj/machinery/r_n_d/protolathe/retro
+	icon = 'icons/hispania/obj/machines/retro.dmi'
+
+/obj/machinery/r_n_d/circuit_imprinter/retro
+	icon = 'icons/hispania/obj/machines/retro.dmi'
