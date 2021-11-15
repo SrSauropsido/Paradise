@@ -36740,10 +36740,6 @@
 	name = "Atmos Blast Door";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 10;
-	initialize_directions = 10
-	},
 /turf/simulated/floor/plating,
 /area/atmos/distribution)
 "kYc" = (
@@ -61290,6 +61286,11 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/atmospherics/binary/valve/digital{
+	color = "";
+	dir = 4;
+	name = "Gas Mix Inlet Valve"
+	},
 /turf/simulated/floor{
 	icon_state = "floorgrime"
 	},
@@ -66572,6 +66573,16 @@
 	icon_state = "darkred"
 	},
 /area/security/lobby)
+"uaq" = (
+/obj/machinery/atmospherics/binary/valve/digital{
+	color = "";
+	dir = 4;
+	name = "Gas Mix Inlet Valve"
+	},
+/turf/simulated/floor{
+	icon_state = "floorgrime"
+	},
+/area/atmos/distribution)
 "uau" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -115332,7 +115343,7 @@ oOs
 xdD
 szU
 qXG
-xAd
+uaq
 iyX
 lHy
 rAR
