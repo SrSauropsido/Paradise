@@ -52,6 +52,7 @@
 		if(pulling == W)
 			stop_pulling()
 		update_inv_l_hand()
+		W.gotcha(src) // hispania
 		return 1
 	return 0
 
@@ -68,6 +69,7 @@
 		if(pulling == W)
 			stop_pulling()
 		update_inv_r_hand()
+		W.gotcha(src) // hispania
 		return 1
 	return 0
 
