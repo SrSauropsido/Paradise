@@ -260,7 +260,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "adF" = (
@@ -319,7 +319,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/main)
 "aeF" = (
@@ -330,7 +330,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "aeG" = (
@@ -436,7 +436,7 @@
 /obj/structure/table/glass,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "agK" = (
@@ -583,7 +583,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "ajn" = (
@@ -707,7 +707,7 @@
 "amh" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4;
-	tag = "icon-pipe-j1 (EAST)"
+	tag = ""
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8;
@@ -772,7 +772,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "anz" = (
@@ -831,12 +831,12 @@
 	},
 /obj/machinery/shower{
 	dir = 4;
-	tag = "icon-shower (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/toxins/xenobiology)
 "anQ" = (
@@ -1229,7 +1229,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/security/medbay)
 "auT" = (
@@ -1299,7 +1299,7 @@
 "awh" = (
 /obj/machinery/shower{
 	dir = 4;
-	tag = "icon-shower (EAST)"
+	tag = ""
 	},
 /obj/structure/sign/securearea{
 	pixel_x = -32
@@ -1307,7 +1307,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/virology)
 "awo" = (
@@ -1335,7 +1335,7 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "awD" = (
@@ -1662,7 +1662,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "aBo" = (
@@ -1690,7 +1690,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "aBT" = (
@@ -1837,7 +1837,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "aDR" = (
@@ -1903,7 +1903,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/paramedic)
 "aEC" = (
@@ -2061,7 +2061,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "aIv" = (
@@ -2312,7 +2312,7 @@
 /obj/structure/closet/secure_closet/personal/patient,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "aLO" = (
@@ -2616,7 +2616,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "aPW" = (
@@ -2663,7 +2663,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "aQr" = (
@@ -2807,7 +2807,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/paramedic)
 "aSm" = (
@@ -2826,7 +2826,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/medbay2)
 "aSu" = (
@@ -3063,7 +3063,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner"
+	tag = ""
 	},
 /area/medical/medbay2)
 "aVt" = (
@@ -3131,7 +3131,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "aXa" = (
@@ -3375,7 +3375,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/main)
 "bcg" = (
@@ -3516,7 +3516,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/virology)
 "bem" = (
@@ -3656,7 +3656,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "bfU" = (
@@ -3686,7 +3686,7 @@
 /obj/item/clothing/under/retro/medical,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "bfY" = (
@@ -3736,7 +3736,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner"
+	tag = ""
 	},
 /area/medical/medbay2)
 "bgr" = (
@@ -4009,7 +4009,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "bkE" = (
@@ -4206,7 +4206,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/reception)
 "bnV" = (
@@ -4377,7 +4377,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "bpH" = (
@@ -4414,7 +4414,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "bqs" = (
@@ -4758,7 +4758,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "bvC" = (
@@ -4791,7 +4791,7 @@
 /obj/structure/chair,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "bvX" = (
@@ -4855,7 +4855,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHWEST)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "bxj" = (
@@ -5187,7 +5187,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "bCh" = (
@@ -5199,7 +5199,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "bCx" = (
@@ -5266,7 +5266,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (SOUTHWEST)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "bDq" = (
@@ -5336,7 +5336,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "bEa" = (
@@ -5397,7 +5397,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "bFK" = (
@@ -5532,7 +5532,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "bHm" = (
@@ -5558,11 +5558,11 @@
 	dir = 4;
 	icon_state = "alarm0";
 	pixel_x = -22;
-	tag = "icon-alarm0 (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "bHF" = (
@@ -5605,7 +5605,7 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor{
 	icon_state = "whitegreen";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/toxins/xenobiology)
 "bIt" = (
@@ -5876,7 +5876,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (SOUTHEAST)"
+	tag = ""
 	},
 /area/medical/reception)
 "bMZ" = (
@@ -5914,7 +5914,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "bOe" = (
@@ -6032,7 +6032,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "bPU" = (
@@ -6281,7 +6281,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "bTt" = (
@@ -6380,7 +6380,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "bVl" = (
@@ -6422,7 +6422,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "bWf" = (
@@ -6510,7 +6510,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/security/medbay)
 "bXo" = (
@@ -6520,7 +6520,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "bXt" = (
@@ -6741,7 +6741,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "caG" = (
@@ -7024,7 +7024,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "cdU" = (
@@ -7032,7 +7032,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "cec" = (
@@ -7111,7 +7111,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "cfb" = (
@@ -7121,7 +7121,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTH)"
+	tag = ""
 	},
 /area/medical/genetics)
 "cfo" = (
@@ -7209,7 +7209,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "cgx" = (
@@ -7323,7 +7323,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "ciq" = (
@@ -7457,7 +7457,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "cjN" = (
@@ -7660,7 +7660,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "cmt" = (
@@ -7907,7 +7907,7 @@
 /obj/structure/cable,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "crl" = (
@@ -7971,7 +7971,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "csG" = (
@@ -8221,7 +8221,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor{
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner"
+	tag = ""
 	},
 /area/medical/medbay2)
 "cwr" = (
@@ -8262,7 +8262,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitehall";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/toxins/xenobiology)
 "cxm" = (
@@ -8453,7 +8453,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "czr" = (
@@ -8732,7 +8732,7 @@
 "cDd" = (
 /obj/structure/morgue{
 	dir = 8;
-	tag = "icon-morgue1 (WEST)"
+	tag = ""
 	},
 /turf/simulated/floor,
 /area/medical/morgue)
@@ -8903,7 +8903,7 @@
 /obj/machinery/photocopier,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "cGg" = (
@@ -9049,7 +9049,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "cHL" = (
@@ -9195,7 +9195,7 @@
 	dir = 4;
 	icon_state = "alarm0";
 	pixel_x = -22;
-	tag = "icon-alarm0 (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	dir = 8;
@@ -9496,7 +9496,7 @@
 /obj/machinery/disposal,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "cOI" = (
@@ -9573,7 +9573,7 @@
 /obj/item/bedsheet/blue,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "cPK" = (
@@ -9607,7 +9607,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/medbay2)
 "cQt" = (
@@ -9710,7 +9710,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "cRH" = (
@@ -9923,7 +9923,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "cUY" = (
@@ -10009,7 +10009,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/virology)
 "cWf" = (
@@ -10199,7 +10199,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner"
+	tag = ""
 	},
 /area/medical/medbay2)
 "cYt" = (
@@ -10635,7 +10635,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTHWEST)"
+	tag = ""
 	},
 /area/toxins/explab_chamber)
 "dfb" = (
@@ -10676,7 +10676,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "dfK" = (
@@ -10721,7 +10721,7 @@
 	dir = 4;
 	icon_state = "alarm0";
 	pixel_x = -22;
-	tag = "icon-alarm0 (EAST)"
+	tag = ""
 	},
 /obj/machinery/camera{
 	c_tag = "Brig Armory";
@@ -10885,7 +10885,7 @@
 /obj/machinery/light/small,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/library)
 "diS" = (
@@ -11042,7 +11042,7 @@
 "dlV" = (
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/brig)
 "dmb" = (
@@ -11050,7 +11050,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "dml" = (
@@ -11076,7 +11076,7 @@
 /obj/structure/table/glass,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "dmw" = (
@@ -11116,7 +11116,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "dne" = (
@@ -11245,7 +11245,7 @@
 	dir = 4;
 	icon_state = "alarm0";
 	pixel_x = -22;
-	tag = "icon-alarm0 (EAST)"
+	tag = ""
 	},
 /obj/machinery/r_n_d/destructive_analyzer/retro,
 /turf/simulated/floor{
@@ -11271,7 +11271,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "dpV" = (
@@ -11293,7 +11293,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "dqM" = (
@@ -11544,7 +11544,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "dwm" = (
@@ -11627,7 +11627,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/magistrateoffice)
 "dxf" = (
@@ -11669,7 +11669,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "dxx" = (
@@ -11739,7 +11739,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/engine/mechanic_workshop)
 "dzo" = (
@@ -11839,7 +11839,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "dAP" = (
@@ -11955,7 +11955,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/security/medbay)
 "dCn" = (
@@ -12261,7 +12261,7 @@
 /obj/item/paper,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "dHA" = (
@@ -12469,7 +12469,7 @@
 /obj/structure/table,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "dKU" = (
@@ -12503,7 +12503,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "dLD" = (
@@ -12580,7 +12580,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "dMH" = (
@@ -12598,7 +12598,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "dMJ" = (
@@ -12686,7 +12686,7 @@
 "dNV" = (
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/reception)
 "dNZ" = (
@@ -12861,7 +12861,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "dQc" = (
@@ -12925,7 +12925,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/chemistry)
 "dRf" = (
@@ -13011,7 +13011,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/xenobiology)
 "dSt" = (
@@ -13808,7 +13808,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/medbay2)
 "ein" = (
@@ -14123,7 +14123,7 @@
 /obj/item/bedsheet/blue,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "enP" = (
@@ -14163,7 +14163,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "eoh" = (
@@ -14187,14 +14187,14 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "eov" = (
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "eox" = (
@@ -14202,7 +14202,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/ai_monitored/storage/eva)
 "eoB" = (
@@ -14310,7 +14310,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/medbay3)
 "eqT" = (
@@ -14498,7 +14498,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "siding8";
-	tag = "icon-siding8 (NORTH)"
+	tag = ""
 	},
 /area/engine/engineering)
 "etw" = (
@@ -15091,7 +15091,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "eBq" = (
@@ -15327,7 +15327,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "eEW" = (
@@ -15484,7 +15484,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/main)
 "eIm" = (
@@ -15513,7 +15513,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "eJe" = (
@@ -15736,7 +15736,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/sleeper)
 "eMp" = (
@@ -15880,7 +15880,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "eOs" = (
@@ -16408,7 +16408,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/cmo)
 "eVv" = (
@@ -16580,7 +16580,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "eXr" = (
@@ -16686,7 +16686,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "eZu" = (
@@ -16898,7 +16898,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "fdo" = (
@@ -16943,7 +16943,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "brown";
-	tag = "icon-brown (EAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "fea" = (
@@ -17288,12 +17288,12 @@
 /obj/structure/sign/directions/evac{
 	dir = 4;
 	pixel_y = 24;
-	tag = "icon-direction_evac (EAST)"
+	tag = ""
 	},
 /obj/structure/sign/directions/medical{
 	dir = 4;
 	pixel_y = 32;
-	tag = "icon-direction_med (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor/plasteel,
 /area/hallway/secondary/entry)
@@ -17625,7 +17625,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "fpt" = (
@@ -17750,7 +17750,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "fsq" = (
@@ -17774,7 +17774,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "fsJ" = (
@@ -17888,7 +17888,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "fvf" = (
@@ -17992,7 +17992,7 @@
 "fwV" = (
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "fwW" = (
@@ -18027,7 +18027,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "fxs" = (
@@ -18153,7 +18153,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "fyB" = (
@@ -18456,7 +18456,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "fDD" = (
@@ -18475,7 +18475,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/medbay3)
 "fDP" = (
@@ -18567,7 +18567,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "fER" = (
@@ -18584,7 +18584,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "fEX" = (
@@ -18679,12 +18679,12 @@
 	dir = 4;
 	icon_state = "alarm0";
 	pixel_x = -22;
-	tag = "icon-alarm0 (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "fFP" = (
@@ -18981,7 +18981,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (EAST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "fMs" = (
@@ -19234,7 +19234,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTH)"
+	tag = ""
 	},
 /area/medical/genetics)
 "fQe" = (
@@ -19254,7 +19254,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "fQy" = (
@@ -19334,7 +19334,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/sleeper)
 "fRA" = (
@@ -19390,7 +19390,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/toxins/xenobiology)
 "fSm" = (
@@ -19405,7 +19405,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/chemistry)
 "fSo" = (
@@ -19642,7 +19642,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "fWg" = (
@@ -19696,7 +19696,7 @@
 /obj/item/flashlight/lamp,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "fXv" = (
@@ -19816,7 +19816,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/sleeper)
 "fZz" = (
@@ -19917,7 +19917,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/reception)
 "gbH" = (
@@ -19953,7 +19953,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "gbN" = (
@@ -19961,7 +19961,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (SOUTHWEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "gbU" = (
@@ -20157,7 +20157,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "gfm" = (
@@ -20387,7 +20387,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/brig)
 "giw" = (
@@ -20430,7 +20430,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner"
+	tag = ""
 	},
 /area/medical/medbay2)
 "giW" = (
@@ -20487,7 +20487,7 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "gkm" = (
@@ -20540,7 +20540,7 @@
 /obj/machinery/kitchen_machine/grill,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "glF" = (
@@ -20581,7 +20581,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "gml" = (
@@ -20605,7 +20605,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology)
 "gmK" = (
@@ -20621,7 +20621,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "gmT" = (
@@ -20726,7 +20726,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "gnx" = (
@@ -20884,7 +20884,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology)
 "gpd" = (
@@ -20948,7 +20948,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "gqh" = (
@@ -21087,7 +21087,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "grK" = (
@@ -21134,7 +21134,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology)
 "gsG" = (
@@ -21195,7 +21195,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "guc" = (
@@ -21464,7 +21464,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/cmo)
 "gxG" = (
@@ -21516,7 +21516,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "gyd" = (
@@ -21620,7 +21620,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "gAw" = (
@@ -21641,7 +21641,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "gAB" = (
@@ -21998,7 +21998,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/brig)
 "gEY" = (
@@ -22258,7 +22258,7 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "gKk" = (
@@ -22271,7 +22271,7 @@
 "gKD" = (
 /obj/structure/transit_tube{
 	icon_state = "D-SW";
-	tag = "icon-D-SW"
+	tag = ""
 	},
 /turf/space,
 /area/space)
@@ -22468,7 +22468,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTHWEST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "gLQ" = (
@@ -22600,7 +22600,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6;
-	tag = "icon-intact (SOUTHEAST)"
+	tag = ""
 	},
 /turf/simulated/floor,
 /area/engine/controlroom)
@@ -22627,7 +22627,7 @@
 /obj/structure/closet/wardrobe/chemistry_white,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/chemistry)
 "gOe" = (
@@ -22658,7 +22658,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology)
 "gOR" = (
@@ -22708,7 +22708,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (SOUTHEAST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "gQF" = (
@@ -22717,7 +22717,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "gQZ" = (
@@ -22814,7 +22814,7 @@
 /obj/machinery/shower{
 	dir = 4;
 	pixel_x = 5;
-	tag = "icon-shower (EAST)"
+	tag = ""
 	},
 /obj/machinery/light_switch{
 	pixel_x = -25
@@ -23136,7 +23136,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "gXg" = (
@@ -23190,7 +23190,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "gXY" = (
@@ -23204,7 +23204,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (SOUTHWEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "gYd" = (
@@ -23386,7 +23386,7 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/medbay2)
 "haK" = (
@@ -23404,7 +23404,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "loadingarea";
-	tag = "loading"
+	tag = ""
 	},
 /area/hallway/primary/central/sw)
 "haO" = (
@@ -23417,7 +23417,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j2"
+	tag = ""
 	},
 /obj/machinery/camera{
 	c_tag = "Boxing Ring"
@@ -23678,7 +23678,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "hey" = (
@@ -23863,7 +23863,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "stage_stairs";
-	tag = "icon-stage_stairs"
+	tag = ""
 	},
 /area/escapepodbay)
 "hhs" = (
@@ -24148,7 +24148,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/library)
 "hna" = (
@@ -24208,12 +24208,12 @@
 	dir = 4;
 	icon_state = "alarm0";
 	pixel_x = -22;
-	tag = "icon-alarm0 (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "hnS" = (
@@ -24234,7 +24234,7 @@
 /obj/structure/foodcart,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "hob" = (
@@ -24416,7 +24416,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/research)
 "hrB" = (
@@ -24439,7 +24439,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "hrT" = (
@@ -24585,7 +24585,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "htt" = (
@@ -24755,7 +24755,7 @@
 /obj/structure/table/glass,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "hvv" = (
@@ -24834,7 +24834,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "hvW" = (
@@ -24941,7 +24941,7 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "hyc" = (
@@ -25097,7 +25097,7 @@
 "hBt" = (
 /obj/machinery/light{
 	dir = 1;
-	tag = "icon-tube1 (NORTH)"
+	tag = ""
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -25106,7 +25106,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "hBy" = (
@@ -25319,7 +25319,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "hEQ" = (
@@ -25364,7 +25364,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "hFL" = (
@@ -25464,7 +25464,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "hIn" = (
@@ -25531,7 +25531,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/explab_chamber)
 "hJA" = (
@@ -25564,7 +25564,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "hJM" = (
@@ -25631,7 +25631,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "hLl" = (
@@ -25964,7 +25964,7 @@
 /obj/structure/chair,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "hRg" = (
@@ -25976,7 +25976,7 @@
 /obj/item/bedsheet/blue,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "hRH" = (
@@ -26024,7 +26024,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "hSU" = (
@@ -26137,7 +26137,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "hUB" = (
@@ -26214,7 +26214,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "hVD" = (
@@ -26559,7 +26559,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "iaE" = (
@@ -27067,7 +27067,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "ihN" = (
@@ -27125,7 +27125,7 @@
 /obj/item/pen/multi,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "iil" = (
@@ -27165,7 +27165,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/research)
 "iiR" = (
@@ -27207,7 +27207,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "ijo" = (
@@ -27229,7 +27229,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "ijA" = (
@@ -27328,7 +27328,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "iln" = (
@@ -27397,7 +27397,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/chemistry)
 "imw" = (
@@ -27406,7 +27406,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "imE" = (
@@ -27717,7 +27717,7 @@
 /obj/machinery/recharger,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "isj" = (
@@ -27753,7 +27753,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "isP" = (
@@ -28034,7 +28034,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "ixA" = (
@@ -28140,7 +28140,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "iyX" = (
@@ -28166,7 +28166,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "izg" = (
@@ -28242,7 +28242,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "izP" = (
@@ -28354,7 +28354,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "iBm" = (
@@ -28488,7 +28488,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTH)"
+	tag = ""
 	},
 /area/toxins/explab_chamber)
 "iEa" = (
@@ -28640,7 +28640,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "iGi" = (
@@ -28653,7 +28653,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "iGn" = (
@@ -28698,7 +28698,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "iGT" = (
@@ -28795,7 +28795,7 @@
 /obj/machinery/cooker/deepfryer,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "iIu" = (
@@ -28805,7 +28805,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/chemistry)
 "iIF" = (
@@ -29037,7 +29037,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "iNq" = (
@@ -29046,7 +29046,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/assembly/assembly_line)
 "iNx" = (
@@ -29056,7 +29056,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "iNH" = (
@@ -29071,7 +29071,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "iNJ" = (
@@ -29097,7 +29097,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "iNN" = (
@@ -29122,7 +29122,7 @@
 /obj/machinery/photocopier/faxmachine/longrange,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "iOl" = (
@@ -29155,7 +29155,7 @@
 /obj/machinery/shower{
 	dir = 8;
 	pixel_x = -5;
-	tag = "icon-shower (WEST)"
+	tag = ""
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor{
@@ -29314,7 +29314,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "iTA" = (
@@ -29402,7 +29402,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "iUg" = (
@@ -29488,7 +29488,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "iVo" = (
@@ -29574,7 +29574,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 1;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j2"
+	tag = ""
 	},
 /turf/simulated/floor/plasteel,
 /area/crew_quarters/locker)
@@ -29644,7 +29644,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitegreen";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/toxins/xenobiology)
 "iXc" = (
@@ -29802,7 +29802,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "iYY" = (
@@ -29913,7 +29913,7 @@
 "jaU" = (
 /turf/simulated/floor{
 	icon_state = "stage_stairs";
-	tag = "icon-stage_stairs"
+	tag = ""
 	},
 /area/security/podbay)
 "jbg" = (
@@ -29992,7 +29992,7 @@
 "jcG" = (
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "jcN" = (
@@ -30277,7 +30277,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHWEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "jgi" = (
@@ -30392,7 +30392,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/brig)
 "jhV" = (
@@ -30428,7 +30428,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "jim" = (
@@ -30534,7 +30534,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "jjd" = (
@@ -30569,7 +30569,7 @@
 "jjk" = (
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "jjn" = (
@@ -30669,7 +30669,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "jkU" = (
@@ -30701,7 +30701,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/security/medbay)
 "jlL" = (
@@ -30725,7 +30725,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "jlS" = (
@@ -30891,7 +30891,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/sleeper)
 "jnv" = (
@@ -31044,7 +31044,7 @@
 /obj/structure/table,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "jpk" = (
@@ -31098,7 +31098,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/chemistry)
 "jpI" = (
@@ -31119,7 +31119,7 @@
 /obj/item/chair,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "jpQ" = (
@@ -31355,7 +31355,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/research)
 "jsW" = (
@@ -31466,7 +31466,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "juD" = (
@@ -31523,7 +31523,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "jvj" = (
@@ -31560,7 +31560,7 @@
 /obj/item/book/manual/security_space_law,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "jvu" = (
@@ -31572,7 +31572,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner"
+	tag = ""
 	},
 /area/medical/medbay2)
 "jvv" = (
@@ -31675,7 +31675,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "jxg" = (
@@ -31720,7 +31720,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "jxM" = (
@@ -31802,7 +31802,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "jzQ" = (
@@ -31912,7 +31912,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (WEST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "jBC" = (
@@ -32217,7 +32217,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "jId" = (
@@ -32302,7 +32302,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "jJk" = (
@@ -32386,7 +32386,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "jKZ" = (
@@ -32427,7 +32427,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j1 (WEST)"
+	tag = ""
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -32662,7 +32662,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "jPb" = (
@@ -32702,7 +32702,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/ai_monitored/storage/eva)
 "jPJ" = (
@@ -33087,7 +33087,7 @@
 /obj/item/bedsheet/blue,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "jXP" = (
@@ -33192,7 +33192,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "jZy" = (
@@ -33228,7 +33228,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/brig)
 "jZN" = (
@@ -33308,7 +33308,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/medbay3)
 "kae" = (
@@ -33504,7 +33504,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/chemistry)
 "kdz" = (
@@ -33671,7 +33671,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "keZ" = (
@@ -33970,7 +33970,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "kim" = (
@@ -34064,7 +34064,7 @@
 "kjB" = (
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "kjD" = (
@@ -34134,7 +34134,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "kkN" = (
@@ -34453,7 +34453,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHWEST)"
+	tag = ""
 	},
 /area/medical/chemistry)
 "kro" = (
@@ -34489,7 +34489,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/medbay2)
 "kru" = (
@@ -34634,7 +34634,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (WEST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "ktl" = (
@@ -34812,7 +34812,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "kwm" = (
@@ -34903,7 +34903,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "loadingarea";
-	tag = "loading"
+	tag = ""
 	},
 /area/assembly/assembly_line)
 "kxH" = (
@@ -34918,7 +34918,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "kxK" = (
@@ -34971,7 +34971,7 @@
 /obj/machinery/light,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "kyE" = (
@@ -34981,7 +34981,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/medbay2)
 "kyF" = (
@@ -35077,7 +35077,7 @@
 /obj/machinery/vending/cola,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "kAu" = (
@@ -35087,7 +35087,7 @@
 /obj/machinery/kitchen_machine/oven,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "kAz" = (
@@ -35113,7 +35113,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "kAD" = (
@@ -35338,7 +35338,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "kCU" = (
@@ -35491,7 +35491,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "kGk" = (
@@ -35655,7 +35655,7 @@
 "kIj" = (
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "kIk" = (
@@ -35741,7 +35741,7 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "kJA" = (
@@ -35780,7 +35780,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "browncorner";
-	tag = "icon-browncorner (EAST)"
+	tag = ""
 	},
 /area/bridge)
 "kKA" = (
@@ -35923,7 +35923,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "kMz" = (
@@ -35960,7 +35960,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "kNo" = (
@@ -36007,7 +36007,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/cmo)
 "kNO" = (
@@ -36050,7 +36050,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "kOX" = (
@@ -36146,7 +36146,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitegreen";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/toxins/xenobiology)
 "kPU" = (
@@ -36257,7 +36257,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "kSd" = (
@@ -36418,7 +36418,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "kUS" = (
@@ -36476,7 +36476,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHWEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "kVh" = (
@@ -36597,7 +36597,7 @@
 "kWV" = (
 /obj/structure/transit_tube{
 	icon_state = "D-SW";
-	tag = "icon-D-SW"
+	tag = ""
 	},
 /obj/structure/lattice,
 /turf/space,
@@ -36659,7 +36659,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/main)
 "kXw" = (
@@ -36883,7 +36883,7 @@
 /obj/machinery/shower{
 	dir = 8;
 	pixel_x = -5;
-	tag = "icon-shower (WEST)"
+	tag = ""
 	},
 /obj/structure/curtain/open/shower,
 /turf/simulated/floor{
@@ -37237,7 +37237,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "lfO" = (
@@ -37360,7 +37360,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/sleeper)
 "lhP" = (
@@ -37369,7 +37369,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/library)
 "lhQ" = (
@@ -37531,7 +37531,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/chemistry)
 "lkR" = (
@@ -37585,7 +37585,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "llq" = (
@@ -37723,7 +37723,7 @@
 /obj/machinery/vending/medical,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "lnM" = (
@@ -37804,7 +37804,7 @@
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 4;
-	tag = "icon-pipe-j1 (EAST)"
+	tag = ""
 	},
 /obj/structure/cable{
 	d1 = 2;
@@ -37972,7 +37972,7 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "lqR" = (
@@ -38072,7 +38072,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "ltU" = (
@@ -38286,7 +38286,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "lxu" = (
@@ -38572,7 +38572,7 @@
 "lCB" = (
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "lCR" = (
@@ -38628,7 +38628,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "lDt" = (
@@ -38663,7 +38663,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/research)
 "lDH" = (
@@ -38718,7 +38718,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "lEU" = (
@@ -38765,7 +38765,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "lFB" = (
@@ -38814,7 +38814,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/xenobiology)
 "lGd" = (
@@ -38957,7 +38957,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/execution{
 	name = "\improper Prisoner Transfer Center"
@@ -38987,7 +38987,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (SOUTHWEST)"
+	tag = ""
 	},
 /area/medical/reception)
 "lJf" = (
@@ -39002,7 +39002,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTH)"
+	tag = ""
 	},
 /area/toxins/lab)
 "lJq" = (
@@ -39033,7 +39033,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "browncorner";
-	tag = "icon-browncorner (EAST)"
+	tag = ""
 	},
 /area/bridge)
 "lJD" = (
@@ -39177,7 +39177,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "lLV" = (
@@ -39286,7 +39286,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (SOUTHEAST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "lNl" = (
@@ -39398,7 +39398,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "lPi" = (
@@ -39610,7 +39610,7 @@
 "lSt" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 4;
-	tag = "icon-manifold-g (NORTH)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	icon_state = "floorgrime"
@@ -39755,7 +39755,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "lUi" = (
@@ -39879,7 +39879,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "loadingarea";
-	tag = "loading"
+	tag = ""
 	},
 /area/hallway/primary/central/sw)
 "lVn" = (
@@ -39902,7 +39902,7 @@
 /obj/structure/table,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "lVI" = (
@@ -39944,7 +39944,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "lWx" = (
@@ -40150,7 +40150,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (EAST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "lZe" = (
@@ -40264,7 +40264,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTH)"
+	tag = ""
 	},
 /area/medical/genetics)
 "map" = (
@@ -40296,7 +40296,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/hydroponics)
 "maB" = (
@@ -40330,13 +40330,13 @@
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j2"
+	tag = ""
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "mbi" = (
@@ -40369,7 +40369,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "mbA" = (
@@ -40544,7 +40544,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "meb" = (
@@ -40688,7 +40688,7 @@
 /obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "mgu" = (
@@ -40763,7 +40763,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "mhA" = (
@@ -41004,7 +41004,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "mjx" = (
@@ -41395,7 +41395,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "mog" = (
@@ -41459,7 +41459,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "moN" = (
@@ -41598,7 +41598,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "mrC" = (
@@ -41659,7 +41659,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "mtk" = (
@@ -41679,7 +41679,7 @@
 /obj/structure/closet/secure_closet/freezer/kitchen,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "mtx" = (
@@ -41741,7 +41741,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "muc" = (
@@ -42043,7 +42043,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (WEST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "myB" = (
@@ -42100,7 +42100,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "mzq" = (
@@ -42610,7 +42610,7 @@
 /obj/machinery/light,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "mJz" = (
@@ -42620,7 +42620,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "mJA" = (
@@ -42709,7 +42709,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHWEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "mLF" = (
@@ -42783,7 +42783,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "mMK" = (
@@ -42924,7 +42924,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "mPt" = (
@@ -42987,7 +42987,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "mPU" = (
@@ -43010,7 +43010,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "mQh" = (
@@ -43050,7 +43050,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/medbay3)
 "mQO" = (
@@ -43649,7 +43649,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "ndG" = (
@@ -44003,7 +44003,7 @@
 /obj/structure/table/glass,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "njE" = (
@@ -44285,7 +44285,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "nnV" = (
@@ -44408,7 +44408,7 @@
 "nqq" = (
 /obj/structure/morgue{
 	dir = 8;
-	tag = "icon-morgue1 (WEST)"
+	tag = ""
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -44427,7 +44427,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "nqA" = (
@@ -44524,7 +44524,7 @@
 /obj/structure/bed,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "nsT" = (
@@ -44849,7 +44849,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/xenobiology)
 "nwE" = (
@@ -44993,7 +44993,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "nyu" = (
@@ -45049,7 +45049,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "nzc" = (
@@ -45171,7 +45171,7 @@
 /obj/structure/table,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "nAU" = (
@@ -45190,7 +45190,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHWEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "nAZ" = (
@@ -45207,7 +45207,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTH)"
+	tag = ""
 	},
 /area/toxins/lab)
 "nBp" = (
@@ -45217,7 +45217,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "nBq" = (
@@ -45409,7 +45409,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHWEST)"
+	tag = ""
 	},
 /area/medical/reception)
 "nEW" = (
@@ -45535,7 +45535,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/assembly/assembly_line)
 "nIr" = (
@@ -45586,7 +45586,7 @@
 /obj/machinery/computer/med_data/laptop,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "nJv" = (
@@ -45754,7 +45754,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j2"
+	tag = ""
 	},
 /turf/simulated/floor{
 	dir = 8;
@@ -45921,7 +45921,7 @@
 /obj/structure/table/glass,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "nRs" = (
@@ -45992,7 +45992,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "nRG" = (
@@ -46053,7 +46053,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "nSD" = (
@@ -46161,7 +46161,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "nTX" = (
@@ -46215,7 +46215,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "nVD" = (
@@ -46247,7 +46247,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "nWs" = (
@@ -46410,7 +46410,7 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "nYm" = (
@@ -46580,7 +46580,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "obe" = (
@@ -46841,7 +46841,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/reception)
 "ofH" = (
@@ -46982,7 +46982,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner"
+	tag = ""
 	},
 /area/medical/medbay2)
 "oie" = (
@@ -47141,7 +47141,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "okU" = (
@@ -47304,7 +47304,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "omX" = (
@@ -47353,7 +47353,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "oon" = (
@@ -47386,12 +47386,12 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j1 (WEST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (SOUTHWEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "opd" = (
@@ -47498,7 +47498,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/brig)
 "ori" = (
@@ -47577,7 +47577,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology)
 "orV" = (
@@ -47687,7 +47687,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "ouB" = (
@@ -47766,7 +47766,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/exam_room)
 "ovf" = (
@@ -47908,14 +47908,14 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "owW" = (
 /obj/structure/bed,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "oxf" = (
@@ -48097,7 +48097,7 @@
 /obj/item/bedsheet/blue,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "ozO" = (
@@ -48292,7 +48292,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTHWEST)"
+	tag = ""
 	},
 /area/toxins/explab_chamber)
 "oCL" = (
@@ -48320,7 +48320,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "oDe" = (
@@ -48558,7 +48558,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "oHt" = (
@@ -48806,7 +48806,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "oKB" = (
@@ -48872,13 +48872,13 @@
 /obj/item/stamp/law,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "oLE" = (
 /turf/simulated/floor{
 	icon_state = "stage_stairs";
-	tag = "icon-stage_stairs"
+	tag = ""
 	},
 /area/hallway/primary/central/nw)
 "oLL" = (
@@ -49041,7 +49041,7 @@
 	},
 /obj/machinery/shower{
 	dir = 4;
-	tag = "icon-shower (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	icon_state = "freezerfloor"
@@ -49116,7 +49116,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/medbay2)
 "oQJ" = (
@@ -49266,7 +49266,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "oTv" = (
@@ -49312,7 +49312,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "oUa" = (
@@ -49462,7 +49462,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/chemistry)
 "oVJ" = (
@@ -49496,7 +49496,7 @@
 /obj/machinery/photocopier,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "oWt" = (
@@ -49813,7 +49813,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "oZr" = (
@@ -50070,7 +50070,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "pcF" = (
@@ -50201,7 +50201,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "pfe" = (
@@ -50753,7 +50753,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "poD" = (
@@ -50773,7 +50773,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "ppg" = (
@@ -50860,13 +50860,13 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (SOUTHEAST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "ppQ" = (
 /obj/structure/morgue{
 	dir = 8;
-	tag = "icon-morgue1 (WEST)"
+	tag = ""
 	},
 /obj/machinery/light/small{
 	dir = 4
@@ -50901,7 +50901,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "ppY" = (
@@ -51011,7 +51011,7 @@
 "prp" = (
 /turf/simulated/floor{
 	icon_state = "stage_stairs";
-	tag = "icon-stage_stairs"
+	tag = ""
 	},
 /area/hallway/primary/central/ne)
 "prL" = (
@@ -51637,7 +51637,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j1 (WEST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	icon_state = "white"
@@ -51965,7 +51965,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "pGd" = (
@@ -51983,7 +51983,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "pGk" = (
@@ -52085,7 +52085,7 @@
 /obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "pHl" = (
@@ -52132,7 +52132,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "pIf" = (
@@ -52987,12 +52987,12 @@
 "pWa" = (
 /obj/machinery/shower{
 	dir = 8;
-	tag = "icon-shower (WEST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/research)
 "pWc" = (
@@ -53057,7 +53057,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "pXi" = (
@@ -53219,7 +53219,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "pZI" = (
@@ -53242,7 +53242,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "loadingarea";
-	tag = "loading"
+	tag = ""
 	},
 /area/hallway/primary/central/sw)
 "pZP" = (
@@ -53273,7 +53273,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "qao" = (
@@ -53320,7 +53320,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/reception)
 "qaQ" = (
@@ -53388,7 +53388,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "qbA" = (
@@ -53487,7 +53487,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "qdk" = (
@@ -53499,7 +53499,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "qdl" = (
@@ -53634,7 +53634,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "qeK" = (
@@ -53719,7 +53719,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology)
 "qgP" = (
@@ -53948,7 +53948,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTH)"
+	tag = ""
 	},
 /area/toxins/lab)
 "qkL" = (
@@ -54025,7 +54025,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "qmm" = (
@@ -54041,7 +54041,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/sleeper)
 "qmA" = (
@@ -54178,7 +54178,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "qoz" = (
@@ -54280,7 +54280,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "qqi" = (
@@ -54414,7 +54414,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "qru" = (
@@ -54726,7 +54726,7 @@
 /obj/structure/table/wood,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/library)
 "quS" = (
@@ -54922,7 +54922,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "qxj" = (
@@ -55359,7 +55359,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (WEST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "qGN" = (
@@ -55472,7 +55472,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "qHH" = (
@@ -55790,7 +55790,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "qMG" = (
@@ -55940,7 +55940,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/reception)
 "qOF" = (
@@ -55980,7 +55980,7 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "qPC" = (
@@ -56025,7 +56025,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "qQc" = (
@@ -56376,7 +56376,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j1 (WEST)"
+	tag = ""
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -56619,7 +56619,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "rbA" = (
@@ -56847,7 +56847,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/execution{
 	name = "\improper Prisoner Transfer Center"
@@ -56915,7 +56915,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "rhl" = (
@@ -57058,7 +57058,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHWEST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "rjw" = (
@@ -57227,7 +57227,7 @@
 "rmC" = (
 /turf/simulated/floor{
 	icon_state = "loadingarea";
-	tag = "loading"
+	tag = ""
 	},
 /area/assembly/assembly_line)
 "rmD" = (
@@ -57373,7 +57373,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (EAST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "ros" = (
@@ -57544,7 +57544,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/virology)
 "rrr" = (
@@ -57628,7 +57628,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/reception)
 "rsg" = (
@@ -57943,7 +57943,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "rwJ" = (
@@ -58062,7 +58062,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/hydroponics)
 "ryO" = (
@@ -58247,7 +58247,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "rBp" = (
@@ -58463,7 +58463,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "rDF" = (
@@ -58493,7 +58493,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "rEk" = (
@@ -58577,7 +58577,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "loadingarea";
-	tag = "loading"
+	tag = ""
 	},
 /area/hallway/primary/starboard/east)
 "rFN" = (
@@ -58590,7 +58590,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/medbay2)
 "rFV" = (
@@ -58830,7 +58830,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/disposalpipe/junction{
 	dir = 4;
-	tag = "icon-pipe-j1 (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/south)
@@ -59158,7 +59158,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "rOY" = (
@@ -59280,7 +59280,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "rSk" = (
@@ -59329,7 +59329,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "rSO" = (
@@ -59348,7 +59348,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/assembly/assembly_line)
 "rTb" = (
@@ -59367,7 +59367,7 @@
 "rTm" = (
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "rTv" = (
@@ -59460,7 +59460,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "rVh" = (
@@ -59482,7 +59482,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "rVy" = (
@@ -59522,7 +59522,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "rVO" = (
@@ -59777,7 +59777,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 1;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j2"
+	tag = ""
 	},
 /turf/simulated/floor/plasteel,
 /area/quartermaster/office)
@@ -59842,7 +59842,7 @@
 /obj/machinery/light,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "sby" = (
@@ -60007,7 +60007,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "seN" = (
@@ -60051,7 +60051,7 @@
 "sfr" = (
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "sfx" = (
@@ -60072,7 +60072,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "sfW" = (
@@ -60179,7 +60179,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/medbay2)
 "shN" = (
@@ -60303,7 +60303,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "sjF" = (
@@ -60393,7 +60393,7 @@
 /obj/structure/table/glass,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "sld" = (
@@ -60431,7 +60431,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "sng" = (
@@ -60463,7 +60463,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "snS" = (
@@ -60630,7 +60630,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "vault";
-	tag = "icon-vault"
+	tag = ""
 	},
 /area/engine/gravitygenerator)
 "sqj" = (
@@ -60800,7 +60800,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "ssS" = (
@@ -61053,7 +61053,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "swL" = (
@@ -61365,7 +61365,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner"
+	tag = ""
 	},
 /area/medical/medbay2)
 "sBS" = (
@@ -61415,7 +61415,7 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/brig)
 "sCh" = (
@@ -61455,7 +61455,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/chemistry)
 "sCA" = (
@@ -61536,7 +61536,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "sDD" = (
@@ -61651,7 +61651,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "sFl" = (
@@ -61923,7 +61923,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner"
+	tag = ""
 	},
 /area/medical/medbay2)
 "sIP" = (
@@ -62187,7 +62187,7 @@
 /obj/item/stack/tape_roll,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/library)
 "sLN" = (
@@ -62274,7 +62274,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "sMF" = (
@@ -62516,7 +62516,7 @@
 /obj/machinery/light,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "sRL" = (
@@ -62664,7 +62664,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitehall";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/crew_quarters/fitness)
 "sTV" = (
@@ -62739,7 +62739,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/cmo)
 "sUV" = (
@@ -62993,7 +62993,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "loadingarea";
-	tag = "loading"
+	tag = ""
 	},
 /area/hallway/primary/central/sw)
 "sYu" = (
@@ -63054,7 +63054,7 @@
 /obj/item/reagent_containers/food/snacks/mint,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "sZv" = (
@@ -63080,7 +63080,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "sZy" = (
@@ -63254,7 +63254,7 @@
 "tbO" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 1;
-	tag = "icon-manifold-g (NORTH)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	icon_state = "floorgrime"
@@ -63315,7 +63315,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "tcZ" = (
@@ -63397,7 +63397,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/library)
 "tem" = (
@@ -63623,7 +63623,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "siding8";
-	tag = "icon-siding8 (NORTH)"
+	tag = ""
 	},
 /area/engine/engineering)
 "thU" = (
@@ -63807,7 +63807,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "tlI" = (
@@ -63987,7 +63987,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "tou" = (
@@ -64003,7 +64003,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "toP" = (
@@ -64181,7 +64181,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/xenobiology)
 "tru" = (
@@ -64387,7 +64387,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "ttx" = (
@@ -64540,7 +64540,7 @@
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/hidden/yellow{
 	dir = 1;
-	tag = "icon-map (NORTH)"
+	tag = ""
 	},
 /turf/simulated/wall/r_wall,
 /area/engine/controlroom)
@@ -64623,7 +64623,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "twY" = (
@@ -64690,7 +64690,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/explab_chamber)
 "txA" = (
@@ -64731,7 +64731,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "txW" = (
@@ -64890,7 +64890,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "tAe" = (
@@ -65142,7 +65142,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "tFa" = (
@@ -65319,7 +65319,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTHWEST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "tGI" = (
@@ -65417,7 +65417,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "tHP" = (
@@ -65674,7 +65674,7 @@
 	dir = 4;
 	icon_state = "alarm0";
 	pixel_x = -22;
-	tag = "icon-alarm0 (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	icon_state = "white"
@@ -65846,7 +65846,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "tOR" = (
@@ -65854,7 +65854,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "tOX" = (
@@ -65880,7 +65880,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "tPe" = (
@@ -65976,7 +65976,7 @@
 /obj/item/clothing/under/retro/medical,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "tQe" = (
@@ -65999,7 +65999,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "tQy" = (
@@ -66175,7 +66175,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "tSZ" = (
@@ -66364,7 +66364,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "tWw" = (
@@ -66482,7 +66482,7 @@
 /obj/machinery/icemachine,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "tYC" = (
@@ -66520,7 +66520,7 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor{
 	icon_state = "redfull";
-	tag = "icon-redfull (NORTHWEST)"
+	tag = ""
 	},
 /area/security/brig)
 "tZC" = (
@@ -66644,7 +66644,7 @@
 "uaS" = (
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/security/medbay)
 "ubm" = (
@@ -66729,7 +66729,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "ubE" = (
@@ -66796,7 +66796,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "ucI" = (
@@ -67061,7 +67061,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "ufJ" = (
@@ -67228,7 +67228,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "ujA" = (
@@ -67339,7 +67339,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "uma" = (
@@ -67347,7 +67347,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "umk" = (
@@ -67362,7 +67362,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/sleeper)
 "umH" = (
@@ -67384,7 +67384,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "umX" = (
@@ -67440,7 +67440,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/cmo)
 "unC" = (
@@ -67752,7 +67752,7 @@
 "utE" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/green{
 	dir = 1;
-	tag = "icon-manifold-g (NORTH)"
+	tag = ""
 	},
 /obj/structure/cable{
 	d1 = 1;
@@ -68201,7 +68201,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTH)"
+	tag = ""
 	},
 /area/medical/genetics)
 "uAq" = (
@@ -68232,7 +68232,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/medbay2)
 "uAL" = (
@@ -68440,7 +68440,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "uDN" = (
@@ -68574,7 +68574,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "uGd" = (
@@ -68691,7 +68691,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "uHA" = (
@@ -69199,7 +69199,7 @@
 /obj/structure/table/glass,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "uNX" = (
@@ -69270,7 +69270,7 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor{
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner"
+	tag = ""
 	},
 /area/medical/medbay2)
 "uPp" = (
@@ -69448,7 +69448,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/sleeper)
 "uRS" = (
@@ -69539,7 +69539,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "uSQ" = (
@@ -69584,7 +69584,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology)
 "uSU" = (
@@ -69629,7 +69629,7 @@
 "uTh" = (
 /turf/simulated/floor{
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "uTo" = (
@@ -69667,7 +69667,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "uTs" = (
@@ -69731,7 +69731,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "brown";
-	tag = "icon-brown (EAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "uUb" = (
@@ -69984,7 +69984,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (EAST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "uWz" = (
@@ -70009,7 +70009,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j2 (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/port)
@@ -70228,7 +70228,7 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "vaC" = (
@@ -70269,7 +70269,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "vbZ" = (
@@ -70625,7 +70625,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (EAST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "viR" = (
@@ -70719,7 +70719,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "vmb" = (
@@ -70801,7 +70801,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/aisat/entrance)
 "vnE" = (
@@ -70926,7 +70926,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/library)
 "vqn" = (
@@ -70945,7 +70945,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitebluecorner";
-	tag = "icon-whitebluecorner (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "vqC" = (
@@ -71042,7 +71042,7 @@
 /obj/item/bedsheet/blue,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "vsz" = (
@@ -71068,7 +71068,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "vsR" = (
@@ -71145,7 +71145,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "vuV" = (
@@ -71284,7 +71284,7 @@
 /obj/item/bedsheet/blue,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "vxI" = (
@@ -71362,7 +71362,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "vyB" = (
@@ -71390,7 +71390,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "vzp" = (
@@ -71567,7 +71567,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "vBW" = (
@@ -71578,12 +71578,12 @@
 /obj/machinery/light,
 /obj/machinery/shower{
 	dir = 8;
-	tag = "icon-shower (WEST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "vBZ" = (
@@ -71626,7 +71626,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/chemistry)
 "vCN" = (
@@ -71845,7 +71845,7 @@
 /obj/structure/filingcabinet,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "vGL" = (
@@ -71983,7 +71983,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "vKm" = (
@@ -72154,7 +72154,7 @@
 "vMP" = (
 /turf/simulated/floor{
 	icon_state = "stage_stairs";
-	tag = "icon-stage_stairs"
+	tag = ""
 	},
 /area/crew_quarters/fitness)
 "vNc" = (
@@ -72254,7 +72254,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "vOH" = (
@@ -72364,7 +72364,7 @@
 "vQH" = (
 /obj/structure/disposalpipe/junction{
 	dir = 4;
-	tag = "icon-pipe-j1 (EAST)"
+	tag = ""
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fsmaint)
@@ -72575,12 +72575,12 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j1 (WEST)"
+	tag = ""
 	},
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "vUc" = (
@@ -72935,7 +72935,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "vYo" = (
@@ -72959,7 +72959,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue"
+	tag = ""
 	},
 /area/medical/medbay2)
 "vYK" = (
@@ -72982,7 +72982,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (SOUTHEAST)"
+	tag = ""
 	},
 /area/medical/medbay3)
 "vYQ" = (
@@ -73106,7 +73106,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "waC" = (
@@ -73122,7 +73122,7 @@
 /obj/item/bedsheet/blue,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "waE" = (
@@ -73169,7 +73169,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "wbj" = (
@@ -73263,7 +73263,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j2"
+	tag = ""
 	},
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/south)
@@ -73282,7 +73282,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "vault";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/toxins/misc_lab)
 "wcU" = (
@@ -73441,7 +73441,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (EAST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "weB" = (
@@ -73480,7 +73480,7 @@
 /obj/structure/bookcase/manuals/medical,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "wfp" = (
@@ -73898,7 +73898,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/aisat_interior)
 "wll" = (
@@ -74022,7 +74022,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j2"
+	tag = ""
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -74049,7 +74049,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "woJ" = (
@@ -74362,7 +74362,7 @@
 /obj/item/paper,
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "wuw" = (
@@ -74390,7 +74390,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "wuH" = (
@@ -74450,7 +74450,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "wva" = (
@@ -74584,7 +74584,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/kitchen)
 "wwQ" = (
@@ -74921,7 +74921,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cult";
-	tag = "icon-cult"
+	tag = ""
 	},
 /area/lawoffice)
 "wCH" = (
@@ -74959,7 +74959,7 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/chemistry)
 "wDp" = (
@@ -75164,7 +75164,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "wFN" = (
@@ -75411,7 +75411,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (WEST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "wKU" = (
@@ -75634,7 +75634,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "wOj" = (
@@ -75659,7 +75659,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 1;
 	icon_state = "pipe-j2";
-	tag = "icon-pipe-j2"
+	tag = ""
 	},
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/south)
@@ -75667,7 +75667,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "loadingarea";
-	tag = "loading"
+	tag = ""
 	},
 /area/hallway/primary/central/sw)
 "wOP" = (
@@ -75702,7 +75702,7 @@
 /turf/simulated/floor{
 	dir = 10;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "wQi" = (
@@ -75867,7 +75867,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/research)
 "wSG" = (
@@ -75894,7 +75894,7 @@
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/virology)
 "wSQ" = (
@@ -76019,7 +76019,7 @@
 /obj/machinery/disposal,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology/lab)
 "wUL" = (
@@ -76238,7 +76238,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/paramedic)
 "wYG" = (
@@ -76665,7 +76665,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "xfW" = (
@@ -76779,7 +76779,7 @@
 /obj/structure/table/glass,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "xhu" = (
@@ -77104,7 +77104,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/cmo)
 "xmF" = (
@@ -77427,7 +77427,7 @@
 /obj/machinery/r_n_d/server/robotics,
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6;
-	tag = "icon-intact (SOUTHEAST)"
+	tag = ""
 	},
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
@@ -77621,7 +77621,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "xvk" = (
@@ -77661,7 +77661,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
-	tag = "icon-whitebluefull"
+	tag = ""
 	},
 /area/medical/virology)
 "xvo" = (
@@ -77695,7 +77695,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "dark";
-	tag = "icon-vault (NORTHEAST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "xvP" = (
@@ -78020,7 +78020,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/exam_room)
 "xBa" = (
@@ -78070,7 +78070,7 @@
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "whiteblue";
-	tag = "icon-whitehall (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "xBq" = (
@@ -78231,7 +78231,7 @@
 	},
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "xET" = (
@@ -78265,7 +78265,7 @@
 /obj/machinery/washing_machine,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/medbreak)
 "xFN" = (
@@ -78509,7 +78509,7 @@
 /turf/simulated/floor{
 	dir = 4;
 	icon_state = "warnwhite";
-	tag = "icon-warnwhite (NORTH)"
+	tag = ""
 	},
 /area/medical/paramedic)
 "xLR" = (
@@ -78692,7 +78692,7 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor{
 	icon_state = "cafeteria";
-	tag = "icon-cafeteria (NORTHEAST)"
+	tag = ""
 	},
 /area/crew_quarters/hor)
 "xOs" = (
@@ -78766,14 +78766,14 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/security/securearmoury)
 "xPa" = (
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "vault";
-	tag = "icon-vault (WEST)"
+	tag = ""
 	},
 /area/turret_protected/ai)
 "xPi" = (
@@ -78820,7 +78820,7 @@
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/reception)
 "xPO" = (
@@ -78835,7 +78835,7 @@
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (WEST)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "xPT" = (
@@ -78915,13 +78915,13 @@
 "xRe" = (
 /obj/machinery/light{
 	dir = 1;
-	tag = "icon-tube1 (NORTH)"
+	tag = ""
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor{
 	dir = 1;
 	icon_state = "whiteblue";
-	tag = "icon-whiteblue (NORTH)"
+	tag = ""
 	},
 /area/medical/medbay2)
 "xRi" = (
@@ -79366,7 +79366,7 @@
 	dir = 4;
 	icon_state = "alarm0";
 	pixel_x = -22;
-	tag = "icon-alarm0 (EAST)"
+	tag = ""
 	},
 /obj/structure/table,
 /turf/simulated/floor{
@@ -80032,7 +80032,7 @@
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "whitepurple";
-	tag = "icon-whitepurple (NORTHEAST)"
+	tag = ""
 	},
 /area/medical/genetics)
 "yit" = (
@@ -80186,7 +80186,7 @@
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 4;
-	tag = "icon-pipe-j1 (EAST)"
+	tag = ""
 	},
 /obj/structure/cable{
 	d1 = 4;
