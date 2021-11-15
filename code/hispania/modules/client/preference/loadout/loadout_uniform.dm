@@ -6,6 +6,16 @@
 	path = /obj/item/clothing/under/retro/medical
 	allowed_roles = list("Chief Medical Officer", "Medical Doctor", "Chemist", "Psychiatrist", "Paramedic", "Virologist", "Brig Physician" , "Coroner")
 
+/datum/gear/uniform/medical/nursesuit
+	display_name = "Nurse suit"
+	path = /obj/item/clothing/under/rank/nursesuit
+	allowed_roles = list("Chief Medical Officer", "Medical Doctor", "Chemist", "Psychiatrist", "Paramedic", "Virologist", "Brig Physician" , "Coroner")
+
+/datum/gear/uniform/medical/nursedress
+	display_name = "Nurse dress"
+	path = /obj/item/clothing/under/rank/nurse
+	allowed_roles = list("Chief Medical Officer", "Medical Doctor", "Chemist", "Psychiatrist", "Paramedic", "Virologist", "Brig Physician" , "Coroner")
+
 /datum/gear/uniform/retro/sec
 	display_name = "security retro"
 	path = /obj/item/clothing/under/retro/security

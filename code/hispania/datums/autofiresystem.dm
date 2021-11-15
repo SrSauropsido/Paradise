@@ -18,9 +18,9 @@
 			return
 	return ..()
 
-/client/MouseDrag(over_object,src_location,over_location,src_control,over_control,params)
+/client/MouseDrag(src_object,over_object,src_location,over_location,src_control,over_control,params)
 	if (CH)
-		if (!CH.MouseDrag(over_object,src_location,over_location,src_control,over_control,params))
+		if (!CH.MouseDrag(src_object,over_object,src_location,over_location,src_control,over_control,params))
 			return
 	return ..()
 
@@ -64,7 +64,7 @@
 /datum/click_handler/proc/MouseDown(object,location,control,params)
 	return TRUE
 
-/datum/click_handler/proc/MouseDrag(over_object,src_location,over_location,src_control,over_control,params)
+/datum/click_handler/proc/MouseDrag(src_object,over_object,src_location,over_location,src_control,over_control,params)
 	return TRUE
 
 /datum/click_handler/proc/MouseUp(object,location,control,params)
@@ -97,10 +97,10 @@
 	target = null
 
 /datum/click_handler/fullauto/proc/do_fire(params)
-	if(owner.mob.a_intent == INTENT_HARM)
-		reciever.afterattack(target, owner.mob, TRUE, params)
-	else
+	if(target.Adjacent(owner.mob))
 		reciever.afterattack(target, owner.mob, TRUE, targetparams)
+	else
+		reciever.afterattack(target, owner.mob, FALSE, targetparams)
 
 /datum/click_handler/fullauto/MouseDown(object, location, control, params)
 	if(owner.mob.in_throw_mode)
@@ -122,8 +122,8 @@
 			sleep(reciever.fire_delay)
 	return TRUE
 
-/datum/click_handler/fullauto/MouseDrag(over_object, src_location, over_location, src_control, over_control, params)
-	src_location = resolve_world_target(src_location, src_location, src_control, params)
+/datum/click_handler/fullauto/MouseDrag(src_object,over_object,src_location,over_location,src_control,over_control,params)
+	src_location = resolve_world_target(over_object, over_location, over_control, params)
 	if(src_location)
 		target = src_location
 		targetparams = params
