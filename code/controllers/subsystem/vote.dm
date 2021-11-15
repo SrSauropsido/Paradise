@@ -198,8 +198,10 @@ SUBSYSTEM_DEF(vote)
 
 /datum/controller/subsystem/vote/proc/submit_vote(ckey, vote)
 	if(mode)
+		/*
 		if(GLOB.configuration.vote.prevent_dead_voting && usr.stat == DEAD && !usr.client.holder)
 			return 0
+		*///Ghost Vote Hispania
 		if(current_votes[ckey])
 			choices[choices[current_votes[ckey]]]--
 		if(vote && 1<=vote && vote<=choices.len)
