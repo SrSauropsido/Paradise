@@ -632,12 +632,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/bridge)
-"akP" = (
-/obj/structure/table,
-/obj/item/airlock_electronics,
-/obj/item/apc_electronics,
-/turf/simulated/floor/plating,
-/area/storage/tech)
 "akY" = (
 /obj/item/clothing/glasses/hud/health,
 /obj/machinery/light{
@@ -2968,11 +2962,6 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/turret_protected/ai)
-"aTL" = (
-/obj/structure/table,
-/obj/item/book/manual/security_space_law,
-/turf/simulated/floor,
-/area/security/main)
 "aTV" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4;
@@ -3310,6 +3299,24 @@
 	icon_state = "barber"
 	},
 /area/civilian/barber)
+"bao" = (
+/obj/structure/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/circuitboard/cloning,
+/obj/item/circuitboard/med_data{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/circuitboard/clonescanner,
+/obj/item/circuitboard/clonepod,
+/obj/item/circuitboard/scan_consolenew,
+/obj/item/circuitboard/cryo_tube{
+	pixel_x = 3
+	},
+/turf/simulated/floor/plating,
+/area/storage/tech)
 "baC" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -3811,6 +3818,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/port)
+"bgP" = (
+/obj/structure/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/circuitboard/secure_data{
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/circuitboard/camera{
+	pixel_x = 1;
+	pixel_y = -1
+	},
+/turf/simulated/floor/plating,
+/area/storage/tech)
 "bgU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -8861,6 +8883,10 @@
 "cFa" = (
 /turf/simulated/wall,
 /area/crew_quarters/locker/locker_toilet)
+"cFf" = (
+/obj/structure/chair/stool,
+/turf/simulated/floor/plasteel,
+/area/security/main)
 "cFi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -9551,6 +9577,14 @@
 	icon_state = "neutral"
 	},
 /area/crew_quarters/fitness)
+"cPi" = (
+/obj/structure/table,
+/obj/item/restraints/handcuffs,
+/obj/item/restraints/handcuffs{
+	pixel_y = -4
+	},
+/turf/simulated/floor,
+/area/security/main)
 "cPy" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -15413,6 +15447,11 @@
 	icon_state = "dark"
 	},
 /area/engine/mechanic_workshop)
+"eFx" = (
+/obj/structure/table,
+/obj/item/book/manual/security_space_law,
+/turf/simulated/floor,
+/area/security/main)
 "eFD" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/cable{
@@ -18211,6 +18250,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/permabrig)
+"fyE" = (
+/obj/structure/table,
+/obj/item/book/manual/security_space_law,
+/turf/simulated/floor/plasteel,
+/area/security/main)
 "fyI" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -29294,6 +29338,14 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/captain)
+"iRL" = (
+/obj/structure/table,
+/obj/item/wirecutters,
+/obj/item/screwdriver{
+	pixel_y = 16
+	},
+/turf/simulated/floor/plating,
+/area/storage/tech)
 "iRN" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1;
@@ -29342,6 +29394,25 @@
 /obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/maintenance/portsolar)
+"iSJ" = (
+/obj/structure/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/circuitboard/powermonitor{
+	pixel_x = -2;
+	pixel_y = 2
+	},
+/obj/item/circuitboard/atmos_alert{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/circuitboard/thermomachine,
+/obj/item/circuitboard/smes{
+	pixel_x = 4
+	},
+/turf/simulated/floor/plating,
+/area/storage/tech)
 "iSZ" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -32061,12 +32132,6 @@
 "jEb" = (
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central/sw)
-"jEe" = (
-/obj/structure/table,
-/obj/item/aicard,
-/obj/item/aiModule/reset,
-/turf/simulated/floor/plating,
-/area/storage/tech)
 "jEl" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -32854,11 +32919,6 @@
 	icon_state = "red"
 	},
 /area/security/processing)
-"jQG" = (
-/obj/structure/table,
-/obj/item/book/manual/security_space_law,
-/turf/simulated/floor/plasteel,
-/area/security/main)
 "jQH" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -37300,6 +37360,13 @@
 	icon_state = "red"
 	},
 /area/security/prisonershuttle)
+"lfl" = (
+/obj/item/twohanded/required/kirbyplants,
+/turf/simulated/floor{
+	dir = 1;
+	icon_state = "whitecorner"
+	},
+/area/hallway/primary/starboard/west)
 "lfr" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	on = 1
@@ -37699,6 +37766,25 @@
 /obj/structure/reagent_dispensers/water_cooler,
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
+"llM" = (
+/obj/structure/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/circuitboard/cyborgrecharger{
+	pixel_x = -4;
+	pixel_y = -2
+	},
+/obj/item/circuitboard/mech_bay_power_console{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/circuitboard/mech_recharger,
+/obj/item/circuitboard/mechfab{
+	pixel_y = 3
+	},
+/turf/simulated/floor/plating,
+/area/storage/tech)
 "llT" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -42721,10 +42807,6 @@
 	},
 /turf/simulated/floor,
 /area/security/permabrig)
-"mJC" = (
-/obj/structure/chair/stool,
-/turf/simulated/floor/plasteel,
-/area/security/main)
 "mJU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plasteel,
@@ -43439,14 +43521,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
-"mXk" = (
-/obj/structure/table,
-/obj/item/restraints/handcuffs,
-/obj/item/restraints/handcuffs{
-	pixel_y = -4
-	},
-/turf/simulated/floor,
-/area/security/main)
 "mXq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -45247,6 +45321,12 @@
 	icon_state = "white"
 	},
 /area/medical/ward)
+"nAv" = (
+/obj/structure/table,
+/obj/item/airlock_electronics,
+/obj/item/apc_electronics,
+/turf/simulated/floor/plating,
+/area/storage/tech)
 "nAE" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -45366,6 +45446,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint2)
+"nBJ" = (
+/obj/structure/table,
+/obj/item/storage/box/evidence,
+/turf/simulated/floor/plasteel,
+/area/security/main)
 "nCc" = (
 /obj/structure/table,
 /obj/structure/disposalpipe/segment{
@@ -45589,6 +45674,25 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/port)
+"nGA" = (
+/obj/structure/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/circuitboard/communications{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/circuitboard/card{
+	pixel_x = 2;
+	pixel_y = -2
+	},
+/obj/item/circuitboard/crew{
+	pixel_x = -1;
+	pixel_y = 1
+	},
+/turf/simulated/floor,
+/area/storage/tech)
 "nHg" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/camera{
@@ -46988,21 +47092,6 @@
 	icon_state = "white"
 	},
 /area/toxins/xenobiology)
-"ogk" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/item/circuitboard/autolathe{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/circuitboard/bodyscanner,
-/obj/item/circuitboard/sleeper{
-	pixel_x = 3
-	},
-/turf/simulated/floor/plating,
-/area/storage/tech)
 "ogl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -49546,25 +49635,6 @@
 	icon_state = "neutralfull"
 	},
 /area/security/prisonlockers)
-"oVa" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/item/circuitboard/cyborgrecharger{
-	pixel_x = -4;
-	pixel_y = -2
-	},
-/obj/item/circuitboard/mech_bay_power_console{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/circuitboard/mech_recharger,
-/obj/item/circuitboard/mechfab{
-	pixel_y = 3
-	},
-/turf/simulated/floor/plating,
-/area/storage/tech)
 "oVe" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -51257,11 +51327,6 @@
 /obj/structure/closet/secure_closet/engineering_electrical,
 /turf/simulated/floor/plasteel,
 /area/engine/equipmentstorage)
-"ptn" = (
-/obj/structure/table,
-/obj/item/storage/box/evidence,
-/turf/simulated/floor/plasteel,
-/area/security/main)
 "ptp" = (
 /obj/structure/table/reinforced,
 /obj/machinery/magnetic_controller{
@@ -55246,25 +55311,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/sw)
-"qBe" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/item/circuitboard/powermonitor{
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/circuitboard/atmos_alert{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/circuitboard/thermomachine,
-/obj/item/circuitboard/smes{
-	pixel_x = 4
-	},
-/turf/simulated/floor/plating,
-/area/storage/tech)
 "qBg" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -55486,21 +55532,6 @@
 /obj/effect/decal/warning_stripes/southeast,
 /turf/simulated/floor/plasteel,
 /area/hallway/secondary/entry)
-"qFb" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/item/circuitboard/secure_data{
-	pixel_x = -2;
-	pixel_y = 2
-	},
-/obj/item/circuitboard/camera{
-	pixel_x = 1;
-	pixel_y = -1
-	},
-/turf/simulated/floor/plating,
-/area/storage/tech)
 "qFG" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -56324,19 +56355,10 @@
 	icon_state = "4-8";
 	tag = ""
 	},
-/obj/item/clothing/mask/breath{
-	step_y = 10
-	},
-/obj/item/rcd/preloaded{
-	step_x = -10
-	},
-/obj/item/rcd_ammo/large{
-	step_x = 10
-	},
+/obj/item/rcd/preloaded,
 /obj/item/rcd_ammo/large,
-/obj/item/rcd_ammo/large{
-	step_x = 5
-	},
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
 /turf/simulated/floor{
 	dir = 8;
 	icon_state = "neutralfull"
@@ -58936,13 +58958,6 @@
 	},
 /turf/simulated/floor,
 /area/storage/tech)
-"rIA" = (
-/obj/item/twohanded/required/kirbyplants,
-/turf/simulated/floor{
-	dir = 1;
-	icon_state = "whitecorner"
-	},
-/area/hallway/primary/starboard/west)
 "rIG" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8;
@@ -71324,6 +71339,21 @@
 	icon_state = "floorgrime"
 	},
 /area/engine/engineering)
+"vud" = (
+/obj/structure/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/circuitboard/autolathe{
+	pixel_x = 3;
+	pixel_y = -3
+	},
+/obj/item/circuitboard/bodyscanner,
+/obj/item/circuitboard/sleeper{
+	pixel_x = 3
+	},
+/turf/simulated/floor/plating,
+/area/storage/tech)
 "vuo" = (
 /obj/structure/chair/comfy/black{
 	dir = 4
@@ -74052,14 +74082,6 @@
 	icon_state = "whitehall"
 	},
 /area/medical/research)
-"wld" = (
-/obj/structure/table,
-/obj/item/wirecutters,
-/obj/item/screwdriver{
-	pixel_y = 16
-	},
-/turf/simulated/floor/plating,
-/area/storage/tech)
 "wlf" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -74564,24 +74586,6 @@
 	},
 /turf/simulated/floor,
 /area/aisat/maintenance)
-"wul" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/item/circuitboard/cloning,
-/obj/item/circuitboard/med_data{
-	pixel_x = 3;
-	pixel_y = -3
-	},
-/obj/item/circuitboard/clonescanner,
-/obj/item/circuitboard/clonepod,
-/obj/item/circuitboard/scan_consolenew,
-/obj/item/circuitboard/cryo_tube{
-	pixel_x = 3
-	},
-/turf/simulated/floor/plating,
-/area/storage/tech)
 "wuv" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light{
@@ -78786,25 +78790,6 @@
 	icon_state = "dark"
 	},
 /area/security/podbay)
-"xMs" = (
-/obj/structure/rack{
-	dir = 8;
-	layer = 2.9
-	},
-/obj/item/circuitboard/communications{
-	pixel_x = 5;
-	pixel_y = -5
-	},
-/obj/item/circuitboard/card{
-	pixel_x = 2;
-	pixel_y = -2
-	},
-/obj/item/circuitboard/crew{
-	pixel_x = -1;
-	pixel_y = 1
-	},
-/turf/simulated/floor,
-/area/storage/tech)
 "xMt" = (
 /obj/structure/closet/secure_closet/brigdoc,
 /turf/simulated/floor{
@@ -80198,6 +80183,12 @@
 /obj/effect/decal/warning_stripes/yellow,
 /turf/simulated/floor/plasteel,
 /area/bridge)
+"yhm" = (
+/obj/structure/table,
+/obj/item/aicard,
+/obj/item/aiModule/reset,
+/turf/simulated/floor/plating,
+/area/storage/tech)
 "yho" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -106321,7 +106312,7 @@ mrF
 uIp
 erb
 jcN
-xMs
+nGA
 uIp
 mrF
 bvJ
@@ -107089,10 +107080,10 @@ hdV
 jBg
 kqp
 bLU
-jEe
-akP
+yhm
+nAv
 qVh
-oVa
+llM
 kYc
 xwb
 rbA
@@ -107606,7 +107597,7 @@ gtz
 ayP
 lAA
 tEQ
-ogk
+vud
 kCs
 iwa
 rbA
@@ -107863,7 +107854,7 @@ gIY
 eCU
 ecn
 mKZ
-qBe
+iSJ
 rqq
 iwa
 rbA
@@ -108116,11 +108107,11 @@ ycE
 gbc
 xAS
 kqp
-wld
+iRL
 jBq
-wul
+bao
 qVh
-qFb
+bgP
 lCR
 rbA
 rbA
@@ -110093,8 +110084,8 @@ tUI
 uuh
 ckl
 jCe
-mXk
-ptn
+cPi
+nBJ
 lpT
 uGd
 jqb
@@ -110350,7 +110341,7 @@ jBl
 ris
 qFW
 jCe
-aTL
+eFx
 dlP
 lpT
 xZK
@@ -112408,7 +112399,7 @@ sel
 buI
 ekW
 buI
-jQG
+fyE
 hpk
 jqb
 qOp
@@ -112665,7 +112656,7 @@ aJw
 buI
 ekW
 buI
-mJC
+cFf
 yfd
 suc
 dTV
@@ -119651,7 +119642,7 @@ qsq
 pDj
 oHo
 hrB
-rIA
+lfl
 trg
 mUb
 trg
