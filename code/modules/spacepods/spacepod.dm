@@ -1,5 +1,5 @@
 #define DAMAGE			1
-#define FIRE			2
+#define POD_FIRE		2
 #define POD_LIGHT		1
 #define WINDOW			2
 #define RIM	    		3
@@ -165,7 +165,7 @@
 	if(!pod_overlays)
 		pod_overlays = new/list(2)
 		pod_overlays[DAMAGE] = image(icon, "pod_damage")
-		pod_overlays[FIRE] = image(icon, "pod_fire")
+		pod_overlays[POD_FIRE] = image(icon, "pod_fire")
 
 	if(!pod_paint_effect)
 		pod_paint_effect = new/list(4)
@@ -202,7 +202,7 @@
 	if(health <= round(maxhealth/2))
 		overlays += pod_overlays[DAMAGE]
 		if(health <= round(maxhealth/4))
-			overlays += pod_overlays[FIRE]
+			overlays += pod_overlays[POD_FIRE]
 
 	light_color = colors[POD_LIGHT]
 
@@ -1126,7 +1126,7 @@
 	next_move = world.time + move_delay
 
 #undef DAMAGE
-#undef FIRE
+#undef POD_FIRE
 #undef WINDOW
 #undef POD_LIGHT
 #undef RIM
