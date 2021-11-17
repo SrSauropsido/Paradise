@@ -182,8 +182,6 @@ SUBSYSTEM_DEF(vote)
 				var/datum/map/top_voted_map
 				for(var/x in subtypesof(/datum/map))
 					var/datum/map/M = x
-					if(M.only_admin)
-						continue
 					// Set top voted map
 					if(. == "[initial(M.fluff_name)] ([initial(M.technical_name)])")
 						top_voted_map = M
@@ -243,8 +241,6 @@ SUBSYSTEM_DEF(vote)
 				question = "Map for next round"
 				for(var/x in subtypesof(/datum/map))
 					var/datum/map/M = x
-					if(M.only_admin)
-						continue
 					choices.Add("[initial(M.fluff_name)] ([initial(M.technical_name)])")
 
 			if("custom")
