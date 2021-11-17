@@ -7,6 +7,9 @@
 /obj/item/proc/hotkeyequip(mob/usr)
 	return
 
+/obj/item/proc/gotcha(mob/usr) // Al conseguir un objeto mediante put_in_hands()
+	return
+
 /obj/item/proc/apply_outline(outline_color = null)
 	if(!in_inventory || QDELETED(src) || isobserver(usr)) //cancel if the item isn't in an inventory, is being deleted, or if the person hovering is a ghost (so that people spectating you don't randomly make your items glow)
 		return

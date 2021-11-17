@@ -12,7 +12,9 @@
 	fire_sound = 'sound/weapons/gunshots/gunshot_mg.ogg'
 	magin_sound = 'sound/weapons/gun_interactions/lmg_magin.ogg'
 	magout_sound = 'sound/weapons/gun_interactions/lmg_magout.ogg'
-	//spread = 20
+	spread = 10
+	force = 10
+	throwforce = 15
 	can_suppress = 0
 
 /obj/item/gun/projectile/automatic/fullauto/natsha/update_icon()
