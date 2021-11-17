@@ -129,6 +129,23 @@ Burning extracts:
 		S.visible_message("<span class='danger'>The [S] is driven into a dangerous frenzy!</span>")
 	..()
 
+/obj/item/slimecross/burning/green
+	colour = "green"
+	effect_desc = "The user gets a dull arm blade in the hand it is used in."
+
+/obj/item/slimecross/burning/green/do_effect(mob/user)
+	var/mob/living/L = user
+	if(!istype(user))
+		return
+	var/obj/item/melee/arm_blade/slime/blade = new(user)
+	if(!L.put_in_hands(blade))
+		qdel(blade)
+		user.visible_message("<span class= = 'warning'>[src] melts onto [user]'s arm, boiling the flesh horribly!</span>")
+	else
+		user.visible_message("<span class = 'danger'>[src] sublimates the flesh around [user]'s arm, transforming the bone into a gruesome blade!</span>")
+	user.emote("scream")
+	..()
+
 /obj/item/slimecross/burning/oil
 	colour = "oil"
 	effect_desc = "Creates an explosion after a few seconds."

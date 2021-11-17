@@ -72,6 +72,16 @@ Chilling extracts:
 	..()
 
 
+
+/obj/item/slimecross/chilling/blue
+	colour = "blue"
+	effect_desc = "Creates a rebreather, a tankless mask."
+
+/obj/item/slimecross/chilling/blue/do_effect(mob/user)
+	user.visible_message("<span class='notice'>[src] cracks, and spills out a liquid goo, which reforms into a mask!</span>")
+	new /obj/item/clothing/mask/nobreath(get_turf(user))
+	..()
+
 /obj/item/slimecross/chilling/yellow
 	colour = "yellow"
 	effect_desc = "Recharges the room's APC by 500W."
