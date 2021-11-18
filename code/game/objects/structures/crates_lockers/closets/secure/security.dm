@@ -187,10 +187,7 @@
 	icon_state = "med"
 	icon_state = "securemed1"
 	icon_closed = "securemed"
-	icon_locked = "securemed1"
 	icon_opened = "securemedopen"
-	icon_broken = "securemedbroken"
-	icon_off = "securemedoff"
 
 /obj/structure/closet/secure_closet/brigdoc/populate_contents()
 	if(prob(50))

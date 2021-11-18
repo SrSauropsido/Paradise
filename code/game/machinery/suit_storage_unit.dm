@@ -799,3 +799,6 @@
 /obj/machinery/suit_storage_unit/proc/check_electrified_callback()
 	if(!wires.is_cut(WIRE_ELECTRIFY))
 		shocked = FALSE
+
+/obj/machinery/suit_storage_unit/security/pod_pilot
+	req_access = list(ACCESS_PILOT)

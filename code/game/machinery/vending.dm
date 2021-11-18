@@ -1815,7 +1815,7 @@
 					/obj/item/clothing/head/officer = 4,
 					/obj/item/clothing/head/beret/sec = 4,
 					/obj/item/clothing/head/soft/sec = 4,
-					/obj/item/clothing/suit/jacket/secbomber = 2,
+					/obj/item/clothing/suit/jacket/pilot = 2,
 					/obj/item/clothing/suit/armor/secjacket = 4,
 					/obj/item/clothing/suit/hooded/wintercoat/security = 4,
 					/obj/item/clothing/shoes/jackboots = 4,

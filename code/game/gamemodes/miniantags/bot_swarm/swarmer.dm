@@ -732,3 +732,12 @@
 		for(var/mob/M in GLOB.mob_list)
 			if(isswarmer(M) || (M in GLOB.dead_mob_list))
 				to_chat(M, "<B>Swarm communication - </b> [src] states: [message]")
+
+///Swarmer Interaction SP
+/obj/spacepod/swarmer_act(mob/living/simple_animal/hostile/swarmer/S)
+	to_chat(S, "<span class='warning'>Destroying this vehicle would destroy us. Aborting.</span>")
+	return FALSE
+
+/obj/structure/spacepoddoor/swarmer_act(mob/living/simple_animal/hostile/swarmer/S)
+	to_chat(S, "<span class='warning'>Disrupting this energy field would overload us. Aborting.</span>")
+	return FALSE

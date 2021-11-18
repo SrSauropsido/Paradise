@@ -79,12 +79,12 @@
 /datum/gear/accessory/holobadge
 	display_name = "Holobadge, pin"
 	path = /obj/item/clothing/accessory/holobadge
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer", "Security Pod Pilot")
 
 /datum/gear/accessory/holobadge_n
 	display_name = "Holobadge, cord"
 	path = /obj/item/clothing/accessory/holobadge/cord
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer")
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer", "Security Pod Pilot")
 
 /datum/gear/accessory/tieblue
 	display_name = "Tie, blue"
@@ -182,7 +182,7 @@
 /datum/gear/accessory/armband_job/sec
 	display_name = "Armband, security"
 	path = /obj/item/clothing/accessory/armband/sec
-	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer", "Brig Physician")
+	allowed_roles = list("Head of Security", "Warden", "Detective", "Security Officer", "Brig Physician", "Security Pod Pilot")
 
 /datum/gear/accessory/armband_job/cargo
 	display_name = "Armband, cargo"

@@ -410,8 +410,6 @@ SUBSYSTEM_DEF(ticker)
 				SSjobs.AssignRank(player, player.mind.assigned_role, FALSE)
 				SSjobs.EquipRank(player, player.mind.assigned_role, FALSE)
 				equip_cuis(player)
-
-				EquipCustomItems(player)
 				// HISPANIA
 				SSquirks.AssignQuirks(player, player.client, TRUE)
 				// HISPANIA END

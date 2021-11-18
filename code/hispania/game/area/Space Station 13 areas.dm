@@ -146,3 +146,15 @@
 
 /area/maintenance/spacepost/third
 	name = "DaBaby SpacePost - THIRD"
+
+/area/engine/mechanic_workshop
+	name = "\improper Mechanic Workshop"
+	icon_state = "engine"
+
+/area/engine/mechanic_workshop/hanger
+	name = "\improper Hanger Bay"
+	icon_state = "engine"
+
+/area/security/podbay
+	name = "\improper Security Podbay"
+	icon_state = "securitypodbay"

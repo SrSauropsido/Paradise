@@ -42,6 +42,7 @@
 		"Life Support Specialist" = "engradio",
 		"Maintenance Technician" = "engradio",
 		"Station Engineer" = "engradio",
+		"Mechanic" = "engradio",
 		// Central Command
 		"Emergency Response Team Engineer" = "dsquadradio", // I know this says deathsquad but the class for responseteam is neon green. No.
 		"Emergency Response Team Leader" = "dsquadradio",
@@ -92,6 +93,7 @@
 		"Magistrate" = "secradio",
 		"Security Officer" = "secradio",
 		"Warden" = "secradio",
+		"Security Pod Pilot" = "secradio",
 		// Supply
 		"Quartermaster" = "supradio",
 		"Cargo Technician" = "supradio",

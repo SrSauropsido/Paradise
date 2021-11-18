@@ -237,7 +237,8 @@
 		/obj/item/holosign_creator/security,
 		/obj/item/melee/classic_baton/telescopic,
 		/obj/item/restraints/legcuffs/bola,
-		/obj/item/clothing/mask/gas/sechailer)
+		/obj/item/clothing/mask/gas/sechailer,
+		/obj/item/spacepod_key)
 
 /obj/item/storage/belt/security/sec/populate_contents()
 	new /obj/item/flashlight/seclite(src)

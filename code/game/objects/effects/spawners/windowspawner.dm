@@ -27,8 +27,8 @@
 			WI = new window_to_spawn_regular(get_turf(src))
 			WI.dir = cdir
 	else
-		var/obj/structure/window/WI = new window_to_spawn_full(get_turf(src)) // Hispania Windows Colors
 		WI.color = color
+		WI = new window_to_spawn_full(get_turf(src))
 	synchronize_variables(WI)
 	if(useGrille)
 		new /obj/structure/grille(get_turf(src))

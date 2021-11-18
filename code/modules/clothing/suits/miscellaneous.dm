@@ -789,7 +789,7 @@
 		"Vox" = 'icons/mob/clothing/species/vox/suit.dmi'
 		)
 
-/obj/item/clothing/suit/jacket/secbomber
+/obj/item/clothing/suit/jacket/pilot
 	name = "security bomber jacket"
 	desc = "A stylish and worn-in armoured black bomber jacket emblazoned with the NT Security crest on the left breast. Looks rugged."
 	w_class = WEIGHT_CLASS_NORMAL

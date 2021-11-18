@@ -249,6 +249,7 @@
 		/obj/item/clothing/accessory/medal/gold/captain,
 		/obj/item/clothing/gloves/color/black/krav_maga/sec,
 		/obj/item/nullrod,
+		/obj/item/spacepod_key,
 		/obj/item/key,
 		/obj/item/door_remote,
 		/obj/item/autopsy_scanner,
