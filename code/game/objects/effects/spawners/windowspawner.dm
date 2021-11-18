@@ -27,9 +27,10 @@
 			WI = new window_to_spawn_regular(get_turf(src))
 			WI.dir = cdir
 	else
-		WI.color = color
 		WI = new window_to_spawn_full(get_turf(src))
+		WI.color = color
 	synchronize_variables(WI)
+
 	if(useGrille)
 		new /obj/structure/grille(get_turf(src))
 
