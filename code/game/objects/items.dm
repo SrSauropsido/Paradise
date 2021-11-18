@@ -5,7 +5,6 @@ GLOBAL_DATUM_INIT(fire_overlay, /image, image("icon" = 'icons/goonstation/effect
 
 	move_resist = null // Set in the Initialise depending on the item size. Unless it's overriden by a specific item
 	var/discrete = 0 // used in item_attack.dm to make an item not show an attack message to viewers
-	var/image/blood_overlay = null //this saves our blood splatter overlay, which will be processed not to go over the edges of the sprite
 	var/item_state = null
 	var/lefthand_file = 'icons/mob/inhands/items_lefthand.dmi'
 	var/righthand_file = 'icons/mob/inhands/items_righthand.dmi'
@@ -236,6 +235,9 @@ GLOBAL_DATUM_INIT(fire_overlay, /image, image("icon" = 'icons/goonstation/effect
 			msg += "<span class='danger'>No extractable materials detected.</span><BR>"
 		msg += "*--------*"
 		. += msg
+
+	if(HAS_TRAIT(src, TRAIT_BUTCHERS_HUMANS))
+		. += "<span class='warning'>Can be used to butcher dead people into meat while on harm intent.</span>"
 
 /obj/item/burn()
 	if(!QDELETED(src))

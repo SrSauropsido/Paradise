@@ -114,6 +114,11 @@
 	/// Is the client watchlisted
 	var/watchlisted = FALSE
 
+	/// Client's pAI save
+	var/datum/pai_save/pai_save
+
+	/// List of the clients CUIs
+	var/list/datum/custom_user_item/cui_entries = list()
 	////////////////
 	//HIPANIA AUTO//
 	////////////////
@@ -128,5 +133,8 @@
 		// I know we will never be in a world where admins are editing client vars to let people bypass TOS
 		// But guess what, if I have the ability to overengineer something, I am going to do it
 		if("tos_consent")
+			return FALSE
+		// Dont fuck with this
+		if("cui_entries")
 			return FALSE
 	return ..()

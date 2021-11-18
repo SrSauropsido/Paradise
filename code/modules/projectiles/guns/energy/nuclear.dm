@@ -81,7 +81,7 @@
 	can_holster = TRUE
 
 /obj/item/gun/energy/gun/blueshield/pdw9
-	name = "PDW-9 taser pistol"
+	name = "\improper PDW-9 taser pistol"
 	desc = "A military grade sidearm, used by many militia forces throughout the local sector."
 	icon_state = "pdw9pistol"
 
@@ -109,7 +109,7 @@
 	charge_delay = 5
 	can_charge = 0
 	ammo_type = list(/obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/disabler)
-	selfcharge = 1
+	selfcharge = TRUE
 	shaded_charge = FALSE
 
 /obj/item/gun/energy/gun/nuclear/detailed_examine()

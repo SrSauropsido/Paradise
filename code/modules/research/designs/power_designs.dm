@@ -7,7 +7,7 @@
 	desc = "A basic power cell that holds 1 kW of power."
 	id = "basic_cell"
 	req_tech = list("powerstorage" = 1)
-	build_type = PROTOLATHE | AUTOLATHE | MECHFAB | PODFAB
+	build_type = PROTOLATHE | AUTOLATHE | MECHFAB
 	materials = list(MAT_METAL = 700, MAT_GLASS = 50)
 	build_path = /obj/item/stock_parts/cell
 	category = list("Misc","Power","Machinery","initial")
@@ -18,7 +18,7 @@
 	desc = "A power cell that holds 10 kW of power."
 	id = "high_cell"
 	req_tech = list("powerstorage" = 2)
-	build_type = PROTOLATHE | AUTOLATHE | MECHFAB | PODFAB
+	build_type = PROTOLATHE | AUTOLATHE | MECHFAB
 	materials = list(MAT_METAL = 700, MAT_GLASS = 60)
 	build_path = /obj/item/stock_parts/cell/high
 	category = list("Misc","Power")
@@ -29,7 +29,7 @@
 	desc = "A power cell that holds 30 kW of power."
 	id = "hyper_cell"
 	req_tech = list("powerstorage" = 5, "materials" = 5, "engineering" = 5)
-	build_type = PROTOLATHE | MECHFAB | PODFAB
+	build_type = PROTOLATHE | MECHFAB
 	materials = list(MAT_METAL = 700, MAT_GOLD = 150, MAT_SILVER = 150, MAT_GLASS = 70)
 	build_path = /obj/item/stock_parts/cell/hyper
 	category = list("Misc","Power")
@@ -40,7 +40,7 @@
 	desc = "A power cell that holds 20 kW of power."
 	id = "super_cell"
 	req_tech = list("powerstorage" = 3, "materials" = 3)
-	build_type = PROTOLATHE | MECHFAB | PODFAB
+	build_type = PROTOLATHE | MECHFAB
 	materials = list(MAT_METAL = 700, MAT_GLASS = 70)
 	build_path = /obj/item/stock_parts/cell/super
 	category = list("Misc","Power")

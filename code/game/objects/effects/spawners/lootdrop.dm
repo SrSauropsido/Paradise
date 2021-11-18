@@ -162,7 +162,7 @@
 				/obj/item/storage/secure/briefcase/syndie = 2,
 				/obj/item/storage/fancy/cigarettes/cigpack_syndicate = 2,
 				/obj/item/storage/pill_bottle/fakedeath = 2,
-				"" = 64 // Reduce this number if you add things above. Make sure all the numbers in the list add to 100 EXACTLY 
+				"" = 64 // Reduce this number if you add things above. Make sure all the numbers in the list add to 100 EXACTLY
 				)
 
 /obj/effect/spawner/lootdrop/crate_spawner // for ruins
@@ -227,7 +227,6 @@
 				)
 
 /obj/effect/spawner/lootdrop/trade_sol/minerals/New()
-	. = ..()
 	if(loot && loot.len)
 		for(var/i = lootcount, i > 0, i--)
 			if(!loot.len)
@@ -238,6 +237,7 @@
 			if(lootspawn)
 				var/obj/item/stack/sheet/S = new lootspawn(get_turf(src))
 				S.amount = 25
+	. = ..()
 	qdel(src)
 
 
@@ -353,13 +353,13 @@
 				)
 
 /obj/effect/spawner/lootdrop/trade_sol/vehicle/New()
-	. = ..()
 	if(!loot.len)
 		return
 	var/lootspawn = pickweight(loot)
 	var/obj/vehicle/V = new lootspawn(get_turf(src))
 	if(V.key_type)
 		new V.key_type(get_turf(src))
+	. = ..()
 	qdel(src)
 
 

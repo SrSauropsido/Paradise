@@ -847,10 +847,6 @@
 		var/obj/mecha/M = loc
 		loc_temp =  M.return_temperature()
 
-	else if(istype(loc, /obj/spacepod))
-		var/obj/spacepod/S = loc
-		loc_temp = S.return_temperature()
-
 	else if(istype(loc, /obj/structure/transit_tube_pod))
 		loc_temp = environment.temperature
 
@@ -1044,3 +1040,7 @@
 			update_transform()
 		if("lighting_alpha")
 			sync_lighting_plane_alpha()
+
+/mob/living/throw_at(atom/target, range, speed, mob/thrower, spin, diagonals_first, datum/callback/callback, force)
+	stop_pulling()
+	return ..()

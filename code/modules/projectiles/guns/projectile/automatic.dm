@@ -238,9 +238,9 @@
 	can_suppress = 0
 
 //ARG Assault Rifle//
-/obj/item/gun/projectile/automatic/fullauto/ar
-	name = "ARG"
-	desc = "A robust assault rile used by Nanotrasen fighting forces."
+/obj/item/gun/projectile/automatic/ar
+	name = "\improper ARG"
+	desc = "A robust assault rifle used by Nanotrasen fighting forces."
 	icon_state = "arg"
 	item_state = "arg"
 	slot_flags = 0

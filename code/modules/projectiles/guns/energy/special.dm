@@ -309,7 +309,7 @@
 
 // HONK Rifle //
 /obj/item/gun/energy/clown
-	name = "HONK Rifle"
+	name = "\improper HONK rifle"
 	desc = "Clown Planet's finest."
 	icon_state = "disabler"
 	ammo_type = list(/obj/item/ammo_casing/energy/clown)
@@ -332,7 +332,7 @@
 
 // Energy Sniper //
 /obj/item/gun/energy/sniperrifle
-	name = "L.W.A.P. Sniper Rifle"
+	name = "\improper L.W.A.P. sniper rifle"
 	desc = "A rifle constructed of lightweight materials, fitted with a SMART aiming-system scope."
 	icon_state = "esniper"
 	item_state = "lwap"

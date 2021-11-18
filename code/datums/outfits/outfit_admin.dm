@@ -651,6 +651,8 @@
 	l_ear = /obj/item/radio/headset/ert
 	id = /obj/item/card/id
 	l_hand = /obj/item/gun/projectile/automatic/fullauto/ar
+	suit_store = /obj/item/gun/projectile/automatic/pistol/m1911
+	r_hand = /obj/item/gun/projectile/automatic/fullauto/ar
 	r_pocket = /obj/item/flashlight/seclite
 	pda = /obj/item/pda
 	backpack_contents = list(

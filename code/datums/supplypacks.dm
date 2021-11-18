@@ -1211,6 +1211,12 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 	containertype = /obj/structure/closet/critter/deer
 	containername = "deer crate"
 
+/datum/supply_packs/organic/bunny
+	name = "Bunny Crate"
+	cost = 20
+	containertype = /obj/structure/closet/critter/bunny
+	containername = "bunny crate"
+
 ////// hippy gear
 
 /datum/supply_packs/organic/hydroponics // -- Skie
@@ -1450,6 +1456,12 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 	contains = list(/obj/item/storage/backpack/duffel/mining_conscript)
 	containertype = /obj/structure/closet/crate/secure
 	containername = "shaft miner starter kit"
+
+/datum/supply_packs/misc/carpet
+	name = "Carpet Crate"
+	cost = 20
+	contains = list(/obj/item/stack/tile/carpet/twenty)
+	containername = "carpet crate"
 
 
 ///////////// Paper Work

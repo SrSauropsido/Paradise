@@ -16,7 +16,6 @@ GLOBAL_LIST_INIT(engineering_positions, list(
 	"Chief Engineer",
 	"Station Engineer",
 	"Life Support Specialist",
-	"Mechanic"
 ))
 
 
@@ -77,7 +76,6 @@ GLOBAL_LIST_INIT(security_positions, list(
 	"Detective",
 	"Security Officer",
 	"Brig Physician",
-	"Security Pod Pilot",
 	"Magistrate"
 ))
 
@@ -97,10 +95,7 @@ GLOBAL_LIST_INIT(whitelisted_positions, list(
 	"Blueshield",
 	"Nanotrasen Representative",
 	"Barber",
-	"Mechanic",
-	"Brig Physician",
-	"Magistrate",
-	"Security Pod Pilot",
+	"Brig Physician"
 ))
 
 
