@@ -1,6 +1,7 @@
 /obj/structure/closet/secure_closet/beekeeper
 	name = "beekeeper locker"
 	req_access = list(ACCESS_HYDROPONICS)
+	icon = 'icons/hispania/obj/closet.dmi'
 	icon_state = "beesecure1"
 	icon_closed = "beesecure"
 	icon_opened = "beesecureopen"
