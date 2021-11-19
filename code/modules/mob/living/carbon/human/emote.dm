@@ -653,14 +653,14 @@
 					//Hispania Laugh Starts Here
 					if(gender == FEMALE)
 						if(HAS_TRAIT(src, TRAIT_MALEFICO))
-							playsound(src, dna.species.female_laughs_sound2, 120, 1, frequency = get_age_pitch()) //Hispania 
+							playsound(src, dna.species.female_laughs_sound_evil, 120, 1, frequency = get_age_pitch()) //Hispania
 						else
-							playsound(src, dna.species.female_laughs_sound, 120, 1, frequency = get_age_pitch()) //Hispania 
+							playsound(src, dna.species.female_laughs_sound, 120, 1, frequency = get_age_pitch()) //Hispania
 					else
 						if(HAS_TRAIT(src, TRAIT_MALEFICO))
-							playsound(src, dna.species.male_laughs_sound4, 120, 1, frequency = get_age_pitch()) //Hispania
+							playsound(src, dna.species.male_laughs_sound_evil, 120, 1, frequency = get_age_pitch()) //Hispania
 						else
-							playsound(src, dna.species.male_laughs_sound, 120, 1, frequency = get_age_pitch()) //Hispania 
+							playsound(src, dna.species.male_laughs_sound, 120, 1, frequency = get_age_pitch()) //Hispania
 					//Hispania Laugh Ends Here
 				else
 					message = "<B>[src]</B> makes a noise."
@@ -676,13 +676,15 @@
 					message = "<B>[src]</B> laughs[M ? " at [M]" : ""]."
 					m_type = 2
 					//Hispania Laugh Starts Here
-					if(gender != FEMALE)
-						playsound(src, dna.species.male_laughs_sound2, 120, 1, frequency = get_age_pitch()) //Hispania 
+					if(gender == FEMALE)
+						playsound(src, dna.species.female_laughs_sound2, 120, 1, frequency = get_age_pitch()) //Hispania
+					else
+						playsound(src, dna.species.male_laughs_sound2, 120, 1, frequency = get_age_pitch())
 					//Hispania Laugh Ends Here
 				else
 					message = "<B>[src]</B> makes a noise."
 					m_type = 2
-			
+
 		if("laugh3", "laughs3")
 			var/M = handle_emote_param(param)
 			if(miming)
@@ -694,7 +696,7 @@
 					m_type = 2
 					//Hispania Laugh Starts Here
 					if(gender != FEMALE)
-						playsound(src, dna.species.male_laughs_sound3, 120, 1, frequency = get_age_pitch()) //Hispania 
+						playsound(src, dna.species.male_laughs_sound3, 120, 1, frequency = get_age_pitch()) //Hispania
 					//Hispania Laugh Ends Here
 				else
 					message = "<B>[src]</B> makes a noise."
