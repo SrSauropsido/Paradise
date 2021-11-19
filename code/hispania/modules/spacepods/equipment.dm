@@ -152,7 +152,6 @@
 /obj/item/spacepod_equipment/weaponry/inmolationpod  ///Proyectil de fuego
 	name = "ZFI Immolation Beam System"
 	desc = "A weapon for spacepods. Fires beams of extreme heat that set targets on fire."
-	icon = 'icons/hispania/obj/spacepod.dmi'
 	icon_state = "weapon_inmolator"
 	projectile_type = /obj/item/projectile/beam/immolator
 	shot_cost = 200
@@ -163,7 +162,6 @@
 /obj/item/spacepod_equipment/weaponry/ionsystempod ///Rifle de Iones
 	name = "Ion Breach System"
 	desc = "A weapon for spacepods. Fires beams of energy that destroy machinery and electrical systems."
-	icon = 'icons/hispania/obj/spacepod.dmi'
 	icon_state = "weapon_ion"
 	projectile_type = /obj/item/projectile/ion
 	shot_cost = 300
@@ -174,7 +172,6 @@
 /obj/item/spacepod_equipment/weaponry/lmgpod /// LMG
 	name = "LMG System"
 	desc = "A weapon for spacepods design to kill xeno threads."
-	icon = 'icons/hispania/obj/spacepod.dmi'
 	icon_state = "weapon_lmg"
 	projectile_type = /obj/item/projectile/bullet/weakbullet3
 	shot_cost = 100
@@ -274,7 +271,7 @@ GLOBAL_LIST_EMPTY(pod_trackers)
 /obj/item/spacepod_equipment/cargo
 	name = "pod cargo"
 	desc = "You shouldn't be seeing this"
-	icon = 'icons/vehicles/spacepod.dmi'
+	icon = 'icons/hispania/obj/spacepod.dmi'
 	icon_state = "cargo_blank"
 	var/obj/storage = null
 
@@ -309,14 +306,12 @@ GLOBAL_LIST_EMPTY(pod_trackers)
 /obj/item/spacepod_equipment/sec_cargo/chair_triple //3 personas por space pod
 	name = "dual seat system"
 	desc = "A system for two more seats for a spacepod."
-	icon = 'icons/hispania/obj/spacepod.dmi'
 	icon_state = "sec_cargo_chair3"
 	occupant_mod = 2
 
 /obj/item/spacepod_equipment/sec_cargo/chair_cuadro  //4 personas por space pod
 	name = "triple seat system"
 	desc = "A system for three more seats for a spacepod."
-	icon = 'icons/hispania/obj/spacepod.dmi'
 	icon_state = "sec_cargo_chair4"
 	occupant_mod = 3
 
@@ -329,7 +324,6 @@ GLOBAL_LIST_EMPTY(pod_trackers)
 /obj/item/spacepod_equipment/sec_cargo
 	name = "secondary cargo"
 	desc = "you shouldn't be seeing this"
-	icon = 'icons/vehicles/spacepod.dmi'
 	icon_state = "blank"
 
 // Passenger Seat
@@ -349,7 +343,6 @@ GLOBAL_LIST_EMPTY(pod_trackers)
 /obj/item/spacepod_equipment/sec_cargo/bs_loot_box //Mucho espacio para cosas
 	name = "bluespace loot box system"
 	desc = "A prototype bluespace lootbox compartment to store valuables."
-	icon = 'icons/hispania/obj/spacepod.dmi'
 	icon_state = "sec_cargo_lootbs"
 	storage_mod = list("slots" = 14, "w_class" = 28)
 
@@ -362,7 +355,7 @@ GLOBAL_LIST_EMPTY(pod_trackers)
 /obj/item/spacepod_equipment/lock
 	name = "pod lock"
 	desc = "You shouldn't be seeing this"
-	icon = 'icons/vehicles/spacepod.dmi'
+	icon = 'icons/hispania/obj/spacepod.dmi'
 	icon_state = "blank"
 	var/mode = 0
 	var/id = null
@@ -382,7 +375,7 @@ GLOBAL_LIST_EMPTY(pod_trackers)
 /obj/item/spacepod_key
 	name = "spacepod key"
 	desc = "A key for a spacepod lock."
-	icon = 'icons/vehicles/spacepod.dmi'
+	icon = 'icons/hispania/obj/spacepod.dmi'
 	icon_state = "podkey"
 	w_class = WEIGHT_CLASS_TINY
 	var/id = 0
