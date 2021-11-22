@@ -1,3 +1,35 @@
+/obj/item/clothing/mask/nobreath
+	name = "rebreather mask"
+	desc = "A transparent mask, resembling a conventional breath mask, but made of bluish slime. Seems to lack any air supply tube, though."
+	icon = 'icons/obj/clothing/masks.dmi'
+	icon_state = "medical"
+	item_state = "medical"
+	body_parts_covered = NONE
+	w_class = WEIGHT_CLASS_SMALL
+	permeability_coefficient = 0.5
+	flags_cover = MASKCOVERSMOUTH
+	resistance_flags = NONE
+	sprite_sheets = list(
+		"Vox" = 'icons/mob/clothing/species/vox/mask.dmi',
+		"Vox Armalis" = 'icons/mob/clothing/species/armalis/mask.dmi',
+		"Unathi" = 'icons/mob/clothing/species/unathi/mask.dmi',
+		"Tajaran" = 'icons/mob/clothing/species/tajaran/mask.dmi',
+		"Vulpkanin" = 'icons/mob/clothing/species/vulpkanin/mask.dmi',
+		"Grey" = 'icons/mob/clothing/species/grey/mask.dmi',
+		"Drask" = 'icons/mob/clothing/species/drask/mask.dmi',
+		"Plasmaman" = 'icons/mob/clothing/species/plasmaman/mask.dmi'
+		)
+
+/obj/item/clothing/mask/nobreath/equipped(mob/living/carbon/human/user, slot)
+	. = ..()
+	if(slot == slot_wear_mask)
+		ADD_TRAIT(user, TRAIT_NOBREATH, "nobreath_[(src)]")
+		user.clear_alert("not_enough_oxy","not_enough_tox","not_enough_co2","not_enough_nitro","too_much_nitro","too_much_oxy","too_much_co2","too_much_tox")
+
+/obj/item/clothing/mask/nobreath/dropped(mob/living/carbon/human/user)
+	..()
+	REMOVE_TRAIT(user, TRAIT_NOBREATH, "nobreath_[(src)]")
+
 /obj/item/clothing/glasses/prism_glasses
 	name = "prism glasses"
 	desc = "The lenses seem to glow slightly, and reflect light into dazzling colors."
