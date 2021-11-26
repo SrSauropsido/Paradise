@@ -129,30 +129,6 @@ Burning extracts:
 		S.visible_message("<span class='danger'>The [S] is driven into a dangerous frenzy!</span>")
 	..()
 
-/obj/item/slimecross/burning/green
-	colour = "green"
-	effect_desc = "The user gets a sharp arm blade in the hand it is used in."
-
-/obj/item/slimecross/burning/green
-	colour = "green"
-	effect_desc = "The user gets a sharp arm blade in the hand it is used in."
-
-/obj/item/slimecross/burning/green/do_effect(mob/user)
-	if(istype(user.l_hand)) //Jaja, seguro hay una forma mejor pero asi lo hacen los changelings
-		qdel(user.l_hand)
-		user.visible_message("<span class='warning'>[src] melts onto [user]'s arm, boiling the flesh horribly!</span>")
-		user.update_inv_l_hand()
-		user.equip_to_slot_if_possible(new /obj/item/melee/arm_blade/slime, slot_l_hand, TRUE, TRUE)
-		return
-	if(istype(user.r_hand))
-		qdel(user.r_hand)
-		user.visible_message("<span class='warning'>[src] melts onto [user]'s arm, boiling the flesh horribly!</span>")
-		user.update_inv_r_hand()
-		user.equip_to_slot_if_possible(new /obj/item/melee/arm_blade/slime, slot_r_hand, TRUE, TRUE)
-		return
-	user.emote("scream")
-	..()
-
 /obj/item/slimecross/burning/oil
 	colour = "oil"
 	effect_desc = "Creates an explosion after a few seconds."
