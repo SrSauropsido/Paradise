@@ -8,7 +8,15 @@ Slimecrossing Weapons
 /obj/item/melee/arm_blade/slime
 	name = "slimy boneblade"
 	desc = "What remains of the bones in your arm. Incredibly sharp, and painful for both you and your opponents."
+	icon_state = "arm_blade"
+	item_state = "arm_blade"
+	flags = ABSTRACT | NODROP | DROPDEL
+	w_class = WEIGHT_CLASS_HUGE
+	sharp = 1
 	force = 15
+	throwforce = 0 //Just to be on the safe side
+	throw_range = 0
+	throw_speed = 0	
 
 /obj/item/melee/arm_blade/slime/attack(mob/living/L, mob/user)
 	. = ..()
