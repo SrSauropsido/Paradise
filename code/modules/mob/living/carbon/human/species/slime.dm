@@ -69,6 +69,7 @@
 	var/reagent_skin_coloring = FALSE
 	var/datum/action/innate/regrow/grow
 	var/datum/action/innate/slimecolor/recolor
+	var/datum/action/innate/slimehair/rehair
 
 /datum/species/slime/on_species_gain(mob/living/carbon/human/H)
 	..()
@@ -76,6 +77,8 @@
 	grow.Grant(H)
 	recolor = new()
 	recolor.Grant(H)
+	rehair = new()
+	rehair.Grant(H)
 	RegisterSignal(H, COMSIG_HUMAN_UPDATE_DNA, /datum/species/slime/./proc/blend)
 	blend(H)
 
@@ -86,6 +89,8 @@
 		grow.Remove(H)
 	if(recolor)
 		recolor.Remove(H)
+	if(rehair)
+		rehair.Remove(H)
 	UnregisterSignal(H, COMSIG_HUMAN_UPDATE_DNA)
 
 /datum/species/slime/proc/blend(mob/living/carbon/human/H)
@@ -208,6 +213,34 @@
 		H.visible_message("<span class='notice'>[H] finishes regrowing [H.p_their()] missing [new_limb]!</span>", "<span class='notice'>You finish regrowing your [limb_select]</span>")
 	else
 		to_chat(H, "<span class='warning'>You need to hold still in order to regrow a limb!</span>")
+
+
+/datum/action/innate/slimehair
+	name = "Change Hair"
+	check_flags = AB_CHECK_CONSCIOUS
+	icon_icon = 'icons/effects/effects.dmi'
+	button_icon_state = "greenglow"
+
+/datum/action/innate/slimehair/Activate()
+	var/mob/living/carbon/human/H = owner
+	var/obj/item/organ/external/head/C = H.get_organ("head")
+	//facial hair
+	var/f_new_style = input(H, "Select a facial hair style", "Grooming")  as null|anything in H.generate_valid_facial_hairstyles()
+	//handle normal hair
+	var/h_new_style = input(H, "Select a hair style", "Grooming")  as null|anything in H.generate_valid_hairstyles()
+	to_chat("<span class='notice'>[H] starts changing [H.p_their()] hair!</span>", "<span class='notice'>You start changing your own hair! [H]</span>") //arguments for this are: 1. what others see 2. what the user sees. --Fixed grammar, (TGameCo)
+	if(do_after(H, 50, target = H)) //this is the part that adds a delay. delay is in deciseconds. --Made it 5 seconds, because hair isn't cut in one second in real life, and I want at least a little bit longer time, (TGameCo)
+
+		if(f_new_style)
+			C.f_style = f_new_style
+		if(h_new_style)
+			C.h_style = h_new_style
+
+	H.update_hair()
+	H.update_fhair()
+	to_chat("<span class='notice'>[H] finishes changing [H.p_their()] hair! </span>")
+
+
 
 #undef SLIMEPERSON_COLOR_SHIFT_TRIGGER
 #undef SLIMEPERSON_ICON_UPDATE_PERIOD
