@@ -1167,6 +1167,7 @@
 #include "code\game\verbs\suicide.dm"
 #include "code\game\verbs\webmap.dm"
 #include "code\game\verbs\who.dm"
+#include "code\hispania\modules\surgery\organs\eyes.dm"
 #include "code\hispania\__DEFINES\monkey.dm"
 #include "code\hispania\__DEFINES\pod.dm"
 #include "code\hispania\__HELPERS\cmp.dm"
