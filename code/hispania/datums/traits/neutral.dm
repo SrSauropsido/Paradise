@@ -9,7 +9,7 @@
 
 /datum/quirk/neutronimplant
 	name = "Vista neutron"
-	desc = "D. (Soluciona algunos errores graficos)"
+	desc = "Implante de ojos neutron que solo te permite ver los extremos de luz y oscuridad. (Soluciona algunos errores graficos)"
 	value = 0
 	gain_text = "<span class='notice'>No ves los cambios de luz, solo los extremos de luz y oscuridad.</span>"
 
