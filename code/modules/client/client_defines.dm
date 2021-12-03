@@ -56,9 +56,6 @@
 
 	var/global/obj/screen/click_catcher/void
 
-	var/karma_spent = 0
-	var/karma_tab = 0
-
 	control_freak = CONTROL_FREAK_ALL | CONTROL_FREAK_SKIN | CONTROL_FREAK_MACROS
 
 	var/ip_intel = "Disabled"
@@ -128,6 +125,9 @@
 	var/fullscreen = FALSE // HISPANIA FULLSCREEN
 
 
+	/// The client's karma holder
+	var/datum/karma_holder/karmaholder
+
 /client/vv_edit_var(var_name, var_value)
 	switch(var_name)
 		// I know we will never be in a world where admins are editing client vars to let people bypass TOS
@@ -136,5 +136,8 @@
 			return FALSE
 		// Dont fuck with this
 		if("cui_entries")
+			return FALSE
+		// or this
+		if("karmaholder")
 			return FALSE
 	return ..()
