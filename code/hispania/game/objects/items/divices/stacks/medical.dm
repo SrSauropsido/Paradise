@@ -83,7 +83,7 @@
 		if(!(affecting.limb_name in list("l_arm", "r_arm", "l_hand", "r_hand", "l_leg", "r_leg", "l_foot", "r_foot")))
 			to_chat(user, "<span class='danger'>You can't apply a [src] there!</span>")
 			return TRUE
-		if(affecting.internal_bleeding)
+		if(affecting.status & ORGAN_INT_BLEEDING)
 			if((M == user && self_delay > 0) || (M != user && other_delay > 0))
 				user.visible_message("<span class='notice'>[user] starts to apply [src] to [H]'s [limb].</span>", \
 										"<span class='notice'>You start to apply [src] to [H]'s [limb].</span>", \
@@ -94,7 +94,7 @@
 				return TRUE
 			user.visible_message("<span class='notice'>[user] applies [src] to [H]'s [limb].</span>", \
 								"<span class='notice'>You apply [src] to [H]'s [limb] stopping the internal bleeding.</span>")
-			affecting.internal_bleeding = FALSE
+			affecting.fix_internal_bleeding()
 			use(1)
 		else
 			to_chat(user, "<span class='warning'>You are unable to find any signs of internal bleeding on this limb.</span>")
