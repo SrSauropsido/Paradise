@@ -190,10 +190,11 @@
 					body_accessory=:body_accessory,
 					gear=:gearlist,
 					autohiss=:autohiss_mode,
+					quirks =: quirklist,
 					hair_gradient=:h_grad_style,
 					hair_gradient_offset=:h_grad_offset,
 					hair_gradient_colour=:h_grad_colour,
-					hair_gradient_alpha=:h_grad_alpha
+					hair_gradient_alpha=:h_grad_alpha,
 					WHERE ckey=:ckey
 					AND slot=:slot"}, list(
 						// OH GOD SO MANY PARAMETERS
@@ -249,6 +250,7 @@
 						"body_accessory" = (body_accessory ? body_accessory : ""),
 						"gearlist" = (gearlist ? gearlist : ""),
 						"autohiss_mode" = autohiss_mode,
+						"quirklist" = (quirklist ? quirklist : ""),
 						"h_grad_style" = h_grad_style,
 						"h_grad_offset" = "[h_grad_offset_x],[h_grad_offset_y]",
 						"h_grad_colour" = h_grad_colour,
@@ -293,7 +295,7 @@
 			gen_record,
 			player_alt_titles,
 			disabilities, organ_data, rlimb_data, nanotrasen_relation, speciesprefs,
-			socks, body_accessory, gear, autohiss,
+			socks, body_accessory, gear, autohiss, quirks,
 			hair_gradient, hair_gradient_offset, hair_gradient_colour, hair_gradient_alpha)
 		VALUES
 			(:ckey, :slot, :metadata, :name, :be_random_name, :gender,
@@ -321,7 +323,7 @@
 			:gen_record,
 			:playertitlelist,
 			:disabilities, :organlist, :rlimblist, :nanotrasen_relation, :speciesprefs,
-			:socks, :body_accessory, :gearlist, :autohiss_mode,
+			:socks, :body_accessory, :gearlist, :autohiss_mode, :quirklist,
 			:h_grad_style, :h_grad_offset, :h_grad_colour, :h_grad_alpha)
 	"}, list(
 		// This has too many params for anyone to look at this without going insae
@@ -379,6 +381,7 @@
 		"body_accessory" = (body_accessory ? body_accessory : ""),
 		"gearlist" = (gearlist ? gearlist : ""),
 		"autohiss_mode" = autohiss_mode,
+		"quirklist" = (quirklist ? quirklist : ""),
 		"h_grad_style" = h_grad_style,
 		"h_grad_offset" = "[h_grad_offset_x],[h_grad_offset_y]",
 		"h_grad_colour" = h_grad_colour,
@@ -555,7 +558,8 @@
 		src.rlimb_data = list()
 	if(!loadout_gear)
 		loadout_gear = list()
-	if(!all_quirks) all_quirks = list()
+	if(!all_quirks)
+		all_quirks = list()
 
 	// Check if the current body accessory exists
 	if(!GLOB.body_accessory_by_name[body_accessory])
