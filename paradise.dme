@@ -1458,6 +1458,7 @@
 #include "code\hispania\modules\station_goals\redspacedisk.dm"
 #include "code\hispania\modules\status_bar\status_bar.dm"
 #include "code\hispania\modules\surgery\tools.dm"
+#include "code\hispania\modules\surgery\organs\eyes.dm"
 #include "code\hispania\modules\surgery\organs\vocal_cords.dm"
 #include "code\hispania\modules\surgery\organs\subtypes\murghal.dm"
 #include "code\hispania\modules\telesci\bscrystal.dm"
