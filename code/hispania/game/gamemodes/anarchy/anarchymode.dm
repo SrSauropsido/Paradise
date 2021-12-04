@@ -1,4 +1,4 @@
-/datum/game_mode/extended/anarchy
+/datum/game_mode/anarchy
 	name = "Extended Anarchy"
 	config_tag = "extended-anarchy"
 	required_players = 0
