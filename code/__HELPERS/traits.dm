@@ -171,6 +171,7 @@ Remember to update _globalvars/traits.dm if you're adding/removing/renaming trai
 #define TRAIT_AMEN 				"amen"
 #define TRAIT_PROSOPAGNOSIA		"prosopagnosia"
 #define TRAIT_ANXIOUS			"anxious"
+#define TRAIT_MALEFICO			"malefico"
 //finhispatraits
 
 #define TRAIT_DWARF				"dwarf"
