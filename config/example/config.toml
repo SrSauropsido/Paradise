@@ -239,7 +239,6 @@ gamemode_probabilities = [
 	{gamemode = "traitorvamp", probability = 3},
 	{gamemode = "vampire", probability = 3},
 	{gamemode = "wizard", probability = 2},
-    {gamemode = "extended-anarchy, probability = 0"},
 ]
 # Maximum cycles (2s) before a shadowling starts to take damage if they dont hatch
 shadowling_max_age = 600 # 20 minutes
