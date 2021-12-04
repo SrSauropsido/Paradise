@@ -9192,10 +9192,6 @@
 /area/hallway/primary/central/nw)
 "cHU" = (
 /obj/structure/table/wood,
-/obj/item/lipstick/white{
-	pixel_y = 5;
-	pixel_z = 5
-	},
 /obj/item/lipstick/black,
 /obj/structure/mirror{
 	pixel_x = -28
@@ -16045,6 +16041,21 @@
 	icon_state = "floorgrime"
 	},
 /area/maintenance/incinerator)
+"eNv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor{
+	dir = 4;
+	icon_state = "yellowcorner"
+	},
+/area/hallway/primary/aft)
 "eNz" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "mining_home";
@@ -35212,21 +35223,6 @@
 	icon_state = "whitehall"
 	},
 /area/toxins/lab)
-"kyh" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor{
-	dir = 4;
-	icon_state = "yellowcorner"
-	},
-/area/hallway/primary/aft)
 "kyq" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/wall/r_wall,
@@ -106278,7 +106274,7 @@ mrF
 mrF
 mrF
 bvJ
-kyh
+eNv
 lBW
 tsg
 poh
