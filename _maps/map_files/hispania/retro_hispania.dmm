@@ -16041,21 +16041,6 @@
 	icon_state = "floorgrime"
 	},
 /area/maintenance/incinerator)
-"eNv" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor{
-	dir = 4;
-	icon_state = "yellowcorner"
-	},
-/area/hallway/primary/aft)
 "eNz" = (
 /obj/machinery/door/airlock/external{
 	id_tag = "mining_home";
@@ -28843,12 +28828,6 @@
 	},
 /area/toxins/storage)
 "iGN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -57289,6 +57268,21 @@
 	icon_state = "brown"
 	},
 /area/quartermaster/miningdock)
+"rfe" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor{
+	dir = 4;
+	icon_state = "yellowcorner"
+	},
+/area/hallway/primary/aft)
 "rfh" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plating,
@@ -77778,6 +77772,9 @@
 /obj/machinery/door/airlock/maintenance{
 	name = "Bar Office Maintenance";
 	req_access_txt = "25"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -106274,7 +106271,7 @@ mrF
 mrF
 mrF
 bvJ
-eNv
+rfe
 lBW
 tsg
 poh
