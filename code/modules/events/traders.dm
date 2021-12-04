@@ -17,7 +17,7 @@ GLOBAL_LIST_INIT(unused_trade_stations, list("sol"))
 	if(!station) // If there are no unused stations, just no.
 		return
 	if(seclevel2num(get_security_level()) >= SEC_LEVEL_RED)
-		GLOB.event_announcement.Announce("A trading shuttle from Jupiter Station has been denied docking permission due to the heightened security alert aboard [station_name()].", "Trader Shuttle Docking Request Refused")
+		GLOB.event_announcement.Announce("Debido al alto nivel de alerta, [station_name()] ha denegado permiso de acoplamiento a una nave mercante de la Estacion Jupiter por razones de seguridad.")
 		// if the docking request was refused, fire another major event in 60 seconds
 		var/datum/event_container/EC = SSevents.event_containers[EVENT_LEVEL_MAJOR]
 		EC.next_event_time = world.time + (60 * 10)
@@ -36,7 +36,7 @@ GLOBAL_LIST_INIT(unused_trade_stations, list("sol"))
 	INVOKE_ASYNC(src, .proc/spawn_traders, spawnlocs)
 
 /datum/event/traders/proc/spawn_traders(list/spawnlocs)
-	var/list/candidates = SSghost_spawns.poll_candidates("Do you want to play as a Sol Trader?", ROLE_TRADER, TRUE)
+	var/list/candidates = SSghost_spawns.poll_candidates("¿Quieres jugar como un comerciante de Sol?", ROLE_TRADER, TRUE)
 	var/index = 1
 	while(spawn_count > 0 && length(candidates))
 		if(index > length(spawnlocs))
@@ -57,14 +57,14 @@ GLOBAL_LIST_INIT(unused_trade_stations, list("sol"))
 			greet_trader(M)
 			success_spawn = TRUE
 	if(success_spawn)
-		GLOB.event_announcement.Announce("A trading shuttle from Jupiter Station has been granted docking permission at [station_name()] arrivals port 4.", "Trader Shuttle Docking Request Accepted")
+		GLOB.event_announcement.Announce("[station_name()] ha concedido permiso de acoplamiento a una nave mercante de la Estacion Jupiter. El acoplamiento sera en llegadas puerto numero 4. ")
 	else
 		GLOB.unused_trade_stations += station // Return the station to the list of usable stations.
 
 /datum/event/traders/proc/greet_trader(mob/living/carbon/human/M)
-	to_chat(M, "<span class='boldnotice'>You are a trader!</span>")
-	to_chat(M, "<span class='notice'>You are currently docked at [get_area(M)].</span>")
-	to_chat(M, "<span class='notice'>You are about to trade with [station_name()].</span>")
+	to_chat(M, "<span class='boldnotice'>¡Eres un comerciante!</span>")
+	to_chat(M, "<span class='notice'>Actualmente estas en [get_area(M)].</span>")
+	to_chat(M, "<span class='notice'>Estas a punto de comerciar con la estacion [station_name()].</span>")
 	addtimer(CALLBACK(GLOBAL_PROC, .proc/show_objectives, M.mind), 25)
 
 /datum/event/traders/proc/forge_trader_objectives()
