@@ -85,7 +85,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	var/weaponlock_time = 120
 	var/lawupdate = 1 //Cyborgs will sync their laws with their AI by default
 	var/lockcharge //Used when locking down a borg to preserve cell charge
-	var/speed = 0 //Cause sec borgs gotta go fast //No they dont!
+	var/speed = -1 //Cause sec borgs gotta go fast //No they dont!//Si van rapido!
 	var/scrambledcodes = 0 // Used to determine if a borg shows up on the robotics console.  Setting to one hides them.
 	var/can_lock_cover = FALSE //Used to set if a borg can re-lock its cover.
 	var/has_camera = TRUE
@@ -316,7 +316,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 		var/image/image = image(icon, icon_state = skin_icon)
 		skins[I] = image
 	var/modtype = show_radial_menu(src, src, skins, null, 40, null, TRUE)
-	
+
 	if(!modtype)
 		return
 	designation = modtype
@@ -488,7 +488,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	update_icons()
 	update_headlamp()
 
-	speed = 0 // Remove upgrades.
+	speed = -1 // Remove upgrades.
 	ionpulse = FALSE
 	magpulse = FALSE
 	weapons_unlock = FALSE
