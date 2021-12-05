@@ -120,3 +120,41 @@
 /area/NT_Polar_Outpost/gate_failure
 	name = "RO Gateway Prototype"
 	icon_state = "teleporter"
+
+/area/dababyruin
+	name = "DaBaBy Ruin"
+	icon = 'icons/hispania/turf/areas.dmi'
+	icon_state = "dababy"
+	ambientsounds = MAINTENANCE_SOUNDS
+	sound_environment = SOUND_AREA_TUNNEL_ENCLOSED
+	always_unpowered = TRUE
+
+/area/dababybigzone
+	name = "DaBaBy Principal Ruin"
+	icon = 'icons/hispania/turf/areas.dmi'
+	icon_state = "dababybig"
+	ambientsounds = RUINS_SOUNDS
+	sound_environment = SOUND_AREA_SMALL_ENCLOSED
+
+/area/maintenance/spacepost
+	name = "DaBaby SpacePost - ONE"
+	icon = 'icons/hispania/turf/areas.dmi'
+	icon_state = "spacepost"
+
+/area/maintenance/spacepost/two
+	name = "DaBaby SpacePost - TWO"
+
+/area/maintenance/spacepost/third
+	name = "DaBaby SpacePost - THIRD"
+
+/area/engine/mechanic_workshop
+	name = "\improper Mechanic Workshop"
+	icon_state = "engine"
+
+/area/engine/mechanic_workshop/hanger
+	name = "\improper Hanger Bay"
+	icon_state = "engine"
+
+/area/security/podbay
+	name = "\improper Security Podbay"
+	icon_state = "securitypodbay"

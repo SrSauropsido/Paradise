@@ -50,13 +50,10 @@
 	underlay_appearance.icon_state = "basalt"
 	return TRUE
 
-/turf/simulated/floor/plating/lava/proc/is_safe()
-	var/static/list/lava_safeties_typecache = typecacheof(list(/obj/structure/lattice/catwalk, /obj/structure/stone_tile))
-	var/list/found_safeties = typecache_filter_list(contents, lava_safeties_typecache)
-	for(var/obj/structure/stone_tile/S in found_safeties)
-		if(S.fallen)
-			LAZYREMOVE(found_safeties, S)
-	return LAZYLEN(found_safeties)
+/turf/simulated/floor/plating/lava/is_safe()
+	if(find_safeties() && ..())
+		return TRUE
+	return FALSE
 
 /turf/simulated/floor/plating/lava/proc/burn_stuff(AM)
 	. = 0
@@ -81,7 +78,7 @@
 				O.resistance_flags |= FLAMMABLE //Even fireproof things burn up in lava
 			if(O.resistance_flags & FIRE_PROOF)
 				O.resistance_flags &= ~FIRE_PROOF
-			if(O.armor.getRating("fire") > 50) //obj with 100% fire armor still get slowly burned away.
+			if(O.armor.getRating(FIRE) > 50) //obj with 100% fire armor still get slowly burned away.
 				O.armor = O.armor.setRating(fire_value = 50)
 			O.fire_act(10000, 1000)
 

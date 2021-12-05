@@ -6,16 +6,12 @@
 	var/server_tag_line = "The perfect mix of RP & action"
 	/// Server features in a newline
 	var/server_features = "Medium RP, varied species/jobs"
-	/// Should bans be stored in the DB
-	var/use_database_bans = FALSE
 	/// Allow character OOC notes
 	var/allow_character_metadata = TRUE
 	/// Time in seconds for the pregame lobby
 	var/lobby_time = 240
 	/// Ban all Guest BYOND accounts
 	var/guest_ban = TRUE
-	/// Player threshold to automatically enable panic bunker
-	var/panic_bunker_threshold = 150
 	/// Allow players to use AntagHUD?
 	var/allow_antag_hud = TRUE
 	/// Forbid players from rejoining if they use AntagHUD?
@@ -89,7 +85,6 @@
 	// Use the load wrappers here. That way the default isnt made 'null' if you comment out the config line
 
 	// A lot of bools
-	CONFIG_LOAD_BOOL(use_database_bans, data["use_database_bans"])
 	CONFIG_LOAD_BOOL(allow_character_metadata, data["allow_character_metadata"])
 	CONFIG_LOAD_BOOL(guest_ban, data["guest_ban"])
 	CONFIG_LOAD_BOOL(allow_antag_hud, data["allow_antag_hud"])
@@ -121,7 +116,6 @@
 
 	// Numbers
 	CONFIG_LOAD_NUM(lobby_time, data["lobby_time"])
-	CONFIG_LOAD_NUM(panic_bunker_threshold, data["panic_bunker_threshold"])
 	CONFIG_LOAD_NUM(base_loadout_points, data["base_loadout_points"])
 	CONFIG_LOAD_NUM(cryo_penalty_period, data["cryo_penalty_period"])
 	CONFIG_LOAD_NUM(minimum_client_build, data["minimum_client_build"])

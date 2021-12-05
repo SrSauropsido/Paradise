@@ -3,10 +3,10 @@
 	desc = "Standard Security gear. Protects the head from impacts."
 	icon_state = "helmetmaterials"
 	w_class = WEIGHT_CLASS_NORMAL
-	flags = HEADBANGPROTECT
+	flags = HEADBANGPROTECT | BLOCKHAIR
 	flags_cover = HEADCOVERSEYES
 	item_state = "helmetmaterials"
-	armor = list("melee" = 35, "bullet" = 30, "laser" = 30,"energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	armor = list(MELEE = 35, BULLET = 30, LASER = 30, ENERGY = 10, BOMB = 25, BIO = 0, RAD = 0, FIRE = 50, ACID = 50)
 	flags_inv = HIDEEARS|HIDEEYES
 	cold_protection = HEAD
 	min_cold_protection_temperature = HELMET_MIN_TEMP_PROTECT
@@ -15,9 +15,9 @@
 	strip_delay = 60
 	dog_fashion = /datum/dog_fashion/head/helmet
 	sprite_sheets = list(
-		"Vox" = 'icons/mob/species/vox/helmet.dmi',
-		"Drask" = 'icons/mob/species/drask/helmet.dmi',
-		"Grey" = 'icons/mob/species/grey/helmet.dmi'
+		"Vox" = 'icons/mob/clothing/species/vox/helmet.dmi',
+		"Drask" = 'icons/mob/clothing/species/drask/helmet.dmi',
+		"Grey" = 'icons/mob/clothing/species/grey/helmet.dmi'
 		)
 
 /obj/item/clothing/head/helmet/attack_self(mob/user)
@@ -73,19 +73,20 @@
 /obj/item/clothing/head/helmet/alt
 	name = "bulletproof helmet"
 	desc = "A bulletproof helmet that excels in protecting the wearer against traditional projectile weaponry and explosives to a minor extent."
-	icon = 'icons/hispania/obj/clothing/hats.dmi'
+	icon = 'icons/hispania/obj/clothing/hats.dmi' // Ayuda a la hora de editar mapas y ver nuestras sprites
 	icon_state = "swat"
 	item_state = "swat"
-	armor = list("melee" = 15, "bullet" = 60, "laser" = 10, "energy" = 10, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	armor = list(MELEE = 15, BULLET = 60, LASER = 10, ENERGY = 10, BOMB = 40, BIO = 0, RAD = 0, FIRE = 50, ACID = 50)
 	dog_fashion = null
 	hispania_icon = TRUE
 
 /obj/item/clothing/head/helmet/riot
 	name = "riot helmet"
 	desc = "It's a helmet specifically designed to protect against close range attacks."
-	icon_state = "riot2"
-	item_state = "riot2"
-	armor = list("melee" = 50, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 80, "acid" = 80)
+	icon = 'icons/hispania/obj/clothing/hats.dmi' // Ayuda a la hora de editar mapas y ver nuestras sprites
+	icon_state = "riot"
+	item_state = "riot"
+	armor = list(MELEE = 50, BULLET = 10, LASER = 10, ENERGY = 10, BOMB = 0, BIO = 0, RAD = 0, FIRE = 80, ACID = 80)
 	flags_inv = HIDEEARS
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 	strip_delay = 80
@@ -97,10 +98,8 @@
 	desc = "A classic metal helmet."
 	icon_state = "knight_green"
 	item_state = "knight_green"
-	flags = BLOCKHAIR
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	dog_fashion = null
-	hispania_icon = FALSE
 
 /obj/item/clothing/head/helmet/justice
 	name = "helmet of justice"
@@ -127,7 +126,7 @@
 	desc = "They're often used by highly trained Swat Members."
 	icon_state = "swat"
 	item_state = "swat"
-	armor = list("melee" = 40, "bullet" = 30, "laser" = 30,"energy" = 30, "bomb" = 50, "bio" = 90, "rad" = 20, "fire" = 50, "acid" = 50)
+	armor = list(MELEE = 40, BULLET = 30, LASER = 30, ENERGY = 30, BOMB = 50, BIO = 90, RAD = 20, FIRE = 50, ACID = 50)
 	flags = null
 	flags_inv = HIDEEARS|HIDEEYES
 	cold_protection = HEAD
@@ -149,7 +148,7 @@
 	icon_state = "thunderdome"
 	flags = null
 	item_state = "thunderdome"
-	armor = list("melee" = 80, "bullet" = 80, "laser" = 50, "energy" = 50, "bomb" = 100, "bio" = 100, "rad" = 100, "fire" = 90, "acid" = 90)
+	armor = list(MELEE = 80, BULLET = 80, LASER = 50, ENERGY = 50, BOMB = 100, BIO = 100, RAD = 100, FIRE = 90, ACID = 90)
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
@@ -161,7 +160,7 @@
 	name = "roman helmet"
 	desc = "An ancient helmet made of bronze and leather."
 	flags = null
-	armor = list("melee" = 25, "bullet" = 0, "laser" = 25, "energy" = 10, "bomb" = 10, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 50)
+	armor = list(MELEE = 25, BULLET = 0, LASER = 25, ENERGY = 10, BOMB = 10, BIO = 0, RAD = 0, FIRE = 100, ACID = 50)
 	resistance_flags = FIRE_PROOF
 	icon_state = "roman"
 	item_state = "roman"
@@ -186,7 +185,6 @@
 	name = "gladiator helmet"
 	desc = "Ave, Imperator, morituri te salutant."
 	icon_state = "gladiator"
-	flags = BLOCKHAIR
 	item_state = "gladiator"
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES
 	toggle_message = "You attach the face shield to the"
@@ -203,7 +201,7 @@
 	icon_state = "redtaghelm"
 	flags = null
 	item_state = "redtaghelm"
-	armor = list("melee" = 15, "bullet" = 10, "laser" = 20,"energy" = 10, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 50)
+	armor = list(MELEE = 15, BULLET = 10, LASER = 20, ENERGY = 10, BOMB = 20, BIO = 0, RAD = 0, FIRE = 0, ACID = 50)
 	// Offer about the same protection as a hardhat.
 	flags_inv = HIDEEARS|HIDEEYES
 	dog_fashion = null
@@ -214,7 +212,7 @@
 	icon_state = "bluetaghelm"
 	flags = null
 	item_state = "bluetaghelm"
-	armor = list("melee" = 15, "bullet" = 10, "laser" = 20,"energy" = 10, "bomb" = 20, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 50)
+	armor = list(MELEE = 15, BULLET = 10, LASER = 20, ENERGY = 10, BOMB = 20, BIO = 0, RAD = 0, FIRE = 0, ACID = 50)
 	// Offer about the same protection as a hardhat.
 	flags_inv = HIDEEARS|HIDEEYES
 	dog_fashion = null
@@ -228,7 +226,7 @@
 	flags_cover = HEADCOVERSEYES | HEADCOVERSMOUTH
 
 	sprite_sheets = list(
-		"Vox" = 'icons/mob/species/vox/helmet.dmi'
+		"Vox" = 'icons/mob/clothing/species/vox/helmet.dmi'
 		)
 
 /obj/item/clothing/head/helmet/riot/knight/blue
@@ -255,7 +253,7 @@
 	desc = "An intimidating tribal helmet, it doesn't look very comfortable."
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
 	flags_cover = HEADCOVERSEYES
-	armor = list("melee" = 35, "bullet" = 25, "laser" = 25, "energy" = 10, "bomb" = 25, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
+	armor = list(MELEE = 35, BULLET = 25, LASER = 25, ENERGY = 10, BOMB = 25, BIO = 0, RAD = 0, FIRE = 50, ACID = 50)
 	icon_state = "skull"
 	item_state = "skull"
 	strip_delay = 100
@@ -266,7 +264,7 @@
 	icon_state = "durathread"
 	item_state = "durathread"
 	resistance_flags = FLAMMABLE
-	armor = list("melee" = 20, "bullet" = 10, "laser" = 30, "energy" = 5, "bomb" = 15, "bio" = 0, "rad" = 0, "fire" = 40, "acid" = 50)
+	armor = list(MELEE = 20, BULLET = 10, LASER = 30, ENERGY = 5, BOMB = 15, BIO = 0, RAD = 0, FIRE = 40, ACID = 50)
 	strip_delay = 60
 
 //Commander

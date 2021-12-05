@@ -215,6 +215,10 @@
 	charge = 0
 	update_icon()
 
+/obj/item/stock_parts/cell/hos_gun
+	name = "\improper X-01 multiphase energy gun power cell"
+	maxcharge = 1200
+
 /obj/item/stock_parts/cell/pulse //200 pulse shots
 	name = "pulse rifle power cell"
 	maxcharge = 40000
@@ -292,6 +296,12 @@
 	..()
 	charge = 0
 	update_icon()
+
+/obj/item/stock_parts/cell/bluespace/charging
+	name = "self-charging bluespace power cell"
+	desc = "An experimental, self-charging, transdimensional power cell."
+	origin_tech =  "powerstorage=10;bluespace=10"
+	self_recharge = TRUE
 
 /obj/item/stock_parts/cell/infinite
 	name = "infinite-capacity power cell!"

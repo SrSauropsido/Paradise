@@ -1,35 +1,21 @@
 ---
-name: Bug report
-about: Create a report to help us improve
+name: Reporte de Bug
+about: Crea un reporte para arreglar errores en el juego
 title: ''
 labels: ''
 assignees: ''
 
 ---
-<!-- Write **BELOW** The Headers and **ABOVE** The comments else it may not be viewable -->
-**Issue Description**:
-<!---What is the problem?-->
+**Reporte del Bug**:
+<!---Cual es el bug?-->
 
+**Consecuencias del Bug:**
+<!---Que problemas trae al juego?-->
 
-**What did you expect to happen**: 
-<!--Why do you think this is an issue?-->
+**Pasos para replicar el Bug**:
+<!---Una lista de pasos para replicar el bug-->
 
+**Cuando comenzo el Bug**:
+<!---Si tu reporte es de algo que no funcionaba desde antes, hace cuanto?-->
 
-**What happened instead**:
-<!--How is what happened different from what you expected?-->
-
-
-**Why is this bad/What are the consequences**:
-<!--Why do you think this is an important issue?-->
-
-
-**Steps to reproduce the problem**:
-<!--The most important section. Review everything you did leading up to causing the issue.-->
-
-
-**When did the problem start happening**:
-<!--If your report is about something that used to work but no longer does, when was the last time you remember it working?-->
-
-
-**Extra information**:
-<!--Anything else you can tell us.-->
+**Informacion Relevante (en que gamemode sucedio, que estabas haciendo, algo destacable)**:

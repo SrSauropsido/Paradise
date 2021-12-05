@@ -7,10 +7,10 @@
 	icon_state = "blue1"
 	item_state = "blue1"
 	item_color = "blue1"
-	hispania_icon = TRUE	
+	hispania_icon = TRUE
 	sprite_sheets = list(
 		"Vox" = 'icons/hispania/mob/species/vox/ties.dmi',
-		"Grey" = 'icons/hispania/mob/species/grey/ties.dmi' 
+		"Grey" = 'icons/hispania/mob/species/grey/ties.dmi'
 	)
 
 /obj/item/clothing/accessory/red_alt
@@ -21,3 +21,11 @@
 	icon_state = "red1"
 	item_state = "red1"
 	item_color = "red1"
+
+/obj/item/clothing/accessory/medal/gold/sheriff
+	name = "sheriff emblem"
+	desc = "A prestigious golden medal for the heroes of the justice."
+
+/obj/item/clothing/accessory/medal/gold/sheriff/on_attached(obj/item/clothing/under/S, mob/user as mob)
+	. = ..()
+	to_chat(user,"<span class='danger'>YEHAAAAAAAAAAAAAAW.</span>")

@@ -26,9 +26,13 @@
 	to_chat(world, "A nuclear explosive was being transported by Nanotrasen to a military base. The transport ship mysteriously lost contact with Space Traffic Control (STC). About that time a strange disk was discovered around [station_name()]. It was identified by Nanotrasen as a nuclear authentication disk and now Syndicate Operatives have arrived to retake the disk and detonate SS13! There are most likely Syndicate starships are in the vicinity, so take care not to lose the disk!\n<B>Syndicate</B>: Reclaim the disk and detonate the nuclear bomb anywhere on SS13.\n<B>Personnel</B>: Hold the disk and <B>escape with the disk</B> on the shuttle!")
 
 /datum/game_mode/nuclear/can_start()//This could be better, will likely have to recode it later
-	if(!..())
+	if(!..() && GLOB.master_mode == "secret")
 		return 0
-
+	if(!..())
+		message_admins("(<font color='#ffcc00'><b>No se alcanzaron los readys Minimos.Se recomienda revisar que la ronda no este desbalanceada</b></font>)\n")
+		required_enemies = required_enemies / 2  //si no hubo readys suficientes se divide por 2 la cantidad de antags redondeando
+		if(GLOB.player_list.len <= 10) //un caso extremo que haya muy pocos conectados solo habra 1 nuke
+			required_enemies = 1
 	var/list/possible_syndicates = get_players_for_role(ROLE_OPERATIVE)
 	var/agent_number = 0
 
@@ -278,14 +282,6 @@
 	synd_mob.equip_to_slot_or_del(U, slot_in_backpack)
 
 	if(synd_mob.dna.species)
-
-		/*
-		Incase anyone ever gets the burning desire to have nukeops with randomized apperances. -- Dave
-		synd_mob.gender = pick(MALE, FEMALE) // Randomized appearances for the nukeops.
-		var/datum/preferences/pref = new()
-		A.randomize_appearance_for(synd_mob)
-		*/
-
 		var/race = synd_mob.dna.species.name
 
 		switch(race)

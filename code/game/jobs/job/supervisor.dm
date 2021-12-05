@@ -203,15 +203,14 @@ GLOBAL_DATUM_INIT(captain_announcement, /datum/announcement/minor, new(do_newsca
 /datum/job/judge
 	title = "Magistrate"
 	flag = JOB_JUDGE
-	department_flag = JOBCAT_KARMA
+	department_flag = JOBCAT_ENGSEC
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "the Nanotrasen Supreme Court"
 	department_head = list("Captain")
 	selection_color = "#ddddff"
-	req_admin_notify = 1
-	is_legal = 1
-	minimal_captain_character_age = 1
+	req_admin_notify = TRUE
+	is_legal = TRUE
 	transfer_allowed = FALSE
 	minimal_player_age = 30
 	exp_requirements = 2880
@@ -274,7 +273,7 @@ GLOBAL_DATUM_INIT(captain_announcement, /datum/announcement/minor, new(do_newsca
 	uniform = /obj/item/clothing/under/rank/internalaffairs
 	suit = /obj/item/clothing/suit/storage/internalaffairs
 	shoes = /obj/item/clothing/shoes/brown
-	l_ear = /obj/item/radio/headset/headset_iaa
+	l_ear = /obj/item/radio/headset/headset_iaa/alt
 	glasses = /obj/item/clothing/glasses/hud/security/sunglasses/read_only
 	id = /obj/item/card/id/security
 	l_pocket = /obj/item/laser_pointer

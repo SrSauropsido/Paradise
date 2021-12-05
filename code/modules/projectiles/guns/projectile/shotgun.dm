@@ -27,6 +27,10 @@
 	return "This is a ballistic weapon. After firing, you will need to pump the gun, by clicking on the gun in your hand. To reload, load more shotgun \
 			shells into the gun."
 
+/obj/item/gun/projectile/shotgun/detailed_examine()
+	return "This is a ballistic weapon. After firing, you will need to pump the gun, by clicking on the gun in your hand. To reload, load more shotgun \
+			shells into the gun."
+
 /obj/item/gun/projectile/shotgun/attackby(obj/item/A, mob/user, params)
 	. = ..()
 	if(.)
@@ -93,7 +97,7 @@
 	name = "riot shotgun"
 	desc = "A sturdy shotgun with a longer magazine and a fixed tactical stock designed for non-lethal riot control."
 	icon_state = "riotshotgun"
-	item_state = "shotgun_riot"
+	item_state = "riotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/riot
 	sawn_desc = "Come with me if you want to live."
 	sawn_state = SAWN_INTACT
@@ -208,10 +212,6 @@
 /obj/item/gun/projectile/shotgun/riot/short/New()
 	..()
 	post_sawoff()
-
-/obj/item/gun/projectile/shotgun/riot/buckshot	//comes pre-loaded with buckshot rather than rubber
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/riot/buckshot
-
 
 ///////////////////////
 // BOLT ACTION RIFLE //

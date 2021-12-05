@@ -11,3 +11,11 @@
 	name = "Circuit board (Engineering ID Computer)"
 	build_path = /obj/machinery/computer/card/minor/qm
 	target_dept = TARGET_DEPT_SUP
+
+/obj/item/circuitboard/rdconsole/mechanics
+	board_name = "RD Console - Mechanics"
+	build_path = /obj/machinery/computer/rdconsole/mechanics
+
+/obj/item/circuitboard/pod_locater
+	board_name = "Pod Location Console"
+	build_path = /obj/machinery/computer/podtracker

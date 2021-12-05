@@ -1,6 +1,6 @@
 /obj/machinery/computer/mecha
 	name = "exosuit control console"
-	icon = 'icons/obj/computer.dmi'
+	//icon = 'icons/obj/computer.dmi'
 	icon_keyboard = "rd_key"
 	icon_screen = "mecha"
 	light_color = LIGHT_COLOR_FADEDPURPLE
@@ -69,7 +69,7 @@
 			return TRUE
 
 /obj/item/mecha_parts/mecha_tracking
-	name = "Exosuit tracking beacon"
+	name = "exosuit tracking beacon"
 	desc = "Device used to transmit exosuit data."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "motion2"
@@ -178,7 +178,7 @@
 	ai_beacon = TRUE
 
 /obj/item/storage/box/mechabeacons
-	name = "Exosuit Tracking Beacons"
+	name = "exosuit tracking beacons"
 
 /obj/item/storage/box/mechabeacons/New()
 	..()

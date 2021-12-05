@@ -1,20 +1,13 @@
-**Problem Description**:
-What is the problem?
+**Issue**:
+<!---Cual es el issue?-->
 
-**What did you expect to happen**: 
-Why do you think this is an issue?
+**Consecuencias del Issue:**
+<!---Que problemas trae al juego?-->
 
-**What happened instead**:
-How is what happened different from what you expected?
+**Pasos para replicar el Issue**:
+<!---Una lista de pasos para replicar el Issue-->
 
-**Why is this bad/What are the consequences:**
-Why do you think this is an important issue?
+**Cuando comenzo el Issue**:
+<!---Si tu reporte es de algo que no funcionaba desde antes, hace cuanto?-->
 
-**Steps to reproduce the problem**:
-The most important section. Review everything you did leading up to causing the issue.
-
-**When did the problem start happening**:
-If your report is about something that used to work but no longer does, when was the last time you remember it working?
-
-**Possibly related stuff (which gamemode was it? What were you doing at the time? Was anything else out of the ordinary happening?)**:
-Anything else you can tell us.
+**Informacion Relevante (en que gamemode sucedio, que estabas haciendo, algo destacable)**:

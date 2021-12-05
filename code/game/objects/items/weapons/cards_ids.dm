@@ -89,7 +89,7 @@
 	var/list/access = list()
 	var/registered_name = "Unknown" // The name registered_name on the card
 	slot_flags = SLOT_ID
-	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 100, "acid" = 100)
+	armor = list(MELEE = 0, BULLET = 0, LASER = 0, ENERGY = 0, BOMB = 0, BIO = 0, RAD = 0, FIRE = 100, ACID = 100)
 	resistance_flags = FIRE_PROOF | ACID_PROOF
 	var/untrackable // Can not be tracked by AI's
 
@@ -483,7 +483,7 @@
 
 					if("Occupation")
 						var/list/departments =list(
-							"Civilian",
+							"Assistant",
 							"Engineering",
 							"Medical",
 							"Science",
@@ -494,11 +494,11 @@
 						)
 
 						var/department = input(user, "What job would you like to put on this card?\nChoose a department or a custom job title.\nChanging occupation will not grant or remove any access levels.","Agent Card Occupation") in departments
-						var/new_job = "Civilian"
+						var/new_job = "Assistant"
 
 						if(department == "Custom")
-							new_job = sanitize(stripped_input(user,"Choose a custom job title:","Agent Card Occupation", "Civilian", MAX_MESSAGE_LEN))
-						else if(department != "Civilian")
+							new_job = sanitize(stripped_input(user,"Choose a custom job title:","Agent Card Occupation", "Assistant", MAX_MESSAGE_LEN))
+						else if(department != "Assistant")
 							switch(department)
 								if("Engineering")
 									new_job = input(user, "What job would you like to put on this card?\nChanging occupation will not grant or remove any access levels.","Agent Card Occupation") in GLOB.engineering_positions
@@ -611,6 +611,7 @@
 	item_state = "gold_id"
 	registered_name = "Captain"
 	assignment = "Captain"
+	var/confirmacion_pickeo = FALSE
 
 /obj/item/card/id/captains_spare/New()
 	var/datum/job/captain/J = new/datum/job/captain

@@ -172,6 +172,7 @@
 #define MUTATIONS_LAYER			32
 #define H_DAMAGE_LAYER			31
 #define UNIFORM_LAYER			30
+#define OVER_SHOE_LAYER			27 // HISPANIA
 #define ID_LAYER				29
 #define SHOES_LAYER				28
 #define GLOVES_LAYER			27
@@ -365,7 +366,7 @@
 #define INVESTIGATE_BOMB "bombs"
 
 // The SQL version required by this version of the code
-#define SQL_VERSION 25
+#define SQL_VERSION 28
 
 // Vending machine stuff
 #define CAT_NORMAL 1
@@ -496,3 +497,6 @@
 
 // Runechat symbol types
 #define RUNECHAT_SYMBOL_EMOTE 1
+
+/// Waits at a line of code until X is true
+#define UNTIL(X) while(!(X)) sleep(world.tick_lag)

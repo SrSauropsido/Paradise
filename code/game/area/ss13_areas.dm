@@ -46,6 +46,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/space/nearstation
 	icon_state = "space_near"
+	icon = 'icons/hispania/turf/areas.dmi' // HISPANIA
 	dynamic_lighting = DYNAMIC_LIGHTING_IFSTARLIGHT
 
 /area/space/atmosalert()
@@ -1124,14 +1125,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Chief Engineer's office"
 	icon_state = "engine_control"
 
-/area/engine/mechanic_workshop
-	name = "\improper Mechanic Workshop"
-	icon_state = "engine"
-
-/area/engine/mechanic_workshop/hanger
-	name = "\improper Hanger Bay"
-	icon_state = "engine"
-
 /area/engine/supermatter
 	name = "\improper Supermatter Engine"
 	icon_state = "engine"
@@ -1391,8 +1384,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/security/brig/prison_break()
 	for(var/obj/structure/closet/secure_closet/brig/temp_closet in src)
-		temp_closet.locked = 0
-		temp_closet.icon_state = temp_closet.icon_closed
+		temp_closet.locked = FALSE
+		temp_closet.close()
 	for(var/obj/machinery/door_timer/temp_timer in src)
 		temp_timer.releasetime = 1
 	..()
@@ -1411,7 +1404,8 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/prison/prison_break()
 	for(var/obj/structure/closet/secure_closet/brig/temp_closet in src)
 		temp_closet.locked = 0
-		temp_closet.icon_state = temp_closet.icon_closed
+		temp_closet.close()
+		temp_closet.update_icon()
 	for(var/obj/machinery/door_timer/temp_timer in src)
 		temp_timer.releasetime = 1
 	..()
@@ -1500,10 +1494,6 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Head of Security's Office"
 	icon_state = "sec_hos"
 
-/area/security/podbay
-	name = "\improper Security Podbay"
-	icon_state = "securitypodbay"
-
 /area/security/detectives_office
 	name = "\improper Detective's Office"
 	icon_state = "detective"
@@ -1556,7 +1546,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/vacantoffice2
 	name = "\improper Vacant Office"
 	icon_state = "security"
-	
+
 /area/security/permasolitary
 	name = "Solitary Confinement"
 	icon_state = "solitary"

@@ -90,3 +90,25 @@
 //////////// Shoes ////////////
 
 //////////// Sets ////////////
+
+/obj/item/fluff/decemviri_spacepod_kit
+	name = "Spacepod mod kit"
+	desc = "a kit on tools and a blueprint detailing how to reconfigure a spacepod"
+	icon_state = "modkit"
+
+/obj/item/fluff/decemviri_spacepod_kit/afterattack(atom/target, mob/user, proximity)
+	if(!proximity || !ishuman(user) || user.incapacitated())
+		return
+
+	if(!istype(target, /obj/spacepod))
+		to_chat(user, "<span class='warning'>You can't modify [target]!</span>")
+		return
+
+	to_chat(user, "<span class='notice'>You modify the appearance of [target] based on the kit blueprints.</span>")
+	var/obj/spacepod/pod = target
+	pod.icon = 'icons/hispania/obj/custom_pod.dmi'
+	pod.icon_state = "pod_dece"
+	pod.name = "sleek spacepod"
+	pod.desc = "A modified varient of a space pod."
+	used = 1
+	qdel(src)

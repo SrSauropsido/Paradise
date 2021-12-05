@@ -105,6 +105,9 @@
 		return
 
 	face_atom(A)
+	if(istype(A,/turf))
+		var/turf/AA = A
+		AA.Airlock(src)
 
 	if(next_move > world.time) // in the year 2000...
 		return
@@ -363,9 +366,11 @@
 	A.AltShiftClick(src)
 	return
 
-/atom/proc/AltShiftClick(mob/user)
+/mob/proc/ShiftMiddleClickOn(atom/A)
 	return
 
+/atom/proc/AltShiftClick(mob/user)
+	return
 
 /*
 	Misc helpers

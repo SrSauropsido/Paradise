@@ -4987,7 +4987,7 @@
 /turf/simulated/floor/plating/asteroid/snow/naga,
 /area/snowland/unexplored)
 "lX" = (
-/mob/living/simple_animal/hostile/skeleton/eskimo,
+/mob/living/simple_animal/hostile/skeleton/arctic,
 /turf/simulated/floor/plating/asteroid/snow/naga,
 /area/snowland/unexplored)
 "lY" = (
@@ -6154,10 +6154,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/closet/secure_closet{
 	desc = "It's a secure locker for personnel. The first card swiped gains control.";
-	icon_broken = "cabinetdetective_broken";
 	icon_closed = "cabinetdetective";
-	icon_locked = "cabinetdetective_locked";
-	icon_off = "cabinetdetective_broken";
 	icon_opened = "cabinetdetective_open";
 	icon_state = "cabinetdetective";
 	locked = 0;
@@ -6174,10 +6171,7 @@
 	},
 /obj/structure/closet/secure_closet{
 	desc = "It's a secure locker for personnel. The first card swiped gains control.";
-	icon_broken = "cabinetdetective_broken";
 	icon_closed = "cabinetdetective";
-	icon_locked = "cabinetdetective_locked";
-	icon_off = "cabinetdetective_broken";
 	icon_opened = "cabinetdetective_open";
 	icon_state = "cabinetdetective";
 	locked = 0;
@@ -6842,10 +6836,7 @@
 /area/NT_Polar_Outpost/centrall_hall)
 "qD" = (
 /obj/structure/closet/secure_closet{
-	icon_broken = "secbroken";
 	icon_closed = "sec";
-	icon_locked = "sec1";
-	icon_off = "secoff";
 	icon_opened = "secopen";
 	icon_state = "sec1";
 	locked = 1;
@@ -7501,10 +7492,7 @@
 /area/NT_Polar_Outpost/centrall_hall)
 "rZ" = (
 /obj/structure/closet/secure_closet{
-	icon_broken = "hydrosecurebroken";
 	icon_closed = "hydrosecure";
-	icon_locked = "hydrosecure1";
-	icon_off = "hydrosecureoff";
 	icon_opened = "hydrosecureopen";
 	icon_state = "hydrosecure";
 	locked = 0;
@@ -7794,10 +7782,7 @@
 /area/NT_Polar_Outpost/centrall_hall)
 "sC" = (
 /obj/structure/closet/secure_closet{
-	icon_broken = "hydrosecurebroken";
 	icon_closed = "hydrosecure";
-	icon_locked = "hydrosecure1";
-	icon_off = "hydrosecureoff";
 	icon_opened = "hydrosecureopen";
 	icon_state = "hydrosecure";
 	locked = 0;
@@ -8553,10 +8538,7 @@
 /area/NT_Polar_Outpost/crew)
 "ul" = (
 /obj/structure/closet/secure_closet{
-	icon_broken = "fridgebroken";
 	icon_closed = "fridge";
-	icon_locked = "fridge1";
-	icon_off = "fridgeoff";
 	icon_opened = "fridgeopen";
 	icon_state = "fridge";
 	locked = 0;
@@ -9585,10 +9567,7 @@
 /area/NT_Polar_Outpost/crew)
 "wr" = (
 /obj/structure/closet/secure_closet{
-	icon_broken = "secureresbroken";
 	icon_closed = "secureres";
-	icon_locked = "secureres1";
-	icon_off = "secureresoff";
 	icon_opened = "secureresopen";
 	icon_state = "secureres";
 	locked = 0;
@@ -9607,10 +9586,7 @@
 	dir = 1
 	},
 /obj/structure/closet/secure_closet{
-	icon_broken = "secureresbroken";
 	icon_closed = "secureres";
-	icon_locked = "secureres1";
-	icon_off = "secureresoff";
 	icon_opened = "secureresopen";
 	icon_state = "secureres";
 	locked = 0;
@@ -10827,7 +10803,7 @@
 /area/NT_Polar_Outpost/research)
 "yn" = (
 /obj/item/stack/sheet/leather,
-/mob/living/simple_animal/hostile/skeleton/eskimo,
+/mob/living/simple_animal/hostile/skeleton/arctic,
 /turf/simulated/floor/wood,
 /area/snowland/explored)
 "yo" = (
@@ -11074,10 +11050,7 @@
 /area/NT_Polar_Outpost/gate_failure)
 "yO" = (
 /obj/structure/closet/secure_closet{
-	icon_broken = "rdsecurebroken";
 	icon_closed = "rdsecure";
-	icon_locked = "rdsecure1";
-	icon_off = "rdsecureoff";
 	icon_opened = "rdsecureopen";
 	icon_state = "rdsecure1";
 	locked = 1;
@@ -11112,10 +11085,7 @@
 "yQ" = (
 /obj/structure/closet/secure_closet{
 	desc = "It's a secure locker for personnel. The first card swiped gains control.";
-	icon_broken = "cabinetdetective_broken";
 	icon_closed = "cabinetdetective";
-	icon_locked = "cabinetdetective_locked";
-	icon_off = "cabinetdetective_broken";
 	icon_opened = "cabinetdetective_open";
 	icon_state = "cabinetdetective";
 	locked = 0;
@@ -11432,10 +11402,7 @@
 /area/NT_Polar_Outpost/crew)
 "zt" = (
 /obj/structure/closet/secure_closet{
-	icon_broken = "fridgebroken";
 	icon_closed = "fridge";
-	icon_locked = "fridge1";
-	icon_off = "fridgeoff";
 	icon_opened = "fridgeopen";
 	icon_state = "fridge";
 	locked = 0;
@@ -12906,10 +12873,7 @@
 /area/NT_Polar_Outpost/crew)
 "Cb" = (
 /obj/structure/closet/secure_closet{
-	icon_broken = "secureengbroken";
 	icon_closed = "secureeng";
-	icon_locked = "secureeng1";
-	icon_off = "secureengoff";
 	icon_opened = "secureengopen";
 	icon_state = "secureeng1";
 	locked = 1;
@@ -13429,10 +13393,7 @@
 "CR" = (
 /obj/structure/closet/secure_closet{
 	desc = "It's a secure locker for personnel. The first card swiped gains control.";
-	icon_broken = "cabinetdetective_broken";
 	icon_closed = "cabinetdetective";
-	icon_locked = "cabinetdetective_locked";
-	icon_off = "cabinetdetective_broken";
 	icon_opened = "cabinetdetective_open";
 	icon_state = "cabinetdetective";
 	locked = 0;
@@ -13518,10 +13479,7 @@
 /area/NT_Polar_Outpost/engineering)
 "Db" = (
 /obj/structure/closet/secure_closet{
-	icon_broken = "secbroken";
 	icon_closed = "sec";
-	icon_locked = "sec1";
-	icon_off = "secoff";
 	icon_opened = "secopen";
 	icon_state = "sec1";
 	locked = 1;
@@ -15646,10 +15604,7 @@
 "GD" = (
 /obj/structure/closet/secure_closet{
 	desc = "It's a secure locker for personnel. The first card swiped gains control.";
-	icon_broken = "cabinetdetective_broken";
 	icon_closed = "cabinetdetective";
-	icon_locked = "cabinetdetective_locked";
-	icon_off = "cabinetdetective_broken";
 	icon_opened = "cabinetdetective_open";
 	icon_state = "cabinetdetective";
 	locked = 0;
@@ -16083,10 +16038,7 @@
 	},
 /obj/structure/closet/secure_closet{
 	desc = "It's a secure locker for personnel. The first card swiped gains control.";
-	icon_broken = "cabinetdetective_broken";
 	icon_closed = "cabinetdetective";
-	icon_locked = "cabinetdetective_locked";
-	icon_off = "cabinetdetective_broken";
 	icon_opened = "cabinetdetective_open";
 	icon_state = "cabinetdetective";
 	locked = 0;
@@ -16125,10 +16077,7 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/engineering_personal{
-	icon_broken = "miningsecbroken";
 	icon_closed = "miningsec";
-	icon_locked = "miningsec1";
-	icon_off = "miningsecoff";
 	icon_opened = "miningsecopen";
 	icon_state = "miningsec";
 	locked = 0;
@@ -16390,10 +16339,7 @@
 	req_access_txt = "201"
 	},
 /obj/structure/closet/secure_closet{
-	icon_broken = "secbroken";
 	icon_closed = "sec";
-	icon_locked = "sec1";
-	icon_off = "secoff";
 	icon_opened = "secopen";
 	icon_state = "sec1";
 	locked = 1;
@@ -19780,7 +19726,7 @@
 /area/snowland/explored)
 "Qs" = (
 /obj/item/trash/canned_tomato,
-/mob/living/simple_animal/hostile/skeleton/eskimo,
+/mob/living/simple_animal/hostile/skeleton/arctic,
 /turf/simulated/floor/wood,
 /area/snowland/explored)
 "Qu" = (
@@ -19852,7 +19798,7 @@
 "Rv" = (
 /obj/item/bedsheet/blue,
 /obj/structure/bed,
-/mob/living/simple_animal/hostile/skeleton/eskimo,
+/mob/living/simple_animal/hostile/skeleton/arctic,
 /turf/simulated/floor/wood,
 /area/snowland/explored)
 "RN" = (
@@ -19941,7 +19887,7 @@
 /area/snowland/explored)
 "TW" = (
 /obj/effect/decal/cleanable/blood,
-/mob/living/simple_animal/hostile/skeleton/eskimo,
+/mob/living/simple_animal/hostile/skeleton/arctic,
 /turf/simulated/floor/wood,
 /area/snowland/explored)
 "Ud" = (
@@ -20111,7 +20057,7 @@
 /turf/simulated/floor/plating/asteroid/snow/naga,
 /area/snowland/explored)
 "YP" = (
-/mob/living/simple_animal/hostile/skeleton/eskimo,
+/mob/living/simple_animal/hostile/skeleton/arctic,
 /turf/simulated/floor/wood,
 /area/snowland/explored)
 "YR" = (

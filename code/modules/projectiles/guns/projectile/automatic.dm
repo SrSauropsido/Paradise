@@ -79,7 +79,7 @@
 //Saber SMG//
 /obj/item/gun/projectile/automatic/fullauto/twomode/proto
 	name = "\improper Nanotrasen Saber SMG"
-	desc = "A rejected prototype three-round burst 9mm submachine gun, designated 'SABR'. Surplus of this model are bouncing around armories of Nanotrasen Space Stations. Has a threaded barrel for suppressors."
+	desc = "A prototype three-round burst and full-auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
 	icon_state = "saber"
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm
 	origin_tech = "combat=4;materials=2"
@@ -239,13 +239,13 @@
 
 //ARG Assault Rifle//
 /obj/item/gun/projectile/automatic/fullauto/ar
-	name = "ARG"
-	desc = "A robust assault rile used by Nanotrasen fighting forces."
+	name = "\improper ARG"
+	desc = "A robust assault rifle used by Nanotrasen fighting forces."
 	icon_state = "arg"
 	item_state = "arg"
 	slot_flags = 0
 	origin_tech = "combat=6;engineering=4"
-	mag_type = /obj/item/ammo_box/magazine/m556/arg
+	mag_type = /obj/item/ammo_box/magazine/m556
 	fire_sound = 'sound/weapons/gunshots/gunshot_mg.ogg'
 	magin_sound = 'sound/weapons/gun_interactions/batrifle_magin.ogg'
 	magout_sound = 'sound/weapons/gun_interactions/batrifle_magout.ogg'

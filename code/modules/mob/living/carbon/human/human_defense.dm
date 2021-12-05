@@ -31,17 +31,6 @@ emp_act
 			P.reflect_back(src)
 			return -1
 
-	if(sword_reflect(P)) // Hispania Energy Swords
-		add_attack_logs(P.firer, src, "hit by [P.type] but got deflected by 'energy sword'")
-		P.firer = src
-		P.setAngle(rand(0, 360))
-		playsound(src, pick('sound/weapons/bulletflyby.ogg', 'sound/weapons/bulletflyby2.ogg', 'sound/weapons/bulletflyby3.ogg'), 75, TRUE)
-		playsound(src, pick('sound/hispania/weapons/light_reflect.ogg'), 75, TRUE)
-		visible_message("<span class='danger'>The [P.name] gets reflected by [src]!</span>", \
-				   "<span class='userdanger'>You deflect the [P.name]!</span>")
-		do_sparks(1, 0, src)
-		return -1
-
 	//Shields
 	if(check_shields(P, P.damage, "the [P.name]", PROJECTILE_ATTACK, P.armour_penetration))
 		P.on_hit(src, 100, def_zone)
@@ -50,8 +39,17 @@ emp_act
 	if(mind?.martial_art?.deflection_chance) //Some martial arts users can deflect projectiles!
 		if(!lying && !HAS_TRAIT(src, TRAIT_HULK) && mind.martial_art.try_deflect(src)) //But only if they're not lying down, and hulks can't do it
 			add_attack_logs(P.firer, src, "hit by [P.type] but got deflected by martial arts '[mind.martial_art]'")
-			visible_message("<span class='danger'>[src] deflects the projectile; [p_they()] can't be hit with ranged weapons!</span>", "<span class='userdanger'>You deflect the projectile!</span>")
 			playsound(src, pick('sound/weapons/bulletflyby.ogg', 'sound/weapons/bulletflyby2.ogg', 'sound/weapons/bulletflyby3.ogg'), 75, TRUE)
+			if(HAS_TRAIT(src, TRAIT_PACIFISM))
+				// Pacifists can deflect projectiles, but not reflect them.
+				// Instead, they deflect them into the ground below them.
+				var/turf/T = get_turf(src)
+				P.firer = src
+				T.bullet_act(P)
+				visible_message("<span class='danger'>[src] deflects the projectile into the ground!</span>", "<span class='userdanger'>You deflect the projectile towards the ground beneath your feet!</span>")
+				return FALSE
+
+			visible_message("<span class='danger'>[src] deflects the projectile!</span>", "<span class='userdanger'>You deflect the projectile!</span>")
 			if(mind.martial_art.reroute_deflection)
 				P.firer = src
 				P.setAngle(rand(0, 360))
@@ -114,6 +112,7 @@ emp_act
 			break
 		nrembrute = max(rembrute - E.brute_dam, 0)
 		E.heal_damage(rembrute,0,0,1)
+		UpdateDamageIcon()
 		rembrute = nrembrute
 		user.visible_message("<span class='alert'>[user] patches some dents on [src]'s [E.name] with [I].</span>")
 	if(bleed_rate && ismachineperson(src))
@@ -126,7 +125,7 @@ emp_act
 
 /mob/living/carbon/human/check_projectile_dismemberment(obj/item/projectile/P, def_zone)
 	var/obj/item/organ/external/affecting = get_organ(check_zone(def_zone))
-	if(affecting && !affecting.cannot_amputate && affecting.get_damage() >= (affecting.max_damage - P.dismemberment))
+	if(affecting && !(affecting.limb_flags & CANNOT_DISMEMBER) && affecting.get_damage() >= (affecting.max_damage - P.dismemberment))
 		var/damtype = DROPLIMB_SHARP
 		if(!P.sharp)
 			switch(P.damage_type)
@@ -241,9 +240,6 @@ emp_act
 
 /mob/living/carbon/human/proc/check_block()
 	if(mind && mind.martial_art && prob(mind.martial_art.block_chance) && mind.martial_art.can_use(src) && in_throw_mode && !incapacitated(FALSE, TRUE))
-		playsound(loc, 'sound/effects/fingersnap.ogg', 25, 1, -1)
-		animate(src, color = mind.martial_art.block_color, time = 1)
-		addtimer(CALLBACK(src, /atom/proc/update_atom_colour), 1)
 		return TRUE
 
 /mob/living/carbon/human/emp_act(severity)
@@ -422,7 +418,7 @@ emp_act
 	if(!I || !user)
 		return 0
 
-	if((istype(I, /obj/item/kitchen/knife/butcher/meatcleaver) || istype(I, /obj/item/twohanded/chainsaw)) && stat == DEAD && user.a_intent == INTENT_HARM)
+	if(HAS_TRAIT(I, TRAIT_BUTCHERS_HUMANS) && stat == DEAD && user.a_intent == INTENT_HARM)
 		var/obj/item/reagent_containers/food/snacks/meat/human/newmeat = new /obj/item/reagent_containers/food/snacks/meat/human(get_turf(loc))
 		newmeat.name = real_name + newmeat.name
 		newmeat.subjectname = real_name
@@ -459,15 +455,19 @@ emp_act
 	if(!I.force)
 		return 0 //item force is zero
 
-	var/armor = run_armor_check(affecting, "melee", "<span class='warning'>Your armour has protected your [hit_area].</span>", "<span class='warning'>Your armour has softened hit to your [hit_area].</span>", armour_penetration = I.armour_penetration)
+	var/armor = run_armor_check(affecting, MELEE, "<span class='warning'>Your armour has protected your [hit_area].</span>", "<span class='warning'>Your armour has softened hit to your [hit_area].</span>", armour_penetration = I.armour_penetration)
 	var/weapon_sharp = is_sharp(I)
-	if(weapon_sharp && prob(getarmor(user.zone_selected, "melee")))
+	if(weapon_sharp && prob(getarmor(user.zone_selected, MELEE)))
 		weapon_sharp = 0
 	if(armor >= 100)
 		return 0
 	var/Iforce = I.force //to avoid runtimes on the forcesay checks at the bottom. Some items might delete themselves if you drop them. (stunning yourself, ninja swords)
+	var/bonus_damage = 0
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		bonus_damage = H.physiology.melee_bonus
 
-	apply_damage(I.force, I.damtype, affecting, armor, sharp = weapon_sharp, used_weapon = I)
+	apply_damage(I.force + bonus_damage , I.damtype, affecting, armor, sharp = weapon_sharp, used_weapon = I)
 
 	var/bloody = 0
 	if(I.damtype == BRUTE && I.force && prob(25 + I.force * 2))
@@ -549,14 +549,12 @@ emp_act
 				if(prob(I.embed_chance) && !HAS_TRAIT(src, TRAIT_PIERCEIMMUNE))
 					throw_alert("embeddedobject", /obj/screen/alert/embeddedobject)
 					var/obj/item/organ/external/L = pick(bodyparts)
-					L.embedded_objects |= I
+					L.add_embedded_object(I)
 					I.add_mob_blood(src)//it embedded itself in you, of course it's bloody!
-					I.forceMove(src)
 					L.receive_damage(I.w_class*I.embedded_impact_pain_multiplier)
 					visible_message("<span class='danger'>[I] embeds itself in [src]'s [L.name]!</span>","<span class='userdanger'>[I] embeds itself in your [L.name]!</span>")
 					hitpush = FALSE
 					skipcatch = TRUE //can't catch the now embedded item
-	on_hitby(AM)
 	return ..()
 
 /mob/living/carbon/human/proc/bloody_hands(mob/living/source, amount = 2)
@@ -599,7 +597,6 @@ emp_act
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		dna.species.spec_attack_hand(H, src)
-	on_attack_hand(user)
 
 /mob/living/carbon/human/attack_larva(mob/living/carbon/alien/larva/L)
 	if(..()) //successful larva bite.
@@ -607,7 +604,7 @@ emp_act
 		if(stat != DEAD)
 			L.amount_grown = min(L.amount_grown + damage, L.max_grown)
 			var/obj/item/organ/external/affecting = get_organ(ran_zone(L.zone_selected))
-			var/armor_block = run_armor_check(affecting, "melee")
+			var/armor_block = run_armor_check(affecting, MELEE)
 			apply_damage(damage, BRUTE, affecting, armor_block)
 			updatehealth("larva attack")
 
@@ -626,7 +623,7 @@ emp_act
 				visible_message("<span class='danger'>[M] has lunged at [src]!</span>")
 				return 0
 			var/obj/item/organ/external/affecting = get_organ(ran_zone(M.zone_selected))
-			var/armor_block = run_armor_check(affecting, "melee", armour_penetration = 10)
+			var/armor_block = run_armor_check(affecting, MELEE, armour_penetration = 10)
 
 			playsound(loc, 'sound/weapons/slice.ogg', 25, TRUE, -1)
 			visible_message("<span class='danger'>[M] has slashed at [src]!</span>", \
@@ -645,13 +642,12 @@ emp_act
 			else
 				var/obj/item/organ/external/affecting = get_organ(ran_zone(M.zone_selected))
 				playsound(loc, 'sound/weapons/pierce.ogg', 25, 1, -1)
-				apply_effect(5, WEAKEN, run_armor_check(affecting, "melee"))
+				apply_effect(5, WEAKEN, run_armor_check(affecting, MELEE))
 				add_attack_logs(M, src, "Alien tackled")
 				visible_message("<span class='danger'>[M] has tackled down [src]!</span>")
 
 /mob/living/carbon/human/attack_animal(mob/living/simple_animal/M)
 	. = ..()
-	on_attack_animal(M)
 	if(.)
 		var/damage = rand(M.melee_damage_lower, M.melee_damage_upper)
 		if(check_shields(M, damage, "the [M.name]", MELEE_ATTACK, M.armour_penetration))
@@ -661,7 +657,7 @@ emp_act
 		if(!affecting)
 			affecting = get_organ("chest")
 		affecting.add_autopsy_data(M.name, damage) // Add the mob's name to the autopsy data
-		var/armor = run_armor_check(affecting, "melee", armour_penetration = M.armour_penetration)
+		var/armor = run_armor_check(affecting, MELEE, armour_penetration = M.armour_penetration)
 		apply_damage(damage, M.melee_damage_type, affecting, armor)
 		updatehealth("animal attack")
 
@@ -679,7 +675,7 @@ emp_act
 		var/obj/item/organ/external/affecting = get_organ(ran_zone(dam_zone))
 		if(!affecting)
 			affecting = get_organ("chest")
-		var/armor_block = run_armor_check(affecting, "melee")
+		var/armor_block = run_armor_check(affecting, MELEE)
 		apply_damage(damage, BRUTE, affecting, armor_block)
 
 /mob/living/carbon/human/mech_melee_attack(obj/mecha/M)

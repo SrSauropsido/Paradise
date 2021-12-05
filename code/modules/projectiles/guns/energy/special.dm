@@ -40,6 +40,7 @@
 	origin_tech = "combat=4;materials=4;biotech=5;plasmatech=6"
 	ammo_type = list(/obj/item/ammo_casing/energy/declone)
 	ammo_x_offset = 1
+	can_holster = TRUE
 
 /obj/item/gun/energy/decloner/update_icon()
 	..()
@@ -59,6 +60,7 @@
 	modifystate = 1
 	ammo_x_offset = 1
 	selfcharge = 1
+	can_holster = TRUE
 
 // Meteor Gun //
 /obj/item/gun/energy/meteorgun
@@ -112,6 +114,15 @@
 	can_flashlight = 0
 	max_mod_capacity = 0
 	empty_state = null
+	can_holster = TRUE
+
+/obj/item/gun/energy/kinetic_accelerator/crossbow/detailed_examine()
+	return "This is an energy weapon. To fire the weapon, have your gun mode set to 'fire', \
+			then click where you want to fire."
+
+/obj/item/gun/energy/kinetic_accelerator/crossbow/detailed_examine_antag()
+	return "This is a stealthy weapon which fires poisoned bolts at your target. When it hits someone, they will suffer a stun effect, in \
+			addition to toxins. The energy crossbow recharges itself slowly, and can be concealed in your pocket or bag."
 
 /obj/item/gun/energy/kinetic_accelerator/crossbow/detailed_examine()
 	return "This is an energy weapon. To fire the weapon, have your gun mode set to 'fire', \
@@ -162,6 +173,7 @@
 	force = 12
 	sharp = 1
 	can_charge = 0
+	can_holster = TRUE
 
 /obj/item/gun/energy/plasmacutter/examine(mob/user)
 	. = ..()
@@ -297,13 +309,14 @@
 
 // HONK Rifle //
 /obj/item/gun/energy/clown
-	name = "HONK Rifle"
+	name = "\improper HONK rifle"
 	desc = "Clown Planet's finest."
 	icon_state = "disabler"
 	ammo_type = list(/obj/item/ammo_casing/energy/clown)
 	clumsy_check = 0
 	selfcharge = 1
 	ammo_x_offset = 3
+	can_holster = TRUE  // you'll never see it coming
 
 /obj/item/gun/energy/toxgun
 	name = "plasma pistol"
@@ -315,27 +328,7 @@
 	origin_tech = "combat=4;magnets=4;powerstorage=3"
 	ammo_type = list(/obj/item/ammo_casing/energy/toxplasma)
 	shaded_charge = 1
-
-// Energy Sniper //
-/obj/item/gun/energy/sniperrifle
-	name = "L.W.A.P. Sniper Rifle"
-	desc = "A rifle constructed of lightweight materials, fitted with a SMART aiming-system scope."
-	icon_state = "esniper"
-	item_state = "lwap"
-	origin_tech = "combat=6;materials=5;powerstorage=4"
-	ammo_type = list(/obj/item/ammo_casing/energy/sniper)
-	item_state = null
-	weapon_weight = WEAPON_HEAVY
-	slot_flags = SLOT_BACK
-	w_class = WEIGHT_CLASS_BULKY
-	can_holster = FALSE
-	zoomable = TRUE
-	zoom_amt = 7 //Long range, enough to see in front of you, but no tiles behind you.
-	shaded_charge = 1
-
-/obj/item/gun/energy/sniperrifle/detailed_examine()
-	return "This is an energy weapon. Most energy weapons can fire through windows harmlessly. To recharge this weapon, use a weapon recharger. \
-			To use the scope, use the appropriate verb in the object tab."
+	can_holster = TRUE
 
 /obj/item/gun/energy/bsg
 	name = "\improper B.S.G"
@@ -644,6 +637,7 @@
 	selfcharge = 1
 	ammo_x_offset = 3
 	var/mimic_type = /obj/item/gun/projectile/automatic/pistol //Setting this to the mimicgun type does exactly what you think it will.
+	can_holster = TRUE
 
 /obj/item/gun/energy/mimicgun/newshot()
 	var/obj/item/ammo_casing/energy/mimic/M = ammo_type[select]

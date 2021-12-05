@@ -10,6 +10,8 @@ SUBSYSTEM_DEF(mapping)
 	var/list/teleportlocs
 	/// List of all areas that can be accessed via IC and OOC means
 	var/list/ghostteleportlocs
+	///List of areas that exist on the station this shift
+	var/list/existing_station_areas
 
 // This has to be here because world/New() uses [station_name()], which looks this datum up
 /datum/controller/subsystem/mapping/PreInit()
@@ -43,6 +45,9 @@ SUBSYSTEM_DEF(mapping)
 	// Load lavaland
 	loadLavaland()
 
+	if(SSmapping.map_datum.fluff_name == "NSS LeBaby") // Si toca lebaby, toca su propia inicializacion
+		handleDaBaby(level_name_to_num(MAIN_STATION))
+
 	// Pick a random away mission.
 	if(GLOB.configuration.gateway.enable_away_mission)
 		load_away_mission()
@@ -62,7 +67,7 @@ SUBSYSTEM_DEF(mapping)
 	log_startup_progress("Populating lavaland...")
 	var/lavaland_setup_timer = start_watch()
 	seedRuins(list(level_name_to_num(MINING)), GLOB.configuration.ruins.lavaland_ruin_budget, /area/lavaland/surface/outdoors/unexplored, GLOB.lava_ruins_templates)
-	spawn_rivers(list(level_name_to_num(MINING)))
+	spawn_rivers(level_name_to_num(MINING))
 	log_startup_progress("Successfully populated lavaland in [stop_watch(lavaland_setup_timer)]s.")
 
 	// Now we make a list of areas for teleport locs
@@ -88,6 +93,13 @@ SUBSYSTEM_DEF(mapping)
 			ghostteleportlocs[AR.name] = AR
 
 	ghostteleportlocs = sortAssoc(ghostteleportlocs)
+
+	// Now we make a list of areas that exist on the station. Good for if you don't want to select areas that exist for one station but not others. Directly references
+	existing_station_areas = list()
+	for(var/area/AR in world)
+		var/turf/picked = safepick(get_area_turfs(AR.type))
+		if(picked && is_station_level(picked.z))
+			existing_station_areas += AR
 
 	// World name
 	if(GLOB.configuration.general.server_name)
