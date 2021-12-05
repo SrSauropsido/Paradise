@@ -255,6 +255,9 @@
 /turf/proc/BeforeChange()
 	return
 
+/turf/proc/is_safe()
+	return FALSE
+
 // I'm including `ignore_air` because BYOND lacks positional-only arguments
 /turf/proc/AfterChange(ignore_air = FALSE, keep_cabling = FALSE) //called after a turf has been replaced in ChangeTurf()
 	levelupdate()
@@ -290,10 +293,10 @@
 		var/asleep = 0
 		var/ab = 0
 		var/atemp = 0
+
 		var/turf_count = 0
 
-		for(var/direction in GLOB.cardinal)//Only use cardinals to cut down on lag
-			var/turf/T = get_step(src, direction)
+		for(var/turf/T in atmos_adjacent_turfs)
 			if(istype(T, /turf/space))//Counted as no air
 				turf_count++//Considered a valid turf for air calcs
 				continue

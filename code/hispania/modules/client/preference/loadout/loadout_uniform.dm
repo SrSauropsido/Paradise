@@ -1,7 +1,4 @@
-/datum/gear/uniform/retro
-	subtype_path = /datum/gear/uniform/retro
-
-/datum/gear/uniform/retro/medical
+/datum/gear/uniform/retro_medical
 	display_name = "medical retro"
 	path = /obj/item/clothing/under/retro/medical
 	allowed_roles = list("Chief Medical Officer", "Medical Doctor", "Chemist", "Psychiatrist", "Paramedic", "Virologist", "Brig Physician" , "Coroner")
@@ -16,17 +13,17 @@
 	path = /obj/item/clothing/under/rank/nurse
 	allowed_roles = list("Chief Medical Officer", "Medical Doctor", "Chemist", "Psychiatrist", "Paramedic", "Virologist", "Brig Physician" , "Coroner")
 
-/datum/gear/uniform/retro/sec
+/datum/gear/uniform/retro_sec
 	display_name = "security retro"
 	path = /obj/item/clothing/under/retro/security
 	allowed_roles = list("Head of Security", "Warden", "Security Officer", "Security Pod Pilot")
 
-/datum/gear/uniform/retro/engie
+/datum/gear/uniform/retro_engie
 	display_name = "engineer retro"
 	path = /obj/item/clothing/under/retro/engineering
 	allowed_roles = list("Chief Engineer","Station Engineer","Life Support Specialist", "Mechanic")
 
-/datum/gear/uniform/retro/sci
+/datum/gear/uniform/retro_sci
 	display_name = "scientist retro"
 	path = /obj/item/clothing/under/retro/science
 	allowed_roles = list("Research Director","Scientist", "Roboticist")
