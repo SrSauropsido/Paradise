@@ -124,8 +124,13 @@
 	//HISPANIA SOUNDS STARTS HERE
 	var/list/male_scream_sound = list('sound/hispania/voice/human/malescream_1.ogg', 'sound/hispania/voice/human/malescream_2.ogg', 'sound/hispania/voice/human/malescream_3.ogg', 'sound/hispania/voice/human/malescream_4.ogg', 'sound/hispania/voice/human/malescream_5.ogg')
 	var/list/female_scream_sound =  list('sound/hispania/voice/human/femalescream_1.ogg', 'sound/hispania/voice/human/femalescream_2.ogg', 'sound/hispania/voice/human/femalescream_3.ogg', 'sound/hispania/voice/human/femalescream_4.ogg', 'sound/hispania/voice/human/femalescream_5.ogg')
-	var/list/male_laughs_sound  = list('sound/hispania/voice/human/manlaugh.ogg','sound/hispania/voice/human/manlaugh2.ogg','sound/hispania/voice/human/manlaugh3.ogg','sound/hispania/voice/human/manlaugh4.ogg')
-	var/list/female_laughs_sound = list('sound/hispania/voice/human/womanlaugh.ogg','sound/hispania/voice/human/womanlaugh2.ogg')
+	var/list/male_laughs_sound  = 'sound/hispania/voice/human/manlaugh.ogg'
+	var/list/male_laughs_sound2 = 'sound/hispania/voice/human/manlaugh2.ogg'
+	var/list/male_laughs_sound3 = 'sound/hispania/voice/human/manlaugh3.ogg'
+	var/list/male_laughs_sound_evil	= 'sound/hispania/voice/human/manlaugh_evil.ogg'
+	var/list/female_laughs_sound = 'sound/hispania/voice/human/womanlaugh.ogg'
+	var/list/female_laughs_sound2 = 'sound/hispania/voice/human/womanlaugh2.ogg'
+	var/list/female_laughs_sound_evil = 'sound/hispania/voice/human/womanlaugh_evil.ogg'
 	//HISPANIA SOUNDS ENDS HERE
 	var/list/death_sounds = list('sound/goonstation/voice/deathgasp_1.ogg', 'sound/goonstation/voice/deathgasp_2.ogg')
 	var/list/male_dying_gasp_sounds = list('sound/goonstation/voice/male_dying_gasp_1.ogg', 'sound/goonstation/voice/male_dying_gasp_2.ogg', 'sound/goonstation/voice/male_dying_gasp_3.ogg', 'sound/goonstation/voice/male_dying_gasp_4.ogg', 'sound/goonstation/voice/male_dying_gasp_5.ogg')
@@ -208,8 +213,9 @@
 	for(var/name in H.bodyparts_by_name)
 		H.bodyparts |= H.bodyparts_by_name[name]
 
-	for(var/obj/item/organ/external/O in H.bodyparts)
-		O.owner = H
+	for(var/obj/item/organ/external/E as anything in H.bodyparts)
+		E.owner = H
+		E.add_limb_flags()
 
 /datum/species/proc/create_mutant_organs(mob/living/carbon/human/H)
 	var/obj/item/organ/internal/ears/ears = H.get_int_organ(/obj/item/organ/internal/ears)
@@ -477,6 +483,7 @@
 
 		var/damage = rand(user.dna.species.punchdamagelow, user.dna.species.punchdamagehigh)
 		damage += attack.damage
+		damage += user.physiology.melee_bonus
 		if(!damage)
 			playsound(target.loc, attack.miss_sound, 25, 1, -1)
 			target.visible_message("<span class='danger'>[user] tried to [pick(attack.attack_verb)] [target]!</span>")
@@ -858,13 +865,18 @@ It'll return null if the organ doesn't correspond, so include null checks when u
 		if(A.update_remote_sight(H)) //returns 1 if we override all other sight updates.
 			return
 
-	if(H.mind && H.mind.vampire)
-		if(H.mind.vampire.get_ability(/datum/vampire_passive/full))
+	if(H.mind?.vampire)
+		if(H.mind.vampire.get_ability(/datum/vampire_passive/xray))
 			H.sight |= SEE_TURFS|SEE_MOBS|SEE_OBJS
-			H.see_in_dark = 8
+			H.see_in_dark += 8
+			H.lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
+		else if(H.mind.vampire.get_ability(/datum/vampire_passive/full))
+			H.sight |= SEE_MOBS
+			H.see_in_dark += 8
 			H.lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_INVISIBLE
 		else if(H.mind.vampire.get_ability(/datum/vampire_passive/vision))
 			H.sight |= SEE_MOBS
+			H.see_in_dark += 1 // base of 2, 2+1 is 3
 			H.lighting_alpha = LIGHTING_PLANE_ALPHA_MOSTLY_VISIBLE
 
 	// my glasses, I can't see without my glasses

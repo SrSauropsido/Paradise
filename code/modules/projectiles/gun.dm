@@ -251,10 +251,7 @@
 				if( i>1 && !(src in get_both_hands(user))) //for burst firing
 					break
 			if(chambered)
-				if(randomspread)
-					sprd = round((rand() - 0.5) * (randomized_gun_spread + randomized_bonus_spread))
-				else
-					sprd = round((i / burst_size - 0.5) * (randomized_gun_spread + randomized_bonus_spread))
+				sprd = round((pick(0.5, -0.5)) * (randomized_gun_spread + randomized_bonus_spread))
 				if(!chambered.fire(target, user, params, ,suppressed, zone_override, sprd))
 					shoot_with_empty_chamber(user)
 					break

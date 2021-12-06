@@ -139,12 +139,12 @@
 	origin_tech = "engineering=4;materials=5;programming=4"
 
 /obj/item/borg/upgrade/vtec/do_install(mob/living/silicon/robot/R)
-	if(R.speed < 0)
+	if(R.speed < -1)
 		to_chat(R, "<span class='notice'>A VTEC unit is already installed!</span>")
 		to_chat(usr, "<span class='notice'>There's no room for another VTEC unit!</span>")
 		return
 
-	R.speed = -1 // Gotta go fast.
+	R.speed = -2 // Gotta go fast.
 
 	return TRUE
 

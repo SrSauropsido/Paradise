@@ -28,7 +28,7 @@
 	female_sneeze_sound = 'sound/effects/slime_squish.ogg'
 
 	species_traits = list(LIPS, IS_WHITELISTED, NO_CLONESCAN, EXOTIC_COLOR)
-	inherent_traits = list(TRAIT_WATERBREATH)
+	inherent_traits = list(TRAIT_WATERBREATH, TRAIT_NO_BONES)
 	clothing_flags = HAS_UNDERWEAR | HAS_UNDERSHIRT | HAS_SOCKS
 	bodyflags = HAS_SKIN_COLOR | NO_EYES
 	dietflags = DIET_CARN
@@ -48,19 +48,6 @@
 		"lungs" = /obj/item/organ/internal/lungs/slime
 		)
 	mutantears = null
-	has_limbs = list(
-		"chest" =  list("path" = /obj/item/organ/external/chest/unbreakable),
-		"groin" =  list("path" = /obj/item/organ/external/groin/unbreakable),
-		"head" =   list("path" = /obj/item/organ/external/head/unbreakable),
-		"l_arm" =  list("path" = /obj/item/organ/external/arm/unbreakable),
-		"r_arm" =  list("path" = /obj/item/organ/external/arm/right/unbreakable),
-		"l_leg" =  list("path" = /obj/item/organ/external/leg/unbreakable),
-		"r_leg" =  list("path" = /obj/item/organ/external/leg/right/unbreakable),
-		"l_hand" = list("path" = /obj/item/organ/external/hand/unbreakable),
-		"r_hand" = list("path" = /obj/item/organ/external/hand/right/unbreakable),
-		"l_foot" = list("path" = /obj/item/organ/external/foot/unbreakable),
-		"r_foot" = list("path" = /obj/item/organ/external/foot/right/unbreakable)
-		)
 	suicide_messages = list(
 		"is melting into a puddle!",
 		"is ripping out their own core!",
@@ -69,6 +56,7 @@
 	var/reagent_skin_coloring = FALSE
 	var/datum/action/innate/regrow/grow
 	var/datum/action/innate/slimecolor/recolor
+	var/datum/action/innate/slimehair/rehair
 
 /datum/species/slime/on_species_gain(mob/living/carbon/human/H)
 	..()
@@ -76,6 +64,8 @@
 	grow.Grant(H)
 	recolor = new()
 	recolor.Grant(H)
+	rehair = new()
+	rehair.Grant(H)
 	RegisterSignal(H, COMSIG_HUMAN_UPDATE_DNA, /datum/species/slime/./proc/blend)
 	blend(H)
 
@@ -86,13 +76,14 @@
 		grow.Remove(H)
 	if(recolor)
 		recolor.Remove(H)
+	if(rehair)
+		rehair.Remove(H)
 	UnregisterSignal(H, COMSIG_HUMAN_UPDATE_DNA)
 
 /datum/species/slime/proc/blend(mob/living/carbon/human/H)
 	var/new_color = BlendRGB(H.skin_colour, "#acacac", 0.5) // Blends this to make it work better
-	if(H.blood_color != new_color) // Put here, so if it's a roundstart, dyed, or CMA'd slime, their blood changes to match skin
-		H.blood_color = new_color
-		H.dna.species.blood_color = H.blood_color
+	if(H.dna.species.blood_color != new_color) // Put here, so if it's a roundstart, dyed, or CMA'd slime, their blood changes to match skin
+		H.dna.species.blood_color = new_color
 
 /datum/species/slime/handle_life(mob/living/carbon/human/H)
 	// Slowly shifting to the color of the reagents
@@ -206,8 +197,37 @@
 		H.UpdateDamageIcon()
 		H.adjust_nutrition(-SLIMEPERSON_HUNGERCOST)
 		H.visible_message("<span class='notice'>[H] finishes regrowing [H.p_their()] missing [new_limb]!</span>", "<span class='notice'>You finish regrowing your [limb_select]</span>")
+		new_limb.add_limb_flags()
 	else
 		to_chat(H, "<span class='warning'>You need to hold still in order to regrow a limb!</span>")
+
+
+/datum/action/innate/slimehair
+	name = "Change Hair"
+	check_flags = AB_CHECK_CONSCIOUS
+	icon_icon = 'icons/effects/effects.dmi'
+	button_icon_state = "greenglow"
+
+/datum/action/innate/slimehair/Activate()
+	var/mob/living/carbon/human/H = owner
+	var/obj/item/organ/external/head/C = H.get_organ("head")
+	//facial hair
+	var/f_new_style = input(H, "Select a facial hair style", "Grooming")  as null|anything in H.generate_valid_facial_hairstyles()
+	//handle normal hair
+	var/h_new_style = input(H, "Select a hair style", "Grooming")  as null|anything in H.generate_valid_hairstyles()
+	to_chat("<span class='notice'>[H] starts changing [H.p_their()] hair!</span>", "<span class='notice'>You start changing your own hair! [H]</span>") //arguments for this are: 1. what others see 2. what the user sees. --Fixed grammar, (TGameCo)
+	if(do_after(H, 50, target = H)) //this is the part that adds a delay. delay is in deciseconds. --Made it 5 seconds, because hair isn't cut in one second in real life, and I want at least a little bit longer time, (TGameCo)
+
+		if(f_new_style)
+			C.f_style = f_new_style
+		if(h_new_style)
+			C.h_style = h_new_style
+
+	H.update_hair()
+	H.update_fhair()
+	to_chat("<span class='notice'>[H] finishes changing [H.p_their()] hair! </span>")
+
+
 
 #undef SLIMEPERSON_COLOR_SHIFT_TRIGGER
 #undef SLIMEPERSON_ICON_UPDATE_PERIOD

@@ -7,6 +7,18 @@
 	lose_text = "<span class='notice'>Nom nom nom.</span>"
 	medical_record_text = "Paciente padece de Ageusia."
 
+/datum/quirk/neutronimplant
+	name = "Vista neutron"
+	desc = "Implante de ojos neutron que solo te permite ver los extremos de luz y oscuridad. (Soluciona algunos errores graficos)"
+	value = 0
+	gain_text = "<span class='notice'>No ves los cambios de luz, solo los extremos de luz y oscuridad.</span>"
+
+/datum/quirk/neutronimplant/on_spawn()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/obj/item/organ/internal/eyes/cybernetic/neutron/implant = new
+	implant.insert(H)
+
+
 /datum/quirk/terminator
 	name = "IPC || Lata Dura"
 	desc = "Eres un IPC con una capa exterior mas resistente y pesada, no eres tan rapido como los demas."

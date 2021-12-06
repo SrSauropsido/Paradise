@@ -536,7 +536,6 @@
 					return
 				amount = clamp(round(num_input), 1, 20)
 
-
 			var/datum/supply_packs/P = locateUID(params["crate"])
 			if(!istype(P))
 				return

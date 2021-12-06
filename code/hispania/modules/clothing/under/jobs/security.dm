@@ -32,3 +32,11 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	item_color = "podpilot_formal"
 	hispania_icon = TRUE
 	species_restricted = list("exclude", "Grey", "Vox")
+
+//Pod Pilot
+/obj/item/clothing/under/rank/security/pod_pilot
+	name = "pod pilot's jumpsuit"
+	desc = "Suit for your regular pod pilot."
+	icon_state = "pod_pilot"
+	item_state = "pod_pilot"
+	item_color = "pod_pilot"

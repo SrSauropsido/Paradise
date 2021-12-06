@@ -62,6 +62,25 @@ Chilling extracts:
 	for(var/mob/living/carbon/C in A)
 		C.reagents.add_reagent("regen_jelly",10)
 	..()
+/obj/item/slimecross/chilling/blue
+	colour = "blue"
+	effect_desc = "Creates a rebreather, a tankless mask."
+
+/obj/item/slimecross/chilling/blue/do_effect(mob/user)
+	user.visible_message("<span class='notice'>[src] cracks, and spills out a liquid goo, which reforms into a mask!</span>")
+	new /obj/item/clothing/mask/nobreath(get_turf(user))
+	..()
+
+
+
+/obj/item/slimecross/chilling/blue
+	colour = "blue"
+	effect_desc = "Creates a rebreather, a tankless mask."
+
+/obj/item/slimecross/chilling/blue/do_effect(mob/user)
+	user.visible_message("<span class='notice'>[src] cracks, and spills out a liquid goo, which reforms into a mask!</span>")
+	new /obj/item/clothing/mask/nobreath(get_turf(user))
+	..()
 
 /obj/item/slimecross/chilling/yellow
 	colour = "yellow"

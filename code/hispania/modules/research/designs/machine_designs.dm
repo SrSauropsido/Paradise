@@ -57,3 +57,13 @@
 	materials = list(MAT_GLASS = 1000)
 	build_path = /obj/item/circuitboard/chem_dispenser/botanical
 	category = list ("Hydroponics Machinery")
+
+/datum/design/podfab
+	name = "Machine Board (Spacepod Fabricator)"
+	desc = "The circuit board for an Spacepod Fabricator"
+	id = "podfab"
+	req_tech = list("programming" = 3, "engineering" = 3)
+	build_type = IMPRINTER
+	materials = list(MAT_GLASS = 1000)
+	build_path = /obj/item/circuitboard/podfab
+	category = list("Research Machinery")

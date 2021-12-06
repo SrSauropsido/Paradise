@@ -502,6 +502,7 @@ Class Procs:
 			"<span class='notice'>You apply some [O] at [src]'s damaged areas.</span>")
 	else
 		return ..()
+
 /obj/machinery/proc/exchange_parts(mob/user, obj/item/storage/part_replacer/W)
 	var/shouldplaysound = 0
 	if((flags & NODECONSTRUCT))
@@ -512,31 +513,30 @@ Class Procs:
 			var/P
 			if(W.works_from_distance)
 				to_chat(user, display_parts(user))
-			for(var/obj/item/A in component_parts)
+			for(var/obj/item/stock_parts/A in component_parts)
 				for(var/D in CB.req_components)
 					if(ispath(A.type, D))
 						P = D
 						break
-				for(var/obj/item/B in W.contents)
+				for(var/obj/item/stock_parts/B in W.contents)
 					if(istype(B, P) && istype(A, P))
-						if(B.get_part_rating() > A.get_part_rating())
-							if(istype(B,/obj/item/stack)) //conveniently this will mean A is also a stack and I will kill the first person to prove me wrong
-								var/obj/item/stack/SA = A
-								var/obj/item/stack/SB = B
-								var/used_amt = SA.get_amount()
-								if(!SB.use(used_amt))
-									continue //if we don't have the exact amount to replace we don't
-								var/obj/item/stack/SN = new SB.merge_type(null,used_amt)
-								component_parts += SN
-							else
-								W.remove_from_storage(B, src)
-								component_parts += B
-								B.loc = null
-							W.handle_item_insertion(A, 1)
-							component_parts -= A
-							to_chat(user, "<span class='notice'>[A.name] replaced with [B.name].</span>")
-							shouldplaysound = 1
-							break
+						//If it's cell - check: 1) Max charge is better? 2) Max charge same but current charge better? - If both NO -> next content
+						if(ispath(B.type, /obj/item/stock_parts/cell))
+							var/obj/item/stock_parts/cell/tA = A
+							var/obj/item/stock_parts/cell/tB = B
+							if(!(tB.maxcharge > tA.maxcharge) && !((tB.maxcharge == tA.maxcharge) && (tB.charge > tA.charge)))
+								continue
+						//If it's not cell and not better -> next content
+						else if(B.rating <= A.rating)
+							continue
+						W.remove_from_storage(B, src)
+						W.handle_item_insertion(A, 1)
+						component_parts -= A
+						component_parts += B
+						B.loc = null
+						to_chat(user, "<span class='notice'>[A.name] replaced with [B.name].</span>")
+						shouldplaysound = 1
+						break
 			RefreshParts()
 		else
 			to_chat(user, display_parts(user))
@@ -545,6 +545,7 @@ Class Procs:
 		return TRUE
 	else
 		return FALSE
+
 
 /obj/machinery/proc/display_parts(mob/user)
 	. = list("<span class='notice'>Following parts detected in the machine:</span>")

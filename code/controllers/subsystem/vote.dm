@@ -182,8 +182,6 @@ SUBSYSTEM_DEF(vote)
 				var/datum/map/top_voted_map
 				for(var/x in subtypesof(/datum/map))
 					var/datum/map/M = x
-					if(M.only_admin)
-						continue
 					// Set top voted map
 					if(. == "[initial(M.fluff_name)] ([initial(M.technical_name)])")
 						top_voted_map = M
@@ -243,8 +241,6 @@ SUBSYSTEM_DEF(vote)
 				question = "Map for next round"
 				for(var/x in subtypesof(/datum/map))
 					var/datum/map/M = x
-					if(M.only_admin)
-						continue
 					choices.Add("[initial(M.fluff_name)] ([initial(M.technical_name)])")
 
 			if("custom")
@@ -272,8 +268,12 @@ SUBSYSTEM_DEF(vote)
 			<a href='?src=[UID()];vote=open'>Click here or type vote to place your vote.</a>
 			You have [GLOB.configuration.vote.vote_time / 10] seconds to vote.</font>"})
 		switch(vote_type)
-			if("crew transfer", "gamemode", "custom", "map")
+			if("crew transfer", "gamemode", "custom")
 				SEND_SOUND(world, sound('sound/ambience/alarm4.ogg'))
+			if("map")
+				SEND_SOUND(world, sound('sound/ambience/alarm4.ogg'))
+				for(var/mob/M in GLOB.player_list)
+					M.throw_alert("Map Vote", /obj/screen/alert/notify_mapvote, timeout_override = GLOB.configuration.vote.vote_time)
 		if(mode == "gamemode" && SSticker.ticker_going)
 			SSticker.ticker_going = FALSE
 			to_chat(world, "<font color='red'><b>Round start has been delayed.</b></font>")
