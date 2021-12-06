@@ -1210,6 +1210,7 @@
 #include "code\hispania\game\area\areas\engineering.dm"
 #include "code\hispania\game\area\areas\mining.dm"
 #include "code\hispania\game\area\areas\ruins\dababy.dm"
+#include "code\hispania\game\gamemodes\anarchy\anarchy.dm"
 #include "code\hispania\game\gamemodes\miniantags\oldman\oldman.dm"
 #include "code\hispania\game\gamemodes\miniantags\oldman\pocket_dimension.dm"
 #include "code\hispania\game\jobs\job\blueshield.dm"
