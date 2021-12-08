@@ -16528,7 +16528,13 @@
 	},
 /area/crew_quarters/heads/cmo)
 "aAG" = (
-/obj/item/radio/beacon,
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	name = "standard air scrubber";
+	on = 1;
+	scrub_N2O = 1;
+	scrub_Toxins = 1
+	},
+/obj/structure/closet/walllocker/emerglocker/north,
 /turf/simulated/floor/wood,
 /area/hallway/secondary)
 "aAH" = (
@@ -28229,26 +28235,7 @@
 /turf/simulated/floor/wood,
 /area/library)
 "aTu" = (
-/obj/structure/table,
-/obj/item/reagent_containers/food/pill/patch/silver_sulf{
-	pixel_x = -8;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/pill/patch/styptic{
-	pixel_x = 2;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/pill/patch/styptic{
-	pixel_x = 2;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/pill/patch/silver_sulf{
-	pixel_x = -8;
-	pixel_y = 8
-	},
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/reagent_containers/syringe,
+/obj/machinery/vending/medical,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -28271,16 +28258,9 @@
 	pixel_x = -8;
 	pixel_y = 8
 	},
-/obj/item/reagent_containers/glass/bottle/epinephrine,
-/obj/item/reagent_containers/glass/bottle/morphine,
-/obj/item/reagent_containers/glass/bottle/charcoal{
-	pixel_x = -4;
-	pixel_y = -3
-	},
-/obj/item/reagent_containers/glass/bottle/epinephrine{
-	pixel_x = 7;
-	pixel_y = -3
-	},
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/reagent_containers/syringe,
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -28438,7 +28418,36 @@
 /turf/simulated/floor/plating/ironsand,
 /area/hallway/secondary/exit)
 "aTP" = (
-/obj/machinery/vending/medical,
+/obj/structure/table,
+/obj/item/reagent_containers/food/pill/patch/silver_sulf{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/food/pill/patch/styptic{
+	pixel_x = 2;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/food/pill/patch/styptic{
+	pixel_x = 2;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/food/pill/patch/silver_sulf{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/glass/bottle/epinephrine,
+/obj/item/reagent_containers/glass/bottle/morphine,
+/obj/item/reagent_containers/glass/bottle/charcoal{
+	pixel_x = -4;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/glass/bottle/epinephrine{
+	pixel_x = 7;
+	pixel_y = -3
+	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "white"
 	},
@@ -29149,6 +29158,15 @@
 	},
 /area/assembly/robotics)
 "aVj" = (
+/obj/machinery/bodyscanner,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "whiteblue"
+	},
+/area/hallway/secondary)
+"aVk" = (
 /obj/machinery/sleeper{
 	dir = 4
 	},
@@ -29159,16 +29177,7 @@
 	icon_state = "whiteblue"
 	},
 /area/hallway/secondary)
-"aVk" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "whiteblue"
-	},
-/area/hallway/secondary)
 "aVl" = (
-/obj/machinery/bodyscanner,
-/obj/machinery/light{
-	dir = 4
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "whiteblue"
 	},
@@ -30020,9 +30029,9 @@
 	},
 /area/hallway/secondary)
 "aXG" = (
-/obj/structure/chair/comfy/brown{
-	dir = 1
-	},
+/obj/structure/table/wood,
+/obj/item/storage/belt/utility,
+/obj/item/crowbar/red,
 /obj/machinery/light,
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
@@ -30044,12 +30053,10 @@
 	},
 /area/hallway/secondary)
 "aXK" = (
-/obj/structure/table/wood,
-/obj/item/storage/belt/utility,
-/obj/item/crowbar/red,
-/turf/simulated/floor/plasteel{
-	icon_state = "grimy"
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
+/turf/simulated/floor/wood,
 /area/hallway/secondary)
 "aXL" = (
 /obj/structure/table/wood,
@@ -30057,6 +30064,7 @@
 	pixel_x = -2;
 	pixel_y = -1
 	},
+/obj/machinery/light,
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -48875,13 +48883,7 @@
 /turf/simulated/floor/wood,
 /area/hallway/secondary)
 "bBA" = (
-/obj/machinery/atmospherics/unary/vent_scrubber{
-	name = "standard air scrubber";
-	on = 1;
-	scrub_N2O = 1;
-	scrub_Toxins = 1
-	},
-/obj/structure/closet/walllocker/emerglocker/north,
+/obj/item/radio/beacon,
 /turf/simulated/floor/wood,
 /area/hallway/secondary)
 "bBB" = (
@@ -64185,7 +64187,10 @@
 	},
 /area/hallway/primary/port)
 "ceN" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -65410,16 +65415,6 @@
 /turf/simulated/floor/engine,
 /area/engine/engineering)
 "cgG" = (
-/obj/machinery/hologram/holopad,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/hallway/secondary)
-"cgH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
@@ -65428,13 +65423,7 @@
 	},
 /turf/simulated/floor/wood,
 /area/hallway/secondary)
-"cgI" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/hallway/secondary)
-"cgJ" = (
+"cgH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -119082,15 +119071,15 @@ aaa
 aaa
 aaa
 aaa
-afy
-aTs
-aTs
-aTs
-afy
+aga
+aTv
+aTS
+aTS
+aVk
 aUe
 bcf
 aXJ
-aYs
+acg
 abn
 abn
 aXs
@@ -119339,14 +119328,14 @@ aaa
 aaa
 aaa
 aaa
-acg
 aga
-aga
-aga
-acg
+aTP
+aTT
+aTY
+aVl
 bBA
 ceN
-aXK
+aXJ
 acg
 aaa
 aXs
@@ -119853,14 +119842,14 @@ aaa
 aaa
 aaa
 aaa
+acg
 aga
-aTv
-aTT
-aTY
-aVk
+aga
+aga
+acg
 aAG
 cgG
-aXJ
+aXL
 acg
 aaa
 abn
@@ -120110,13 +120099,13 @@ aaa
 aaa
 aaa
 aaa
-aga
-aTP
-aTS
-aTS
-aVl
+afy
+aTs
+aTs
+aTs
+afy
 aUe
-bcf
+aXK
 aXJ
 acg
 aaa
@@ -120367,14 +120356,14 @@ aaa
 aaa
 aaa
 aaa
+aga
+aga
+aga
+aga
 acg
-aga
-aga
-aga
-acg
-bBA
+bBz
 cgH
-aXL
+aXJ
 acg
 aaa
 aaa
@@ -120630,8 +120619,8 @@ aTs
 aTs
 afy
 aUe
-cgI
-aXJ
+aUe
+aXF
 acg
 aaa
 aaa
@@ -120886,9 +120875,9 @@ aga
 aga
 aga
 acg
-bBz
-cgJ
-aXG
+aga
+aga
+aga
 acg
 aaa
 aaa
@@ -121138,15 +121127,15 @@ aaa
 aaa
 aaa
 aaa
-afy
-aTs
-aTs
-aTs
-afy
-aUe
-aUe
-aXF
-acg
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa
@@ -121395,15 +121384,15 @@ aaa
 aaa
 aaa
 aaa
-aga
-aga
-aga
-aga
-acg
-aga
-aga
-aga
-acg
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
+aaa
 aaa
 aaa
 aaa

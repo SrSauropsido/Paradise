@@ -190,11 +190,11 @@
 					body_accessory=:body_accessory,
 					gear=:gearlist,
 					autohiss=:autohiss_mode,
-					quirks =: quirklist,
+					quirks=:quirklist,
 					hair_gradient=:h_grad_style,
 					hair_gradient_offset=:h_grad_offset,
 					hair_gradient_colour=:h_grad_colour,
-					hair_gradient_alpha=:h_grad_alpha,
+					hair_gradient_alpha=:h_grad_alpha
 					WHERE ckey=:ckey
 					AND slot=:slot"}, list(
 						// OH GOD SO MANY PARAMETERS
