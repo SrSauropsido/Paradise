@@ -6,8 +6,8 @@ proc/is_complete_print(print)
 
 //microscope code itself
 /obj/machinery/microscope
-	name = "Microscopio electronico"
-	desc = "Microscopio de alta tecnologia capaz de ampliar imagenes hasta 3000 veces."
+	name = "Электронный микроскоп"
+	desc = "Высокотехнологичный микроскоп, способный увеличивать изображение до 3000 раз."
 	icon = 'icons/obj/forensics.dmi'
 	icon_state = "microscope"
 	anchored = 1
@@ -26,11 +26,11 @@ proc/is_complete_print(print)
 /obj/machinery/microscope/attackby(obj/item/W as obj, mob/user as mob)
 
 	if(sample)
-		to_chat(user, "<span class='warning'>¡Ya hay una muestra en el microscopio!</span>")
+		to_chat(user, "<span class='warning'>В микроскопе уже есть образец!</span>")
 		return
 
 	if(istype(W, /obj/item/forensics/swab)|| istype(W, /obj/item/sample/fibers) || istype(W, /obj/item/sample/print))
-		to_chat(user, "<span class='notice'>Insertaste \the [W] en el microscopio</span>")
+		to_chat(user, "<span class='notice'>Вы вставили \the [W] в микроскоп.</span>")
 		user.unEquip(W)
 		W.forceMove(src)
 		sample = W
@@ -42,16 +42,16 @@ proc/is_complete_print(print)
 /obj/machinery/microscope/attack_hand(mob/user)
 
 	if(!sample)
-		to_chat(user, "<span class='warning'>No hay muestra en el microscopio para analizar.</span>")
+		to_chat(user, "<span class='warning'>В микроскопе нет образца для анализа.</span>")
 		return
 
-	to_chat(user, "<span class='notice'>El microscopio vibra mientras analizas \the [sample].</span>")
+	to_chat(user, "<span class='notice'>Микроскоп жужжит, пока вы анализируете \the [sample].</span>")
 
 	if(!do_after(user, 25, src) || !sample)
-		to_chat(user, "<span class='notice'>Dejas de analizar \the [sample].</span>")
+		to_chat(user, "<span class='notice'>Вы перестаёте анализировать \the [sample].</span>")
 		return
 
-	to_chat(user, "<span class='notice'>Imprimiendo reporte..</span>")
+	to_chat(user, "<span class='notice'>Печать отчета...</span>")
 	var/obj/item/paper/report = new(get_turf(src))
 	report.stamped = list(/obj/item/stamp)
 	report.overlays = list("paper_stamped")
@@ -60,39 +60,39 @@ proc/is_complete_print(print)
 	if(istype(sample, /obj/item/forensics/swab))
 		var/obj/item/forensics/swab/swab = sample
 
-		report.name = ("Informe forense №[++report_num]: [swab.name]")
-		report.info = "<b>Objeto analizado:</b><br>[swab.name]<br><br>"
+		report.name = ("Криминалистический отчет №[++report_num]: [swab.name]")
+		report.info = "<b>Анализируемый объект:</b><br>[swab.name]<br><br>"
 
 		if(swab.gsr)
-			report.info += "Resto de bala determinado [swab.gsr] calibre."
+			report.info += "Определен остаток от пули [swab.gsr] калибра."
 		else
-			report.info += "No se encontraron residuos de bala."
+			report.info += "Пороховой остаток от пули не найден."
 
 	else if(istype(sample, /obj/item/sample/fibers))
 		var/obj/item/sample/fibers/fibers = sample
-		report.name = ("Informe de fragmentos №[++report_num]: [fibers.name]")
-		report.info = "<b>Objeto analizado:</b><br>[fibers.name]<br><br>"
+		report.name = ("Отчет по фрагменту ткани №[++report_num]: [fibers.name]")
+		report.info = "<b>Анализируемый объект:</b><br>[fibers.name]<br><br>"
 		if(fibers.evidence)
-			report.info = "El analisis molecular de la muestra proporcionada identifico la presencia de hilos de fibra únicos.<br><br>"
+			report.info = "Молекулярный анализ на предоставленном образце определил наличие уникальных волоконных струн.<br><br>"
 			for(var/fiber in fibers.evidence)
-				report.info += "<span class='notice'>Coincidencia mas probable: [fiber]</span><br><br>"
+				report.info += "<span class='notice'>Наиболее вероятное совпадение: [fiber]</span><br><br>"
 		else
-			report.info += "No se encontraron fibras."
+			report.info += "Волокна не найдены."
 	else if(istype(sample, /obj/item/sample/print))
-		report.name = ("Informe de analisis de huellas dactilares №[report_num]: [sample.name]")
-		report.info = "<b>Informe de analisis de huellas dactilares №[report_num]</b>: [sample.name]<br>"
+		report.name = ("Отчет по анализу отпечатков пальцев №[report_num]: [sample.name]")
+		report.info = "<b>Отчет об анализе отпечатков пальцев №[report_num]</b>: [sample.name]<br>"
 		var/obj/item/sample/print/card = sample
 		if(card.evidence && card.evidence.len)
-			report.info += "<br>El analisis de superficie identifico las siguientes lineas únicas de huellas dactilares:<br><br>"
+			report.info += "<br>Поверхностный анализ определил следующие уникальные строки отпечатков пальцев:<br><br>"
 			for(var/prints in card.evidence)
-				report.info += "<span class='notice'>Cadena de huellas dactilares: </span>"
+				report.info += "<span class='notice'>Строка отпечатков пальцев: </span>"
 				if(!is_complete_print(prints))
-					report.info += "IMPRESIÓN INCOMPLETA"
+					report.info += "НЕПОЛНЫЙ ОТПЕЧАТОК"
 				else
 					report.info += "[prints]"
 				report.info += "<br>"
 		else
-			report.info += "No hay informacion de analisis disponible."
+			report.info += "Информация по анализу отсутствует."
 
 	if(report)
 		report.update_icon()
@@ -104,9 +104,9 @@ proc/is_complete_print(print)
 	if(!istype(remover) || remover.incapacitated() || !Adjacent(remover))
 		return ..()
 	if(!sample)
-		to_chat(remover, "<span class='warning'>¡No hay muestra dentro del microscopio!</span>")
+		to_chat(remover, "<span class='warning'>Внутри микроскопа нет образца!</span>")
 		return
-	to_chat(remover, "<span class='notice'>Te sacaste \the [sample] de un microscopio.</span>")
+	to_chat(remover, "<span class='notice'>Вы вытащили \the [sample] из микроскопа.</span>")
 	sample.forceMove(get_turf(src))
 	remover.put_in_hands(sample)
 	sample = null

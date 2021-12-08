@@ -1,6 +1,6 @@
 //DNA machine
 /obj/machinery/dnaforensics
-	name = "Analizador de ADN"
+	name = "Анализатор ДНК"
 	desc = "Высокотехнологичная машина, которая предназначена для правильного считывания образцов ДНК."
 	icon = 'icons/obj/forensics.dmi'
 	icon_state = "dnaopen"
@@ -23,11 +23,11 @@
 /obj/machinery/dnaforensics/attackby(obj/item/W as obj, mob/user as mob)
 
 	if(swab)
-		to_chat(user, "<span class='warning'>Ya hay un tubo dentro del escaner.</span>")
+		to_chat(user, "<span class='warning'>Внутри сканера уже есть пробирка.</span>")
 		return
 
 	if(istype(W, /obj/item/forensics/swab))
-		to_chat(user, "<span class='notice'>Inserta \the [W] en el analizador de ADN.</span>")
+		to_chat(user, "<span class='notice'>Вы вставляете \the [W] в ДНК анализатор.</span>")
 		user.unEquip(W)
 		W.forceMove(src)
 		swab = W
@@ -38,20 +38,20 @@
 /obj/machinery/dnaforensics/attack_hand(mob/user)
 
 	if(!swab)
-		to_chat(user, "<span class='warning'>¡El escaner está vacío!</span>")
+		to_chat(user, "<span class='warning'>Сканер пуст!</span>")
 		return
 	scanning = 1
 	update_icon()
-	to_chat(user, "<span class='notice'>El escaner comienza a analizar el contenido del tubo con un zumbido. \the [swab].</span>")
+	to_chat(user, "<span class='notice'>Сканер начинает с жужением анализировать содержимое пробирки \the [swab].</span>")
 
 	if(!do_after(user, 25, src) || !swab)
-		to_chat(user, "<span class='notice'>Dejaste de analizar \the [swab].</span>")
+		to_chat(user, "<span class='notice'>Вы перестали анализировать \the [swab].</span>")
 		scanning = 0
 		update_icon()
 
 		return
 
-	to_chat(user, "<span class='notice'>Imprimiendo reporte ...</span>")
+	to_chat(user, "<span class='notice'>Печать отчета...</span>")
 	var/obj/item/paper/report = new(get_turf(src))
 	report.stamped = list(/obj/item/stamp)
 	report.overlays = list("paper_stamped")
@@ -59,17 +59,17 @@
 
 	if(swab)
 		var/obj/item/forensics/swab/bloodswab = swab
-		report.name = ("Informe del escaner de ADN N°[++report_num]: [bloodswab.name]")
+		report.name = ("Отчет ДНК сканера №[++report_num]: [bloodswab.name]")
 		//dna data itself
-		var/data = "No hay datos de analisis disponibles"
+		var/data = "Нет доступных данных по анализу."
 		if(bloodswab.dna != null)
-			data = "El analisis espectrometrico de la muestra proporcionada determino la presencia de hebras de ADN en una cantidad [bloodswab.dna.len].<br><br>"
+			data = "Спектрометрический анализ на предоставленном образце определил наличие нитей ДНК в количестве [bloodswab.dna.len].<br><br>"
 			for(var/blood in bloodswab.dna)
-				data += "<span class='notice'>Tipo de sangre: [bloodswab.dna[blood]]<br>\n ADN: [blood]</span><br><br>"
+				data += "<span class='notice'>Группа крови: [bloodswab.dna[blood]]<br>\nДНК: [blood]</span><br><br>"
 		else
 			data += "\nДНК не найдено.<br>"
-		report.info = "<b>Reporte №[report_num] по \n[src]</b><br>"
-		report.info += "<b>\nObjeto analizado:</b><br>[bloodswab.name]<br>[bloodswab.desc]<br><br>" + data
+		report.info = "<b>Отчет №[report_num] по \n[src]</b><br>"
+		report.info += "<b>\nАнализируемый объект:</b><br>[bloodswab.name]<br>[bloodswab.desc]<br><br>" + data
 		report.forceMove(src.loc)
 		report.update_icon()
 		scanning = 0
@@ -80,9 +80,9 @@
 	if(!istype(remover) || remover.incapacitated() || !Adjacent(remover))
 		return ..()
 	if(!swab)
-		to_chat(remover, "<span class='warning'>¡No hay muestra dentro del escaner!.</span>")
+		to_chat(remover, "<span class='warning'>Внутри сканера нет образца!.</span>")
 		return
-	to_chat(remover, "<span class='notice'Tiraste \the [swab] desde el escaner.</span>")
+	to_chat(remover, "<span class='notice'>Вы вытащили \the [swab] из сканера.</span>")
 	swab.forceMove(get_turf(src))
 	remover.put_in_hands(swab)
 	swab = null
