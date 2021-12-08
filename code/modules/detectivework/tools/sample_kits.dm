@@ -44,7 +44,7 @@
 	to_chat(user, "<span class='notice'>You overlay \the [src] and \the [supplied], combining the print records.</span>")
 	return 1
 
-/obj/item/sample/pre_attackby(atom/A, mob/living/user, params)
+/obj/item/sample/pre_attack(atom/A, mob/living/user, params)
 	// Fingerprints will be handled in after_attack() to not mess up the samples taken
 	return A.attackby(src, user, params)
 
