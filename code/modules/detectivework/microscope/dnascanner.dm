@@ -21,7 +21,7 @@
 
 /obj/machinery/dnaforensics/attackby(obj/item/W as obj, mob/user as mob)
 	if(swab)
-		to_chat(user, "<span class='warning'>Ya hay un tubo dentro del escaner.</span>")
+		to_chat(user, "<span class='warning'>Ya hay un tubo dentro del escaner.(ALT+click para remover)</span>")
 		return
 	if(istype(W, /obj/item/forensics/swab))
 		to_chat(user, "<span class='notice'>Insertaste \the [W] en el analizador de ADN.</span>")

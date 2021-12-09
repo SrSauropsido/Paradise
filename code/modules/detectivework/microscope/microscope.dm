@@ -24,7 +24,7 @@
 
 /obj/machinery/microscope/attackby(obj/item/W as obj, mob/user as mob)
 	if(sample)
-		to_chat(user, "<span class='warning'>¡Ya hay una muestra en el microscopio!</span>")
+		to_chat(user, "<span class='warning'>¡Ya hay una muestra en el microscopio!(ALT+click para remover)</span>")
 		return
 	if(istype(W, /obj/item/forensics/swab)|| istype(W, /obj/item/sample/fibers) || istype(W, /obj/item/sample/print))
 		to_chat(user, "<span class='notice'>Insertaste \the [W] en el microscopio</span>")
