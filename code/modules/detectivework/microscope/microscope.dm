@@ -2,7 +2,6 @@
 //the print must be there for it to be complete.  (Prints are 32 digits)
 proc/is_complete_print(print)
 	return stringpercent(print) <= 6
-
 //microscope code itself
 /obj/machinery/microscope
 	name = "Microscopio electronico"
@@ -13,14 +12,12 @@ proc/is_complete_print(print)
 	density = 1
 	var/obj/item/sample = null
 	var/report_num = 0
-
 /obj/machinery/microscope/Initialize(mapload)
 	. = ..()
 	component_parts = list()
 	component_parts += new /obj/item/circuitboard/microscope(null)
 	component_parts += new /obj/item/stock_parts/micro_laser(null)
 	component_parts += new /obj/item/stack/sheet/glass(null)
-
 /obj/machinery/microscope/attackby(obj/item/W as obj, mob/user as mob)
 	if(sample)
 		to_chat(user, "<span class='warning'>¡Ya hay una muestra en el microscopio!</span>")
@@ -33,7 +30,6 @@ proc/is_complete_print(print)
 		update_icon()
 		return
 	..()
-
 /obj/machinery/microscope/attack_hand(mob/user)
 	if(!sample)
 		to_chat(user, "<span class='warning'>No hay muestra en el microscopio para analizar.</span>")
@@ -85,7 +81,6 @@ proc/is_complete_print(print)
 		if(report.info)
 			to_chat(user, report.info)
 	return
-
 // /obj/machinery/microscope/proc/remove_sample(mob/living/remover)
 // 	if(!istype(remover) || remover.incapacitated() || !Adjacent(remover))
 // 		return ..()
@@ -97,34 +92,28 @@ proc/is_complete_print(print)
 // 	remover.put_in_hands(sample)
 // 	sample = null
 // 	update_icon()
-
 // /obj/machinery/microscope/AltClick()
 // 	remove_sample(usr)
-
 // /obj/machinery/microscope/MouseDrop(atom/other)
 // 	if(usr == other)
 // 		remove_sample(usr)
 // 	else
 // 		return ..()
-
 /obj/machinery/microscope/update_icon()
 	icon_state = "microscope"
 	if(sample)
 		icon_state += "slide"
-
 /obj/machinery/microscope/screwdriver_act(mob/user, obj/item/I)
 	if(sample)
 		return
 	. = TRUE
 	default_deconstruction_screwdriver(user, "microscope_off", "microscope", I)
-
 /obj/machinery/microscope/wrench_act(mob/user, obj/item/I)
 	. = TRUE
 	default_unfasten_wrench(user, I)
-
 /obj/machinery/microscope/crowbar_act(mob/user, obj/item/I)
 	if(sample)
 		return
 	. = TRUE
 	default_deconstruction_crowbar(user, I)
-
+	

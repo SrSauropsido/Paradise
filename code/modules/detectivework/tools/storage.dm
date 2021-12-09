@@ -11,7 +11,6 @@
 		new /obj/item/forensics/swab(src)
 		new /obj/item/forensics/swab(src)
 		new /obj/item/forensics/swab(src)
-
 /obj/item/storage/box/fingerprints
 	name = "box of fingerprint cards"
 	desc = "Sterilized equipment within. Do not contaminate."
@@ -25,4 +24,4 @@
 		new /obj/item/sample/print(src)
 		new /obj/item/sample/print(src)
 		new /obj/item/sample/print(src)
-
+		
