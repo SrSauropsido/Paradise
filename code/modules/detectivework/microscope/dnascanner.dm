@@ -10,6 +10,7 @@
 	var/obj/item/forensics/swab = null
 	var/scanning = 0
 	var/report_num = 0
+
 /obj/machinery/dnaforensics/Initialize(mapload)
 	. = ..()
 	component_parts = list()
@@ -17,6 +18,7 @@
 	component_parts += new /obj/item/stock_parts/micro_laser(null)
 	component_parts += new /obj/item/stock_parts/manipulator(null)
 	component_parts += new /obj/item/stock_parts/micro_laser(null)
+
 /obj/machinery/dnaforensics/attackby(obj/item/W as obj, mob/user as mob)
 	if(swab)
 		to_chat(user, "<span class='warning'>Ya hay un tubo dentro del escaner.</span>")
@@ -29,6 +31,7 @@
 		update_icon()
 		return
 	..()
+
 /obj/machinery/dnaforensics/attack_hand(mob/user)
 	if(!swab)
 		to_chat(user, "<span class='warning'>¡El escaner esta vacio!</span>")
@@ -82,23 +85,26 @@
 // 		remove_sample(usr)
 // 	else
 // 		return ..()
+
 /obj/machinery/dnaforensics/update_icon()
 	icon_state = "dnaopen"
 	if(swab)
 		icon_state = "dnaclosed"
 		if(scanning)
 			icon_state = "dnaworking"
+
 /obj/machinery/dnaforensics/screwdriver_act(mob/user, obj/item/I)
 	if(swab)
 		return
 	. = TRUE
 	default_deconstruction_screwdriver(user, "dnaopenunpowered", "dnaopen", I)
+
 /obj/machinery/dnaforensics/wrench_act(mob/user, obj/item/I)
 	. = TRUE
 	default_unfasten_wrench(user, I)
+
 /obj/machinery/dnaforensics/crowbar_act(mob/user, obj/item/I)
 	if(swab)
 		return
 	. = TRUE
 	default_deconstruction_crowbar(user, I)
-	

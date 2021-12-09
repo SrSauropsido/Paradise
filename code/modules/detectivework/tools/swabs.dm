@@ -7,8 +7,10 @@
 	var/list/dna
 	var/used
 	var/inuse = 0
+
 /obj/item/forensics/swab/proc/is_used()
 	return used
+
 /obj/item/forensics/swab/attack(mob/living/M, mob/user)
 	if(!ishuman(M))
 		return ..()
@@ -79,6 +81,7 @@
 			return
 		inuse = 0
 		return 1
+
 /obj/item/forensics/swab/afterattack(atom/A, mob/user, proximity)
 	if(!proximity || istype(A, /obj/machinery/dnaforensics))
 		return
@@ -137,13 +140,14 @@
 				S.gsr = target_gsr
 				S.set_used(sample_type, A)
 	inuse = 0
+
 /obj/item/forensics/swab/proc/set_used(sample_str, atom/source)
 	name = ("[initial(name)] ([sample_str] - [source])")
 	desc = "[initial(desc)] The label on the vial reads 'Sample of [sample_str] from [source].'."
 	icon_state = "swab_used"
 	used = 1
+
 /obj/item/forensics/swab/cyborg
 	name = "swab kit"
 	desc = "A sterilized cotton swab and vial used to take forensic samples."
 	dispenser = 1
-	
