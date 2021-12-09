@@ -25,7 +25,7 @@
 
 /obj/machinery/microscope/attackby(obj/item/W as obj, mob/user as mob)
 	if(sample)
-		to_chat(user, "<span class='warning'>¡Ya hay una muestra en el microscopio!(ALT+click para remover)</span>")
+		to_chat(user, "<span class='warning'>¡Ya hay una muestra en el microscopio!</span>")
 		return
 	if(istype(W, /obj/item/forensics/swab)|| istype(W, /obj/item/sample/fibers) || istype(W, /obj/item/sample/print))
 		to_chat(user, "<span class='notice'>Insertaste \the [W] en el microscopio</span>")
@@ -130,6 +130,15 @@
 /obj/machinery/microscope/wrench_act(mob/user, obj/item/I)
 	. = TRUE
 	default_unfasten_wrench(user, I)
+
+/obj/machinery/microscope/verb/eject()
+	set category = "Object"
+	set name = "Eject Sample"
+	set src in oview(1)
+	if(usr.incapacitated())
+		return
+	remove_sample(usr)
+	add_fingerprint(usr)
 
 /obj/machinery/microscope/crowbar_act(mob/user, obj/item/I)
 	if(sample)

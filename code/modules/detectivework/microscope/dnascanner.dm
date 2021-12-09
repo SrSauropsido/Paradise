@@ -22,7 +22,7 @@
 
 /obj/machinery/dnaforensics/attackby(obj/item/W as obj, mob/user as mob)
 	if(swab)
-		to_chat(user, "<span class='warning'>Ya hay un tubo dentro del escaner.(ALT+click para remover)</span>")
+		to_chat(user, "<span class='warning'>Ya hay un tubo dentro del escaner.</span>")
 		return
 	if(istype(W, /obj/item/forensics/swab))
 		to_chat(user, "<span class='notice'>Insertaste \the [W] en el analizador de ADN.</span>")
@@ -113,6 +113,15 @@
 /obj/machinery/dnaforensics/wrench_act(mob/user, obj/item/I)
 	. = TRUE
 	default_unfasten_wrench(user, I)
+
+/obj/machinery/dnaforensics/verb/eject()
+	set category = "Object"
+	set name = "Eject DNA"
+	set src in oview(1)
+	if(usr.incapacitated())
+		return
+	remove_sample(usr)
+	add_fingerprint(usr)
 
 /obj/machinery/dnaforensics/crowbar_act(mob/user, obj/item/I)
 	if(swab)
