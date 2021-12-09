@@ -859,5 +859,3 @@ BLIND     // can't see anything
 		deconstruct(FALSE)
 	else
 		..()
-
-

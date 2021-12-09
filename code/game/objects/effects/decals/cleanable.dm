@@ -74,5 +74,3 @@
 	if(smooth)
 		queue_smooth_neighbors(src)
 	return ..()
-
-

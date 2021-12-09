@@ -205,5 +205,3 @@
 	/// A soft reference to the location where this mob's runechat message will appear. Uses `UID()`.
 	var/runechat_msg_location
 	var/messagereal //HISPANIA
-
-
