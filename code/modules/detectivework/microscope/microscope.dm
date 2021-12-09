@@ -27,6 +27,7 @@ proc/is_complete_print(print)
 		return
 	if(istype(W, /obj/item/forensics/swab)|| istype(W, /obj/item/sample/fibers) || istype(W, /obj/item/sample/print))
 		to_chat(user, "<span class='notice'>Insertaste \the [W] en el microscopio</span>")
+		playsound(loc, 'sound/hispania/machines/Custom_screwdriverclose.ogg', 50, 1)
 		user.unEquip(W)
 		W.forceMove(src)
 		sample = W
@@ -60,23 +61,24 @@ proc/is_complete_print(print)
 		report.name = ("Informe de fragmentos №[++report_num]: [fibers.name]")
 		report.info = "<b>Objeto analizado:</b><br>[fibers.name]<br><br>"
 		if(fibers.evidence)
-			report.info = "El analisis molecular de la muestra proporcionada identifico la presencia de hilos de fibra únicos.<br><br>"
+			report.info = "El analisis molecular de la muestra proporcionada identifico la presencia de hilos de fibra unicos.<br><br>"
 			for(var/fiber in fibers.evidence)
 				report.info += "<span class='notice'>Coincidencia mas probable: [fiber]</span><br><br>"
 		else
 			report.info += "No se encontraron fibras."
 	else if(istype(sample, /obj/item/sample/print))
-		report.name = ("Informe de analisis de huellas dactilares №[report_num]: [sample.name]")
-		report.info = "<b>Informe de analisis de huellas dactilares №[report_num]</b>: [sample.name]<br>"
+		report.name = ("Informe de analisis de huellas dactilares numero: [report_num]: [sample.name]")
+		report.info = "<b>Informe de analisis de huellas dactilares numero: [report_num]</b>: [sample.name]<br>"
 		var/obj/item/sample/print/card = sample
 		if(card.evidence && card.evidence.len)
-			report.info += "<br>El analisis de superficie identifico las siguientes lineas únicas de huellas dactilares:<br><br>"
+			report.info += "<br>El analisis de superficie identifico las siguientes lineas unicas de huellas dactilares:<br><br>"
 			for(var/prints in card.evidence)
 				report.info += "<span class='notice'>Cadena de huellas dactilares: </span>"
 				if(!is_complete_print(prints))
 					report.info += "IMPRESIÓN INCOMPLETA"
 				else
 					report.info += "[prints]"
+					playsound(loc, 'sound/hispania/machines/floppydisk.ogg', 50, 1)
 				report.info += "<br>"
 		else
 			report.info += "No hay informacion de analisis disponible."

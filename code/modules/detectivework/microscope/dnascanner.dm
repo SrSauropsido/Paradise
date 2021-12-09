@@ -24,7 +24,8 @@
 		to_chat(user, "<span class='warning'>Ya hay un tubo dentro del escaner.</span>")
 		return
 	if(istype(W, /obj/item/forensics/swab))
-		to_chat(user, "<span class='notice'>Inserta \the [W] en el analizador de ADN.</span>")
+		to_chat(user, "<span class='notice'>Insertaste \the [W] en el analizador de ADN.</span>")
+		playsound(loc, 'sound/hispania/machines/Custom_screwdriverclose.ogg', 50, 1)
 		user.unEquip(W)
 		W.forceMove(src)
 		swab = W
@@ -45,6 +46,7 @@
 		update_icon()
 		return
 	to_chat(user, "<span class='notice'>Imprimiendo reporte ...</span>")
+	playsound(loc, 'sound/goonstation/machines/printer_dotmatrix.ogg', 50, 1)
 	var/obj/item/paper/report = new(get_turf(src))
 	report.stamped = list(/obj/item/stamp)
 	report.overlays = list("paper_stamped")
@@ -55,12 +57,12 @@
 		//dna data itself
 		var/data = "No hay datos de analisis disponibles"
 		if(bloodswab.dna != null)
-			data = "El analisis espectrometrico de la muestra proporcionada determino la presencia de hebras de ADN en una cantidad [bloodswab.dna.len].<br><br>"
+			data = "El analisis espectrometrico de la muestra proporcionada determino la presencia de hebras de ADN en una cantidad de: [bloodswab.dna.len].<br><br>"
 			for(var/blood in bloodswab.dna)
 				data += "<span class='notice'>Tipo de sangre: [bloodswab.dna[blood]]<br>\n ADN: [blood]</span><br><br>"
 		else
 			data += "\nДНК не найдено.<br>"
-		report.info = "<b>Reporte №[report_num] по \n[src]</b><br>"
+		report.info = "<b>Reporte numero:[report_num] \n[src]</b><br>"
 		report.info += "<b>\nObjeto analizado:</b><br>[bloodswab.name]<br>[bloodswab.desc]<br><br>" + data
 		report.forceMove(src.loc)
 		report.update_icon()
