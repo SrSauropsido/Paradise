@@ -1,7 +1,3 @@
-//This is the output of the stringpercent(print) proc, and means about 80% of
-//the print must be there for it to be complete.  (Prints are 32 digits)
-proc/is_complete_print(print)
-	return stringpercent(print) <= 6
 //microscope code itself
 
 /obj/machinery/microscope
@@ -13,6 +9,11 @@ proc/is_complete_print(print)
 	density = 1
 	var/obj/item/sample = null
 	var/report_num = 0
+
+//This is the output of the stringpercent(print) proc, and means about 80% of
+//the print must be there for it to be complete.  (Prints are 32 digits)
+/obj/machinery/microscope/proc/is_complete_print(print)
+	return stringpercent(print) <= 6
 
 /obj/machinery/microscope/Initialize(mapload)
 	. = ..()
