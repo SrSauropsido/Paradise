@@ -10,6 +10,7 @@
 	var/obj/item/forensics/swab = null
 	var/scanning = 0
 	var/report_num = 0
+	var/operating = 0
 
 /obj/machinery/dnaforensics/Initialize(mapload)
 	. = ..()
@@ -34,16 +35,20 @@
 	..()
 
 /obj/machinery/dnaforensics/attack_hand(mob/user)
+	if(operating == 1)
+		return
 	if(!swab)
 		to_chat(user, "<span class='warning'>¡El escaner esta vacio!</span>")
 		return
 	scanning = 1
 	update_icon()
 	to_chat(user, "<span class='notice'>El escaner comienza a analizar el contenido del tubo con un zumbido. \the [swab].</span>")
+	operating = 1
 	if(!do_after(user, 25, src) || !swab)
 		to_chat(user, "<span class='notice'>Dejaste de analizar \the [swab].</span>")
 		scanning = 0
 		update_icon()
+		operating = 0
 		return
 	to_chat(user, "<span class='notice'>Imprimiendo reporte ...</span>")
 	playsound(loc, 'sound/goonstation/machines/printer_dotmatrix.ogg', 50, 1)
@@ -68,6 +73,7 @@
 		report.update_icon()
 		scanning = 0
 		update_icon()
+	operating = 0
 	return
 
 /obj/machinery/dnaforensics/proc/remove_sample(mob/living/remover)

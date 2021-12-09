@@ -9,6 +9,7 @@
 	density = 1
 	var/obj/item/sample = null
 	var/report_num = 0
+	var/operating = 0
 
 //This is the output of the stringpercent(print) proc, and means about 80% of
 //the print must be there for it to be complete.  (Prints are 32 digits)
@@ -37,12 +38,16 @@
 	..()
 
 /obj/machinery/microscope/attack_hand(mob/user)
+	if(operating == 1)
+		return
 	if(!sample)
 		to_chat(user, "<span class='warning'>No hay muestra en el microscopio para analizar.</span>")
 		return
 	to_chat(user, "<span class='notice'>El microscopio vibra mientras analizas \the [sample].</span>")
+	operating = 1
 	if(!do_after(user, 25, src) || !sample)
 		to_chat(user, "<span class='notice'>Dejas de analizar \the [sample].</span>")
+		operating = 0
 		return
 	to_chat(user, "<span class='notice'>Imprimiendo reporte..</span>")
 	var/obj/item/paper/report = new(get_turf(src))
@@ -87,6 +92,7 @@
 		report.update_icon()
 		if(report.info)
 			to_chat(user, report.info)
+	operating = 0
 	return
 
 /obj/machinery/microscope/proc/remove_sample(mob/living/remover)
