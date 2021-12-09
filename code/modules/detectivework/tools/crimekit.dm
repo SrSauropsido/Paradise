@@ -13,3 +13,4 @@
 	new /obj/item/forensics/sample_kit(src)
 	new /obj/item/forensics/sample_kit/powder(src)
 	new /obj/item/detective_scanner(src)
+

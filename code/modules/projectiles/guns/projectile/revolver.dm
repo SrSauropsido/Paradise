@@ -490,3 +490,4 @@
 
 	if(desc)
 		. += desc
+

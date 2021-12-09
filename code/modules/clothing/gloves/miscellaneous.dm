@@ -182,3 +182,4 @@
 	name = "gloves of headpats"
 	desc = "You feel the irresistable urge to give headpats by merely glimpsing these."
 	accepted_intents = list(INTENT_HELP)
+
