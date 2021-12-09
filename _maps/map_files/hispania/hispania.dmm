@@ -1249,11 +1249,13 @@
 	},
 /area/security/main)
 "acF" = (
-/obj/structure/chair/stool,
-/turf/simulated/floor/plasteel{
-	icon_state = "grimy"
+/obj/effect/spawner/window/reinforced,
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
 	},
-/area/security/detectives_office)
+/turf/simulated/floor/plating,
+/area/security/prisonershuttle)
 "acG" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
@@ -3421,6 +3423,17 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/security/podbay)
+"aib" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "dark"
+	},
+/area/security/brig)
 "aic" = (
 /obj/effect/decal/warning_stripes/north,
 /obj/machinery/space_heater,
@@ -3441,17 +3454,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
-/turf/simulated/floor/plasteel{
-	icon_state = "dark"
-	},
-/area/security/brig)
-"aie" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "dark"
 	},
@@ -9712,14 +9714,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/atmos)
-"atM" = (
-/obj/effect/spawner/window/reinforced,
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
-/area/security/prisonershuttle)
 "atN" = (
 /obj/effect/spawner/window/reinforced,
 /obj/structure/cable{
@@ -16700,16 +16694,7 @@
 	icon_state = "barber"
 	},
 /area/civilian/barber)
-"aIa" = (
-/obj/machinery/atmospherics/unary/vent_scrubber{
-	name = "standard air scrubber";
-	on = 1;
-	scrub_N2O = 1;
-	scrub_Toxins = 1
-	},
-/turf/simulated/floor/carpet/arcade,
-/area/crew_quarters/arcade)
-"aIb" = (
+"aHZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -16720,6 +16705,15 @@
 	icon_state = "grimy"
 	},
 /area/security/detectives_office)
+"aIa" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	name = "standard air scrubber";
+	on = 1;
+	scrub_N2O = 1;
+	scrub_Toxins = 1
+	},
+/turf/simulated/floor/carpet/arcade,
+/area/crew_quarters/arcade)
 "aIc" = (
 /turf/simulated/wall,
 /area/clownoffice)
@@ -22155,6 +22149,17 @@
 /area/hallway/secondary/construction{
 	name = "\improper Garden"
 	})
+"aUw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "neutralcorner"
+	},
+/area/crew_quarters/dorms)
 "aUx" = (
 /obj/machinery/seed_extractor,
 /turf/simulated/floor/plasteel,
@@ -26587,17 +26592,6 @@
 	icon_state = "showroomfloor"
 	},
 /area/crew_quarters/kitchen)
-"bdN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "neutralcorner"
-	},
-/area/crew_quarters/dorms)
 "bdO" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -31611,6 +31605,11 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/hallway/primary/central/ne)
+"bof" = (
+/turf/simulated/floor/plasteel{
+	icon_state = "cafeteria"
+	},
+/area/crew_quarters/kitchen)
 "bog" = (
 /obj/structure/table/reinforced,
 /obj/machinery/door/firedoor,
@@ -79551,6 +79550,20 @@
 /obj/item/soap,
 /turf/simulated/floor/plating,
 /area/maintenance/fsmaint)
+"eUB" = (
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/aft)
 "eUK" = (
 /obj/structure/sign/hispania/gradius{
 	pixel_y = 32
@@ -80791,6 +80804,12 @@
 	icon_state = "yellowcorner"
 	},
 /area/engine/corridor_1)
+"gua" = (
+/obj/structure/chair/stool,
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/security/detectives_office)
 "gum" = (
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -81336,11 +81355,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
-"gSA" = (
-/turf/simulated/floor/plasteel{
-	icon_state = "cafeteria"
-	},
-/area/crew_quarters/kitchen)
 "gSU" = (
 /obj/structure/closet/secure_closet/engineering_chief,
 /obj/structure/cable{
@@ -82121,6 +82135,12 @@
 	icon_state = "yellowcorner"
 	},
 /area/atmos)
+"hPh" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 6
+	},
+/turf/space,
+/area/space/nearstation)
 "hPI" = (
 /obj/effect/spawner/window/reinforced,
 /obj/machinery/door/poddoor{
@@ -96409,20 +96429,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/apmaint)
-"wsr" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/aft)
 "wtu" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -98174,12 +98180,6 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/crew_quarters/dorms)
-"xWg" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 6
-	},
-/turf/space,
-/area/space/nearstation)
 "xWi" = (
 /obj/structure/mecha_wreckage/ripley,
 /turf/simulated/floor/plating,
@@ -114578,7 +114578,7 @@ iGB
 liO
 sdu
 tNz
-wsr
+eUB
 cZw
 cNB
 cLi
@@ -117661,7 +117661,7 @@ cLi
 cLi
 cLi
 cLi
-wsr
+eUB
 jzV
 cNB
 cNB
@@ -121163,13 +121163,13 @@ aaa
 aaa
 aaa
 aaa
-atM
+acF
 auy
-atM
+acF
 adZ
-atM
+acF
 auy
-atM
+acF
 akZ
 akZ
 akZ
@@ -122704,7 +122704,7 @@ aaa
 aaa
 aaa
 aaa
-atM
+acF
 acW
 adr
 adK
@@ -123229,7 +123229,7 @@ afb
 afo
 afU
 ago
-aie
+aib
 ajp
 aIo
 aIo
@@ -123743,7 +123743,7 @@ afd
 afq
 aef
 aqX
-aie
+aib
 ajM
 alc
 anZ
@@ -124257,7 +124257,7 @@ ahu
 afr
 aeg
 aqW
-aie
+aib
 ajM
 alc
 aob
@@ -125285,7 +125285,7 @@ afi
 afv
 aeg
 aqX
-aie
+aib
 ajR
 alo
 axL
@@ -128142,7 +128142,7 @@ avq
 avq
 aHp
 aRx
-bdN
+aUw
 aDN
 biQ
 bpQ
@@ -128399,7 +128399,7 @@ aLP
 aLP
 aLP
 aRx
-bdN
+aUw
 bgT
 biP
 boU
@@ -128656,7 +128656,7 @@ aWz
 aYs
 aLP
 bbZ
-bdN
+aUw
 bgT
 biT
 bpT
@@ -128913,7 +128913,7 @@ aQZ
 aYp
 aSl
 aRx
-bdN
+aUw
 bgT
 biR
 bpR
@@ -129928,7 +129928,7 @@ aDn
 aEq
 aFE
 aGC
-aIb
+aHZ
 awG
 aKB
 axe
@@ -130185,8 +130185,8 @@ aAx
 aEt
 axe
 aGF
-aIb
-acF
+aHZ
+gua
 aKD
 axe
 aNU
@@ -130442,7 +130442,7 @@ aAx
 aEs
 axe
 aGE
-aIb
+aHZ
 aJo
 aKC
 axe
@@ -133356,7 +133356,7 @@ dou
 cQy
 cXT
 cZZ
-wsr
+eUB
 cNA
 fuX
 ois
@@ -133613,7 +133613,7 @@ dou
 cQy
 cZw
 dah
-wsr
+eUB
 cGE
 fuX
 cXU
@@ -135606,12 +135606,12 @@ biU
 boN
 bdT
 bmh
-gSA
-gSA
-gSA
-gSA
-gSA
-gSA
+bof
+bof
+bof
+bof
+bof
+bof
 bxF
 bdT
 bAk
@@ -135863,12 +135863,12 @@ biU
 boS
 bdT
 bmt
-gSA
+bof
 fVV
 tAf
 dyq
-gSA
-gSA
+bof
+bof
 bxG
 bdT
 bAq
@@ -136377,7 +136377,7 @@ bdT
 bdT
 bdT
 nCu
-gSA
+bof
 btK
 but
 bsT
@@ -136636,10 +136636,10 @@ boV
 bbW
 buJ
 btJ
-gSA
+bof
 bsS
-gSA
-gSA
+bof
+bof
 bxH
 bzf
 bAk
@@ -136887,16 +136887,16 @@ bbC
 aGY
 bdT
 djw
-gSA
-gSA
+bof
+bof
 buJ
-gSA
-gSA
+bof
+bof
 xCu
-gSA
+bof
 bus
-gSA
-gSA
+bof
+bof
 bxJ
 bzf
 bAk
@@ -137144,16 +137144,16 @@ bbh
 aGY
 bdT
 dju
-gSA
-gSA
+bof
+bof
 dnD
 uNE
 uNE
 vEQ
-gSA
-gSA
-gSA
-gSA
+bof
+bof
+bof
+bof
 bxI
 bzf
 bAk
@@ -137401,16 +137401,16 @@ bbh
 aGY
 bdT
 djx
-gSA
+bof
 bjv
 dnE
 itF
 itF
-gSA
+bof
 buv
-gSA
-gSA
-gSA
+bof
+bof
+bof
 bxJ
 bzf
 bAk
@@ -137663,11 +137663,11 @@ bjx
 mtc
 bmy
 boq
-gSA
-gSA
-gSA
-gSA
-gSA
+bof
+bof
+bof
+bof
+bof
 bdT
 bzh
 bAk
@@ -137920,8 +137920,8 @@ bjy
 bkY
 bmy
 bos
-gSA
-gSA
+bof
+bof
 bsX
 buK
 bwr
@@ -149512,7 +149512,7 @@ cEW
 aaa
 dca
 dcc
-xWg
+hPh
 duq
 xAw
 iJf
@@ -150024,10 +150024,10 @@ nbr
 bgm
 cEW
 aaa
-xWg
+hPh
 qUv
 nMi
-xWg
+hPh
 djc
 hsy
 cqm
@@ -150283,7 +150283,7 @@ cEW
 aaa
 pZO
 mVi
-xWg
+hPh
 nMi
 aab
 iNz
@@ -150538,7 +150538,7 @@ qwt
 sbD
 cEW
 aaa
-xWg
+hPh
 nMi
 pZO
 mVi
@@ -150797,7 +150797,7 @@ sjF
 aaa
 oWL
 mVi
-xWg
+hPh
 nMi
 afO
 iNz
@@ -151310,7 +151310,7 @@ gFP
 sjF
 aaa
 ick
-xWg
+hPh
 mVi
 uxy
 afO
