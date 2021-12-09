@@ -2121,3 +2121,4 @@
 					/obj/item/storage/backpack/duffel/hydro = 2,)
 	contraband = list(/obj/item/toy/figure/crew/botanist = 1)
 	refill_canister = /obj/item/vending_refill/hydrodrobe
+
