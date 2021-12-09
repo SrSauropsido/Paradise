@@ -289,7 +289,7 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 					/obj/item/toy/crayon/white,
 					/obj/item/storage/box/swabs,
 					/obj/item/storage/box/fingerprints,
-					/obj/item/storage/briefcase/crimekit)
+					/obj/item/storage/briefcase/crimekit,
 					/obj/item/clothing/head/det_hat)
 	cost = 20
 	containername = "forensics crate"
