@@ -68,17 +68,17 @@
 		update_icon()
 	return
 
-/obj/machinery/dnaforensics/proc/remove_sample(mob/living/remover)
-	if(!istype(remover) || remover.incapacitated() || !Adjacent(remover))
-		return ..()
-	if(!swab)
-		to_chat(remover, "<span class='warning'>¡No hay muestra dentro del escaner!.</span>")
-		return
-	to_chat(remover, "<span class='notice'Tiraste \the [swab] desde el escaner.</span>")
-	swab.forceMove(get_turf(src))
-	remover.put_in_hands(swab)
-	swab = null
-	update_icon()
+// /obj/machinery/dnaforensics/proc/remove_sample(mob/living/remover)
+// 	if(!istype(remover) || remover.incapacitated() || !Adjacent(remover))
+// 		return ..()
+// 	if(!swab)
+// 		to_chat(remover, "<span class='warning'>¡No hay muestra dentro del escaner!.</span>")
+// 		return
+// 	to_chat(remover, "<span class='notice'Tiraste \the [swab] desde el escaner.</span>")
+// 	swab.forceMove(get_turf(src))
+// 	remover.put_in_hands(swab)
+// 	swab = null
+// 	update_icon()
 
 /obj/machinery/dnaforensics/AltClick()
 	remove_sample(usr)

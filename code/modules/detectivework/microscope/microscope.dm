@@ -86,17 +86,17 @@ proc/is_complete_print(print)
 			to_chat(user, report.info)
 	return
 
-/obj/machinery/microscope/proc/remove_sample(mob/living/remover)
-	if(!istype(remover) || remover.incapacitated() || !Adjacent(remover))
-		return ..()
-	if(!sample)
-		to_chat(remover, "<span class='warning'>¡No hay muestra dentro del microscopio!</span>")
-		return
-	to_chat(remover, "<span class='notice'>Te sacaste \the [sample] de un microscopio.</span>")
-	sample.forceMove(get_turf(src))
-	remover.put_in_hands(sample)
-	sample = null
-	update_icon()
+// /obj/machinery/microscope/proc/remove_sample(mob/living/remover)
+// 	if(!istype(remover) || remover.incapacitated() || !Adjacent(remover))
+// 		return ..()
+// 	if(!sample)
+// 		to_chat(remover, "<span class='warning'>¡No hay muestra dentro del microscopio!</span>")
+// 		return
+// 	to_chat(remover, "<span class='notice'>Te sacaste \the [sample] de un microscopio.</span>")
+// 	sample.forceMove(get_turf(src))
+// 	remover.put_in_hands(sample)
+// 	sample = null
+// 	update_icon()
 
 /obj/machinery/microscope/AltClick()
 	remove_sample(usr)
