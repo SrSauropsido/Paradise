@@ -77,7 +77,6 @@
 	if(H.gloves)
 		to_chat(user, "<span class='warning'>Take \the [H.gloves] off first.</span>")
 		return
-
 	to_chat(user, "<span class='notice'>You firmly press your fingertips onto the card.</span>")
 	var/fullprint = H.get_full_print()
 	evidence[fullprint] = fullprint
@@ -85,23 +84,17 @@
 	icon_state = "fingerprint1"
 
 /obj/item/sample/print/attack(mob/living/M, mob/user)
-
 	if(!ishuman(M))
 		return ..()
-
 	if(evidence && evidence.len)
 		return 0
-
 	var/mob/living/carbon/human/H = M
-
 	if(H.gloves)
 		to_chat(user, "<span class='warning'>\The [H] is wearing gloves.</span>")
 		return 1
-
 	if(user != H && H.a_intent != INTENT_HELP && !H.lying)
 		user.visible_message("<span class='danger'>\The [user] tries to take prints from \the [H], but they move away.</span>")
 		return 1
-
 	if(user.zone_selected == "r_hand" || user.zone_selected == "l_hand")
 		var/has_hand
 		var/obj/item/organ/external/O = H.has_organ("r_hand")
@@ -169,3 +162,4 @@
 
 /obj/item/forensics/sample_kit/powder/can_take_sample(mob/user, atom/supplied)
 	return (supplied.fingerprints && supplied.fingerprints.len)
+

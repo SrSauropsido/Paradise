@@ -2012,3 +2012,4 @@ GLOBAL_LIST_INIT(all_supply_groups, list(SUPPLY_EMERGENCY,SUPPLY_SECURITY,SUPPLY
 	contains = list(/obj/item/vending_refill/chinese)
 	cost = 15
 	containername = "chinese supply crate"
+

@@ -11,7 +11,6 @@ proc/is_complete_print(print)
 	icon_state = "microscope"
 	anchored = 1
 	density = 1
-
 	var/obj/item/sample = null
 	var/report_num = 0
 
@@ -23,50 +22,39 @@ proc/is_complete_print(print)
 	component_parts += new /obj/item/stack/sheet/glass(null)
 
 /obj/machinery/microscope/attackby(obj/item/W as obj, mob/user as mob)
-
 	if(sample)
 		to_chat(user, "<span class='warning'>¡Ya hay una muestra en el microscopio!</span>")
 		return
-
 	if(istype(W, /obj/item/forensics/swab)|| istype(W, /obj/item/sample/fibers) || istype(W, /obj/item/sample/print))
 		to_chat(user, "<span class='notice'>Insertaste \the [W] en el microscopio</span>")
 		user.unEquip(W)
 		W.forceMove(src)
 		sample = W
 		update_icon()
-
 		return
 	..()
 
 /obj/machinery/microscope/attack_hand(mob/user)
-
 	if(!sample)
 		to_chat(user, "<span class='warning'>No hay muestra en el microscopio para analizar.</span>")
 		return
-
 	to_chat(user, "<span class='notice'>El microscopio vibra mientras analizas \the [sample].</span>")
-
 	if(!do_after(user, 25, src) || !sample)
 		to_chat(user, "<span class='notice'>Dejas de analizar \the [sample].</span>")
 		return
-
 	to_chat(user, "<span class='notice'>Imprimiendo reporte..</span>")
 	var/obj/item/paper/report = new(get_turf(src))
 	report.stamped = list(/obj/item/stamp)
 	report.overlays = list("paper_stamped")
 	report_num++
-
 	if(istype(sample, /obj/item/forensics/swab))
 		var/obj/item/forensics/swab/swab = sample
-
 		report.name = ("Informe forense №[++report_num]: [swab.name]")
 		report.info = "<b>Objeto analizado:</b><br>[swab.name]<br><br>"
-
 		if(swab.gsr)
 			report.info += "Resto de bala determinado [swab.gsr] calibre."
 		else
 			report.info += "No se encontraron residuos de bala."
-
 	else if(istype(sample, /obj/item/sample/fibers))
 		var/obj/item/sample/fibers/fibers = sample
 		report.name = ("Informe de fragmentos №[++report_num]: [fibers.name]")
@@ -92,7 +80,6 @@ proc/is_complete_print(print)
 				report.info += "<br>"
 		else
 			report.info += "No hay informacion de analisis disponible."
-
 	if(report)
 		report.update_icon()
 		if(report.info)
@@ -140,3 +127,4 @@ proc/is_complete_print(print)
 		return
 	. = TRUE
 	default_deconstruction_crowbar(user, I)
+

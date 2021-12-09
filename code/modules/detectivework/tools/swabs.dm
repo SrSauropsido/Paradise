@@ -12,14 +12,11 @@
 	return used
 
 /obj/item/forensics/swab/attack(mob/living/M, mob/user)
-
 	if(!ishuman(M))
 		return ..()
-
 	if(is_used())
 		to_chat(user, "<span class='warning'>This swab has already been used.</span>")
 		return
-
 	var/mob/living/carbon/human/H = M
 	var/sample_type
 	inuse = 1
@@ -29,12 +26,10 @@
 			to_chat(user, "<span class='warning'>\The [H] is wearing a mask.</span>")
 			inuse = 0
 			return
-
 		if(!H.dna || !H.dna.unique_enzymes)
 			to_chat(user, "<span class='warning'>They don't seem to have DNA!</span>")
 			inuse = 0
 			return
-
 		if(user != H && H.a_intent != INTENT_HELP && !H.lying)
 			user.visible_message("<span class='danger'>\The [user] tries to take a swab sample from \the [H], but they move away.</span>")
 			inuse = 0
@@ -53,7 +48,6 @@
 			user.visible_message("[user] swabs \the [H]'s mouth for a saliva sample.")
 			target_dna = list(H.dna.unique_enzymes)
 			sample_type = "DNA"
-
 		else if(user.zone_selected == "r_hand" || user.zone_selected == "l_hand")
 			var/has_hand
 			var/obj/item/organ/external/O = H.has_organ("r_hand")
@@ -73,7 +67,6 @@
 		else
 			inuse = 0
 			return
-
 		if(sample_type)
 			if (!dispenser)
 				dna = target_dna
@@ -90,17 +83,13 @@
 		return 1
 
 /obj/item/forensics/swab/afterattack(atom/A, mob/user, proximity)
-
 	if(!proximity || istype(A, /obj/machinery/dnaforensics))
 		return
-
 	if(istype(A,/mob/living))
 		return
-
 	if(is_used())
 		to_chat(user, "<span class='warning'>This swab has already been used.</span>")
 		return
-
 	add_fingerprint(user)
 	inuse = 1
 	to_chat(user, "<span class='notice'>You begin collecting evidence.</span>")
@@ -110,7 +99,6 @@
 			choices |= "Blood"
 		if(istype(A, /obj/item/clothing))
 			choices |= "Gunshot Residue"
-
 		var/choice
 		if(!choices.len)
 			to_chat(user, "<span class='warning'>There is no evidence on \the [A].</span>")
@@ -120,11 +108,9 @@
 			choice = choices[1]
 		else
 			choice = input("What kind of evidence are you looking for?","Evidence Collection") as null|anything in choices
-
 		if(!choice)
 			inuse = 0
 			return
-
 		var/sample_type
 		var/target_dna
 		var/target_gsr
@@ -143,7 +129,6 @@
 				return
 			target_gsr = B.gunshot_residue
 			sample_type = "residue"
-
 		if(sample_type)
 			user.visible_message("\The [user] swabs \the [A] for a sample.", "You swab \the [A] for a sample.")
 			if (!dispenser)
@@ -167,3 +152,4 @@
 	name = "swab kit"
 	desc = "A sterilized cotton swab and vial used to take forensic samples."
 	dispenser = 1
+

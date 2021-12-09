@@ -7,7 +7,6 @@
 	layer = BELOW_OBJ_LAYER
 	anchored = 1
 	density = 1
-
 	var/obj/item/forensics/swab = null
 	var/scanning = 0
 	var/report_num = 0
@@ -21,11 +20,9 @@
 	component_parts += new /obj/item/stock_parts/micro_laser(null)
 
 /obj/machinery/dnaforensics/attackby(obj/item/W as obj, mob/user as mob)
-
 	if(swab)
 		to_chat(user, "<span class='warning'>Ya hay un tubo dentro del escaner.</span>")
 		return
-
 	if(istype(W, /obj/item/forensics/swab))
 		to_chat(user, "<span class='notice'>Inserta \the [W] en el analizador de ADN.</span>")
 		user.unEquip(W)
@@ -36,27 +33,22 @@
 	..()
 
 /obj/machinery/dnaforensics/attack_hand(mob/user)
-
 	if(!swab)
 		to_chat(user, "<span class='warning'>¡El escaner esta vacio!</span>")
 		return
 	scanning = 1
 	update_icon()
 	to_chat(user, "<span class='notice'>El escaner comienza a analizar el contenido del tubo con un zumbido. \the [swab].</span>")
-
 	if(!do_after(user, 25, src) || !swab)
 		to_chat(user, "<span class='notice'>Dejaste de analizar \the [swab].</span>")
 		scanning = 0
 		update_icon()
-
 		return
-
 	to_chat(user, "<span class='notice'>Imprimiendo reporte ...</span>")
 	var/obj/item/paper/report = new(get_turf(src))
 	report.stamped = list(/obj/item/stamp)
 	report.overlays = list("paper_stamped")
 	report_num++
-
 	if(swab)
 		var/obj/item/forensics/swab/bloodswab = swab
 		report.name = ("Informe del escaner de ADN N°[++report_num]: [bloodswab.name]")
@@ -119,3 +111,4 @@
 		return
 	. = TRUE
 	default_deconstruction_crowbar(user, I)
+

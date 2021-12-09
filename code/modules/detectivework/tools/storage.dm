@@ -3,7 +3,6 @@
 	desc = "Sterilized equipment within. Do not contaminate."
 	icon = 'icons/obj/forensics.dmi'
 	icon_state = "dnakit"
-
 	New()
 		..()
 		new /obj/item/forensics/swab(src)
@@ -18,7 +17,6 @@
 	desc = "Sterilized equipment within. Do not contaminate."
 	icon = 'icons/obj/forensics.dmi'
 	icon_state = "dnakit"
-
 	New()
 		..()
 		new /obj/item/sample/print(src)
@@ -27,3 +25,4 @@
 		new /obj/item/sample/print(src)
 		new /obj/item/sample/print(src)
 		new /obj/item/sample/print(src)
+
