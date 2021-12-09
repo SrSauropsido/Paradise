@@ -80,14 +80,14 @@
 // 	swab = null
 // 	update_icon()
 
-/obj/machinery/dnaforensics/AltClick()
-	remove_sample(usr)
+// /obj/machinery/dnaforensics/AltClick()
+// 	remove_sample(usr)
 
-/obj/machinery/dnaforensics/MouseDrop(atom/other)
-	if(usr == other)
-		remove_sample(usr)
-	else
-		return ..()
+// /obj/machinery/dnaforensics/MouseDrop(atom/other)
+// 	if(usr == other)
+// 		remove_sample(usr)
+// 	else
+// 		return ..()
 
 /obj/machinery/dnaforensics/update_icon()
 	icon_state = "dnaopen"

@@ -98,14 +98,14 @@ proc/is_complete_print(print)
 // 	sample = null
 // 	update_icon()
 
-/obj/machinery/microscope/AltClick()
-	remove_sample(usr)
+// /obj/machinery/microscope/AltClick()
+// 	remove_sample(usr)
 
-/obj/machinery/microscope/MouseDrop(atom/other)
-	if(usr == other)
-		remove_sample(usr)
-	else
-		return ..()
+// /obj/machinery/microscope/MouseDrop(atom/other)
+// 	if(usr == other)
+// 		remove_sample(usr)
+// 	else
+// 		return ..()
 
 /obj/machinery/microscope/update_icon()
 	icon_state = "microscope"
