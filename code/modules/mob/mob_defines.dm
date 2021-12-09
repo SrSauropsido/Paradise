@@ -206,3 +206,4 @@
 	var/runechat_msg_location
 	var/messagereal //HISPANIA
 
+

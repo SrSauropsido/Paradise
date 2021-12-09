@@ -307,3 +307,5 @@
 
 /obj/item/ammo_casing/energy/mimic/newshot()
 	..(mimic_type)
+
+

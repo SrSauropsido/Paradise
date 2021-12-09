@@ -569,3 +569,4 @@
 	// The gun is equipped in their hands, give them the zoom ability.
 	azoom.Grant(user)
 
+

@@ -61,3 +61,4 @@
 	fire_sound = 'sound/weapons/gunshots/gunshot_mg.ogg'
 	e_cost = 20
 
+

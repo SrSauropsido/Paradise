@@ -469,3 +469,4 @@
 	muzzle_flash_color = LIGHT_COLOR_DARKRED
 	icon_state = "lasercasing"
 
+

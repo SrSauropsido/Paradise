@@ -251,3 +251,4 @@
 		ammo.forceMove(turf_mag)
 		stored_ammo -= ammo
 
+
