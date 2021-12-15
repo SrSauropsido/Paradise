@@ -87,6 +87,8 @@ GLOBAL_LIST_INIT(default_medbay_channels, list(
 
 
 /obj/item/radio/New()
+	if("[station_name()]" == "NSS Retro Hispania")
+		icon = 'icons/hispania/obj/radio_r.dmi'
 	..()
 	wires = new(src)
 

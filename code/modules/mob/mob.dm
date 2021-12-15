@@ -964,6 +964,7 @@ GLOBAL_LIST_INIT(slot_equipment_priority, list( \
 	show_stat_turf_contents()
 
 	statpanel("Status") // We only want alt-clicked turfs to come before Status
+	stat(null, "Game Mode: [GLOB.master_mode]")
 	stat(null, "Round ID: [GLOB.round_id ? GLOB.round_id : "NULL"]")
 	stat(null, "Map: [SSmapping.map_datum.fluff_name]")
 	if(SSmapping.next_map)

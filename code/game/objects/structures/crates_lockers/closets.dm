@@ -2,7 +2,7 @@
 	name = "closet"
 	desc = "It's a basic storage unit."
 	icon = 'icons/obj/closet.dmi'
-	icon_state = "closed"
+	icon_state = "generic"
 	density = TRUE
 	max_integrity = 200
 	integrity_failure = 50

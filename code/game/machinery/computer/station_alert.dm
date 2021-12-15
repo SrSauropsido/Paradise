@@ -9,6 +9,8 @@
 	var/ui_x = 325
 	var/ui_y = 500
 	var/list/alarms_listend_for = list("Fire", "Atmosphere", "Power")
+	var/icon_alert2 = "alert:2"
+	var/icon_alert0 = "alert:0"
 
 /obj/machinery/computer/station_alert/Initialize(mapload)
 	. = ..()
@@ -89,8 +91,8 @@
 		if(length(L))
 			active_alarms = TRUE
 	if(active_alarms)
-		icon_screen = "alert:2"
+		icon_screen = icon_alert2
 	else
-		icon_screen = "alert:0"
+		icon_screen = icon_alert0
 
 	..()

@@ -1,0 +1,10 @@
+/obj/machinery/computer/station_alert/retro
+	icon_screen = "retro_alert:0"
+	icon_alert0 = "retro_alert:0"
+	icon_alert2 = "retro_alert:2"
+
+/obj/machinery/computer/atmos_alert
+	icon_screen = "retro_alert:0"
+	icon_alert0 = "retro_alert:0"
+	icon_alert1 = "retro_alert:1"
+	icon_alert2 = "retro_alert:2"

@@ -10,6 +10,9 @@
 	var/list/priority_alarms = list()
 	var/list/minor_alarms = list()
 	var/receive_frequency = ATMOS_FIRE_FREQ
+	var/icon_alert0 = "alert:0"
+	var/icon_alert1 = "alert:1"
+	var/icon_alert2 = "alert:2"
 
 /obj/machinery/computer/atmos_alert/Initialize(mapload)
 	. = ..()
@@ -81,9 +84,9 @@
 
 /obj/machinery/computer/atmos_alert/update_icon()
 	if(length(priority_alarms))
-		icon_screen = "alert:2"
+		icon_screen = icon_alert2
 	else if(length(minor_alarms))
-		icon_screen = "alert:1"
+		icon_screen = icon_alert1
 	else
-		icon_screen = "alert:0"
+		icon_screen = icon_alert0
 	..()
