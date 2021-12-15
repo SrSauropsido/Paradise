@@ -276,6 +276,8 @@
 /area/toxins/xenobiology)
 "adF" = (
 /obj/structure/table/glass,
+/obj/item/clothing/gloves/color/latex,
+/obj/item/storage/fancy/vials,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -979,6 +981,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/fsmaint)
+"aoU" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4;
+	initialize_directions = 11
+	},
+/mob/living/carbon/human/monkey,
+/turf/simulated/floor{
+	icon_state = "white"
+	},
+/area/medical/virology/lab)
 "apd" = (
 /obj/structure/closet/secure_closet/security,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2359,7 +2371,7 @@
 	},
 /area/hallway/primary/aft)
 "aLL" = (
-/obj/structure/closet/secure_closet/personal/patient,
+/obj/structure/closet/wardrobe/virology_white,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
 	tag = ""
@@ -5330,6 +5342,9 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light,
+/obj/structure/table/glass,
+/obj/item/paper_bin,
+/obj/item/pen/red,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -7242,6 +7257,11 @@
 /area/engine/engineering)
 "ceN" = (
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/medical/glass{
+	id_tag = null;
+	name = "Monkey Pen";
+	req_access_txt = "39"
+	},
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -8140,6 +8160,12 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/security/prisonlockers)
+"csm" = (
+/mob/living/carbon/human/monkey,
+/turf/simulated/floor{
+	icon_state = "white"
+	},
+/area/medical/virology/lab)
 "csw" = (
 /obj/structure/chair/stool/bar,
 /turf/simulated/floor,
@@ -12270,6 +12296,8 @@
 /area/assembly/robotics)
 "dDr" = (
 /obj/machinery/light,
+/obj/structure/table/glass,
+/obj/machinery/reagentgrinder,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -17181,6 +17209,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/item/storage/box/monkeycubes/farwacubes,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -18258,6 +18287,9 @@
 	icon_state = "1-4";
 	tag = ""
 	},
+/obj/structure/chair/office/light{
+	dir = 8
+	},
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
 	tag = ""
@@ -19233,6 +19265,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/table/glass,
+/obj/item/hand_labeler{
+	pixel_x = -3;
+	pixel_y = -3
+	},
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -19526,7 +19563,7 @@
 	tag_exterior_door = "viro_lab_airlock_exterior";
 	tag_interior_door = "viro_lab_airlock_interior"
 	},
-/obj/structure/table/glass,
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -23339,6 +23376,7 @@
 	c_tag = "Virology Lab East";
 	dir = 1
 	},
+/obj/structure/bed,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -32564,6 +32602,12 @@
 	icon_state = "dark"
 	},
 /area/toxins/server)
+"jHd" = (
+/obj/structure/bed,
+/turf/simulated/floor{
+	icon_state = "white"
+	},
+/area/medical/virology/lab)
 "jHe" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -33424,6 +33468,9 @@
 	dir = 8;
 	external_pressure_bound = 100;
 	on = 1
+	},
+/obj/structure/chair/office/light{
+	dir = 1
 	},
 /turf/simulated/floor{
 	icon_state = "white"
@@ -55124,6 +55171,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/closet/wardrobe/virology_white,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -55507,6 +55555,7 @@
 "qtJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/table/glass,
+/obj/item/storage/box/syringes,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -56300,6 +56349,8 @@
 	dir = 5
 	},
 /obj/structure/table/glass,
+/obj/item/reagent_containers/dropper/precision,
+/obj/item/reagent_containers/dropper,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -58121,6 +58172,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/item/reagent_containers/iv_bag/blood/random,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -60977,6 +61029,12 @@
 /area/space{
 	icon_state = "circuit"
 	})
+"sfb" = (
+/obj/machinery/vending/medical,
+/turf/simulated/floor{
+	icon_state = "white"
+	},
+/area/medical/virology/lab)
 "sfn" = (
 /obj/machinery/light{
 	dir = 1
@@ -65645,10 +65703,10 @@
 	},
 /area/chapel/office)
 "twQ" = (
-/obj/structure/closet/secure_closet/personal/patient,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/closet/wardrobe/virology_white,
 /turf/simulated/floor{
 	icon_state = "whitebluefull";
 	tag = ""
@@ -66059,7 +66117,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
-/obj/structure/table/glass,
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -73606,6 +73664,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/structure/table/glass,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -74485,7 +74545,7 @@
 	icon_state = "0-2";
 	pixel_y = 1
 	},
-/obj/structure/table/glass,
+/obj/machinery/smartfridge/secure/chemistry/virology,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -79819,6 +79879,7 @@
 	dir = 1;
 	initialize_directions = 11
 	},
+/obj/structure/chair/office/light,
 /turf/simulated/floor{
 	icon_state = "white"
 	},
@@ -120675,7 +120736,7 @@ rBn
 bHE
 tWi
 eRP
-sCR
+sfb
 obf
 hUB
 nYu
@@ -123502,7 +123563,7 @@ ylq
 dZF
 pJT
 nTM
-dVN
+aoU
 gjI
 dVN
 qpD
@@ -123758,10 +123819,10 @@ nhg
 fRA
 dCq
 rAZ
-sCR
+jHd
 vQt
 bdO
-sCR
+csm
 gVw
 gea
 uMj
