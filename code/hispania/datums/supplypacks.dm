@@ -93,6 +93,14 @@
 	containername = "assault armor crate"
 	contraband = 1
 
+// Prototipo syndie
+/datum/supply_packs/science/syndieprototype
+	name = "Suspicious Prototype Crate"
+	contains = list(/obj/item/syndieprototype)
+	cost = 180
+	containername = "suspicious machine prototype crate"
+	contraband = 1
+
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////// Miscellaneous ///////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////

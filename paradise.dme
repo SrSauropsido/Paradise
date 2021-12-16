@@ -1251,6 +1251,7 @@
 #include "code\hispania\game\objects\items\radial.dm"
 #include "code\hispania\game\objects\items\trash.dm"
 #include "code\hispania\game\objects\items\divices\binoculars.dm"
+#include "code\hispania\game\objects\items\divices\syndieprototype.dm"
 #include "code\hispania\game\objects\items\divices\whistle.dm"
 #include "code\hispania\game\objects\items\divices\radio\radio.dm"
 #include "code\hispania\game\objects\items\divices\stacks\medical.dm"
