@@ -124,3 +124,13 @@
 			movement_target.attack_animal(src) // Eat the thing
 		else if(prob(30) && ishuman(movement_target.loc)) // mean hooman has stolen it
 			custom_emote(EMOTE_VISUAL, "stares at [movement_target.loc]'s [movement_target] with a sad puppy-face.")
+
+
+/mob/living/simple_animal/feedme/death(gibbed)
+	// Only execute the below if we successfully died
+	. = ..(gibbed)
+	if(!.)
+		return
+	GLOB.event_announcement.Announce(".... Han matado al catador. Esto es inaceptable")
+	explosion((pick(GLOB.feedmespawn)), 2, 3, 4, 4)
+
