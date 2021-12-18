@@ -45,12 +45,7 @@
 
 /mob/living/simple_animal/feedme/proc/alimentar(I)
 	if(icon_state == "clown")
-		to_chat(world,"esta bien es clown")
-		to_chat(world,"tamaño lista:  [listaclown.len]")
 		for(var/A in listaclown)
-			to_chat(world,"aver q onda cuantas veces???")
-			to_chat(world,"eeee[A]")
-			to_chat(world,"mmmm[I]")
 			to_chat(world, A)
 			to_chat(world, I)
 			if(istype(I, A))
@@ -65,7 +60,7 @@
 	. = ..()
 	if(world.time > endtime)
 		endtime = endtime * 2 //para q no entre denuevo
-		GLOB.event_announcement.Announce("El Catador se ha ido y nos ha dejado una muy mala calificacion. Habra consecuencias..")
+		GLOB.priority_announcement.Announce("El Catador se ha ido y nos ha dejado una muy mala calificacion. Habra consecuencias..")
 		var/locat = src.loc
 		new /obj/effect/portal/(locat)
 		icon_state = "vacio"
@@ -76,7 +71,7 @@
 	if(alimentado > meta)
 		var/locat = src.loc
 		new /obj/effect/portal/(locat)
-		GLOB.event_announcement.Announce("El Catador se ha ido totalmente satisfecho. Buen trabajo!")
+		GLOB.priority_announcement.Announce("El Catador se ha ido totalmente satisfecho. Buen trabajo!")
 		del(src)
 		return
 
@@ -131,6 +126,6 @@
 	. = ..(gibbed)
 	if(!.)
 		return
-	GLOB.event_announcement.Announce(".... Han matado al catador. Esto es inaceptable")
+	GLOB.priority_announcement.Announce("... Han matado al catador. Esto es inaceptable")
 	explosion((pick(GLOB.feedmespawn)), 2, 3, 4, 4)
 
