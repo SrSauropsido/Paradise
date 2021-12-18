@@ -155,7 +155,7 @@
 			playsound(loc,'sound/items/eatfood.ogg', rand(10,50), 1)
 			D.adjustHealth(-100) //se cura
 			D.taste(reagents)
-			D.alimentado += 1
+			D.alimentar(src)
 			qdel(src)
 		if(isdog(M))
 			var/mob/living/simple_animal/pet/dog/D = M

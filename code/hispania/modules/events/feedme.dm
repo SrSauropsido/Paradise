@@ -3,18 +3,19 @@
 	endWhen = 10
 
 /datum/event/feedme/announce()
-	GLOB.event_announcement.Announce("vino la criatura")
+	GLOB.event_announcement.Announce("Ha llegado un prestigioso catador de comida a la estacion. Es importante que se vaya satisfecho o podria haber consecuencias negativas para los trabajadores de servicio")
 
 /datum/event/feedme/start()
 	new /mob/living/simple_animal/feedme(pick(GLOB.feedmespawn))
 
 /mob/living/simple_animal/feedme
-	name = "feedme"
-	desc = "A small parasitic creature that would like to connect with your brain stem."
-	icon = 'icons/hispania/mob/headcrab.dmi'
-	icon_state = "headcrab"
-	icon_living = "headcrab"
-	icon_dead = "headcrab_dead"
+	name = "Catador"
+	desc = "Parece hambriento.."
+	icon = 'icons/hispania/mob/comensales.dmi'
+	var/list/comensales = list("clown")
+	icon_state = "clown"
+	icon_living = "clown"
+	icon_dead = "clown"
 	health = 60
 	maxHealth = 60
 	nutrition = -9000
@@ -22,6 +23,9 @@
 	var/turns_since_scan = 0
 	var/obj/movement_target
 	var/alimentado = 0
+
+/mob/living/simple_animal/feedme/proc/alimentar(obj/item/I as obj)
+	alimentado += 1
 
 /mob/living/simple_animal/feedme/handle_automated_movement()
 	. = ..()
