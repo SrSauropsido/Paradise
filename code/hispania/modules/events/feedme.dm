@@ -6,6 +6,7 @@
 	GLOB.event_announcement.Announce("Ha llegado un prestigioso catador de comida a la estacion. Es importante que se vaya satisfecho o podria haber consecuencias negativas para los trabajadores de servicio")
 
 /datum/event/feedme/start()
+	new /obj/effect/portal/(pick(GLOB.feedmespawn))
 	new /mob/living/simple_animal/feedme(pick(GLOB.feedmespawn))
 
 /mob/living/simple_animal/feedme
@@ -13,9 +14,10 @@
 	desc = "Parece hambriento.."
 	icon = 'icons/hispania/mob/comensales.dmi'
 	var/list/comensales = list("clown")
+	speak = list("Muero de hambre!", "Que clase de servicio es este?", "Deme su mejor platillo", "Tengo tanto hambre que me comeria un planeta")
 	icon_state = "clown"
 	icon_living = "clown"
-	icon_dead = "clown"
+	icon_dead = "clown_dead"
 	health = 60
 	maxHealth = 60
 	nutrition = -9000
@@ -23,20 +25,67 @@
 	var/turns_since_scan = 0
 	var/obj/movement_target
 	var/alimentado = 0
+	var/meta = 50
+	var/paciencia = 1 MINUTES
+	var/endtime = 0
+	var/list/listaclown = list(/obj/item/reagent_containers/food/snacks/banana_mugcake,
+		/obj/item/reagent_containers/food/snacks/bananabreadslice,
+		/obj/item/reagent_containers/food/snacks/bananacakeslice,
+		/obj/item/reagent_containers/food/snacks/friedbanana,
+		/obj/item/reagent_containers/food/snacks/grown/banana,
+		/obj/item/reagent_containers/food/snacks/grown/banana/bluespace,
+		/obj/item/reagent_containers/food/snacks/sliceable/bananabread,
+		/obj/item/reagent_containers/food/snacks/sliceable/bananacake
+	)
 
-/mob/living/simple_animal/feedme/proc/alimentar(obj/item/I as obj)
+/mob/living/simple_animal/feedme/New()
+	..()
+	endtime = world.time + paciencia
+	icon_state = pick(comensales)
+
+/mob/living/simple_animal/feedme/proc/alimentar(I)
+	if(icon_state == "clown")
+		to_chat(world,"esta bien es clown")
+		to_chat(world,"tamaño lista:  [listaclown.len]")
+		for(var/A in listaclown)
+			to_chat(world,"aver q onda cuantas veces???")
+			to_chat(world,"eeee[A]")
+			to_chat(world,"mmmm[I]")
+			to_chat(world, A)
+			to_chat(world, I)
+			if(istype(I, A))
+				src.say(pick("Eso me gusta!","Delicioso!!"))
+				alimentado += 10
+				return
+
+	src.say(pick("Esta comida es muy regular...", "Nada del otro mundo..", "Meh...", "Preferiria otra comida.."))
 	alimentado += 1
 
 /mob/living/simple_animal/feedme/handle_automated_movement()
 	. = ..()
-	//Feeding, chasing food, FOOOOODDDD
+	if(world.time > endtime)
+		endtime = endtime * 2 //para q no entre denuevo
+		GLOB.event_announcement.Announce("El Catador se ha ido y nos ha dejado una muy mala calificacion. Habra consecuencias..")
+		var/locat = src.loc
+		new /obj/effect/portal/(locat)
+		icon_state = "vacio"
+		spawn(7 SECONDS)
+			explosion((pick(GLOB.feedmespawn)), 2, 3, 4, 4)
+			del(src)
+
+	if(alimentado > meta)
+		var/locat = src.loc
+		new /obj/effect/portal/(locat)
+		GLOB.event_announcement.Announce("El Catador se ha ido totalmente satisfecho. Buen trabajo!")
+		del(src)
+		return
+
 	if(resting)
 		return
 
 	if(++turns_since_scan > 5)
 		turns_since_scan = 0
 
-		// Has a target, but it's not where it was before, and it wasn't picked up by someone.
 		if(movement_target && !(isturf(movement_target.loc) || ishuman(movement_target.loc)))
 			movement_target = null
 			stop_automated_movement = FALSE
@@ -51,10 +100,6 @@
 				if(istype(I, /obj/item/reagent_containers/food/snacks)) // Noms
 					possible_target = I
 					break
-				else if(istype(I, /obj/item/paper)) // Important noms
-					if(prob(10))
-						possible_target = I
-						break
 			if(possible_target && (isturf(possible_target.loc) || ishuman(possible_target.loc))) // On the ground or in someone's hand.
 				movement_target = possible_target
 		if(movement_target)
