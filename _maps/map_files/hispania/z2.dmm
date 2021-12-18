@@ -9342,11 +9342,6 @@
 /obj/effect/decal/remains/human,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate_sit)
-"GR" = (
-/obj/item/flag/nt,
-/obj/structure/table_frame/abductor,
-/turf/space,
-/area/tdome/arena_source2)
 "GT" = (
 /obj/structure/chair/sofa,
 /turf/simulated/floor/mineral/plastitanium/red/brig,
@@ -71738,7 +71733,7 @@ RU
 zB
 OK
 zB
-GR
+pt
 ZT
 ZT
 RM
@@ -76878,7 +76873,7 @@ pt
 zB
 OK
 zB
-GR
+pt
 ZT
 IY
 Xk
