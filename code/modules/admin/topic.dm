@@ -3053,6 +3053,71 @@
 				log_admin("[key_name(usr)] reset the thunderdome to default with delete_mobs==[delete_mobs].", 1)
 				message_admins("<span class='adminnotice'>[key_name_admin(usr)] reset the thunderdome to default with delete_mobs==[delete_mobs].</span>")
 
+			if("tdomereset2")
+				var/delete_mobs = alert("Clear all mobs?","Confirm","Yes","No","Cancel")
+				if(delete_mobs == "Cancel")
+					return
+
+				var/area/thunderdome = locate(/area/tdome/arena)
+				if(delete_mobs == "Yes")
+					for(var/mob/living/mob in thunderdome)
+						qdel(mob) //Clear mobs
+				for(var/obj/obj in thunderdome)
+					if(!istype(obj,/obj/machinery/camera))
+						qdel(obj) //Clear objects
+
+				var/area/template = locate(/area/tdome/arena_source2)
+				template.copy_contents_to(thunderdome)
+
+				log_admin("[key_name(usr)] reset the thunderdome to default with delete_mobs==[delete_mobs].", 1)
+				message_admins("<span class='adminnotice'>[key_name_admin(usr)] reset the thunderdome to default with delete_mobs==[delete_mobs].</span>")
+
+			if("tdomereset3")
+				var/delete_mobs = alert("Clear all mobs?","Confirm","Yes","No","Cancel")
+				if(delete_mobs == "Cancel")
+					return
+
+				var/area/thunderdome = locate(/area/tdome/arena)
+				if(delete_mobs == "Yes")
+					for(var/mob/living/mob in thunderdome)
+						qdel(mob) //Clear mobs
+				for(var/obj/obj in thunderdome)
+					if(!istype(obj,/obj/machinery/camera))
+						qdel(obj) //Clear objects
+
+				var/area/template = locate(/area/tdome/arena_source3)
+				template.copy_contents_to(thunderdome)
+
+				log_admin("[key_name(usr)] reset the thunderdome to default with delete_mobs==[delete_mobs].", 1)
+				message_admins("<span class='adminnotice'>[key_name_admin(usr)] reset the thunderdome to default with delete_mobs==[delete_mobs].</span>")
+
+			if("tdomereset4")
+				var/delete_mobs = alert("Clear all mobs?","Confirm","Yes","No","Cancel")
+				if(delete_mobs == "Cancel")
+					return
+
+				var/area/thunderdome = locate(/area/tdome/arena)
+				if(delete_mobs == "Yes")
+					for(var/mob/living/mob in thunderdome)
+						qdel(mob) //Clear mobs
+				for(var/obj/obj in thunderdome)
+					if(!istype(obj,/obj/machinery/camera))
+						qdel(obj) //Clear objects
+
+				var/area/template = locate(/area/tdome/arena_source4)
+				template.copy_contents_to(thunderdome)
+
+				for(var/obj/obj2 in thunderdome)
+					if(istype(obj2,/obj/machinery/mineral/equipment_vendor)) //putas vendedoras q se qedan sin energia al copiar y pegarlas
+						var/T = get_turf(obj2)
+						qdel(obj2)
+						new/obj/machinery/mineral/equipment_vendor(T)
+				log_admin("[key_name(usr)] reset the thunderdome to default with delete_mobs==[delete_mobs].", 1)
+				message_admins("<span class='adminnotice'>[key_name_admin(usr)] reset the thunderdome to default with delete_mobs==[delete_mobs].</span>")
+
+
+
+
 			if("tdomestart")
 				var/confirmation = alert("Start a Thunderdome match?","Confirm","Yes","No")
 				if(confirmation == "No")

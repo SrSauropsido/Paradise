@@ -26,12 +26,14 @@
 	dat += "<B>Thunderdome Control System</B><BR>"
 	dat += "<HR>Loaded Programs:<BR>"
 
-	dat += "<A href='?src=[UID()];snowfield=1'>((Snow Field)</font>)</A><BR>"
+	dat += "<A href='?src=[UID()];snowfield=1'>((Gladiator Arena)</font>)</A><BR>"
 	dat += "<A href='?src=[UID()];technohell=1'>((Techno Hell)</font>)</A><BR>"
-	dat += "<A href='?src=[UID()];placeholder=1'>((Placeholder)</font>)</A><BR>"
-	dat += "<A href='?src=[UID()];placeholder2=1'>((Placeholder 2)</font>)</A><BR>"
+	dat += "<A href='?src=[UID()];placeholder=1'>((Fort Siege)</font>)</A><BR>"
+	dat += "<A href='?src=[UID()];placeholder2=1'>((Lava Hell)</font>)</A><BR>"
 
 	dat += "Weapons are live and can kill. Well not the weapons but the morons using them.<BR>"
+
+	dat += "<A href='?src=[UID()];abrir=1'>((ABRIR COMPUERTAS)</font>)</A><BR>"
 
 	var/datum/browser/popup = new(user, "thunderdome_computer", name, 400, 500)
 	popup.set_content(dat)
@@ -44,33 +46,60 @@
 		return 1
 
 	if(href_list["snowfield"])
-		tdometarget = locate(/area/tdome/arena_source)
-		if(tdometarget)
-			for(var/obj/obj in thunderdomearea)
+		var/area/thunderdome = locate(/area/tdome/arena)
+		for(var/mob/living/mob in thunderdome)
+			qdel(mob) //Clear mobs
+		for(var/obj/obj in thunderdome)
+			if(!istype(obj,/obj/machinery/camera))
 				qdel(obj) //Clear objects
-			tdometarget.copy_contents_to(thunderdomearea)
-
+		var/area/template = locate(/area/tdome/arena_source)
+		template.copy_contents_to(thunderdome)
 	else if(href_list["technohell"])
-		tdometarget = locate(/area/tdome/arena_source2)
-		if(tdometarget)
-			for(var/obj/obj in thunderdomearea)
-				qdel(obj)
-			tdometarget.copy_contents_to(thunderdomearea)
-
+		var/area/thunderdome = locate(/area/tdome/arena)
+		for(var/mob/living/mob in thunderdome)
+			qdel(mob) //Clear mobs
+		for(var/obj/obj in thunderdome)
+			if(!istype(obj,/obj/machinery/camera))
+				qdel(obj) //Clear objects
+		var/area/template = locate(/area/tdome/arena_source2)
+		template.copy_contents_to(thunderdome)
 	else if(href_list["placeholder"])
-		tdometarget = locate(/area/tdome/arena_source3)
-		if(tdometarget)
-			for(var/obj/obj in thunderdomearea)
-				qdel(obj)
-			tdometarget.copy_contents_to(thunderdomearea)
-
+		var/area/thunderdome = locate(/area/tdome/arena)
+		for(var/mob/living/mob in thunderdome)
+			qdel(mob) //Clear mobs
+		for(var/obj/obj in thunderdome)
+			if(!istype(obj,/obj/machinery/camera))
+				qdel(obj) //Clear objects
+		var/area/template = locate(/area/tdome/arena_source3)
+		template.copy_contents_to(thunderdome)
 	else if(href_list["placeholder2"])
-		tdometarget = locate(/area/tdome/arena_source4)
-		if(tdometarget)
-			for(var/obj/obj in thunderdomearea)
-				qdel(obj)
-			tdometarget.copy_contents_to(thunderdomearea)
+		var/area/thunderdome = locate(/area/tdome/arena)
+		for(var/mob/living/mob in thunderdome)
+			qdel(mob) //Clear mobs
+		for(var/obj/obj in thunderdome)
+			if(!istype(obj,/obj/machinery/camera))
+				qdel(obj) //Clear objects
 
+		var/area/template = locate(/area/tdome/arena_source4)
+		template.copy_contents_to(thunderdome)
+		for(var/obj/obj2 in thunderdome)
+			if(istype(obj2,/obj/machinery/mineral/equipment_vendor)) //putas vendedoras q se qedan sin energia al copiar y pegarlas
+				var/T = get_turf(obj2)
+				qdel(obj2)
+				new/obj/machinery/mineral/equipment_vendor(T)
+
+	else if(href_list["abrir"])
+		var/area/thunderdome = locate(/area/tdome/arena)
+		for(var/obj/obj2 in thunderdome)
+			if(istype(obj2,/obj/machinery/door/poddoor))
+				qdel(obj2)
+
+	// if(href_list["snowfield"])
+	// 	tdometarget = locate(/area/tdome/arena_source)
+	// 	if(tdometarget)
+	// 		for(var/obj/obj in thunderdomearea)
+	// 			qdel(obj) //Clear objects
+	// 		tdometarget.copy_contents_to(thunderdomearea)
 
 	add_fingerprint(usr)
 	updateUsrDialog()
