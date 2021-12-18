@@ -1,8 +1,12 @@
 /datum/event/feedme
 	announceWhen = 3
+	endWhen = 10
 
-/datum/event/spawn_feedme/announce()
+/datum/event/feedme/announce()
 	GLOB.event_announcement.Announce("vino la criatura")
+
+/datum/event/feedme/start()
+	new /mob/living/simple_animal/feedme(pick(GLOB.feedmespawn))
 
 /mob/living/simple_animal/feedme
 	name = "feedme"
@@ -71,6 +75,3 @@
 			movement_target.attack_animal(src) // Eat the thing
 		else if(prob(30) && ishuman(movement_target.loc)) // mean hooman has stolen it
 			custom_emote(EMOTE_VISUAL, "stares at [movement_target.loc]'s [movement_target] with a sad puppy-face.")
-
-/datum/event/spawn_feedme/start()
-	new /mob/living/simple_animal/feedme(pick(GLOB.feedmespawn))
