@@ -26,7 +26,7 @@
 	var/obj/movement_target
 	var/alimentado = 0
 	var/meta = 50
-	var/paciencia = 1 MINUTES
+	var/paciencia = 10 MINUTES
 	var/endtime = 0
 	var/list/listaclown = list(/obj/item/reagent_containers/food/snacks/banana_mugcake,
 		/obj/item/reagent_containers/food/snacks/bananabreadslice,
