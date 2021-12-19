@@ -114,6 +114,8 @@
 	var/obj/item/card/id/guest/guest_pass = null // Guest pass attached to the ID
 
 /obj/item/card/id/New()
+	if("[station_name()]" == "NSS Retro Hispania")
+		icon = 'icons/hispania/obj/card_r.dmi'
 	..()
 	spawn(30)
 		if(ishuman(loc) && blood_type == "\[UNSET\]")

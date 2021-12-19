@@ -91,6 +91,11 @@ GLOBAL_LIST_EMPTY(PDAs)
 	else
 		return 0
 
+/obj/item/pda/New()
+	if("[station_name()]" == "NSS Retro Hispania")
+		icon = 'icons/obj/pda_gb.dmi'
+	..()
+
 /obj/item/pda/GetAccess()
 	if(id)
 		return id.GetAccess()
