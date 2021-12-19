@@ -925,7 +925,7 @@
 			<h3>Trabajo de detective</h3>
 
 
-			Mientras estas en tu oficina bebiendo un whisky en las rocas y disfrutando del jazz puede ser que tengas que resolver algun caso o dos<br>
+			Mientras estas en tu oficina bebiendo un whisky en las rocas y disfrutando del jazz puede ser que tengas que resolver algun caso o dos.<br>
 			Para ello debes estar familiarisado con tu equipo:
 			<p>
 			<ol>
