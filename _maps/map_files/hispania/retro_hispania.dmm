@@ -11524,7 +11524,7 @@
 	pixel_x = -22;
 	tag = ""
 	},
-/obj/machinery/r_n_d/destructive_analyzer/retro,
+/obj/item/gun/energy/laser/retro,
 /turf/simulated/floor{
 	dir = 9;
 	icon_state = "warning"
@@ -15834,6 +15834,13 @@
 	icon_state = "dark"
 	},
 /area/ai_monitored/storage/eva)
+"eHK" = (
+/obj/structure/table,
+/obj/machinery/microscope,
+/turf/simulated/floor{
+	icon_state = "floorgrime"
+	},
+/area/security/detectives_office)
 "eId" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17152,7 +17159,7 @@
 /turf/simulated/wall/r_wall,
 /area/security/podbay)
 "fbg" = (
-/obj/machinery/computer/med_data/laptop/retro,
+/obj/item/gun/energy/laser/retro,
 /obj/structure/table/glass,
 /turf/simulated/floor{
 	icon_state = "white"
@@ -18641,8 +18648,8 @@
 	},
 /area/atmos/control)
 "fzx" = (
-/mob/living/simple_animal/pig,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/mob/living/simple_animal/pig,
 /turf/simulated/floor/grass,
 /area/hydroponics)
 "fzJ" = (
@@ -23104,7 +23111,7 @@
 /turf/simulated/floor/plasteel,
 /area/storage/primary)
 "gRo" = (
-/obj/machinery/computer/atmos_alert/retro,
+/obj/item/gun/energy/laser/retro,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/plasteel{
 	dir = 10;
@@ -24118,10 +24125,10 @@
 	dir = 4;
 	initialize_directions = 11
 	},
+/obj/machinery/hydroponics/soil,
 /mob/living/simple_animal/chicken{
 	name = "Commander Clucky"
 	},
-/obj/machinery/hydroponics/soil,
 /turf/simulated/floor/grass,
 /area/hydroponics)
 "hfk" = (
@@ -25494,7 +25501,7 @@
 /turf/simulated/floor,
 /area/bridge)
 "hBg" = (
-/obj/machinery/computer/supplycomp/public/retro,
+/obj/item/gun/energy/laser/retro,
 /obj/structure/table,
 /turf/simulated/floor/plasteel{
 	dir = 9;
@@ -41539,7 +41546,7 @@
 /turf/simulated/wall/mineral/plastitanium,
 /area/shuttle/tsf)
 "mia" = (
-/obj/machinery/computer/station_alert/retro,
+/obj/item/gun/energy/laser/retro,
 /obj/structure/table/glass,
 /turf/simulated/floor/plasteel{
 	dir = 0;
@@ -44623,7 +44630,7 @@
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/computer/guestpass/retro{
+/obj/item/gun/energy/laser/retro{
 	pixel_y = 5
 	},
 /turf/simulated/floor/plasteel,
@@ -46524,10 +46531,10 @@
 /turf/simulated/floor,
 /area/engine/gravitygenerator)
 "nNt" = (
-/mob/living/simple_animal/slime,
 /obj/effect/landmark{
 	name = "revenantspawn"
 	},
+/mob/living/simple_animal/slime,
 /turf/simulated/floor/engine,
 /area/toxins/xenobiology)
 "nNK" = (
@@ -47545,17 +47552,6 @@
 /obj/machinery/computer/arcade,
 /turf/simulated/floor/plasteel,
 /area/hallway/secondary/exit)
-"odX" = (
-/obj/structure/closet{
-	name = "Evidence Closet"
-	},
-/obj/machinery/light_switch{
-	pixel_x = -25
-	},
-/turf/simulated/floor{
-	icon_state = "floorgrime"
-	},
-/area/security/detectives_office)
 "oeb" = (
 /obj/machinery/firealarm{
 	pixel_y = 24
@@ -47654,8 +47650,8 @@
 /obj/machinery/vending/walldrobe/chap{
 	pixel_y = -32
 	},
-/mob/living/simple_animal/friendly/owl,
 /obj/structure/bed/dogbed/garronte,
+/mob/living/simple_animal/friendly/owl,
 /turf/simulated/floor{
 	icon_state = "grimy"
 	},
@@ -64130,7 +64126,7 @@
 /area/security/prison/cell_block/C)
 "sZE" = (
 /obj/structure/table,
-/obj/machinery/computer/supplycomp/retro,
+/obj/item/gun/energy/laser/retro,
 /turf/simulated/floor/plasteel,
 /area/quartermaster/office)
 "sZO" = (
@@ -67469,6 +67465,12 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/engine/chiefs_office)
+"tWx" = (
+/obj/machinery/dnaforensics,
+/turf/simulated/floor{
+	icon_state = "floorgrime"
+	},
+/area/security/detectives_office)
 "tXa" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -67833,7 +67835,7 @@
 /turf/simulated/floor/plating,
 /area/storage/secure)
 "ubJ" = (
-/obj/machinery/r_n_d/circuit_imprinter/retro,
+/obj/item/gun/energy/laser/retro,
 /turf/simulated/floor{
 	dir = 6;
 	icon_state = "warning"
@@ -71178,7 +71180,7 @@
 	},
 /area/toxins/server_coldroom)
 "uXy" = (
-/obj/machinery/r_n_d/protolathe/retro,
+/obj/item/gun/energy/laser/retro,
 /turf/simulated/floor{
 	dir = 5;
 	icon_state = "warning"
@@ -76687,7 +76689,7 @@
 /area/hallway/primary/central/south)
 "wMq" = (
 /obj/structure/table,
-/obj/machinery/computer/guestpass/retro{
+/obj/item/gun/energy/laser/retro{
 	pixel_y = 5
 	},
 /turf/simulated/floor{
@@ -112425,7 +112427,7 @@ euo
 qfQ
 kIo
 aQx
-odX
+eWw
 aQS
 bxW
 rjw
@@ -113198,7 +113200,7 @@ jlS
 itW
 rVr
 iGY
-eWw
+tWx
 rjw
 rGP
 qtH
@@ -113455,7 +113457,7 @@ sdU
 gsh
 qQc
 fjx
-xej
+eHK
 rjw
 rGP
 qtH
