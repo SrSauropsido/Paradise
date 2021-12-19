@@ -92740,6 +92740,12 @@
 	dir = 1
 	},
 /area/security/armoury)
+"qio" = (
+/obj/effect/landmark{
+	name = "feed me spawn"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "qiT" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -135873,7 +135879,7 @@ aYd
 bnQ
 bkO
 bmr
-bmM
+qio
 bqk
 bqk
 bqk
