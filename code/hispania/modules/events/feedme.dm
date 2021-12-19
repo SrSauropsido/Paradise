@@ -13,8 +13,8 @@
 	name = "Catador"
 	desc = "Parece hambriento.."
 	icon = 'icons/hispania/mob/comensales.dmi'
-	var/list/comensales = list("clown")
-	speak = list("Muero de hambre!", "Que clase de servicio es este?", "Deme su mejor platillo", "Tengo tanto hambre que me comeria un planeta")
+	var/list/comensales = list("clown","carnivoro","mexicano")
+	speak = list("Muero de hambre!", "Escuche varias cosas de la cocina de este lugar.. Y no particularmente buenas", "Deme su mejor platillo", "Tengo tanto hambre que me comeria un planeta","Cuanto tiempo hay que esperar para ser atendido?")
 	icon_state = "clown"
 	icon_living = "clown"
 	icon_dead = "clown_dead"
@@ -37,23 +37,50 @@
 		/obj/item/reagent_containers/food/snacks/sliceable/bananabread,
 		/obj/item/reagent_containers/food/snacks/sliceable/bananacake
 	)
+	var/list/listamexicano = list(/obj/item/reagent_containers/food/snacks/taco,
+		/obj/item/reagent_containers/food/snacks/burrito,
+		/obj/item/reagent_containers/food/snacks/discountburrito
+	)
+	var/list/listacarnivoro = list(/obj/item/reagent_containers/food/snacks/meatsteak,
+		/obj/item/reagent_containers/food/snacks/stewedsoymeat,
+		/obj/item/reagent_containers/food/snacks/xemeatpie,
+		/obj/item/reagent_containers/food/snacks/meat/monkey,
+		/obj/item/reagent_containers/food/snacks/meatpizzaslice
+	)
 
 /mob/living/simple_animal/feedme/New()
 	..()
 	endtime = world.time + paciencia
-	icon_state = pick(comensales)
+	var/pickeado = pick(comensales)
+	icon_state = pickeado
+	icon_dead = pickeado + "_dead"
+
+	var/T
+	for(T in typesof(/obj/item/reagent_containers/food/snacks/meat/))
+		listacarnivoro += T
 
 /mob/living/simple_animal/feedme/proc/alimentar(I)
 	if(icon_state == "clown")
 		for(var/A in listaclown)
-			to_chat(world, A)
-			to_chat(world, I)
 			if(istype(I, A))
-				src.say(pick("Eso me gusta!","Delicioso!!"))
+				src.say(pick("Honk!!!","HOOOONK !!!", "honk honk"))
+				alimentado += 10
+				return
+	if(icon_state == "mexicano")
+		for(var/A in listamexicano)
+			if(istype(I, A))
+				src.say(pick("Orale manito esto si es comida!","Pero que rico chamaco","Hmmm...Delicioso"))
+				alimentado += 10
+				return
+	if(icon_state == "carnivoro")
+		for(var/A in listacarnivoro)
+			if(istype(I, A))
+				src.say(pick("Yeeha!!","De eso estoy hablando!!","HMM Carne!!"))
 				alimentado += 10
 				return
 
-	src.say(pick("Esta comida es muy regular...", "Nada del otro mundo..", "Meh...", "Preferiria otra comida.."))
+
+	src.say(pick("Esta comida es mala...", "No tienes una comida mejor?.", "Meh...", "Preferiria otra comida.."))
 	alimentado += 1
 
 /mob/living/simple_animal/feedme/handle_automated_movement()
