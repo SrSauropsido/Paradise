@@ -16606,16 +16606,6 @@
 	},
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
-"aGC" = (
-/obj/structure/closet/secure_closet{
-	anchored = 1;
-	name = "Evidence Storage";
-	req_access_txt = "4"
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "grimy"
-	},
-/area/security/detectives_office)
 "aGD" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -17237,19 +17227,6 @@
 	},
 /turf/simulated/floor/carpet/arcade,
 /area/crew_quarters/arcade)
-"aIb" = (
-/obj/structure/chair/stool,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	level = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/plasteel{
-	icon_state = "grimy"
-	},
-/area/security/detectives_office)
 "aIc" = (
 /turf/simulated/wall,
 /area/clownoffice)
@@ -17808,11 +17785,7 @@
 	},
 /area/security/detectives_office)
 "aJn" = (
-/obj/machinery/alarm{
-	dir = 1;
-	icon_state = "alarm0";
-	pixel_y = -22
-	},
+/obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -18270,10 +18243,7 @@
 	},
 /area/security/detectives_office)
 "aKD" = (
-/obj/structure/filingcabinet/chestdrawer,
-/obj/machinery/ai_status_display{
-	pixel_y = -32
-	},
+/obj/machinery/dnaforensics,
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -81995,6 +81965,13 @@
 	icon_state = "dark"
 	},
 /area/engine/supermatter_outside)
+"eZB" = (
+/obj/structure/table/wood,
+/obj/machinery/microscope,
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/security/detectives_office)
 "eZD" = (
 /obj/item/radio/intercom{
 	name = "station intercom (General)";
@@ -97399,6 +97376,12 @@
 	},
 /turf/simulated/floor/plasteel,
 /area/atmos)
+"uJg" = (
+/obj/structure/chair/stool,
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/security/detectives_office)
 "uJQ" = (
 /obj/machinery/hydroponics/constructable,
 /obj/effect/decal/cleanable/dirt,
@@ -132764,7 +132747,7 @@ art
 aDn
 aEq
 aFE
-aGC
+aKC
 aHZ
 awG
 aKB
@@ -133022,8 +133005,8 @@ aAx
 aEt
 axe
 aGF
-aIb
-awG
+aHZ
+uJg
 aKD
 axe
 aNU
@@ -133281,7 +133264,7 @@ axe
 aGE
 aHZ
 aJo
-aKC
+eZB
 axe
 aNU
 aOI
