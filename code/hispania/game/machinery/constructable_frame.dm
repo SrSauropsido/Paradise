@@ -66,6 +66,6 @@
 	board_type = "machine"
 	origin_tech = "engineering=2;programming=2;illegal=3"
 	req_components = list(
-							/obj/item/stock_parts/matter_bin = 1,
+							/obj/item/stock_parts/matter_bin = 3,
 							/obj/item/stock_parts/manipulator = 1,
 							/obj/item/stack/sheet/glass = 1)
