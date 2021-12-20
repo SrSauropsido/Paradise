@@ -48,3 +48,24 @@
 							/obj/item/stock_parts/capacitor = 1,
 							/obj/item/stack/sheet/glass = 1,
 							/obj/item/stock_parts/cell = 1)
+
+/obj/item/circuitboard/podfab
+	board_name = "Spacepod Fabricator"
+	build_path = /obj/machinery/mecha_part_fabricator/spacepod
+	board_type = "machine"
+	origin_tech = "programming=2;engineering=2"
+	req_components = list(
+							/obj/item/stock_parts/matter_bin = 2,
+							/obj/item/stock_parts/manipulator = 1,
+							/obj/item/stock_parts/micro_laser = 1,
+							/obj/item/stack/sheet/glass = 1)
+
+/obj/item/circuitboard/clothelate
+	board_name = "Clothelate"
+	build_path = /obj/machinery/clothelate
+	board_type = "machine"
+	origin_tech = "engineering=2;programming=2;illegal=3"
+	req_components = list(
+							/obj/item/stock_parts/matter_bin = 1,
+							/obj/item/stock_parts/manipulator = 1,
+							/obj/item/stack/sheet/glass = 1)
