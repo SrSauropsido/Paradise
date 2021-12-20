@@ -116,7 +116,7 @@
 		if(M.mind.assigned_role == "Botanist")
 			active_with_role["Botanist"]++
 
-		if(M.mind.assigned_role in list("Botanist", "Cheff","Bartender","Mime","Clown","Libarian","Barber","Chaplain","Barber"))
+		if(M.mind.assigned_role in list("Botanist", "Cheff","Bartender","Mime","Clown","Libarian","Barber","Chaplain"))
 			active_with_role["Service"]++
 
 	return active_with_role
