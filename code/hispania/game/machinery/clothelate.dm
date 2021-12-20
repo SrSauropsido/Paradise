@@ -4,7 +4,7 @@
 
 /obj/machinery/clothelate
 	name = "clothelate"
-	desc = "It produces clothes."
+	desc = "It produces items using metal and glass."
 	icon = 'icons/hispania/obj/clothelate.dmi'
 	icon_state = "clothelate"
 	density = 1
@@ -41,10 +41,12 @@
 	var/board_type = /obj/item/circuitboard/clothelate
 
 /obj/machinery/clothelate/New()
-	AddComponent(/datum/component/material_container, list(MAT_METAL), _show_on_examine=TRUE)
+	AddComponent(/datum/component/material_container, list(MAT_METAL, MAT_GLASS), _show_on_examine=TRUE, _after_insert=CALLBACK(src, .proc/AfterMaterialInsert))
 	..()
 	component_parts = list()
 	component_parts += new board_type(null)
+	component_parts += new /obj/item/stock_parts/matter_bin(null)
+	component_parts += new /obj/item/stock_parts/matter_bin(null)
 	component_parts += new /obj/item/stock_parts/matter_bin(null)
 	component_parts += new /obj/item/stock_parts/manipulator(null)
 	component_parts += new /obj/item/stack/sheet/glass(null)
@@ -58,6 +60,8 @@
 	component_parts = list()
 	component_parts += new board_type(null)
 	component_parts += new /obj/item/stock_parts/matter_bin/super(null)
+	component_parts += new /obj/item/stock_parts/matter_bin/super(null)
+	component_parts += new /obj/item/stock_parts/matter_bin/super(null)
 	component_parts += new /obj/item/stock_parts/manipulator/pico(null)
 	component_parts += new /obj/item/stack/sheet/glass(null)
 	RefreshParts()
@@ -66,6 +70,8 @@
 	. = ..()
 	component_parts = list()
 	component_parts += new /obj/item/circuitboard/clothelate(null)
+	component_parts += new /obj/item/stock_parts/matter_bin/super(null)
+	component_parts += new /obj/item/stock_parts/matter_bin/super(null)
 	component_parts += new /obj/item/stock_parts/matter_bin/super(null)
 	component_parts += new /obj/item/stock_parts/manipulator/pico(null)
 	component_parts += new /obj/item/stack/sheet/glass(null)
@@ -95,7 +101,7 @@
 /obj/machinery/clothelate/ui_interact(mob/user, ui_key = "main", datum/tgui/ui = null, force_open = TRUE, datum/tgui/master_ui = null, datum/ui_state/state = GLOB.default_state)
 	ui = SStgui.try_update_ui(user, src, ui_key, ui, force_open)
 	if(!ui)
-		ui = new(user, src, ui_key, "Clothelate", name, 750, 700, master_ui, state)
+		ui = new(user, src, ui_key, "Autolathe", name, 750, 700, master_ui, state)
 		ui.open()
 
 
@@ -113,6 +119,8 @@
 					continue
 				if(x["name"] == "metal") // Do not use MAT_METAL or MAT_GLASS here.
 					matreq["metal"] = x["amount"]
+				if(x["name"] == "glass")
+					matreq["glass"] = x["amount"]
 			var/obj/item/I = D.build_path
 			var/maxmult = 1
 			if(ispath(D.build_path, /obj/item/stack))
@@ -144,6 +152,7 @@
 	data["max_amount"] = materials.max_amount
 	data["fill_percent"] = round((materials.total_amount / materials.max_amount) * 100)
 	data["metal_amount"] = materials.amount(MAT_METAL)
+	data["glass_amount"] = materials.amount(MAT_GLASS)
 	data["busyname"] =  FALSE
 	data["busyamt"] = 1
 	if(length(being_built) > 0)
@@ -185,12 +194,15 @@
 			if(design_last_ordered.materials["$metal"] / coeff > materials.amount(MAT_METAL))
 				to_chat(usr, "<span class='warning'>Invalid design (not enough metal)</span>")
 				return
+			if(design_last_ordered.materials["$glass"] / coeff > materials.amount(MAT_GLASS))
+				to_chat(usr, "<span class='warning'>Invalid design (not enough glass)</span>")
+				return
 			if(!hacked && ("hacked" in design_last_ordered.category))
 				to_chat(usr, "<span class='warning'>Invalid design (lathe requires hacking)</span>")
 				return
 			//multiplier checks : only stacks can have one and its value is 1, 10 ,25 or max_multiplier
 			var/multiplier = text2num(params["multiplier"])
-			var/max_multiplier = min(design_last_ordered.maxstack, design_last_ordered.materials[MAT_METAL] ?round(materials.amount(MAT_METAL)/design_last_ordered.materials[MAT_METAL]):INFINITY)
+			var/max_multiplier = min(design_last_ordered.maxstack, design_last_ordered.materials[MAT_METAL] ?round(materials.amount(MAT_METAL)/design_last_ordered.materials[MAT_METAL]):INFINITY,design_last_ordered.materials[MAT_GLASS]?round(materials.amount(MAT_GLASS)/design_last_ordered.materials[MAT_GLASS]):INFINITY)
 			var/is_stack = ispath(design_last_ordered.build_path, /obj/item/stack)
 
 			if(!is_stack && (multiplier > 1))
@@ -219,22 +231,28 @@
 	var/has_metal = 1
 	if(D.materials[MAT_METAL] && (materials.amount(MAT_METAL) < (D.materials[MAT_METAL] / coeff)))
 		has_metal = 0
+	var/has_glass = 1
+	if(D.materials[MAT_GLASS] && (materials.amount(MAT_GLASS) < (D.materials[MAT_GLASS] / coeff)))
+		has_glass = 0
 
 	data[++data.len] = list("name" = "metal", "amount" = D.materials[MAT_METAL] / coeff, "is_red" = !has_metal)
+	data[++data.len] = list("name" = "glass", "amount" = D.materials[MAT_GLASS] / coeff, "is_red" = !has_glass)
 
 	return data
 
 /obj/machinery/clothelate/proc/queue_data(list/data)
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
 	var/temp_metal = materials.amount(MAT_METAL)
+	var/temp_glass = materials.amount(MAT_GLASS)
 	data["processing"] = being_built.len ? get_processing_line() : null
 	if(istype(queue) && queue.len)
 		var/list/data_queue = list()
 		for(var/list/L in queue)
 			var/datum/design/D = L[1]
 			var/list/LL = get_design_cost_as_list(D, L[2])
-			data_queue[++data_queue.len] = list("name" = initial(D.name), "can_build" = can_build(D, L[2], temp_metal), "multiplier" = L[2])
+			data_queue[++data_queue.len] = list("name" = initial(D.name), "can_build" = can_build(D, L[2], temp_metal, temp_glass), "multiplier" = L[2])
 			temp_metal = max(temp_metal - LL[1], 1)
+			temp_glass = max(temp_glass - LL[2], 1)
 		data["queue"] = data_queue
 		data["queue_len"] = data_queue.len
 	else
@@ -243,14 +261,49 @@
 
 /obj/machinery/clothelate/attackby(obj/item/O, mob/user, params)
 	if(busy)
-		to_chat(user, "<span class='alert'>The clothelate is busy. Please wait for completion of previous operation.</span>")
+		to_chat(user, "<span class='alert'>The autolathe is busy. Please wait for completion of previous operation.</span>")
 		return 1
 	if(exchange_parts(user, O))
 		return
 	if(stat)
 		return 1
 
-/obj/machinery/clothelate/crowbar_act(mob/user, obj/item/I)
+	// Disks in general
+	if(istype(O, /obj/item/disk))
+		if(istype(O, /obj/item/disk/design_disk))
+			var/obj/item/disk/design_disk/D = O
+			if(D.blueprint)
+				var/datum/design/design = D.blueprint // READ ONLY!!
+
+				if(design.id in files.known_designs)
+					to_chat(user, "<span class='warning'>This design has already been loaded into the autolathe.</span>")
+					return 1
+
+				if(!files.CanAddDesign2Known(design))
+					to_chat(user, "<span class='warning'>This design is not compatible with the autolathe.</span>")
+					return 1
+				user.visible_message("[user] begins to load \the [O] in \the [src]...",
+					"You begin to load a design from \the [O]...",
+					"You hear the chatter of a floppy drive.")
+				playsound(get_turf(src), 'sound/goonstation/machines/printer_dotmatrix.ogg', 50, 1)
+				busy = TRUE
+				if(do_after(user, 14.4, target = src))
+					imported[design.id] = TRUE
+					files.AddDesign2Known(design)
+					recipiecache = list()
+					SStgui.close_uis(src) // forces all connected users to re-open the TGUI. Imported entries won't show otherwise due to static_data
+				busy = FALSE
+			else
+				to_chat(user, "<span class='warning'>That disk does not have a design on it!</span>")
+			return 1
+		else
+			// So that people who are bad at computers don't shred their disks
+			to_chat(user, "<span class='warning'>This is not the correct type of disk for the autolathe!</span>")
+			return 1
+
+	return ..()
+
+/obj/machinery/autolathe/crowbar_act(mob/user, obj/item/I)
 	if(!panel_open)
 		return
 	if(!I.use_tool(src, user, 0, volume = 0))
@@ -293,6 +346,15 @@
 		return
 	interact(user)
 
+/obj/machinery/clothelate/proc/AfterMaterialInsert(type_inserted, id_inserted, amount_inserted)
+	switch(id_inserted)
+		if(MAT_METAL)
+			flick("clothelate", src)//plays metal insertion animation
+		if(MAT_GLASS)
+			flick("clothelate", src)//plays glass insertion animation
+	use_power(min(1000, amount_inserted / 100))
+	SStgui.update_uis(src)
+
 /obj/machinery/clothelate/attack_ghost(mob/user)
 	interact(user)
 
@@ -324,17 +386,18 @@
 	var/coeff = get_coeff(D)
 	var/datum/component/material_container/materials = GetComponent(/datum/component/material_container)
 	var/metal_cost = D.materials[MAT_METAL]
-	var/power = max(2000, (metal_cost)*multiplier/5)
+	var/glass_cost = D.materials[MAT_GLASS]
+	var/power = max(2000, (metal_cost+glass_cost)*multiplier/5)
 	if(can_build(D, multiplier))
 		being_built = list(D, multiplier)
 		use_power(power)
 		icon_state = "clothelate"
 		flick("clothelate_n",src)
 		if(is_stack)
-			var/list/materials_used = list(MAT_METAL=metal_cost*multiplier)
+			var/list/materials_used = list(MAT_METAL=metal_cost*multiplier, MAT_GLASS=glass_cost*multiplier)
 			materials.use_amount(materials_used)
 		else
-			var/list/materials_used = list(MAT_METAL=metal_cost/coeff)
+			var/list/materials_used = list(MAT_METAL=metal_cost/coeff, MAT_GLASS=glass_cost/coeff)
 			materials.use_amount(materials_used)
 		SStgui.update_uis(src)
 		sleep(32/coeff)
@@ -345,10 +408,11 @@
 			var/obj/item/new_item = new D.build_path(BuildTurf)
 			new_item.fabricated()
 			new_item.materials[MAT_METAL] /= coeff
+			new_item.materials[MAT_GLASS] /= coeff
 	SStgui.update_uis(src)
 	desc = initial(desc)
 
-/obj/machinery/clothelate/proc/can_build(datum/design/D, multiplier = 1, custom_metal)
+/obj/machinery/clothelate/proc/can_build(datum/design/D, multiplier = 1, custom_metal, custom_glass)
 	if(D.make_reagents.len)
 		return 0
 
@@ -357,8 +421,13 @@
 	var/metal_amount = materials.amount(MAT_METAL)
 	if(custom_metal)
 		metal_amount = custom_metal
+	var/glass_amount = materials.amount(MAT_GLASS)
+	if(custom_glass)
+		glass_amount = custom_glass
 
 	if(D.materials[MAT_METAL] && (metal_amount < (multiplier*D.materials[MAT_METAL] / coeff)))
+		return 0
+	if(D.materials[MAT_GLASS] && (glass_amount < (multiplier*D.materials[MAT_GLASS] / coeff)))
 		return 0
 	return 1
 
@@ -367,6 +436,8 @@
 	var/coeff = get_coeff(D)
 	if(D.materials[MAT_METAL])
 		OutputList[1] = (D.materials[MAT_METAL] / coeff)*multiplier
+	if(D.materials[MAT_GLASS])
+		OutputList[2] = (D.materials[MAT_GLASS] / coeff)*multiplier
 	return OutputList
 
 /obj/machinery/clothelate/proc/get_processing_line()
