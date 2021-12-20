@@ -12,13 +12,10 @@ const canBeMade = (recipe, mavail, gavail, multi) => {
   if ((recipe.requirements["metal"] * multi) > mavail) {
     return false;
   }
-  if ((recipe.requirements["glass"] * multi) > gavail) {
-    return false;
-  }
   return true;
 };
 
-export const Autolathe = (props, context) => {
+export const Clothelate = (props, context) => {
   const { act, data } = useBackend(context);
   const {
     total_amount,
@@ -40,7 +37,6 @@ export const Autolathe = (props, context) => {
     category = "Engineering";
   }
   let metalReadable = metal_amount.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'); // add thousands seperator
-  let glassReadable = glass_amount.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
   let totalReadable = total_amount.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
 
   const [
@@ -122,7 +118,7 @@ export const Autolathe = (props, context) => {
                       && data.busyamt === 1}
                     disabled={
                       !canBeMade(recipe,
-                        data.metal_amount, data.glass_amount, 1)
+                        data.metal_amount, 1)
                     }
                     onClick={() => act("make", {
                       make: recipe.uid, multiplier: 1 })}>
@@ -136,7 +132,7 @@ export const Autolathe = (props, context) => {
                         && data.busyamt === 10}
                       disabled={
                         !canBeMade(recipe,
-                          data.metal_amount, data.glass_amount, 10)
+                          data.metal_amount, 10)
                       }
                       onClick={() => act("make", {
                         make: recipe.uid, multiplier: 10,
@@ -151,7 +147,7 @@ export const Autolathe = (props, context) => {
                         && data.busyamt === 25}
                       disabled={
                         !canBeMade(recipe,
-                          data.metal_amount, data.glass_amount, 25)
+                          data.metal_amount, 25)
                       }
                       onClick={() => act("make", {
                         make: recipe.uid, multiplier: 25,
@@ -166,8 +162,7 @@ export const Autolathe = (props, context) => {
                         && data.busyamt === recipe.max_multiplier}
                       disabled={
                         !canBeMade(recipe,
-                          data.metal_amount,
-                          data.glass_amount, recipe.max_multiplier)
+                          data.metal_amount, recipe.max_multiplier)
                       }
                       onClick={() => act("make", {
                         make: recipe.uid, multiplier: recipe.max_multiplier,
@@ -198,9 +193,6 @@ export const Autolathe = (props, context) => {
             <LabeledList>
               <LabeledList.Item label="Metal">
                 {metalReadable}
-              </LabeledList.Item>
-              <LabeledList.Item label="Glass">
-                {glassReadable}
               </LabeledList.Item>
               <LabeledList.Item label="Total">
                 {totalReadable}

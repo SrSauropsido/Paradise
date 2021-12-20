@@ -12,4 +12,12 @@
 	build_type = CRAFTLATHE
 	materials = list(MAT_METAL = 70)
 	build_path = /obj/item/clothing/suit/storage/labcoat/genetics
-	category = list("Medbay")
+	category = list("initial","Medbay")
+
+/datum/design/pirate_brown
+	name = "Brown Pirate"
+	id = "pirate_brown"
+	build_type = CRAFTLATHE
+	materials = list(MAT_METAL = 70)
+	build_path = /obj/item/clothing/suit/pirate_brown
+	category = list("Miscellaneous")
