@@ -93,6 +93,10 @@
 			GLOB.syndicateofficer += loc
 			qdel(src)
 
+		if("feed me spawn")
+			GLOB.feedmespawn += loc
+			qdel(src)
+
 	GLOB.landmarks_list += src
 	return 1
 

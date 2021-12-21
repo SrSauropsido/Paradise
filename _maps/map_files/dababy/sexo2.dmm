@@ -66289,6 +66289,26 @@
 	icon_state = "bar"
 	},
 /area/crew_quarters/kitchen)
+"liU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/obj/effect/landmark{
+	name = "feed me spawn"
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/crew_quarters/bar)
 "pQV" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -99296,7 +99316,7 @@ bzD
 azf
 azT
 aBr
-bzE
+liU
 bzS
 bzU
 avh

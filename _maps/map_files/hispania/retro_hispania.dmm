@@ -10788,6 +10788,14 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
 /area/atmos)
+"ddK" = (
+/obj/effect/landmark{
+	name = "feed me spawn"
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "bar"
+	},
+/area/crew_quarters/bar)
 "ddL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -116053,7 +116061,7 @@ hkt
 xAd
 vZB
 vZB
-vZB
+ddK
 vZB
 vZB
 vZB
