@@ -18,8 +18,6 @@
 
 #define ismecha(A) (istype(A, /obj/mecha))
 
-#define isspacepod(A) (istype(A, /obj/spacepod))
-
 #define iseffect(A) (istype(A, /obj/effect))
 
 #define isclothing(A) (istype(A, /obj/item/clothing))
@@ -91,4 +89,4 @@ GLOBAL_LIST_INIT(glass_sheet_types, typecacheof(list(
 #define isclient(A) istype(A, /client)
 #define isradio(A) istype(A, /obj/item/radio)
 #define ispill(A) istype(A, /obj/item/reagent_containers/food/pill)
-
+#define isspacepod(A) (istype(A, /obj/spacepod))

@@ -968,13 +968,6 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	id = 3
 	circuit = /obj/item/circuitboard/rdconsole/experiment
 
-/obj/machinery/computer/rdconsole/mechanics
-	name = "mechanics R&D console"
-	desc = "A console used to interface with R&D tools."
-	id = 4
-	req_access = list(ACCESS_MECHANIC)
-	circuit = /obj/item/circuitboard/rdconsole/mechanics
-
 /obj/machinery/computer/rdconsole/public
 	name = "public R&D console"
 	desc = "A console used to interface with R&D tools."

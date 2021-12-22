@@ -214,7 +214,7 @@
 			return
 		if(client.prefs.active_character.species in GLOB.whitelisted_species)
 
-			if(!is_alien_whitelisted(src, client.prefs.active_character.species))
+			if(!can_use_species(src, client.prefs.active_character.species))
 				to_chat(src, alert("You are currently not whitelisted to play [client.prefs.active_character.species]."))
 				return FALSE
 
@@ -233,7 +233,7 @@
 			client.prefs.load_random_character_slot(client)
 
 		if(client.prefs.active_character.species in GLOB.whitelisted_species)
-			if(!is_alien_whitelisted(src, client.prefs.active_character.species))
+			if(!can_use_species(src, client.prefs.active_character.species))
 				to_chat(src, alert("You are currently not whitelisted to play [client.prefs.active_character.species]."))
 				return FALSE
 
@@ -258,7 +258,7 @@
 		return 0
 
 	if(GLOB.configuration.jobs.assistant_limit)
-		if(job.title == "Civilian")
+		if(job.title == "Assistant")
 			var/count = 0
 			var/datum/job/officer = SSjobs.GetJob("Security Officer")
 			var/datum/job/warden = SSjobs.GetJob("Warden")
@@ -359,7 +359,7 @@
 		character.buckled.dir = character.dir
 
 	character = SSjobs.EquipRank(character, rank, 1)					//equips the human
-	EquipCustomItems(character)
+	SSticker.equip_cuis(character) // Gives them their CUIs
 
 	SSticker.mode.latespawn(character)
 
@@ -549,7 +549,7 @@
 	var/mob/living/carbon/human/new_character = new(loc)
 	new_character.lastarea = get_area(loc)
 
-	if(SSticker.random_players || appearance_isbanned(new_character))
+	if(SSticker.random_players)
 		client.prefs.active_character.randomise()
 		client.prefs.active_character.real_name = random_name(client.prefs.active_character.gender)
 	client.prefs.active_character.copy_to(new_character)
@@ -610,7 +610,7 @@
 
 /mob/new_player/proc/is_species_whitelisted(datum/species/S)
 	if(!S) return 1
-	return is_alien_whitelisted(src, S.name) || !(IS_WHITELISTED in S.species_traits)
+	return can_use_species(src, S.name) || !(IS_WHITELISTED in S.species_traits)
 
 /mob/new_player/get_gender()
 	if(!client || !client.prefs) ..()

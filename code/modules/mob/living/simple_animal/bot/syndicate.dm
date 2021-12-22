@@ -147,7 +147,6 @@
 			handle_automated_action()
 		break
 
-
 /mob/living/simple_animal/bot/ed209/syndicate/shootAt(atom/target)
 	if(lastfired && world.time - lastfired < shot_delay)
 		return

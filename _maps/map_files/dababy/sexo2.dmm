@@ -6323,7 +6323,7 @@
 	},
 /area/medical/genetics)
 "akz" = (
-/obj/structure/foodcart,
+/obj/machinery/smartfridge/foodcart,
 /obj/effect/decal/warning_stripes/yellow/hollow,
 /obj/item/radio/intercom{
 	pixel_y = 25

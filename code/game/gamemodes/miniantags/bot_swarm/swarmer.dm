@@ -444,10 +444,6 @@
 	to_chat(S, "<span class='warning'>Attempting to dismantle this machine would result in an immediate counterattack. Aborting.</span>")
 	return FALSE
 
-/obj/spacepod/swarmer_act(mob/living/simple_animal/hostile/swarmer/S)
-	to_chat(S, "<span class='warning'>Destroying this vehicle would destroy us. Aborting.</span>")
-	return FALSE
-
 /obj/machinery/clonepod/swarmer_act(mob/living/simple_animal/hostile/swarmer/S)
 	if(occupant)
 		to_chat(S, "<span class='warning'>Destroying this machine while it is occupied would result in biological and sentient resources to be harmed. Aborting.</span>")
@@ -542,7 +538,7 @@
 		return
 
 	var/turf/simulated/floor/F
-	F = find_safe_turf(zlevels = z, extended_safety_checks = TRUE)
+	F = find_safe_turf(zlevels = z)
 
 	if(!F)
 		return
@@ -736,3 +732,12 @@
 		for(var/mob/M in GLOB.mob_list)
 			if(isswarmer(M) || (M in GLOB.dead_mob_list))
 				to_chat(M, "<B>Swarm communication - </b> [src] states: [message]")
+
+///Swarmer Interaction SP
+/obj/spacepod/swarmer_act(mob/living/simple_animal/hostile/swarmer/S)
+	to_chat(S, "<span class='warning'>Destroying this vehicle would destroy us. Aborting.</span>")
+	return FALSE
+
+/obj/structure/spacepoddoor/swarmer_act(mob/living/simple_animal/hostile/swarmer/S)
+	to_chat(S, "<span class='warning'>Disrupting this energy field would overload us. Aborting.</span>")
+	return FALSE

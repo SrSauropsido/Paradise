@@ -42,6 +42,14 @@
 	gain_text = "<span class='notice'>Dioses vengan a mi.</span>"
 	lose_text = "<span class='danger'>Perdistes tu confianza con los dioses.</span>"
 
+/datum/quirk/malefico
+	name = "Malefico"
+	desc = "Eres pura maldad y tu risa demuestra lo villano que eres"
+	value = 1
+	mob_trait = TRAIT_MALEFICO
+	gain_text = "<span class='notice'>MUAHAHAHA.</span>"
+	lose_text = "<span class='danger'>Ya no me siento tan malvado..</span>"
+
 /datum/quirk/hudmedimplant
 	name = "Implante Medhud"
 	desc = "Empiezas con un implante de MedHud."

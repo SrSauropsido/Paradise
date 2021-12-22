@@ -2867,7 +2867,7 @@
 	},
 /area/derelict/crew_quarters)
 "gz" = (
-/obj/structure/closet/medical_wall,
+/obj/structure/table,
 /turf/simulated/wall/mineral/titanium/nodecon/nodiagonal,
 /area/derelict/arrival)
 "gA" = (

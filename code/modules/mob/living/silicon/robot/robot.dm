@@ -85,7 +85,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	var/weaponlock_time = 120
 	var/lawupdate = 1 //Cyborgs will sync their laws with their AI by default
 	var/lockcharge //Used when locking down a borg to preserve cell charge
-	var/speed = 0 //Cause sec borgs gotta go fast //No they dont!
+	var/speed = -1 //Cause sec borgs gotta go fast //No they dont!//Si van rapido!
 	var/scrambledcodes = 0 // Used to determine if a borg shows up on the robotics console.  Setting to one hides them.
 	var/can_lock_cover = FALSE //Used to set if a borg can re-lock its cover.
 	var/has_camera = TRUE
@@ -165,6 +165,10 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	..()
 
 	add_robot_verbs()
+	
+	// Remove inherited verbs that effectively do nothing for cyborgs, or lead to unintended behaviour.
+	verbs -= /mob/living/verb/lay_down
+	verbs -= /mob/living/verb/mob_sleep
 
 	if(cell)
 		var/datum/robot_component/cell_component = components["power cell"]
@@ -277,7 +281,8 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	SStgui.close_uis(wires)
 	if(mmi && mind)//Safety for when a cyborg gets dust()ed. Or there is no MMI inside.
 		var/turf/T = get_turf(loc)//To hopefully prevent run time errors.
-		if(T)	mmi.loc = T
+		if(T)
+			mmi.forceMove(T)
 		if(mmi.brainmob)
 			mind.transfer_to(mmi.brainmob)
 			mmi.update_icon()
@@ -316,7 +321,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 		var/image/image = image(icon, icon_state = skin_icon)
 		skins[I] = image
 	var/modtype = show_radial_menu(src, src, skins, null, 40, null, TRUE)
-	
+
 	if(!modtype)
 		return
 	designation = modtype
@@ -488,7 +493,7 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 	update_icons()
 	update_headlamp()
 
-	speed = 0 // Remove upgrades.
+	speed = -1 // Remove upgrades.
 	ionpulse = FALSE
 	magpulse = FALSE
 	weapons_unlock = FALSE
@@ -1291,6 +1296,8 @@ GLOBAL_LIST_INIT(robot_verbs_default, list(
 		connected_ai = AI
 		connected_ai.connected_robots |= src
 		notify_ai(1)
+		if(module)
+			module.rebuild_modules() //This way, if a borg gets linked to a malf AI that has upgrades, they get their upgrades.
 		sync()
 
 /mob/living/silicon/robot/adjustOxyLoss(amount)
