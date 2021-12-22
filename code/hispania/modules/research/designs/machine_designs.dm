@@ -67,3 +67,13 @@
 	materials = list(MAT_GLASS = 1000)
 	build_path = /obj/item/circuitboard/podfab
 	category = list("Research Machinery")
+
+/datum/design/clothelate
+	name = "Machine Board (Clothelate)"
+	desc = "The circuit board for a Clothelate"
+	id = "podfab"
+	req_tech = list("engineering" = 3, "illegal" = 3)
+	build_type = IMPRINTER
+	materials = list(MAT_GLASS = 1000)
+	build_path = /obj/item/circuitboard/clothelate
+	category = list("Misc. Machinery")

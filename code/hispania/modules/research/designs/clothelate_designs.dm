@@ -709,3 +709,11 @@
 	materials = list(MAT_METAL = 25)
 	build_path = /obj/item/clothing/head/beret/solgov/command/
 	category = list("hacked","Illegal")
+
+/datum/design/cap_tsf
+    name = "TSF Marine Cap"
+    id = "cap_tsf"
+    build_type = CRAFTLATHE
+    materials = list(MAT_METAL = 25)
+    build_path = /obj/item/clothing/head/soft/solgov/marines
+    category = list("hacked","Illegal")
