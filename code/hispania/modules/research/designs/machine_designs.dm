@@ -60,7 +60,7 @@
 
 /datum/design/podfab
 	name = "Machine Board (Spacepod Fabricator)"
-	desc = "The circuit board for a Spacepod Fabricator"
+	desc = "The circuit board for an Spacepod Fabricator"
 	id = "podfab"
 	req_tech = list("programming" = 3, "engineering" = 3)
 	build_type = IMPRINTER
