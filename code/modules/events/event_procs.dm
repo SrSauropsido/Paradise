@@ -74,6 +74,7 @@
 	active_with_role["Cyborg"] = 0
 	active_with_role["Janitor"] = 0
 	active_with_role["Botanist"] = 0
+	active_with_role["Service"] = 0
 	active_with_role["Any"] = GLOB.player_list.len
 
 	for(var/mob/M in GLOB.player_list)
@@ -114,6 +115,9 @@
 
 		if(M.mind.assigned_role == "Botanist")
 			active_with_role["Botanist"]++
+
+		if(M.mind.assigned_role in list("Botanist", "Cheff","Bartender","Mime","Clown","Libarian","Barber","Chaplain"))
+			active_with_role["Service"]++
 
 	return active_with_role
 

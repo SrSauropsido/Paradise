@@ -2664,6 +2664,12 @@
 	pixel_y = 32
 	},
 /obj/item/stack/tape_roll,
+/obj/item/camera_film,
+/obj/item/camera{
+	desc = "A one use - polaroid camera. 30 photos left.";
+	name = "detectives camera";
+	pictures_left = 30
+	},
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -2692,11 +2698,11 @@
 /area/medical/morgue)
 "aeB" = (
 /obj/structure/table/wood,
-/obj/item/hand_labeler,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = 32
 	},
+/obj/machinery/microscope,
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -5356,10 +5362,6 @@
 	icon_state = "asteroid";
 	tag = ""
 	},
-/turf/simulated/floor/plasteel{
-	icon_state = "asteroid";
-	tag = ""
-	},
 /area/crew_quarters/kitchen)
 "aiR" = (
 /obj/structure/table/glass,
@@ -5497,10 +5499,6 @@
 	req_access_txt = "35"
 	},
 /mob/living/simple_animal/pig,
-/turf/simulated/floor/plasteel{
-	icon_state = "asteroid";
-	tag = ""
-	},
 /turf/simulated/floor/plasteel{
 	icon_state = "asteroid";
 	tag = ""
@@ -11159,7 +11157,6 @@
 	icon_state = "plant-35";
 	random_hispania_icon = 0
 	},
-/turf/simulated/floor/carpet,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/kitchen)
 "arY" = (
@@ -23592,7 +23589,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet,
-/turf/simulated/floor/carpet,
 /area/crew_quarters/kitchen)
 "aLB" = (
 /obj/effect/spawner/window/reinforced,
@@ -28971,7 +28967,6 @@
 /area/toxins/xenobiology)
 "aUP" = (
 /turf/simulated/floor/carpet,
-/turf/simulated/floor/carpet,
 /area/crew_quarters/kitchen)
 "aUQ" = (
 /obj/effect/turf_decal/stripes,
@@ -31490,21 +31485,12 @@
 	},
 /area/hallway/primary/central/sw)
 "bas" = (
-/obj/item/camera{
-	desc = "A one use - polaroid camera. 30 photos left.";
-	name = "detectives camera";
-	pictures_left = 30
-	},
 /obj/structure/table/wood,
-/obj/item/storage/photo_album{
-	pixel_y = -10
-	},
-/obj/item/camera_film,
-/obj/item/camera_film,
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/machinery/dnaforensics,
 /turf/simulated/floor/plasteel{
 	icon_state = "grimy"
 	},
@@ -66289,6 +66275,26 @@
 	icon_state = "bar"
 	},
 /area/crew_quarters/kitchen)
+"liU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	tag = ""
+	},
+/obj/effect/landmark{
+	name = "feed me spawn"
+	},
+/turf/simulated/floor/plasteel{
+	icon_state = "grimy"
+	},
+/area/crew_quarters/bar)
 "pQV" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -99296,7 +99302,7 @@ bzD
 azf
 azT
 aBr
-bzE
+liU
 bzS
 bzU
 avh

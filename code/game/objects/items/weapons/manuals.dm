@@ -922,27 +922,26 @@
 			</style>
 			</head>
 			<body>
-			<h3>Detective Work</h3>
+			<h3>Trabajo de detective</h3>
 
-			Between your bouts of self-narration, and drinking whiskey on the rocks, you might get a case or two to solve.<br>
-			To have the best chance to solve your case, follow these directions:
+
+			Mientras estas en tu oficina bebiendo un whisky en las rocas y disfrutando del jazz puede ser que tengas que resolver algun caso o dos.<br>
+			Para ello debes estar familiarisado con tu equipo:
 			<p>
 			<ol>
-			<li>Go to the crime scene. </li>
-			<li>Take your scanner and scan EVERYTHING (Yes, the doors, the tables, even the dog.) </li>
-			<li>Once you are reasonably certain you have every scrap of evidence you can use, find all possible entry points and scan them, too. </li>
-			<li>Return to your office. </li>
-			<li>Using your forensic scanning computer, scan your Scanner to upload all of your evidence into the database.</li>
-			<li>Browse through the resulting dossiers, looking for the one that either has the most complete set of prints, or the most suspicious items handled. </li>
-			<li>If you have 80% or more of the print (The print is displayed) go to step 10, otherwise continue to step 8.</li>
-			<li>Look for clues from the suit fibres you found on your perp, and go about looking for more evidence with this new information, scanning as you go. </li>
-			<li>Try to get a fingerprint card of your perp, as if used in the computer, the prints will be completed on their dossier.</li>
-			<li>Assuming you have enough of a print to see it, grab the biggest complete piece of the print and search the security records for it. </li>
-			<li>Since you now have both your dossier and the name of the person, print both out as evidence, and get security to nab your baddie.</li>
-			<li>Give yourself a pat on the back and a bottle of the ships finest vodka, you did it!. </li>
-			</ol>
+			<li>CrimeKit: Contiene todo lo necesario para llevar a cabo las investigaciones. </li>
+			<li>Fingerprint powder: Polvo que permite revelar huellas dactilares de los objetos/estructuras. Para analizarlas necesitas el microscopio. </li>
+			<li>Fiber collector:  Es un recolector de fragmentos de fibras, normalmente se usa para saber si hay restos de vestimenta sobre un elemento en particular. Luego deberas analizarlo en el microscopio </li>
+			<li>Swab Kit: El swab kit es un hisopo que permite tomar muestras de sangre para analizar su ADN, para ello se debe mojar un poco con la sangre y luego escanearlaen el ADN analyzer.  Tambien puede ser usado para tomar muestras de saliva de las personas (Apuntando a la boca)  Y restos de polvora o marcas sobre algunarma que hayan utilizado (Apuntando a las manos). Para esto ultimo deben ser analizados en el microscopio. </li>
+			<li>Scanner: Aqui se ingresan la secuencia del codigo genetico o huellas dactilares para ver si coincide con algun tripulante de la base de datos. Ten en cuenta que estotambien se puede hacer desde la consola de security records.</li>
+			<li>Si tiene pruebas suficientes para respaldar el arresto de alguien, alerte a seguridad y establezca su estado a Arresto en la consola de seguridad. </li></ol>
 			<p>
-			It really is that easy! Good luck!
+
+			No es recomendable que el detective lleve a cabo arrestos, para eso estan los oficiales.
+			Finalmente recuerda que aveces los resultados no son 100% concluyentes, es decir que son aproximados. Si hay 2 tripulantes que matchean entonces deberas interrogarlos a ambos y usar tu mejor criterio detectivesco.
+
+
+			Buena suerte detective !
 
 			</body>
 			</html>"}

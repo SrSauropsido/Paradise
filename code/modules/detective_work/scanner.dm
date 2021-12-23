@@ -58,7 +58,7 @@
 		<i>Blood DNA:</i><span class='notice'> [dna]</span>")
 	else
 		to_chat(user, "<span class='warning'>No match found in station records.</span>")
-
+/*
 /obj/item/detective_scanner/ui_action_click(mob/user, actiontype)
 	if(actiontype == /datum/action/item_action/print_forensic_report)
 		print_scanner_report()
@@ -228,3 +228,4 @@
 
 /proc/get_timestamp()
 	return time2text(world.time + 432000, ":ss")
+	*/
