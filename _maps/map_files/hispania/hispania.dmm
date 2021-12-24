@@ -26393,13 +26393,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/fpmaint)
-"bbS" = (
-/obj/structure/closet/emcloset{
-	icon_state = "emergencyopen";
-	opened = 1
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/fpmaint)
 "bbT" = (
 /obj/structure/rack,
 /obj/item/tank/internals/oxygen,
@@ -128911,7 +128904,7 @@ aPi
 aVD
 aQl
 aMA
-bbS
+aEN
 aEN
 aRw
 biM
