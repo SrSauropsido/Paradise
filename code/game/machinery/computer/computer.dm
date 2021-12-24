@@ -24,6 +24,8 @@
 
 /obj/machinery/computer/New()
 	overlay_layer = layer
+	if("[station_name()]" == "NSS Retro Hispania")
+		icon = 'icons/hispania/retro/computer_r.dmi'
 	..()
 
 /obj/machinery/computer/Initialize()
