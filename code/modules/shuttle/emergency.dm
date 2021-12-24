@@ -234,9 +234,9 @@
 					return
 				mode = SHUTTLE_DOCKED
 				timer = world.time
-				spawn(5 SECONDS)
-					SSvote.initiate_vote("map", "the server", TRUE)
-					SSvote.no_more_vote()
+				// spawn(5 SECONDS)
+				// 	SSvote.initiate_vote("map", "the server", TRUE)
+				// 	SSvote.no_more_vote()
 				if(canRecall)
 					emergency_shuttle_docked.Announce("The emergency shuttle has docked with the station. You have [timeLeft(600)] minutes to board the emergency shuttle.")
 				else
