@@ -72,7 +72,7 @@
 	name = "Machine Board (Clothelate)"
 	desc = "The circuit board for a Clothelate"
 	id = "podfab"
-	req_tech = list("engineering" = 3, "illegal" = 2)
+	req_tech = list("engineering" = 3, "syndicate" = 2)
 	build_type = IMPRINTER
 	materials = list(MAT_GLASS = 1000)
 	build_path = /obj/item/circuitboard/clothelate
