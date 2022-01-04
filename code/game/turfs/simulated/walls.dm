@@ -50,7 +50,7 @@
 /turf/simulated/wall/Initialize(mapload)
 	var/nombre_estacion = "[station_name()]"
 	if((nombre_estacion == "NSS Retro Hispania") && (icon == 'icons/turf/walls/wall.dmi'))
-		icon = 'icons/hispania/turf/walls/wall.dmi'
+		icon = 'icons/hispania/retro/wall_r.dmi'
 
 /turf/simulated/wall/BeforeChange()
 	for(var/obj/effect/overlay/wall_rot/WR in src)

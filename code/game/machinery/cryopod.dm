@@ -193,6 +193,16 @@
 	orient_right = 1
 	icon_state = "cryo_rear-r"
 
+/obj/structure/cryofeededge
+	name = "cryogenic feed"
+	icon = 'icons/obj/cryogenic2.dmi'
+	icon_state = "cryo_rear_e"
+
+/obj/structure/cryofeededgeright
+	name = "cryogenic feed"
+	icon = 'icons/obj/cryogenic2.dmi'
+	icon_state = "cryo_rear_e-r"
+
 /obj/structure/cryofeed/Initialize(mapload)
 	. = ..()
 	if(orient_right)

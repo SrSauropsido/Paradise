@@ -17,6 +17,8 @@
 /obj/machinery/computer/pandemic/New()
 	..()
 	update_icon()
+	if("[station_name()]" == "NSS Retro Hispania")
+		icon = 'icons/obj/chemical.dmi'
 
 /obj/machinery/computer/pandemic/set_broken()
 	icon_state = (beaker ? "mixer1_b" : "mixer0_b")
