@@ -93,7 +93,7 @@ GLOBAL_LIST_EMPTY(PDAs)
 
 /obj/item/pda/New()
 	if("[station_name()]" == "NSS Retro Hispania")
-		icon = 'icons/obj/pda_gb.dmi'
+		icon = 'icons/hispania/retro/pda_gb.dmi'
 	..()
 
 /obj/item/pda/GetAccess()

@@ -20,7 +20,7 @@
 /turf/simulated/wall/r_wall/Initialize(mapload)
 	var/nombre_estacion = "[station_name()]"
 	if((nombre_estacion == "NSS Retro Hispania") && (icon == 'icons/turf/walls/reinforced_wall.dmi'))
-		icon = 'icons/hispania/turf/walls/reinforced_wall.dmi'
+		icon = 'icons/hispania/retro/reinforced_wall_r.dmi'
 
 /turf/simulated/wall/r_wall/examine(mob/user)
 	. = ..()

@@ -42,7 +42,7 @@ GLOBAL_LIST_INIT(icons_to_ignore_at_floor_init, list("damaged1","damaged2","dama
 		icon_regular_floor = icon_state
 	var/nombre_estacion = "[station_name()]"
 	if((nombre_estacion == "NSS Retro Hispania") && (icon == 'icons/turf/floors.dmi'))
-		icon = 'icons/hispania/turf/r_floors.dmi'
+		icon = 'icons/hispania/retro/floors_r.dmi'
 
 //turf/simulated/floor/CanPass(atom/movable/mover, turf/target, height=0)
 //	if((istype(mover, /obj/machinery/vehicle) && !(src.burnt)))

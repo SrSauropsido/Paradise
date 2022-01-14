@@ -15,6 +15,11 @@
 	icon = 'icons/obj/library.dmi'
 	icon_state = "computer"
 
+/obj/machinery/computer/library/New()
+	..()
+	if("[station_name()]" == "NSS Retro Hispania")
+		icon = 'icons/hispania/retro/library.dmi'
+
 /obj/machinery/computer/library/proc/interact_check(mob/user)
 	if(stat & (BROKEN | NOPOWER))
 		return 1

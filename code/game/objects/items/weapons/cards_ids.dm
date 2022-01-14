@@ -115,7 +115,7 @@
 
 /obj/item/card/id/New()
 	if("[station_name()]" == "NSS Retro Hispania")
-		icon = 'icons/hispania/obj/card_r.dmi'
+		icon = 'icons/hispania/retro/card_r.dmi'
 	..()
 	spawn(30)
 		if(ishuman(loc) && blood_type == "\[UNSET\]")
