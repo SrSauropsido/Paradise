@@ -198,8 +198,9 @@
 /turf/proc/Airlock(mob/user)
 	for(var/i in contents)
 		if(istype(i,/obj/machinery/door))
-			var/obj/machinery/door/A = i
-			A.try_to_activate_door(user)
+			if(in_range(user, src))
+				var/obj/machinery/door/A = i
+				A.try_to_activate_door(user)
 
 //Creates a new turf
 /turf/proc/ChangeTurf(path, defer_change = FALSE, keep_icon = TRUE, ignore_air = FALSE)
