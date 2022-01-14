@@ -16,6 +16,7 @@ SUBSYSTEM_DEF(vote)
 	var/list/current_votes = list()
 	var/list/round_voters = list()
 	var/auto_muted = 0
+	var/no_more_vote = FALSE
 
 /datum/controller/subsystem/vote/fire()
 	if(mode)
@@ -209,6 +210,9 @@ SUBSYSTEM_DEF(vote)
 			return vote
 	return 0
 
+/datum/controller/subsystem/vote/proc/no_more_vote()
+	no_more_vote = !no_more_vote
+
 /datum/controller/subsystem/vote/proc/initiate_vote(vote_type, initiator_key, code_invoked = FALSE)
 	if(!mode)
 		if(usr && started_time != null && !check_rights(R_ADMIN)) // Allow the game to call votes whenever. But check other callers
@@ -236,6 +240,9 @@ SUBSYSTEM_DEF(vote)
 					question = "End the shift?"
 					choices.Add("Initiate Crew Transfer", "Continue The Round")
 			if("map")
+				if(no_more_vote == TRUE)
+					to_chat(world, "<span class='warning'> El mapa ya fue elegido </span>")
+					return FALSE
 				if(!(check_rights(R_SERVER) || code_invoked))
 					return FALSE
 				question = "Map for next round"
