@@ -27,32 +27,53 @@
 	var/icon_staterand = rand(1,3)
 	var/aggrofaction = rand(1,4) //1 es pasivo, no ataca para nada, 2 es territorial, si te acercas te ataca, 3 es agresivo a cierto rango y 4 es ultra agresivo
 	health = maxHealth
+	var/hasrangedattack = rand(0,1)
 
 	if(aggrofaction == 1) //pasivo
-		vision_range = 4
+		vision_range = 6
 		aggro_vision_range = 0
 		faction -= "hostile"
 		faction += "neutral"
 	if(aggrofaction == 2) //territorial
-		vision_range = 2
+		vision_range = 6
 		aggro_vision_range = 2
 	if(aggrofaction == 3) //agresivo
-		vision_range = 4
-		aggro_vision_range = 9
+		vision_range = 6
+		aggro_vision_range = 6
 	if(aggrofaction == 4) //ultra-agresivo
 		vision_range = 9
 		aggro_vision_range = 9
 
-	if(maxHealth < 90) //Mas vida tiene, mas lento es.
+	if(hasrangedattack == 1) //si tiene ranged attack, va a poder usar uno de tres ataques definidos cuando spawnea.
+		ranged = TRUE
+		var/randtyperanged = rand(1,3)
+		if(maxHealth > 150)
+			ranged_cooldown_time = maxHealth*0.5 //si tiene mucha vida, el cooldown aumenta respecto a la vida divida a la mitad. la base es 70
+		else ranged_cooldown_time = 70
+		if(randtyperanged == 1)
+			projectiletype = /obj/item/projectile/magic/fireball/infernal/impfire
+			projectilesound = 'sound/hispania/misc/impranged.wav'
+			ranged_message = "shoots a fireball"
+		if(randtyperanged == 2)
+			projectiletype = /obj/item/projectile/hook
+			projectilesound = 'sound/weapons/pierce.ogg'
+			ranged_message = "shoots a hook"
+		if(randtyperanged == 3)
+			projectiletype = /obj/item/projectile/neurotox
+			projectilesound = 'sound/weapons/pierce.ogg'
+			ranged_message = "shoots a projectile of acid"
+
+
+	if(maxHealth > 90) //Mas vida tiene, mas lento es.
 		speed += 1
 		move_to_delay += 10
-	if(maxHealth < 290)
+	if(maxHealth > 290)
 		speed += 1
 		move_to_delay += 10
-	if(maxHealth < 590)
+	if(maxHealth > 590)
 		speed += 1
 		move_to_delay += 10
-	if(maxHealth < 790)
+	if(maxHealth > 790)
 		speed += 1
 		move_to_delay += 10
 
@@ -77,5 +98,6 @@
 		icon_living = "Goldgrub"
 		icon_dead = "Goldgrub_dead"
 		faction += "ultima3"
+
 
 	..()
