@@ -3010,12 +3010,8 @@
 /turf/simulated/wall/r_wall,
 /area/solar/auxstarboard)
 "aff" = (
-/obj/machinery/conveyor/west{
-	id = "QMLoad2"
-	},
-/obj/structure/plasticflaps/mining,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
+/obj/structure/lattice,
+/turf/simulated/floor/plating/airless,
 /area/quartermaster/storage)
 "afg" = (
 /obj/structure/table/glass,
@@ -13988,16 +13984,7 @@
 	},
 /area/quartermaster/miningdock)
 "awn" = (
-/obj/structure/sign/securearea{
-	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
-	icon_state = "space";
-	layer = 4;
-	name = "EXTERNAL AIRLOCK"
-	},
-/obj/effect/spawner/window/reinforced{
-	color = "#f39c12"
-	},
-/turf/simulated/floor/plating,
+/turf/space,
 /area/quartermaster/storage)
 "awo" = (
 /turf/simulated/wall/r_wall,
@@ -14397,19 +14384,20 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "awZ" = (
-/obj/machinery/conveyor/west{
+/obj/machinery/conveyor/northwest/ccw{
 	id = "QMLoad2"
 	},
-/obj/structure/plasticflaps/mining,
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "axa" = (
-/obj/machinery/door/poddoor{
-	id_tag = "QMLoaddoor2";
-	name = "supply dock loading door"
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
+	icon_state = "space";
+	layer = 4;
+	name = "EXTERNAL AIRLOCK"
 	},
-/obj/machinery/conveyor/west{
-	id = "QMLoad2"
+/obj/effect/spawner/window/reinforced{
+	color = "#f39c12"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -14430,13 +14418,12 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "axd" = (
-/obj/machinery/status_display/supply_display{
-	layer = 4
+/obj/machinery/light,
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/stripes{
+	dir = 1
 	},
-/obj/effect/spawner/window/reinforced{
-	color = "#f39c12"
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
 "axe" = (
 /obj/structure/closet/crate,
@@ -14492,37 +14479,37 @@
 	},
 /area/quartermaster/storage)
 "axi" = (
-/obj/machinery/hologram/holopad,
 /obj/structure/window/reinforced{
 	color = "#f39c12";
 	dir = 1;
 	pixel_y = 2
 	},
+/obj/structure/window/reinforced{
+	color = "#f39c12";
+	dir = 4;
+	pixel_y = 2
+	},
+/obj/machinery/conveyor_switch/oneway{
+	id = "QMLoad2"
+	},
 /turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralfull"
+	dir = 4;
+	icon_state = "darkyellowfull"
 	},
 /area/quartermaster/storage)
 "axj" = (
-/obj/effect/decal/warning_stripes/yellow,
-/obj/structure/window/reinforced{
-	color = "#f39c12";
-	dir = 1;
-	pixel_y = 2
+/obj/machinery/conveyor/northwest{
+	id = "QMLoad2"
 	},
-/turf/simulated/floor/plasteel{
-	dir = 8;
-	icon_state = "neutralfull"
-	},
+/turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "axk" = (
-/obj/machinery/door/airlock/external{
-	id_tag = "supply_home";
-	locked = 1;
-	name = "Cargo Docking Hatch";
-	req_access_txt = "48"
+/obj/machinery/conveyor/west{
+	id = "QMLoad2"
 	},
-/turf/simulated/floor/plasteel,
+/obj/structure/plasticflaps/mining,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "axl" = (
 /obj/machinery/vending/cart,
@@ -14685,7 +14672,12 @@
 	pixel_x = 24;
 	pixel_y = -8
 	},
-/obj/effect/decal/warning_stripes/yellow/hollow,
+/obj/effect/decal/warning_stripes/yellow,
+/obj/structure/window/reinforced{
+	color = "#f39c12";
+	dir = 1;
+	pixel_y = 2
+	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "neutralfull"
@@ -14750,21 +14742,18 @@
 /turf/simulated/floor/plasteel,
 /area/hallway/secondary/entry)
 "axD" = (
-/obj/machinery/door/airlock/external{
-	id_tag = "supply_home";
-	locked = 1;
-	name = "Cargo Docking Hatch";
-	req_access_txt = "48"
+/obj/machinery/conveyor/west{
+	id = "QMLoad2"
 	},
-/obj/effect/decal/warning_stripes/yellow,
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "darkyellowfull"
-	},
+/obj/structure/plasticflaps/mining,
+/turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "axE" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "QMLoad"
+/obj/structure/closet/firecloset,
+/obj/effect/decal/warning_stripes/yellow,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -14885,11 +14874,14 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/office)
 "axP" = (
-/obj/structure/closet/firecloset,
 /obj/effect/decal/warning_stripes/yellow,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -24
+/obj/structure/closet/crate/trashcart,
+/obj/item/storage/bag/trash{
+	pixel_y = 5
+	},
+/obj/item/storage/bag/trash{
+	pixel_x = 7;
+	pixel_y = 6
 	},
 /turf/simulated/floor/plasteel{
 	dir = 4;
@@ -14897,38 +14889,41 @@
 	},
 /area/quartermaster/storage)
 "axQ" = (
-/obj/machinery/conveyor/east{
+/obj/machinery/conveyor_switch/oneway{
 	id = "QMLoad"
 	},
-/obj/structure/closet/walllocker/emerglocker/south,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "darkyellowfull"
+	},
 /area/quartermaster/storage)
 "axR" = (
-/obj/machinery/conveyor/east{
-	id = "QMLoad"
+/obj/effect/decal/warning_stripes/yellow,
+/turf/simulated/floor/plasteel{
+	dir = 8;
+	icon_state = "neutralfull"
 	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -22
-	},
-/turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "axS" = (
-/obj/machinery/conveyor/east{
-	id = "QMLoad"
+/obj/machinery/door/airlock/external{
+	id_tag = "supply_home";
+	locked = 1;
+	name = "Cargo Docking Hatch";
+	req_access_txt = "48"
 	},
-/obj/structure/plasticflaps/mining,
-/turf/simulated/floor/plating,
+/obj/effect/decal/warning_stripes/yellow,
+/turf/simulated/floor/plasteel{
+	dir = 4;
+	icon_state = "darkyellowfull"
+	},
 /area/quartermaster/storage)
 "axT" = (
-/obj/machinery/door/poddoor{
-	id_tag = "QMLoaddoor";
-	name = "supply dock loading door"
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/machinery/conveyor/east{
-	id = "QMLoad"
-	},
-/turf/simulated/floor/plating,
+/obj/machinery/door/firedoor,
+/obj/effect/turf_decal/stripes,
+/turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
 "axU" = (
 /obj/structure/table,
@@ -31742,19 +31737,11 @@
 	},
 /area/hallway/primary/central/nw)
 "baP" = (
-/obj/effect/decal/warning_stripes/yellow,
-/obj/structure/closet/crate/trashcart,
-/obj/item/storage/bag/trash{
-	pixel_y = 5
+/obj/machinery/conveyor/east{
+	id = "QMLoad"
 	},
-/obj/item/storage/bag/trash{
-	pixel_x = 7;
-	pixel_y = 6
-	},
-/turf/simulated/floor/plasteel{
-	dir = 4;
-	icon_state = "darkyellowfull"
-	},
+/obj/structure/closet/walllocker/emerglocker/south,
+/turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "baQ" = (
 /obj/structure/table/wood,
@@ -42664,20 +42651,22 @@
 	pixel_x = -24
 	},
 /obj/structure/rack,
-/obj/item/gun/energy/gun/advtaser{
-	pixel_x = -3;
-	pixel_y = 3
+/obj/item/gun/energy/disabler,
+/obj/item/gun/energy/disabler{
+	pixel_x = 2;
+	pixel_y = -5
 	},
-/obj/item/gun/energy/gun/advtaser,
-/obj/item/gun/energy/gun/advtaser{
-	pixel_x = 3;
-	pixel_y = -3
+/obj/item/gun/energy/disabler{
+	pixel_x = -2;
+	pixel_y = 4
 	},
 /obj/effect/decal/warning_stripes/red/hollow,
 /obj/machinery/light{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/gun/energy/disabler,
+/obj/item/gun/energy/disabler,
 /turf/simulated/floor/plasteel{
 	dir = 4;
 	icon_state = "darkredfull";
@@ -45134,7 +45123,7 @@
 	},
 /area/quartermaster/office)
 "bvW" = (
-/obj/effect/decal/warning_stripes/yellow,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/plasteel{
 	dir = 8;
 	icon_state = "neutralfull"
@@ -46043,12 +46032,14 @@
 	},
 /area/engine/engineering)
 "bxg" = (
-/obj/machinery/light,
-/obj/machinery/door/firedoor,
-/obj/effect/turf_decal/stripes{
-	dir = 1
+/obj/machinery/door/poddoor{
+	id_tag = "QMLoaddoor2";
+	name = "supply dock loading door"
 	},
-/turf/simulated/floor/plasteel,
+/obj/machinery/conveyor/west{
+	id = "QMLoad2"
+	},
+/turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "bxh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -46330,20 +46321,22 @@
 	},
 /area/medical/chemistry)
 "bxy" = (
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/status_display/supply_display{
+	layer = 4
 	},
-/obj/machinery/door/firedoor,
-/obj/effect/turf_decal/stripes,
-/turf/simulated/floor/plasteel,
+/obj/effect/spawner/window/reinforced{
+	color = "#f39c12"
+	},
+/turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "bxz" = (
-/obj/machinery/conveyor/east{
-	id = "QMLoad"
+/obj/machinery/door/airlock/external{
+	id_tag = "supply_home";
+	locked = 1;
+	name = "Cargo Docking Hatch";
+	req_access_txt = "48"
 	},
-/obj/structure/plasticflaps/mining,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plasteel,
 /area/quartermaster/storage)
 "bxA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -66275,6 +66268,16 @@
 	icon_state = "bar"
 	},
 /area/crew_quarters/kitchen)
+"kNx" = (
+/obj/machinery/door/poddoor{
+	id_tag = "QMLoaddoor";
+	name = "supply dock loading door"
+	},
+/obj/machinery/conveyor/east{
+	id = "QMLoad"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/storage)
 "liU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -66295,6 +66298,24 @@
 	icon_state = "grimy"
 	},
 /area/crew_quarters/bar)
+"oYZ" = (
+/obj/machinery/conveyor/east{
+	id = "QMLoad"
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -22
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/storage)
+"pix" = (
+/obj/machinery/conveyor/east{
+	id = "QMLoad"
+	},
+/obj/structure/plasticflaps/mining,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/plating,
+/area/quartermaster/storage)
 "pQV" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -66313,6 +66334,13 @@
 	icon_state = "bluecorner"
 	},
 /area/hallway/primary/port)
+"vWx" = (
+/obj/machinery/conveyor/east{
+	id = "QMLoad"
+	},
+/obj/structure/plasticflaps/mining,
+/turf/simulated/floor/plating,
+/area/quartermaster/storage)
 
 (1,1,1) = {"
 aaa
@@ -102148,10 +102176,10 @@ avQ
 awY
 axh
 bvM
-baP
+awF
 axP
+axE
 awo
-agR
 auQ
 bAD
 auQ
@@ -102405,10 +102433,10 @@ avQ
 awY
 axi
 acL
-axE
+awF
 axQ
+baP
 awo
-arA
 awo
 bZT
 bbF
@@ -102659,13 +102687,13 @@ aaa
 aaa
 aaa
 avQ
-awY
+awZ
 axj
 axx
 bvW
 axR
+oYZ
 awo
-agR
 awo
 bZP
 caQ
@@ -102915,14 +102943,14 @@ aaa
 aaa
 aaa
 aaa
-avQ
-aff
-axk
+awn
 avQ
 axk
 bxz
 avQ
-aRe
+bxz
+pix
+avQ
 awo
 caP
 bXe
@@ -103178,8 +103206,8 @@ bxg
 axd
 bxy
 axT
-awn
-aaa
+kNx
+axa
 awo
 bZZ
 bZU
@@ -103427,16 +103455,16 @@ aRe
 agR
 aRe
 awo
+aOM
 agR
-agR
-avQ
-awZ
-axD
+aff
 avQ
 axD
 axS
 avQ
-agR
+axS
+vWx
+avQ
 awo
 awo
 bZY
@@ -103688,8 +103716,8 @@ aaa
 aaa
 aaa
 aaa
-axw
 aaa
+axw
 aaa
 aaa
 aaa
