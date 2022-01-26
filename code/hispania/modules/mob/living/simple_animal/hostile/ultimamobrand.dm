@@ -25,7 +25,23 @@
 	maxHealth += rand(40,1000)
 	move_to_delay = rand(5,10)
 	var/icon_staterand = rand(1,3)
+	var/aggrofaction = rand(1,4) //1 es pasivo, no ataca para nada, 2 es territorial, si te acercas te ataca, 3 es agresivo a cierto rango y 4 es ultra agresivo
 	health = maxHealth
+
+	if(aggrofaction == 1) //pasivo
+		vision_range = 4
+		aggro_vision_range = 0
+		faction -= "hostile"
+		faction += "neutral"
+	if(aggrofaction == 2) //territorial
+		vision_range = 2
+		aggro_vision_range = 2
+	if(aggrofaction == 3) //agresivo
+		vision_range = 4
+		aggro_vision_range = 9
+	if(aggrofaction == 4) //ultra-agresivo
+		vision_range = 9
+		aggro_vision_range = 9
 
 	if(maxHealth < 90) //Mas vida tiene, mas lento es.
 		speed += 1
