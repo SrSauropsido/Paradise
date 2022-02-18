@@ -185,7 +185,7 @@ research holder datum.
 /datum/research/clothelate/DesignHasReqs(datum/design/D)
 	return D && (D.build_type & CRAFTLATHE) && ("initial" in D.category)
 
-/datum/research/autolathe/CanAddDesign2Known(datum/design/design)
+/datum/research/clothelate/CanAddDesign2Known(datum/design/design)
 	// Specifically excludes circuit imprinter and mechfab
 	if(design.locked || !(design.build_type & (AUTOLATHE|PROTOLATHE|CRAFTLATHE)))
 		return FALSE
