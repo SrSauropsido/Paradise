@@ -1,4 +1,4 @@
-/datum/game_mode/anarchy
+/*/datum/game_mode/anarchy
 	name = "Extended Anarchy"
 	config_tag = "anarchy"
 	required_players = 0
@@ -13,3 +13,4 @@
 
 /datum/game_mode/anarchy/post_setup()
 	..()
+*/
