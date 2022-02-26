@@ -332,7 +332,7 @@ GLOBAL_DATUM_INIT(global_prizes, /datum/prizes, new())
 	name = "NFT"
 	desc = "Pun Pun highly detailed on the block-chain."
 	typepath = /obj/item/nft
-	cost = 2000	//max stack + 1 tickets.
+	cost = 2000
 /datum/prize_item/bike
 	name = "Awesome Bike!"
 	desc = "WOAH."
