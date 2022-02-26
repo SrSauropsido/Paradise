@@ -783,6 +783,15 @@
 	build_path = /obj/item/ammo_box/magazine/toy/enforcer
 	category = list("hacked", "Security")
 
+/datum/design/fm10mm
+	name = "Foam Force Ammo Magazine (10mm)"
+	id = "fm10mm"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 500)
+	build_path = /obj/item/ammo_box/magazine/toy/pistol
+	category = list("hacked", "Security")
+
+
 /datum/design/cleaver
 	name = "Butcher's cleaver"
 	id = "cleaver"
