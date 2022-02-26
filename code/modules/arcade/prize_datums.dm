@@ -310,6 +310,7 @@ GLOBAL_DATUM_INIT(global_prizes, /datum/prizes, new())
 	desc = "A replica of a modern pistol that fires foam darts."
 	typepath = /obj/item/gun/projectile/automatic/toy/pistol/enforcer
 	cost = 200
+
 /datum/prize_item/spacesuit
 	name = "Fake Spacesuit"
 	desc = "A replica spacesuit. Not actually spaceworthy."
@@ -333,6 +334,7 @@ GLOBAL_DATUM_INIT(global_prizes, /datum/prizes, new())
 	desc = "Pun Pun highly detailed on the block-chain."
 	typepath = /obj/item/nft
 	cost = 2000
+
 /datum/prize_item/bike
 	name = "Awesome Bike!"
 	desc = "WOAH."
