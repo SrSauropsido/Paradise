@@ -175,6 +175,29 @@
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wttx
 
+// Pistol Mags
+/datum/design/magazines
+	name = "10mm Magazine"
+	desc = "A 10mm universal Magazine"
+	id = "mag_10mm_1"
+	req_tech = list("combat" = 1, "materials" = 1)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 2000)
+	build_path = /obj/item/ammo_box/magazine/m10mm
+	category = list("Weapons")
+
+/datum/design/magazines/mag_45
+	name = "45mm Magazine"
+	desc = "A 45mm universal Magazine"
+	id = "mag_45mm_1"
+	build_path = /obj/item/ammo_box/magazine/m45
+
+/datum/design/magazines/mag_9mm
+	name = "9mm Magazine"
+	desc = "A 9mm universal Magazine"
+	id = "mag_9mm_1"
+	build_path = /obj/item/ammo_box/magazine/enforcer/lethal
+
 /datum/design/rapidsyringe
 	name = "Rapid Syringe Gun"
 	desc = "A gun that fires many syringes."
