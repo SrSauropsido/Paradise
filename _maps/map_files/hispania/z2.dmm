@@ -2877,7 +2877,7 @@
 /area/syndicate_mothership)
 "kL" = (
 /obj/structure/table,
-/obj/item/gun/energy/ionrifle,
+/obj/item/gun/energy/ionrifle/carbine,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
 "kM" = (
@@ -2920,10 +2920,7 @@
 	},
 /area/abductor_ship)
 "kT" = (
-/obj/effect/landmark{
-	name = "Syndicate-Infiltrator";
-	tag = "Commando"
-	},
+/obj/effect/landmark/spawner/syndicate_infiltrator,
 /obj/structure/mirror{
 	pixel_x = -28
 	},
@@ -3407,10 +3404,7 @@
 	},
 /area/centcom/control)
 "mt" = (
-/obj/effect/landmark{
-	name = "Syndicate-Infiltrator";
-	tag = "Commando"
-	},
+/obj/effect/landmark/spawner/syndicate_infiltrator,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
 "mu" = (
@@ -3645,10 +3639,7 @@
 /obj/structure/mirror{
 	pixel_x = -28
 	},
-/obj/effect/landmark{
-	name = "Syndicate-Infiltrator";
-	tag = "Commando"
-	},
+/obj/effect/landmark/spawner/syndicate_infiltrator,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
 "nu" = (
@@ -3860,10 +3851,7 @@
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
 "ob" = (
-/obj/effect/landmark{
-	name = "Syndicate-Infiltrator-Leader";
-	tag = "Commando"
-	},
+/obj/effect/landmark/spawner/syndicate_infiltrator_leader,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
 "oc" = (
@@ -6134,11 +6122,11 @@
 /turf/simulated/floor/plasteel,
 /area/admin)
 "vp" = (
-/obj/machinery/computer/mech_bay_power_console,
 /obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/machinery/computer/mech_bay_power_console,
 /turf/simulated/floor/plasteel,
 /area/admin)
 "vr" = (
@@ -6432,9 +6420,6 @@
 "we" = (
 /turf/space,
 /area/centcom/specops)
-"wg" = (
-/turf/simulated/wall,
-/area/syndicate_mothership)
 "wh" = (
 /obj/machinery/recharge_station/upgraded,
 /turf/simulated/floor/plasteel/grimy,
@@ -6710,8 +6695,8 @@
 /area/centcom/evac)
 "wL" = (
 /obj/structure/rack,
-/obj/item/gun/projectile/automatic/fullauto/twomode/proto,
-/obj/item/gun/projectile/automatic/fullauto/twomode/proto{
+/obj/machinery/computer/telescience/proto,
+/obj/machinery/computer/telescience/proto{
 	pixel_x = 3;
 	pixel_y = -3
 	},
@@ -6754,8 +6739,10 @@
 /turf/simulated/floor/carpet,
 /area/admin)
 "wS" = (
-/obj/machinery/computer/secure_data,
 /obj/item/paper/sop,
+/obj/machinery/computer/secure_data{
+	dir = 8
+	},
 /turf/simulated/floor/carpet,
 /area/admin)
 "wT" = (
@@ -6783,11 +6770,15 @@
 /turf/simulated/floor/carpet,
 /area/admin)
 "wY" = (
-/obj/machinery/computer/communications,
+/obj/machinery/computer/communications{
+	dir = 4
+	},
 /turf/simulated/floor/carpet,
 /area/admin)
 "wZ" = (
-/obj/machinery/computer/med_data,
+/obj/machinery/computer/med_data{
+	dir = 8
+	},
 /turf/simulated/floor/carpet,
 /area/admin)
 "xa" = (
@@ -7163,10 +7154,7 @@
 /turf/simulated/floor/plasteel,
 /area/admin)
 "ym" = (
-/obj/effect/landmark{
-	name = "aroomwarp";
-	tag = ""
-	},
+/obj/effect/landmark/spawner/aroomwarp,
 /turf/simulated/floor/plasteel,
 /area/admin)
 "yn" = (
@@ -7260,7 +7248,9 @@
 	},
 /area/trader_station/sol)
 "yJ" = (
-/obj/machinery/computer/communications,
+/obj/machinery/computer/communications{
+	dir = 1
+	},
 /turf/simulated/floor/plasteel,
 /area/admin)
 "yK" = (
@@ -7277,7 +7267,9 @@
 	},
 /area/trader_station/sol)
 "yP" = (
-/obj/machinery/computer/atmos_alert,
+/obj/machinery/computer/atmos_alert{
+	dir = 1
+	},
 /turf/simulated/floor/plasteel,
 /area/admin)
 "yQ" = (
@@ -7287,12 +7279,15 @@
 	},
 /area/centcom/evac)
 "yR" = (
-/obj/machinery/computer/message_monitor,
 /obj/item/paper/monitorkey,
+/obj/machinery/computer/message_monitor{
+	dir = 1
+	},
 /turf/simulated/floor/plasteel,
 /area/admin)
 "yS" = (
 /obj/machinery/computer/account_database{
+	dir = 1;
 	name = "Admin Accounts Database"
 	},
 /turf/simulated/floor/plasteel,
@@ -7304,7 +7299,9 @@
 /turf/simulated/floor/plating,
 /area/centcom/evac)
 "yU" = (
-/obj/machinery/computer/secure_data,
+/obj/machinery/computer/secure_data{
+	dir = 1
+	},
 /turf/simulated/floor/plasteel,
 /area/admin)
 "yV" = (
@@ -7830,7 +7827,9 @@
 /turf/simulated/floor/plasteel,
 /area/admin)
 "AS" = (
-/obj/machinery/computer/teleporter,
+/obj/machinery/computer/teleporter{
+	dir = 1
+	},
 /turf/simulated/floor/plasteel,
 /area/admin)
 "AT" = (
@@ -7971,9 +7970,7 @@
 /obj/structure/chair/comfy/red{
 	dir = 1
 	},
-/obj/effect/landmark{
-	name = "Syndicate Officer"
-	},
+/obj/effect/landmark/spawner/syndicateofficer,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
 "Bu" = (
@@ -7986,7 +7983,9 @@
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
 "Bv" = (
-/obj/machinery/computer/camera_advanced,
+/obj/machinery/computer/camera_advanced{
+	dir = 8
+	},
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
 "Bw" = (
@@ -7995,14 +7994,12 @@
 /area/syndicate_mothership)
 "Bx" = (
 /obj/structure/chair/stool,
-/obj/effect/landmark{
-	name = "Syndicate-Commando";
-	tag = "Commando"
-	},
+/obj/effect/landmark/spawner/syndicate_commando,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership)
 "By" = (
 /obj/machinery/computer/shuttle/syndicate{
+	dir = 1;
 	name = "Nuclear Operatives Shuttle Console"
 	},
 /turf/simulated/floor/plasteel/dark,
@@ -9282,9 +9279,7 @@
 /area/shuttle/escape)
 "Ie" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark{
-	name = "syndieprisonwarp"
-	},
+/obj/effect/landmark/spawner/syndieprisonwarp,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership/jail)
 "Ig" = (
@@ -9932,6 +9927,10 @@
 /obj/structure/chair/comfy/shuttle,
 /turf/simulated/floor/mineral/plastitanium/red/brig,
 /area/shuttle/escape)
+"Lb" = (
+/obj/item/toy/figure/crew/syndie,
+/turf/simulated/floor/plating/asteroid/snow/airless,
+/area/syndicate_mothership)
 "Ld" = (
 /obj/item/claymore,
 /turf/simulated/floor/wood,
@@ -11418,7 +11417,9 @@
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership/jail)
 "Sl" = (
-/obj/machinery/computer/shuttle/sit,
+/obj/machinery/computer/shuttle/sit{
+	dir = 1
+	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate_sit)
 "Sn" = (
@@ -11459,7 +11460,9 @@
 /turf/simulated/floor/plasteel,
 /area/shuttle/escape)
 "Sx" = (
-/obj/machinery/computer/shuttle/sst,
+/obj/machinery/computer/shuttle/sst{
+	dir = 1
+	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate_elite)
 "SB" = (
@@ -11739,7 +11742,9 @@
 /turf/simulated/floor/plasteel/dark,
 /area/centcom/specops)
 "Ui" = (
-/obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/sst,
+/obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/sst{
+	dir = 1
+	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate_elite)
 "Uj" = (
@@ -12194,14 +12199,14 @@
 /turf/simulated/wall/mineral/titanium,
 /area/shuttle/escape)
 "Xd" = (
-/obj/effect/landmark{
-	name = "Nuclear-Bomb"
-	},
+/obj/effect/landmark/spawner/nuclear_bomb,
 /obj/machinery/light/spot,
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate)
 "Xe" = (
-/obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/sit,
+/obj/machinery/computer/camera_advanced/shuttle_docker/syndicate/sit{
+	dir = 1
+	},
 /turf/simulated/floor/mineral/plastitanium/red,
 /area/shuttle/syndicate_sit)
 "Xf" = (
@@ -12586,9 +12591,7 @@
 /turf/simulated/floor/beach/sand,
 /area/tdome/arena_source)
 "YO" = (
-/obj/effect/landmark{
-	name = "syndieprisonwarp"
-	},
+/obj/effect/landmark/spawner/syndieprisonwarp,
 /turf/simulated/floor/plasteel/dark,
 /area/syndicate_mothership/jail)
 "YP" = (
@@ -49347,7 +49350,7 @@ Ro
 Ro
 Ro
 Ro
-wg
+Ro
 aN
 aN
 aN
@@ -49604,7 +49607,7 @@ ag
 ag
 ag
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -49861,7 +49864,7 @@ Xw
 RH
 RH
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -50118,7 +50121,7 @@ TG
 Yn
 OI
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -50375,7 +50378,7 @@ ul
 Yn
 Su
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -50632,7 +50635,7 @@ CG
 Yn
 SP
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -50889,7 +50892,7 @@ RH
 RH
 bG
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -51146,7 +51149,7 @@ ag
 ag
 ag
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -51403,7 +51406,7 @@ RH
 RH
 ag
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -51660,7 +51663,7 @@ Yn
 OI
 ag
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -51917,7 +51920,7 @@ Yn
 Su
 ag
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -52174,7 +52177,7 @@ Yn
 SP
 ag
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -52431,7 +52434,7 @@ RH
 RH
 ag
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -52688,7 +52691,7 @@ ag
 ag
 ag
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -52945,7 +52948,7 @@ RH
 RH
 GL
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -53202,7 +53205,7 @@ KD
 Yn
 OI
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -53459,7 +53462,7 @@ ED
 Yn
 Su
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -53687,7 +53690,7 @@ ag
 ag
 ag
 ag
-ag
+Lb
 eU
 hn
 hn
@@ -53716,7 +53719,7 @@ hT
 Yn
 SP
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -53973,7 +53976,7 @@ Tb
 RH
 RH
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -54230,7 +54233,7 @@ ag
 ag
 ag
 ag
-wg
+Ro
 aN
 aN
 aN
@@ -54485,9 +54488,9 @@ ae
 ag
 ag
 ag
+Lb
 ag
-ag
-wg
+Ro
 aN
 aN
 aN
@@ -54741,10 +54744,10 @@ ag
 ag
 ag
 ag
-ag
+Lb
 XK
-ag
-wg
+Lb
+Ro
 aN
 aN
 aN
@@ -54999,9 +55002,9 @@ ag
 ag
 ag
 ag
+Lb
 ag
-ag
-wg
+Ro
 aN
 aN
 aN
@@ -55258,7 +55261,7 @@ Ro
 Ro
 Ro
 Ro
-wg
+Ro
 aN
 aN
 aN

@@ -995,6 +995,12 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "magistrate"
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR
 
+///Conservamos mecanico
+/area/escapepodbay
+	name = "\improper Escape Shuttle Hallway Podbay"
+	icon_state = "escape"
+
+///Conservamos mecanico
 /area/clownoffice
 	name = "\improper Clown's Office"
 	icon_state = "clown_office"
@@ -1461,6 +1467,12 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Warden's Office"
 	icon_state = "Warden"
 	sound_environment = SOUND_AREA_SMALL_SOFTFLOOR
+
+//Conservamos brigphys
+/area/security/medbay
+	name = "\improper Security Medbay"
+	icon_state = "security_medbay"
+///Conservamos brigphys
 
 /area/security/armoury
 	name = "\improper Armory"
@@ -2235,6 +2247,8 @@ GLOBAL_LIST_INIT(the_station_areas, list(
 	/area/toxins,
 	/area/storage,
 	/area/construction,
+	/area/escapepodbay, ///Conservamos mecanico
+	/area/security/medbay, ///Conservamos brig physician
 	/area/ai_monitored/storage/eva, //do not try to simplify to "/area/ai_monitored" --rastaf0
 	/area/ai_monitored/storage/secure,
 	/area/ai_monitored/storage/emergency,
