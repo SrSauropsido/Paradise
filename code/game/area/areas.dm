@@ -76,6 +76,8 @@
 	///Used to decide what the maximum time between ambience is
 	var/max_ambience_cooldown = 90 SECONDS
 
+	var/area/area_limited_icon_smoothing
+
 /area/New(loc, ...)
 	if(!there_can_be_many) // Has to be done in New else the maploader will fuck up and find subtypes for the parent
 		GLOB.all_unique_areas[type] = src
@@ -508,6 +510,9 @@
 	if(istype(M,/mob/living/carbon/human/))  // Only humans can wear magboots, so we give them a chance to.
 		if(istype(M.shoes, /obj/item/clothing/shoes/magboots) && (M.shoes.flags & NOSLIP))
 			return
+
+	if(M.dna.species.spec_thunk(M)) //Species level thunk overrides
+		return
 
 	if(M.buckled) //Cam't fall down if you are buckled
 		return
