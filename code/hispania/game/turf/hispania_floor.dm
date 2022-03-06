@@ -17,16 +17,21 @@
 	name = "ice sheet"
 	desc = "A sheet of solid ice. Looks slippery."
 	icon = 'icons/hispania/turf/ice_turfs.dmi'
+	icon_state = "ice_turf-0"
 	oxygen = 10
 	nitrogen = 82
 	temperature = 120
-	baseturf = /turf/simulated/floor/plating/asteroid/snow/naga
-	canSmoothWith = list(/turf/simulated/floor/plating/ice_naga/smooth, /turf/simulated/floor/plating/ice_naga)
+	baseturf = /turf/simulated/floor/plating/ice_naga
 
 /turf/simulated/floor/plating/ice_naga/smooth
-	icon_state = "smooth"
-	smooth = SMOOTH_MORE | SMOOTH_BORDER
-	canSmoothWith = list(/turf/simulated/floor/plating/ice_naga/smooth, /turf/simulated/floor/plating/ice_naga)
+	icon_state = "ice_turf-255"
+	base_icon_state = "ice_turf"
+	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
+	canSmoothWith = list(SMOOTH_GROUP_TURF, SMOOTH_GROUP_FLOOR_NAGA)
+	smoothing_groups = list(SMOOTH_GROUP_FLOOR_NAGA)
+
+/turf/simulated/floor/plating/ice_naga/try_replace_tile(obj/item/stack/tile/T, mob/user, params)
+	return
 
 /turf/simulated/floor/plating/ice_naga/Initialize(mapload)
 	. = ..()

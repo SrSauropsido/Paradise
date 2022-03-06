@@ -170,6 +170,11 @@
 /mob/living/carbon/human/stok/Initialize(mapload)
 	. = ..(mapload, /datum/species/monkey/unathi)
 
+/mob/living/carbon/human/moth/Initialize(mapload)
+	. = ..(mapload, /datum/species/moth)
+	if(!body_accessory)
+		change_body_accessory("Plain Wings")
+
 /mob/living/carbon/human/Stat()
 	..()
 	statpanel("Status")
@@ -206,10 +211,10 @@
 			if(mind.changeling)
 				stat("Chemical Storage", "[mind.changeling.chem_charges]/[mind.changeling.chem_storage]")
 				stat("Absorbed DNA", mind.changeling.absorbedcount)
-
-			if(mind.vampire)
-				stat("Total Blood", "[mind.vampire.bloodtotal]")
-				stat("Usable Blood", "[mind.vampire.bloodusable]")
+			var/datum/antagonist/vampire/V = mind.has_antag_datum(/datum/antagonist/vampire)
+			if(V)
+				stat("Total Blood", "[V.bloodtotal]")
+				stat("Usable Blood", "[V.bloodusable]")
 	if(istype(loc, /obj/spacepod)) // Spacdpods!
 		var/obj/spacepod/S = loc
 		stat("Spacepod Charge", "[istype(S.battery) ? "[(S.battery.charge / S.battery.maxcharge) * 100]" : "No cell detected"]")
@@ -399,7 +404,7 @@
 				dat += "<font color=grey>Right (Empty)</font>"
 			dat += "</A></td></tr>"
 			dat += "<tr><td>&nbsp;&#8627;<B>ID:</B></td><td><A href='?src=[UID()];item=[slot_wear_id]'>[(wear_id && !(wear_id.flags&ABSTRACT)) ? html_encode(wear_id) : "<font color=grey>Empty</font>"]</A></td></tr>"
-			dat += "<tr><td>&nbsp;&#8627;<B>PDA:</B></td><td><A href='?src=[UID()];item=[slot_wear_pda]'>[(wear_pda && !(wear_pda.flags&ABSTRACT)) ? html_encode(wear_pda) : "<font color=grey>Empty</font>"]</A></td></tr>"
+			dat += "<tr><td>&nbsp;&#8627;<B>PDA:</B></td><td><A href='?src=[UID()];item=[slot_wear_pda]'>[(wear_pda && !(wear_pda.flags&ABSTRACT)) ? "Full" : "<font color=grey>Empty</font>"]</A></td></tr>"
 
 			if(istype(w_uniform, /obj/item/clothing/under))
 				var/obj/item/clothing/under/U = w_uniform
@@ -1259,6 +1264,8 @@
 
 	tail = dna.species.tail
 
+	wing = dna.species.wing
+
 	maxHealth = dna.species.total_health
 
 	if(dna.species.language)
@@ -1390,7 +1397,10 @@
 
 	m_styles = DEFAULT_MARKING_STYLES //Wipes out markings, setting them all to "None".
 	m_colours = DEFAULT_MARKING_COLOURS //Defaults colour to #00000 for all markings.
-	body_accessory = null
+	if(dna.species.bodyflags & HAS_BODY_ACCESSORY)
+		body_accessory = GLOB.body_accessory_by_name[dna.species.default_bodyacc]
+	else
+		body_accessory = null
 
 	dna.real_name = real_name
 
@@ -1949,6 +1959,11 @@ Eyes need to have significantly high darksight to shine unless the mob has the X
 
 /mob/living/carbon/human/proc/get_perceived_trauma()
 	return min(health, maxHealth - getStaminaLoss())
+
+/mob/living/carbon/human/WakeUp(updating = TRUE)
+	if(dna.species.spec_WakeUp(src))
+		return
+	..()
 
 /**
   * Helper to get the mobs runechat colour span

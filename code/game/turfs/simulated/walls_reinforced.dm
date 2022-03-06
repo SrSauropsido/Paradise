@@ -2,7 +2,9 @@
 	name = "reinforced wall"
 	desc = "A huge chunk of reinforced metal used to separate rooms."
 	icon = 'icons/turf/walls/reinforced_wall.dmi'
-	icon_state = "r_wall"
+	icon_state = "reinforced_wall-0"
+	base_icon_state = "reinforced_wall"
+	smoothing_flags = SMOOTH_BITMASK
 	opacity = 1
 	density = 1
 	explosion_block = 2
@@ -16,11 +18,6 @@
 
 	var/d_state = RWALL_INTACT
 	var/can_be_reinforced = 1
-
-/turf/simulated/wall/r_wall/Initialize(mapload)
-	var/nombre_estacion = "[station_name()]"
-	if((nombre_estacion == "NSS Retro Hispania") && (icon == 'icons/turf/walls/reinforced_wall.dmi'))
-		icon = 'icons/hispania/retro/reinforced_wall_r.dmi'
 
 /turf/simulated/wall/r_wall/examine(mob/user)
 	. = ..()
@@ -74,24 +71,10 @@
 					return
 				d_state = RWALL_INTACT
 				update_icon()
-				queue_smooth_neighbors(src)
+				QUEUE_SMOOTH_NEIGHBORS(src)
 				to_chat(user, "<span class='notice'>You repair the last of the damage.</span>")
 			return
-			// Upgrading To Coate
-	else if(d_state == RWALL_INTACT && istype(I, /obj/item/stack/sheet/plasteel))
-		var/obj/item/stack/sheet/plasteel/MS = I
-		if(!can_be_reinforced)
-			to_chat(user, "<span class='notice'>The wall is already coated!</span>")
-		else if (can_be_reinforced == 1)
-			to_chat(user, "<span class='notice'>You begin adding an additional layer of coating to the wall with \a [MS].</span>")
-			if(do_after(user, 40, target = src))
-				if(!MS.use(2))
-					to_chat(user, "<span class='warning'>You don't have enough plasteel for that!</span>")
-				else
-					to_chat(user, "<span class='notice'>You add an additional layer of coating to the wall!</span>")
-					ChangeTurf(/turf/simulated/wall/r_wall/coated)
-					update_icon()
-					can_be_reinforced = 0
+	else
 		return ..()
 
 /turf/simulated/wall/r_wall/welder_act(mob/user, obj/item/I)
@@ -232,11 +215,12 @@
 
 	if(d_state)
 		icon_state = "r_wall-[d_state]"
-		smooth = SMOOTH_FALSE
-		clear_smooth_overlays()
+		smoothing_flags = NONE
 	else
-		smooth = SMOOTH_TRUE
-		icon_state = ""
+		smoothing_flags = SMOOTH_BITMASK
+		icon_state = "[base_icon_state]-[smoothing_junction]"
+		QUEUE_SMOOTH_NEIGHBORS(src)
+		QUEUE_SMOOTH(src)
 
 /turf/simulated/wall/r_wall/devastate_wall()
 	new sheet_type(src, sheet_amount)

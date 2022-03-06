@@ -5,7 +5,6 @@
 	clothes_req = 1
 	invocation = "TEMPUS FUGIT"
 	invocation_type = "shout"
-	range = 0
 	cooldown_min = 20
 	summon_amt = 1
 	action_icon_state = "time"

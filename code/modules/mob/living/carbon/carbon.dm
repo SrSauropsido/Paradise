@@ -501,6 +501,8 @@ GLOBAL_LIST_INIT(ventcrawl_machinery, list(/obj/machinery/atmospherics/unary/ven
 					var/failed = 0
 					if(istype(I, /obj/item/implant))
 						continue
+					if(istype(I, /obj/item/reagent_containers/food/pill/patch))
+						continue
 					if(I.flags & ABSTRACT)
 						continue
 					else
@@ -511,7 +513,9 @@ GLOBAL_LIST_INIT(ventcrawl_machinery, list(/obj/machinery/atmospherics/unary/ven
 						return
 
 			visible_message("<b>[src] scrambles into the ventilation ducts!</b>", "You climb into the ventilation system.")
-			src.loc = vent_found
+			var/old_loc = loc
+			loc = vent_found
+			Moved(old_loc, get_dir(old_loc, loc), FALSE)
 			add_ventcrawl(vent_found)
 
 	else

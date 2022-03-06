@@ -21,7 +21,7 @@
 				photosync()
 				to_chat(src, "<b>Laws synced with AI, be sure to note any changes.</b>")
 				// TODO: Update to new antagonist system.
-				if(mind && mind.special_role == SPECIAL_ROLE_TRAITOR && mind.original == src)
+				if(mind && mind.special_role == SPECIAL_ROLE_TRAITOR && mind.is_original_mob(src))
 					to_chat(src, "<b>Recuerda, tu IA no comparte ni conoce tu ley 0.")
 		else
 			to_chat(src, "<b>No AI selected to sync laws with, disabling lawsync protocol.</b>")
@@ -32,7 +32,7 @@
 	// TODO: Update to new antagonist system.
 	if (shell) //AI shell
 		to_chat(who, "<b>Recuerda, eres una cáscara de borg controlada por una IA, Otras IAs pueden ser ignoradas.</b>")
-	else if(mind && (mind.special_role == SPECIAL_ROLE_TRAITOR && mind.original == src) && connected_ai)
+	else if(mind && (mind.special_role == SPECIAL_ROLE_TRAITOR && mind.is_original_mob(src)) && connected_ai)
 		to_chat(who, "<b>Recuerda, [connected_ai.name] es tecnicamente tu maestro, pero tus objetivos van por encima de este.</b>")
 	else if(connected_ai)
 		to_chat(who, "<b>Recuerda, [connected_ai.name] es tu maestro, otras IAs pueden ser ignoradas.</b>")

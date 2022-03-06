@@ -128,6 +128,9 @@
 	/// The client's karma holder
 	var/datum/karma_holder/karmaholder
 
+	/// The client's job ban holder
+	var/datum/job_ban_holder/jbh = new()
+
 /client/vv_edit_var(var_name, var_value)
 	switch(var_name)
 		// I know we will never be in a world where admins are editing client vars to let people bypass TOS
@@ -139,5 +142,8 @@
 			return FALSE
 		// or this
 		if("karmaholder")
+			return FALSE
+		// or this
+		if("jbh")
 			return FALSE
 	return ..()

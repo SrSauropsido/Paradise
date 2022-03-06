@@ -12,8 +12,7 @@
 	department_head = list("Captain")
 	req_admin_notify = 1
 	minimal_player_age = 30
-	exp_requirements = 2880
-	exp_type = EXP_TYPE_SILICON
+	exp_map = list(EXP_TYPE_SILICON = 300)
 
 /datum/job/ai/equip(mob/living/carbon/human/H)
 	if(!H)
@@ -35,9 +34,8 @@
 	supervisors = "your laws and the AI"	//Nodrak
 	department_head = list("AI")
 	selection_color = "#ddffdd"
-	minimal_player_age = 15
-	exp_requirements = 600
-	exp_type = EXP_TYPE_CREW
+	minimal_player_age = 21
+	exp_map = list(EXP_TYPE_CREW = 300)
 	alt_titles = list("Robot")
 
 /datum/job/cyborg/equip(mob/living/carbon/human/H)

@@ -5155,11 +5155,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/sortjunction{
+/obj/structure/disposalpipe/junction{
 	dir = 1;
-	icon_state = "pipe-j2s";
-	name = "Brig Physician";
-	sortType = 24
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/plasteel{
 	dir = 8;
@@ -10406,13 +10404,6 @@
 "auq" = (
 /turf/simulated/wall/mineral/titanium,
 /area/shuttle/pod_3)
-"aur" = (
-/obj/structure/filingcabinet/employment,
-/turf/simulated/floor/plasteel{
-	dir = 2;
-	icon_state = "cult"
-	},
-/area/lawoffice)
 "aut" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -126676,7 +126667,7 @@ aIo
 aoa
 aKw
 asO
-aur
+aKs
 avQ
 axp
 ayH
