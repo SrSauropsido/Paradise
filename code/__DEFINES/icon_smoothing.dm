@@ -70,7 +70,7 @@ DEFINE_BITFIELD(smoothing_flags, list(
 
 #define SMOOTH_GROUP_GRASS S_TURF(31)					///turf/simulated/floor/grass
 #define SMOOTH_GROUP_JUNGLE_GRASS S_TURF(32)			///turf/simulated/floor/grass/jungle
-#define SMOOTH_GROUP_FLOOR_ICE_NAGA S_TURF(33)			///turf/simulated/floor/plating/ice_naga
+#define SMOOTH_GROUP_FLOOR_NAGA S_TURF(33)			///turf/simulated/floor/plating/ice_naga
 
 #define MAX_S_TURF SMOOTH_GROUP_FLOOR_ICE_NAGA //Always match this value with the one above it.
 
