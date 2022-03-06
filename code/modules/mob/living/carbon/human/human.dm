@@ -211,8 +211,8 @@
 			if(mind.changeling)
 				stat("Chemical Storage", "[mind.changeling.chem_charges]/[mind.changeling.chem_storage]")
 				stat("Absorbed DNA", mind.changeling.absorbedcount)
-				var/datum/antagonist/vampire/V = mind.has_antag_datum(/datum/antagonist/vampire)
-				if(V)
+			var/datum/antagonist/vampire/V = mind.has_antag_datum(/datum/antagonist/vampire)
+			if(V)
 				stat("Total Blood", "[V.bloodtotal]")
 				stat("Usable Blood", "[V.bloodusable]")
 	if(istype(loc, /obj/spacepod)) // Spacdpods!

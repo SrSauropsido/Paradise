@@ -40,3 +40,12 @@ deberan tener una linea de codigo demas para que funcionen "hispania_icon = TRUE
 	icon_state = "pod_pilot"
 	item_state = "pod_pilot"
 	item_color = "pod_pilot"
+
+/obj/item/clothing/under/rank/security/brigphys
+	name = "brig physician's jumpsuit"
+	desc = "Jumpsuit for Brig Physician it has both medical and security protection."
+	icon_state = "brig_phys"
+	item_state = "brig_phys"
+	item_color = "brig_phys"
+	permeability_coefficient = 0.50
+	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0, fire = 30, acid = 30)

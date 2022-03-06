@@ -25,7 +25,7 @@
 
 /turf/simulated/floor/plating/ice_naga/smooth
 	icon_state = "smooth"
-	smooth = SMOOTH_MORE | SMOOTH_BORDER
+	smoothing_flags = SMOOTH_BITMASK | SMOOTH_BORDER
 	canSmoothWith = list(/turf/simulated/floor/plating/ice_naga/smooth, /turf/simulated/floor/plating/ice_naga)
 
 /turf/simulated/floor/plating/ice_naga/Initialize(mapload)

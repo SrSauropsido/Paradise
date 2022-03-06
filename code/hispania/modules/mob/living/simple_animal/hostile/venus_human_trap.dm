@@ -8,7 +8,6 @@
 	layer = MOB_LAYER + 0.9
 	opacity = 0
 	canSmoothWith = list()
-	smooth = SMOOTH_FALSE
 	var/growth_time = 1200
 
 /obj/structure/alien/resin/flower_bud_enemy/New()

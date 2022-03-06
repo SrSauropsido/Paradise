@@ -302,18 +302,6 @@
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "vial"
 
-/obj/item/wendigo_blood/attack_self(mob/living/user)
-	if(!ishuman(user))
-		return
-	var/mob/living/carbon/human/human_user = user
-	if(!human_user.mind)
-		return
-	to_chat(human_user, "<span class='danger'>Power courses through you! You can now shift your form at will.</span>")
-	var/obj/effect/proc_holder/spell/targeted/shapeshift/polar_bear/transformation_spell = new
-	human_user.mind.AddSpell(transformation_spell)
-	playsound(human_user.loc, 'sound/items/drink.ogg', rand(10,50), TRUE)
-	qdel(src)
-
 /mob/living/simple_animal/hostile/bear/wendigo_version //¿Alguien si quiera puede matarlo?
 	name = "Polar Bear"
 	maxHealth = 500
@@ -321,11 +309,21 @@
 	melee_damage_lower = 50
 	melee_damage_upper = 50
 	icon = 'icons/hispania/mob/animals.dmi'
-/obj/effect/proc_holder/spell/targeted/shapeshift/polar_bear
+/obj/effect/proc_holder/spell/shapeshift/polar_bear
 	name = "Polar Bear Form"
 	desc = "Take on the shape of a polar bear."
 	invocation = "RAAAAAAAAWR!"
-	shapeshift_type = /mob/living/simple_animal/hostile/bear/wendigo_version
+	current_shapes = list(/mob/living/simple_animal/hostile/bear/wendigo_version)
+	current_casters = list()
+	possible_shapes = list(/mob/living/simple_animal/hostile/bear/wendigo_version)
+
+/obj/effect/proc_holder/spell/shapeshift/dragon/Shapeshift(mob/living/caster)
+	caster.visible_message("<span class='danger'>[caster] screams in agony as bones and claws erupt out of their flesh!</span>",
+		"<span class='danger'>You begin channeling the transformation.</span>")
+	if(!do_after(caster, 5 SECONDS, FALSE, caster))
+		to_chat(caster, "<span class='warning'>You lose concentration of the spell!</span>")
+		return
+	return ..()
 
 /obj/item/crusher_trophy/wendigo_horn //OP SHIT
 	name = "wendigo horn"

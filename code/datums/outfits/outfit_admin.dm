@@ -693,7 +693,6 @@
 		/obj/item/clothing/mask/gas/explorer/marines = 1,
 		/obj/item/ammo_box/magazine/m50 = 3
 	)
-	is_solgov_lieutenant = TRUE
 
 /datum/outfit/admin/solgov/elite
 	name = "Solar Federation Specops Marine"
@@ -702,7 +701,7 @@
 	head = null
 	mask = /obj/item/clothing/mask/gas/explorer/marines
 	belt = /obj/item/storage/belt/military/assault/marines/elite/full
-	l_hand = /obj/item/gun/projectile/automatic/ar
+	l_hand = /obj/item/gun/projectile/automatic/fullauto/ar
 	backpack_contents = list(
 		/obj/item/clothing/shoes/magboots/advance = 1,
 		/obj/item/whetstone = 1,
