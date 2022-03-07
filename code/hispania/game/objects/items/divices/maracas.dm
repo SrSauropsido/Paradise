@@ -17,7 +17,7 @@
 		to_chat(user,"<span class='danger'>You disable the safety thermal controls of the maraca. Be careful when you throw it.</span>")
 		emagged = TRUE
 
-/obj/item/maracas/throw_impact(atom/hit_atom, var/speed, var/mob/user)
+/obj/item/maracas/throw_impact(atom/hit_atom,speed, mob/user)
 	if(emagged)
 		log_game("[key_name(user)] triggered a explosion at [COORD(loc)]")
 		add_attack_logs(user, src, "throw a maraca")
