@@ -17,6 +17,11 @@
 				satchel = /obj/item/storage/backpack/satchel_hyd
 				dufflebag = /obj/item/storage/backpack/duffel/hydro
 
+/datum/outfit/job/librarian
+	backpack_contents = list(
+		/obj/item/videocam = 1,
+		/obj/item/melee/librarian_whip = 1)
+
 // Indumentaria Cadaveres de TSF Discovery //
 /datum/outfit/sol_gov/solgov_no_gun
 	name = "Solar Federation Marine (No Gun)"
