@@ -69,3 +69,22 @@
 			else
 				A.take_damage(120, damtype, "melee", 1)
 		ramming = FALSE
+
+/obj/item/melee/librarian_whip
+	name = "librarian's whip"
+	desc = "Somewhat eccentric and outdated, it still stings like hell to be hit by."
+	icon = 'icons/hispania/obj/items.dmi'
+	icon_state = "succubuswhip"
+	item_state = "chain"
+	slot_flags = slot_belt
+	force = 15
+	w_class = WEIGHT_CLASS_NORMAL
+	attack_verb = list("flogs", "whips", "lashes", "disciplines")
+	hitsound = 'sound/weapons/whip.ogg'
+
+/obj/item/melee/librarian_whip/afterattack(atom/target, mob/user, proximity)
+	. = ..()
+	if(ishuman(target) && proximity)
+		var/mob/living/carbon/human/human_target = target
+		human_target.drop_item()
+		human_target.visible_message("<span class='danger'>[user] disarms [human_target]!</span>", "<span class='danger'>[user] disarmed you!</span>")

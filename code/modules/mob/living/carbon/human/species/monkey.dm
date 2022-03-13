@@ -29,7 +29,7 @@
 	male_laughs_sound = list('sound/hispania/voice/human/silence.ogg')//Hispania Laughs
 	female_laughs_sound = list('sound/hispania/voice/human/silence.ogg')//Hispania Laughs
 	tail = "chimptail"
-	bodyflags = HAS_TAIL
+	bodyflags = HAS_TAIL | HAS_BODYACC_COLOR
 	reagent_tag = PROCESS_ORG
 	//Has standard darksight of 2.
 
@@ -149,7 +149,7 @@
 	base_color = "#000000"
 	reagent_tag = PROCESS_ORG
 
-	bodyflags = HAS_TAIL
+	bodyflags = HAS_TAIL | HAS_BODYACC_COLOR
 
 	has_organ = list(
 		"heart" =    /obj/item/organ/internal/heart/unathi,

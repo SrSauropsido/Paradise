@@ -242,7 +242,7 @@
 		/obj/item/organ/internal/cyberimp/eyes/hud/security,
 		/obj/item/organ/internal/eyes/cybernetic/xray,
 		/obj/item/organ/internal/cyberimp/brain/anti_stun/hardened,
-		/obj/item/organ/internal/cyberimp/chest/nutriment/plus,
+		/obj/item/organ/internal/cyberimp/chest/nutriment/plus/hardened,
 		/obj/item/organ/internal/cyberimp/arm/combat/centcom
 	)
 
@@ -324,13 +324,6 @@
 		/obj/item/flash = 1,
 		/obj/item/gun/energy/noisecannon = 1
 	)
-
-/datum/outfit/admin/vox/equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	if(isvoxarmalis(H))
-		. = ..()
-	else
-		H.equip_vox_raider()
-		H.regenerate_icons()
 
 /datum/outfit/admin/vox/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	. = ..()
@@ -659,8 +652,14 @@
 		/obj/item/storage/box/responseteam = 1,
 		/obj/item/ammo_box/magazine/m556 = 3,
 		/obj/item/clothing/shoes/magboots = 1,
-		/obj/item/gun/projectile/automatic/pistol/m1911 = 1,
-		/obj/item/ammo_box/magazine/m45 = 2
+		/obj/item/whetstone = 1,
+		/obj/item/clothing/mask/gas/explorer/marines = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/survival = 1
+	)
+	cybernetic_implants = list(
+		/obj/item/organ/internal/cyberimp/arm/flash,
+		/obj/item/organ/internal/cyberimp/chest/nutriment/hardened,
+		/obj/item/organ/internal/cyberimp/eyes/hud/security
 	)
 	var/is_tsf_lieutenant = FALSE
 
@@ -688,8 +687,48 @@
 	l_hand = null
 	l_pocket = /obj/item/pinpointer/advpinpointer
 	backpack_contents = list(
-		/obj/item/storage/box/responseteam = 1,
-		/obj/item/melee/classic_baton/telescopic = 1,
+		/obj/item/storage/box/handcuffs = 1,
+		/obj/item/clothing/shoes/magboots/advance = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/survival = 1,
+		/obj/item/clothing/mask/gas/explorer/marines = 1,
+		/obj/item/ammo_box/magazine/m50 = 3
+	)
+
+/datum/outfit/admin/solgov/elite
+	name = "Solar Federation Specops Marine"
+	uniform = /obj/item/clothing/under/solgov/elite
+	suit = /obj/item/clothing/suit/space/hardsuit/ert/solgov
+	head = null
+	mask = /obj/item/clothing/mask/gas/explorer/marines
+	belt = /obj/item/storage/belt/military/assault/marines/elite/full
+	l_hand = /obj/item/gun/projectile/automatic/fullauto/ar
+	backpack_contents = list(
+		/obj/item/clothing/shoes/magboots/advance = 1,
+		/obj/item/whetstone = 1,
+		/obj/item/reagent_containers/hypospray/autoinjector/survival = 1
+	)
+	cybernetic_implants = list(
+		/obj/item/organ/internal/cyberimp/eyes/hud/security,
+		/obj/item/organ/internal/cyberimp/chest/nutriment/hardened,
+		/obj/item/organ/internal/cyberimp/brain/anti_stun/hardened,
+		/obj/item/organ/internal/cyberimp/arm/flash,
+		/obj/item/organ/internal/eyes/cybernetic/shield
+	)
+
+/datum/outfit/admin/solgov/elite/lieutenant
+	name = "Solar Federation Specops Lieutenant"
+	uniform = /obj/item/clothing/under/solgov/command/elite
+	suit = /obj/item/clothing/suit/space/hardsuit/ert/solgov/command
+	head = null
+	mask = /obj/item/clothing/mask/gas/explorer/marines
+	glasses = /obj/item/clothing/glasses/night
+	belt = /obj/item/melee/baton/loaded
+	l_hand = null
+	suit_store = /obj/item/gun/projectile/automatic/pistol/deagle
+	l_pocket = /obj/item/pinpointer/advpinpointer
+	l_ear = /obj/item/radio/headset/ert/alt/commander/solgov
+	backpack_contents = list(
+		/obj/item/storage/box/handcuffs = 1,
 		/obj/item/clothing/shoes/magboots/advance = 1,
 		/obj/item/gun/projectile/automatic/pistol/deagle = 1,
 		/obj/item/ammo_box/magazine/m50 = 2
@@ -1040,12 +1079,13 @@
 		apply_to_card(I, H, get_all_accesses(), "Ancient One", "data")
 
 	if(H.mind)
-		if(!H.mind.vampire)
+		if(!H.mind.has_antag_datum(/datum/antagonist/vampire))
 			H.mind.make_vampire(TRUE)
-		H.mind.vampire.bloodusable = 9999
-		H.mind.vampire.bloodtotal = 9999
+		var/datum/antagonist/vampire/V = H.mind.has_antag_datum(/datum/antagonist/vampire)
+		V.bloodusable = 9999
+		V.bloodtotal = 9999
 		H.mind.offstation_role = TRUE
-		H.mind.vampire.add_subclass(SUBCLASS_ANCIENT, FALSE)
+		V.add_subclass(SUBCLASS_ANCIENT, FALSE)
 		H.dna.SetSEState(GLOB.jumpblock, TRUE)
 		singlemutcheck(H, GLOB.jumpblock, MUTCHK_FORCED)
 		H.update_mutations()

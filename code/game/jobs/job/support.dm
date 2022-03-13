@@ -11,8 +11,7 @@
 	supervisors = "the head of personnel"
 	department_head = list("Head of Personnel")
 	selection_color = "#e2c59d"
-	exp_requirements = 600
-	exp_type = EXP_TYPE_CREW
+	exp_map = list(EXP_TYPE_CREW = 600)
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
 	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_MINERAL_STOREROOM)
 	outfit = /datum/outfit/job/qm
@@ -387,8 +386,8 @@
 		return
 
 	if(H.mind)
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/aoe_turf/conjure/mime_wall(null))
-		H.mind.AddSpell(new /obj/effect/proc_holder/spell/targeted/mime/speak(null))
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/aoe_turf/conjure/build/mime_wall(null))
+		H.mind.AddSpell(new /obj/effect/proc_holder/spell/mime/speak(null))
 		H.mind.miming = 1
 
 
