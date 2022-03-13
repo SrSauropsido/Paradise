@@ -826,11 +826,11 @@
 	},
 /area/holodeck/source_basketball)
 "cR" = (
-/obj/effect/landmark/start,
 /obj/item/gun/projectile/automatic/fullauto/natsha{
 	icon_state = "natashaloaded100";
 	layer = 99
 	},
+/obj/effect/landmark/newplayer_start,
 /turf/simulated/floor,
 /area/start)
 "cS" = (

@@ -5039,7 +5039,7 @@
 /turf/simulated/floor/plating,
 /area/centcom/evac)
 "rH" = (
-/obj/effect/landmark/start,
+/obj/effect/landmark/newplayer_start,
 /turf/simulated/floor,
 /area/start)
 "rI" = (
